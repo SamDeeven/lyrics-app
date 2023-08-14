@@ -7,7 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import { useRoute } from "@react-navigation/native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 import {
   Poppins_100Thin,
   Poppins_100Thin_Italic,
@@ -30,12 +30,14 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const Lyrics = () => {
-  const [fontSize, setFontSize] = useState(17);
+  const navigation = useNavigation();
+  const [fontSize, setFontSize] = useState(18);
   const route = useRoute();
-  const { titleItem } = route.params;
-
+  const { titleItem, serialNum } = route.params;
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
     Poppins_100Thin_Italic,
@@ -57,6 +59,7 @@ const Lyrics = () => {
     Poppins_900Black_Italic,
   });
 
+ 
   if (!fontsLoad) {
     return <AppLoading />;
   }
@@ -77,27 +80,27 @@ const Lyrics = () => {
               <Text style={styles.buttonText}>Small</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.button, fontSize === 17 && styles.selectedButton]}
-              onPress={() => handleFontSize(17)}
+              style={[styles.button, fontSize === 18 && styles.selectedButton]}
+              onPress={() => handleFontSize(18)}
             >
               <Text style={styles.buttonText}>Medium</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.button, fontSize === 20 && styles.selectedButton]}
-              onPress={() => handleFontSize(20)}
+              style={[styles.button, fontSize === 22 && styles.selectedButton]}
+              onPress={() => handleFontSize(22)}
             >
               <Text style={styles.buttonText}>Large</Text>
             </TouchableOpacity>
           </View>
-          <Text style={styles.title}>{titleItem.title}</Text>
+          <Text style={styles.title}>{serialNum+1}){" "}{titleItem.title}</Text>
           {titleItem.lyrics !== '' ? (
           <Text style={[styles.song, { fontSize }]}>{titleItem.lyrics}</Text>
 
           ) : (
             <>
-          <Text style={styles.errorMessage}>No lyrics available</Text>
+          <Text style={styles.errorMessage}>No lyrics available. App is still under development.</Text>
           <Text style={styles.errorMessage}>Kindly contact Sam Deeven (Vinnu)</Text>
-          </>
+            </>
 
           )
         }
@@ -144,7 +147,7 @@ const styles = StyleSheet.create({
   song: {
     fontSize: 17,
     lineHeight: 25,
-    paddingHorizontal: 10,
+    paddingLeft: 10,
     minHeight: 1200,
   },
   errorMessage:{
@@ -152,7 +155,7 @@ const styles = StyleSheet.create({
     alignSelf:"center",
     paddingVertical:10,
     fontFamily:"Poppins_700Bold_Italic",
-    color:"red"
+    color:"red",
   }
 });
 

@@ -37,7 +37,7 @@ const Home = () => {
   useEffect(() => {
     setInterval(() => {
       setIsLoading(false);
-    }, 500);
+    }, 1500);
   }, []);
 
   const navigation = useNavigation();
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    margin: 5,
+    margin: 4,
     height: 50,
     backgroundColor: "#eee",
     borderRadius: 5,

@@ -29,6 +29,7 @@ import {
 
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import History from "./src/screens/components/History";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -117,6 +118,7 @@ const App = () => {
             cardStyle: { backgroundColor: "#FAFAD2" },
           }}
         />
+      
       </Stack.Navigator>
     </NavigationContainer>
   );

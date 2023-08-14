@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import {
   Poppins_100Thin,
@@ -60,22 +60,25 @@ const TitlesList = () => {
     return <AppLoading />;
   }
 
-  const handleTitlePress = (item) => {
-    navigation.navigate('Lyrics', { titleItem: item });
+  const handleTitlePress = (item, serialNum) => {
+    navigation.navigate('Lyrics', { titleItem: item, serialNum: serialNum });
   };
-
   return (
     <View style={styles.container}>
       <Text style={styles.alphabet}>{alphabet}</Text>
-      {data.map((item) => (
+      <SafeAreaView>
+        <ScrollView>
+      {data.map((item, serialNum) => (
         <TouchableOpacity
           key={item.id}
           style={styles.titleContainer}
-          onPress={() => handleTitlePress(item)}
+          onPress={() => handleTitlePress(item, serialNum)}
         >
-          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.title}>{serialNum+1}){"    "}{item.title}</Text>
         </TouchableOpacity>
       ))}
+      </ScrollView>
+      </SafeAreaView>
     </View>
   );
 };
@@ -84,6 +87,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    marginBottom:25
   },
   alphabet: {
     fontSize: 24,
