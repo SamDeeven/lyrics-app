@@ -29,7 +29,7 @@ import {
 
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import History from "./src/screens/components/History";
+import 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();

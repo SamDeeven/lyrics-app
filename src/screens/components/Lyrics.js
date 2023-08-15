@@ -30,7 +30,6 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const Lyrics = () => {
