@@ -24,16 +24,19 @@ import {
 
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import { useSelector } from "react-redux";
 
 
 
 
 const TitlesList = () => {
+   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
   const route = useRoute();
   const navigation = useNavigation();
   const { alphabet } = route.params;
   const alphabetData = require('../../../data/songsData.json'); // Adjust the path accordingly
   const data = alphabetData[alphabet];
+  console.log("video link", data)
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -60,21 +63,21 @@ const TitlesList = () => {
     return <AppLoading />;
   }
 
-  const handleTitlePress = (item, serialNum) => {
-    navigation.navigate('Lyrics', { titleItem: item, serialNum: serialNum });
+  const handleTitlePress = (item) => {
+    navigation.navigate('Lyrics', { titleItem: item});
   };
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, isDarkMode && styles.darkContainer]}>
       <Text style={styles.alphabet}>{alphabet}</Text>
       <SafeAreaView>
         <ScrollView>
-      {data.map((item, serialNum) => (
+      {data.map((item) => (
         <TouchableOpacity
           key={item.id}
           style={styles.titleContainer}
-          onPress={() => handleTitlePress(item, serialNum)}
+          onPress={() => handleTitlePress(item)}
         >
-          <Text style={styles.title}>{serialNum+1}){"    "}{item.title}</Text>
+          <Text style={styles.title}>{item.title}</Text>
         </TouchableOpacity>
       ))}
       </ScrollView>
@@ -87,7 +90,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    marginBottom:25
+    marginBottom:78,
+  },
+  darkContainer:{
+
   },
   alphabet: {
     fontSize: 24,
@@ -96,10 +102,13 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     marginBottom: 10,
-    borderWidth: 5,
+    borderWidth: 4,
     borderColor: 'darkgrey',
-    borderRadius: 5,
     padding: 10,
+    borderTopLeftRadius: 18,
+    borderTopRightRadius:5,
+    borderBottomLeftRadius:5,
+    borderBottomRightRadius:18,
   },
   title: {
     fontSize: 18,

@@ -6,8 +6,10 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Linking,
+  Alert
 } from "react-native";
-import { useRoute, useNavigation } from "@react-navigation/native";
+import { useRoute } from "@react-navigation/native";
 import {
   Poppins_100Thin,
   Poppins_100Thin_Italic,
@@ -30,13 +32,19 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-
+import { useSelector } from "react-redux";
 
 const Lyrics = () => {
-  const navigation = useNavigation();
-  const [fontSize, setFontSize] = useState(18);
+
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+
+  const [fontSize, setFontSize] = useState(17);
   const route = useRoute();
-  const { titleItem, serialNum } = route.params;
+  const { titleItem } = route.params;
+  console.log("Received from Lyrics.js: ", titleItem);
+
+  
+
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
     Poppins_100Thin_Italic,
@@ -58,7 +66,6 @@ const Lyrics = () => {
     Poppins_900Black_Italic,
   });
 
- 
   if (!fontsLoad) {
     return <AppLoading />;
   }
@@ -67,9 +74,23 @@ const Lyrics = () => {
     setFontSize(size);
   };
 
+  const handleVideoButton = async () => {
+    if (titleItem.video) {
+      const canOpen = await Linking.canOpenURL(titleItem.video);
+      if (canOpen) {
+        Linking.openURL(titleItem.video);
+      } else {
+        Alert.alert("Invalid video link:", titleItem.video);
+      }
+    } else {
+      console.log("No video link available");
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+          <ScrollView>
+
         <View>
           <View style={styles.buttonContainer}>
             <TouchableOpacity
@@ -79,32 +100,50 @@ const Lyrics = () => {
               <Text style={styles.buttonText}>Small</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.button, fontSize === 18 && styles.selectedButton]}
-              onPress={() => handleFontSize(18)}
+              style={[styles.button, fontSize === 17 && styles.selectedButton]}
+              onPress={() => handleFontSize(17)}
             >
               <Text style={styles.buttonText}>Medium</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.button, fontSize === 22 && styles.selectedButton]}
-              onPress={() => handleFontSize(22)}
+              style={[styles.button, fontSize === 20 && styles.selectedButton]}
+              onPress={() => handleFontSize(20)}
             >
               <Text style={styles.buttonText}>Large</Text>
             </TouchableOpacity>
           </View>
-          <Text style={styles.title}>{serialNum+1}){" "}{titleItem.title}</Text>
-          {titleItem.lyrics !== '' ? (
-          <Text style={[styles.song, { fontSize }]}>{titleItem.lyrics}</Text>
+          {
+            titleItem.video && (
+              <TouchableOpacity
+              style={styles.videoBtn}
+              onPress={handleVideoButton}
+            >
+              <Text style={styles.videoBtnText}>Video Song</Text>
+            </TouchableOpacity>
+            )
+          }
 
+          <Text style={styles.title}>{titleItem.title}</Text>
+
+          <View>
+          {titleItem.lyrics !== "" ? (
+            <Text style={[styles.song, { fontSize }]}>{titleItem.lyrics}</Text>
           ) : (
             <>
-          <Text style={styles.errorMessage}>No lyrics available. App is still under development.</Text>
-          <Text style={styles.errorMessage}>Kindly contact Sam Deeven (Vinnu)</Text>
+              <Text style={styles.errorMessage}>
+                No lyrics available. App is still under development.
+              </Text>
+              <Text style={styles.errorMessage}>
+                Kindly contact Sam Deeven (Vinnu)
+              </Text>
             </>
+          )}
+            </View>
 
-          )
-        }
+
         </View>
       </ScrollView>
+
     </SafeAreaView>
   );
 };
@@ -113,17 +152,37 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FAFAD2",
-    padding: 20,
+    paddingHorizontal: 15,
+    marginBottom:57,
+
+   
+  },
+  videoBtn: {
+    backgroundColor: "#E21717",
+    padding: 10,
+    width: 120,
+    borderRadius: 15,
+    marginBottom: 10,
+    alignSelf: "center",
+  },
+  videoBtnText: {
+    textAlign: "center",
+    color: "white",
+    fontSize: 15,
+    fontWeight: "bold",
   },
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-evenly",
-    marginBottom: 10,
+    margin: 10,
   },
   button: {
     backgroundColor: "#333",
-    padding: 10,
-    borderRadius: 10,
+    padding: 8,
+    borderTopLeftRadius: 14,
+    borderTopRightRadius:5,
+    borderBottomLeftRadius:5,
+    borderBottomRightRadius:14,
     borderWidth: 1,
   },
   buttonText: {
@@ -146,16 +205,16 @@ const styles = StyleSheet.create({
   song: {
     fontSize: 17,
     lineHeight: 25,
-    paddingLeft: 10,
+    paddingLeft: 5,
     minHeight: 1200,
+    },
+  errorMessage: {
+    fontSize: 20,
+    alignSelf: "center",
+    paddingVertical: 10,
+    fontFamily: "Poppins_700Bold_Italic",
+    color: "red",
   },
-  errorMessage:{
-    fontSize:20,
-    alignSelf:"center",
-    paddingVertical:10,
-    fontFamily:"Poppins_700Bold_Italic",
-    color:"red",
-  }
 });
 
 export default Lyrics;

@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "VinnuLyricsApp",
+    "name": "Vinnu Lyrics App_2",
     "slug": "lyrics",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/app-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/app-icon.png",
+      "image": "./assets/app-splashscreen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

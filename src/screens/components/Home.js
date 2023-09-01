@@ -5,7 +5,8 @@ import {
   FlatList,
   TouchableOpacity,
   StyleSheet,
-  ActivityIndicator,
+  TextInput,
+  Keyboard,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.json"; // Adjust the path accordingly
@@ -31,16 +32,39 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleDarkMode } from "../../../reducers/darkModeReducer";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setInterval(() => {
-      setIsLoading(false);
-    }, 1500);
-  }, []);
+  const [inputSearch, setInputSearch] = useState("");
+  const [isKeyboardActive, setIsKeyboardActive] = useState(false);
+
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  const dispatch = useDispatch();
 
   const navigation = useNavigation();
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      "keyboardDidShow",
+      () => {
+        setIsKeyboardActive(true);
+      }
+    );
+
+    const keyboardDidHideListener = Keyboard.addListener(
+      "keyboardDidHide",
+      () => {
+        setIsKeyboardActive(false);
+      }
+    );
+
+    return () => {
+      keyboardDidShowListener.remove();
+      keyboardDidHideListener.remove();
+    };
+  }, []);
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -67,6 +91,16 @@ const Home = () => {
     return <AppLoading />;
   }
 
+  const handleSearch = () => {
+    if (inputSearch.length === 0) return;
+    navigation.navigate("FilteredTitles", { searchQuery: inputSearch });
+    console.log("searched==> ", inputSearch);
+    setInputSearch("");
+  };
+
+  const clearText = () => {
+    setInputSearch("");
+  };
   const renderAlphabetItem = ({ item }) => (
     <TouchableOpacity
       style={styles.alphabetItem}
@@ -76,12 +110,38 @@ const Home = () => {
     </TouchableOpacity>
   );
 
-  return isLoading ? (
-    <View style={styles.loadingContainer}>
-      <ActivityIndicator size={90} style={styles.loader} color="#333" />
-    </View>
-  ) : (
-    <View style={styles.container}>
+  return (
+    <View style={[styles.container, isDarkMode && styles.darkModeContainer]}>
+      <TouchableOpacity
+        style={[styles.themeBtn, isDarkMode && styles.darkThemeBtn]}
+        onPress={() => dispatch(toggleDarkMode())}
+      >
+        <Text
+          style={[styles.themeBtnText, isDarkMode && styles.darkThemeBtnText]}
+        >
+          {isDarkMode ? "Light Mode" : "Dark Mode"}
+        </Text>
+      </TouchableOpacity>
+      <View style={styles.inputBoxContainer}>
+        <TextInput
+          style={styles.searchInput}
+          placeholder="Search Song / పాటను వెతకండి"
+          value={inputSearch}
+          onChangeText={(text) => setInputSearch(text)}
+          onSubmitEditing={handleSearch}
+          maxLength={30}
+          selectionColor={"brown"}
+          backgroundColor="white"
+        />
+        {isKeyboardActive && (
+          <Icon
+            onPress={clearText}
+            style={styles.closeBtn}
+            name="close-sharp"
+            size={30}
+          />
+        )}
+      </View>
       <FlatList
         data={Object.keys(alphabetData)}
         renderItem={renderAlphabetItem}
@@ -98,13 +158,28 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  inputBoxContainer: {
   },
-  loader: {
-    marginBottom: 80,
+  searchInput: {
+    fontFamily: "Poppins_500Medium",
+    height: 55,
+    margin: 12,
+    borderWidth: 1,
+    paddingTop: 5,
+    paddingHorizontal: 25,
+    alignContent: "center",
+    justifyContent: "center",
+    borderTopLeftRadius:25,
+    borderBottomRightRadius:25,
+    borderTopRightRadius:5,
+    borderBottomLeftRadius:5,
+    fontSize:18,
+  },
+  closeBtn: {
+    position: "absolute",
+    margin: 12,
+    paddingTop: 11,
+    right: 15,
   },
   alphabetContainer: {
     justifyContent: "space-between",
@@ -116,11 +191,43 @@ const styles = StyleSheet.create({
     margin: 4,
     height: 50,
     backgroundColor: "#eee",
-    borderRadius: 5,
+    borderRadius: 30,
   },
   alphabetText: {
     fontSize: 26,
     fontWeight: "bold",
+  },
+  titleContainer: {
+    marginBottom: 10,
+    borderWidth: 5,
+    borderColor: "grey",
+    backgroundColor: "lightblue",
+    borderRadius: 5,
+    padding: 10,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  themeBtn: {
+    backgroundColor: "black",
+    width: 130,
+    padding: 5,
+    borderRadius: 10,
+  },
+  themeBtnText: {
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+  },
+  darkModeContainer: {
+    backgroundColor: "black",
+  },
+  darkThemeBtn: {
+    backgroundColor: "white",
+  },
+  darkThemeBtnText: {
+    color: "black",
   },
 });
 
