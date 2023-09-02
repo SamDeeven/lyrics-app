@@ -5,11 +5,11 @@ import { Text, View, StyleSheet, Button, TouchableOpacity } from "react-native";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "./src/screens/components/Home";
 import TitlesList from "./src/screens/components/TitlesList";
 import Lyrics from "./src/screens/components/Lyrics";
 import FilteredTitles from "./src/screens/components/FilteredTitles";
+import RandomTitles from "./src/screens/components/RandomTitles";
 import Menu from "./src/screens/components/Menu";
 import { Poppins_800ExtraBold } from "@expo-google-fonts/poppins";
 
@@ -18,10 +18,10 @@ import AppLoading from "expo-app-loading";
 import Icon from "react-native-vector-icons/Ionicons";
 import Contact from "./src/screens/components/Contact";
 import About from "./src/screens/components/About";
+import Theme from "./src/screens/components/Theme";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-const Drawer = createDrawerNavigator();
 
 const StackNavigator = () => {
   const [fontsLoad] = useFonts({
@@ -149,6 +149,42 @@ const StackNavigator = () => {
         // cardStyle: { backgroundColor: "#FAFAD2" },
       }}
       />
+      <Stack.Screen 
+      name="RandomTitles"
+      component={RandomTitles}
+      options={{
+        headerTitle: () => (
+          <Text style={{ fontFamily: "Poppins_800ExtraBold", fontSize: 25 }}>
+            Random Titles
+          </Text>
+        ),
+        headerTitleAlign: "center",
+        headerStyle: {
+          backgroundColor: "#FFFACD",
+          borderBottomWidth: 2,
+          height: 85,
+        },
+        cardStyle: { backgroundColor: "#FAFAD2" },
+      }}
+      />
+       <Stack.Screen 
+      name="Theme"
+      component={Theme}
+      options={{
+        headerTitle: () => (
+          <Text style={{ fontFamily: "Poppins_800ExtraBold", fontSize: 25 }}>
+            Theme
+          </Text>
+        ),
+        headerTitleAlign: "center",
+        headerStyle: {
+          backgroundColor: "#FFFACD",
+          borderBottomWidth: 2,
+          height: 85,
+        },
+        cardStyle: { backgroundColor: "#FAFAD2" },
+      }}
+      />
     </Stack.Navigator>
   );
 };
@@ -208,7 +244,7 @@ const App = () => {
           <Tab.Screen
             name="Home"
             component={StackNavigator}
-            options={({ route }) => ({
+            options={() => ({
               headerShown: false,
               tabBarLabel: "Index",
               tabBarLabelStyle: {
@@ -216,7 +252,6 @@ const App = () => {
               },
               tabBarOptions: {
                 activeTintColor: "black",
-                borderRadius: 20,
               },
               tabBarLabelStyle: {
                 fontSize: 16,
@@ -231,13 +266,13 @@ const App = () => {
             name="Menu"
             component={Menu}
             options={{
+              headerShown:false,
               tabBarLabel: "Menu",
               tabBarLabelStyle: {
-                fontSize: 16,
+                fontSize: 15,
               },
 
               tabBarOptions: {
-                showIcon: true,
                 activeTintColor: "black",
               },
               tabBarLabelStyle: {

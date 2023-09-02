@@ -88,10 +88,8 @@ const Lyrics = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-          <ScrollView>
 
-        <View>
+        <View style={styles.container}>
           <View style={styles.buttonContainer}>
             <TouchableOpacity
               style={[styles.button, fontSize === 14 && styles.selectedButton]}
@@ -112,6 +110,7 @@ const Lyrics = () => {
               <Text style={styles.buttonText}>Large</Text>
             </TouchableOpacity>
           </View>
+ 
           {
             titleItem.video && (
               <TouchableOpacity
@@ -122,7 +121,10 @@ const Lyrics = () => {
             </TouchableOpacity>
             )
           }
+   
+      <SafeAreaView >
 
+      <ScrollView>
           <Text style={styles.title}>{titleItem.title}</Text>
 
           <View>
@@ -139,12 +141,10 @@ const Lyrics = () => {
             </>
           )}
             </View>
-
+            </ScrollView>
+      </SafeAreaView>
 
         </View>
-      </ScrollView>
-
-    </SafeAreaView>
   );
 };
 
@@ -159,8 +159,8 @@ const styles = StyleSheet.create({
   },
   videoBtn: {
     backgroundColor: "#E21717",
-    padding: 10,
-    width: 120,
+    padding: 5,
+    width: 100,
     borderRadius: 15,
     marginBottom: 10,
     alignSelf: "center",
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   videoBtnText: {
     textAlign: "center",
     color: "white",
-    fontSize: 15,
+    fontSize:15,
     fontWeight: "bold",
   },
   buttonContainer: {
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#333",
-    padding: 8,
+    padding: 10,
     borderTopLeftRadius: 14,
     borderTopRightRadius:5,
     borderBottomLeftRadius:5,
@@ -189,6 +189,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     color: "white",
+    fontSize:17
   },
 
   selectedButton: {

@@ -6,7 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import alphabetData from "../../../data/songsData.json";
+import alphabetData from "../../../data/songsData.js";
 import { useSelector } from "react-redux";
 
 const FilteredTitles = ({ route, navigation }) => {

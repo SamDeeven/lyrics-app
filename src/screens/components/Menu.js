@@ -10,8 +10,15 @@ const Menu = ({navigation}) => {
     navigation.navigate('Contact')
     console.log("Contact Navigated")
   }
+  const handleThemeNavigation = () => {
+    navigation.navigate('Theme')
+    console.log("Theme Navigated")
+  }
   return (
     <View style={styles.menuContainer}>
+       <TouchableOpacity style={styles.menuItem} onPress={handleThemeNavigation}>
+        <Text style={styles.menuItemText}>Theme</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={styles.menuItem} onPress={handleAboutNavigation}>
         <Text style={styles.menuItemText}>About</Text>
       </TouchableOpacity>

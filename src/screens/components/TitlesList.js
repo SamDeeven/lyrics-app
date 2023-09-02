@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, ScrollView, FlatList } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import {
   Poppins_100Thin,
@@ -26,6 +26,7 @@ import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import { useSelector } from "react-redux";
 
+import alphabetData from "../../../data/songsData.js"; 
 
 
 
@@ -34,7 +35,6 @@ const TitlesList = () => {
   const route = useRoute();
   const navigation = useNavigation();
   const { alphabet } = route.params;
-  const alphabetData = require('../../../data/songsData.json'); // Adjust the path accordingly
   const data = alphabetData[alphabet];
   console.log("video link", data)
 
@@ -71,7 +71,7 @@ const TitlesList = () => {
       <Text style={styles.alphabet}>{alphabet}</Text>
       <SafeAreaView>
         <ScrollView>
-      {data.map((item) => (
+      {data && data.map((item) => (
         <TouchableOpacity
           key={item.id}
           style={styles.titleContainer}

@@ -9,7 +9,7 @@ import {
   Keyboard,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import alphabetData from "../../../data/songsData.json"; // Adjust the path accordingly
+import alphabetData from "../../../data/songsData.js";
 import {
   Poppins_100Thin,
   Poppins_100Thin_Italic,
@@ -39,9 +39,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
   const [isKeyboardActive, setIsKeyboardActive] = useState(false);
-
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
-  const dispatch = useDispatch();
 
   const navigation = useNavigation();
 
@@ -91,6 +89,10 @@ const Home = () => {
     return <AppLoading />;
   }
 
+  const navigateToRandomTitles = () => {
+    navigation.navigate('RandomTitles');
+  };
+  
   const handleSearch = () => {
     if (inputSearch.length === 0) return;
     navigation.navigate("FilteredTitles", { searchQuery: inputSearch });
@@ -112,16 +114,6 @@ const Home = () => {
 
   return (
     <View style={[styles.container, isDarkMode && styles.darkModeContainer]}>
-      <TouchableOpacity
-        style={[styles.themeBtn, isDarkMode && styles.darkThemeBtn]}
-        onPress={() => dispatch(toggleDarkMode())}
-      >
-        <Text
-          style={[styles.themeBtnText, isDarkMode && styles.darkThemeBtnText]}
-        >
-          {isDarkMode ? "Light Mode" : "Dark Mode"}
-        </Text>
-      </TouchableOpacity>
       <View style={styles.inputBoxContainer}>
         <TextInput
           style={styles.searchInput}
@@ -149,17 +141,20 @@ const Home = () => {
         numColumns={6}
         contentContainerStyle={styles.alphabetContainer}
       />
+       <TouchableOpacity style={styles.randomBtn} 
+      onPress={navigateToRandomTitles}
+      >
+        <Text style={styles.randomBtnText}>6 Random Songs</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 20,
   },
-  inputBoxContainer: {
-  },
+  inputBoxContainer: {},
   searchInput: {
     fontFamily: "Poppins_500Medium",
     height: 55,
@@ -169,11 +164,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     alignContent: "center",
     justifyContent: "center",
-    borderTopLeftRadius:25,
-    borderBottomRightRadius:25,
-    borderTopRightRadius:5,
-    borderBottomLeftRadius:5,
-    fontSize:18,
+    borderTopLeftRadius: 25,
+    borderBottomRightRadius: 25,
+    borderTopRightRadius: 5,
+    borderBottomLeftRadius: 5,
+    fontSize: 18,
   },
   closeBtn: {
     position: "absolute",
@@ -209,14 +204,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
-  themeBtn: {
-    backgroundColor: "black",
+  randomBtn: {
+    backgroundColor: "#CAD5E2",
     width: 130,
     padding: 5,
+    marginTop:15,
     borderRadius: 10,
+    alignSelf:"center"
   },
-  themeBtnText: {
-    color: "white",
+  randomBtnText: {
+    color: "#120E43",
     fontSize: 20,
     textAlign: "center",
   },
