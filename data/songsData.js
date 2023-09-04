@@ -1522,7 +1522,6 @@ const songsData = {
         "prabhu sannedhilo",
         "sharon sisters",
         "sharonsisters",
-        "aayaney naa",
         "jk christopher",
       ],
     },
@@ -1604,7 +1603,7 @@ const songsData = {
       lyrics:
 "దీవించావే సమృద్ధిగా\nనీ సాక్షిగా కొనసాగమని\nప్రేమించావే నను ప్రాణంగా\nనీ కోసమే నను బ్రతకమని\n\nదారులలో.. ఏడారులలో..\nసెలయేరులై ప్రవహించుమయా..\nచీకటిలో.. కారు చీకటిలో..\nఅగ్ని స్తంభమై నను నడుపుమయా... ||దీవించావే సమృద్ధిగా||\n\n1. నువ్వే లేకుండా నేనుండలేను యేసయ్యా\nనీ ప్రేమే లేకుండా జీవించలేను నేనయ్యా \nనా ఒంటరి పయనంలో నా జంటగ నిలిచావే\nనే నడిచే దారుల్లో నా తోడై ఉన్నావే (2)\nఊహలలో.. నా ఊసులలో..\nనా ధ్యాస బాసవైనావే..\nశుద్ధతలో.. పరిశుద్ధతలో..\nనిను పోలి నన్నిల సాగమని... ||దీవించావే సమృద్ధిగా||\n\n2. కొలతే లేదయ్యా నీ జాలి నాపై యేసయ్యా\nకొరతే లేదయ్యా సమృద్ధి జీవం నీవయ్యా\nనా కన్నీరంత తుడిచావే కన్నతల్లిలా\nకొదువంతా తీర్చావే కన్నతండ్రిలా (2) \nఆశలలో.. నిరాశలలో..\nనేనున్నా నీకని అన్నావే..\nపోరులలో.. పోరాటములో..\nనా పక్షముగానే నిలిచావే...  ||దీవించావే సమృద్ధిగా||",
       keywords: [
-        "preminchaave samrudhiga", "preminchave", "preeminchaave", "preeminchave", "preminchaavee", "preminchavee", "preminchavey", "satish kumar", "satishkumar", "preminchavey samrudhiga", "preminchaave sammruddhiga", "preminchave samruddiga"
+        "dheevinchaave samrudhiga", "dhevinchave", "deevinchave", "deevinchaave", "deevinchave samrudhiga", "deevinchave samrudiga", "devinchave samrudiga", "satish kumar", "satishkumar", "divinchave samrudhiga", "divinchavey sammruddhiga", "samruddiga"
       ],
       video: "https://youtu.be/irvw4_562BM"
     },
@@ -1622,6 +1621,7 @@ const songsData = {
         "prema",
         "love",
         "preminchedaa yeesu raja",
+        "ప్రేమించెద యేసు రాజా"
       ],
       video:""
     },

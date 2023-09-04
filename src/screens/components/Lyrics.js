@@ -74,16 +74,14 @@ const Lyrics = () => {
     setFontSize(size);
   };
 
-  const handleVideoButton = async () => {
+  const handleVideoButton = () => {
     if (titleItem.video) {
-      const canOpen = await Linking.canOpenURL(titleItem.video);
-      if (canOpen) {
+      const videoLink = Linking.openURL(titleItem.video);
+      if (videoLink) {
         Linking.openURL(titleItem.video);
-      } else {
-        Alert.alert("Invalid video link:", titleItem.video);
-      }
+      } 
     } else {
-      console.log("No video link available");
+      Alert.alert("No video link available");
     }
   };
 

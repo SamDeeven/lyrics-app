@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TextInput,
   Keyboard,
+  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.js";
@@ -40,7 +41,7 @@ const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
   const [isKeyboardActive, setIsKeyboardActive] = useState(false);
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
-
+  const [suggestions, setSuggestions] = useState([]);
   const navigation = useNavigation();
 
   useEffect(() => {
@@ -63,6 +64,31 @@ const Home = () => {
       keyboardDidHideListener.remove();
     };
   }, []);
+
+  useEffect(() => {
+    if (inputSearch.trim() === "") {
+      setSuggestions([]);
+      return;
+    }
+
+    const matchingSuggestions = [];
+
+    Object.keys(alphabetData).forEach((alphabet) => {
+      alphabetData[alphabet].forEach((item) => {
+        if (
+          item.title.toLowerCase().includes(inputSearch.toLowerCase()) ||
+          (item.keywords &&
+            item.keywords.some((kw) =>
+              kw.toLowerCase().startsWith(inputSearch.toLowerCase())
+            ))
+        ) {
+          matchingSuggestions.push(item.title);
+        }
+      });
+    });
+
+    setSuggestions(matchingSuggestions);
+  }, [inputSearch]);
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -90,19 +116,45 @@ const Home = () => {
   }
 
   const navigateToRandomTitles = () => {
-    navigation.navigate('RandomTitles');
+    navigation.navigate("RandomTitles");
   };
-  
+
   const handleSearch = () => {
     if (inputSearch.length === 0) return;
-    navigation.navigate("FilteredTitles", { searchQuery: inputSearch });
-    console.log("searched==> ", inputSearch);
-    setInputSearch("");
+
+    if (suggestions.length >= 0) {
+      navigation.navigate("FilteredTitles", { searchQuery: inputSearch });
+      setInputSearch("");
+    }
+  };
+
+  const handleSuggestionPress = (suggestion) => {
+    const matchingTitlesArray = [];
+
+    Object.keys(alphabetData).forEach((alphabet) => {
+      alphabetData[alphabet].forEach((item) => {
+        if (
+          item.title.toLowerCase() === suggestion.toLowerCase() ||
+          (item.keywords &&
+            item.keywords.some(
+              (kw) => kw.toLowerCase() === suggestion.toLowerCase()
+            ))
+        ) {
+          matchingTitlesArray.push(item);
+        }
+      });
+    });
+
+    if (matchingTitlesArray.length > 0) {
+      navigation.navigate("Lyrics", { titleItem: matchingTitlesArray[0] });
+      setInputSearch("");
+    }
   };
 
   const clearText = () => {
     setInputSearch("");
   };
+
   const renderAlphabetItem = ({ item }) => (
     <TouchableOpacity
       style={styles.alphabetItem}
@@ -119,7 +171,9 @@ const Home = () => {
           style={styles.searchInput}
           placeholder="Search Song / పాటను వెతకండి"
           value={inputSearch}
-          onChangeText={(text) => setInputSearch(text)}
+          onChangeText={(text) => {
+            setInputSearch(text);
+          }}
           onSubmitEditing={handleSearch}
           maxLength={30}
           selectionColor={"brown"}
@@ -133,6 +187,19 @@ const Home = () => {
             size={30}
           />
         )}
+        {suggestions.length > 0 && (
+          <ScrollView>
+            {suggestions.map((suggestion) => (
+              <TouchableOpacity
+                key={suggestion}
+                style={styles.suggestionItem}
+                onPress={() => handleSuggestionPress(suggestion)}
+              >
+                <Text style={styles.suggestionText}>{suggestion}</Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        )}
       </View>
       <FlatList
         data={Object.keys(alphabetData)}
@@ -141,8 +208,9 @@ const Home = () => {
         numColumns={6}
         contentContainerStyle={styles.alphabetContainer}
       />
-       <TouchableOpacity style={styles.randomBtn} 
-      onPress={navigateToRandomTitles}
+      <TouchableOpacity
+        style={styles.randomBtn}
+        onPress={navigateToRandomTitles}
       >
         <Text style={styles.randomBtnText}>6 Random Songs</Text>
       </TouchableOpacity>
@@ -176,6 +244,15 @@ const styles = StyleSheet.create({
     paddingTop: 11,
     right: 15,
   },
+  suggestionItem: {
+    paddingHorizontal: 35,
+    margin: 3,
+    padding: 10,
+    borderWidth: 0.5,
+  },
+  suggestionText: {
+    fontSize: 16,
+  },
   alphabetContainer: {
     justifyContent: "space-between",
   },
@@ -208,9 +285,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#CAD5E2",
     width: 130,
     padding: 5,
-    marginTop:15,
+    marginTop: 15,
     borderRadius: 10,
-    alignSelf:"center"
+    alignSelf: "center",
   },
   randomBtnText: {
     color: "#120E43",

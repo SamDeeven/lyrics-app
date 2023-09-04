@@ -36,6 +36,7 @@ const FilteredTitles = ({ route, navigation }) => {
     setMatchingTitles(matchingTitlesArray);
     console.log("Matching Titles==> ", matchingTitlesArray);
   }, [searchQuery]);
+  
   const handleTitlePress = (item) => {
     console.log("FilteredTitles.js:", item);
     navigation.navigate("Lyrics", { titleItem: item });
