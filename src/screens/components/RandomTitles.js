@@ -9,7 +9,7 @@ const RandomTitles = ({navigation}) => {
         const allTitles = Object.values(songsData).flat();
         const randomIndexes = [];
     
-        while (randomIndexes.length < 6) {
+        while (randomIndexes.length < 5) {
           const randomIndex = Math.floor(Math.random() * allTitles.length);
           if (!randomIndexes.includes(randomIndex)) {
             randomIndexes.push(randomIndex);

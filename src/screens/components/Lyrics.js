@@ -120,11 +120,11 @@ const Lyrics = () => {
             )
           }
    
-      <SafeAreaView >
-
-      <ScrollView>
+     
           <Text style={styles.title}>{titleItem.title}</Text>
+          <SafeAreaView >
 
+<ScrollView>
           <View>
           {titleItem.lyrics !== "" ? (
             <Text style={[styles.song, { fontSize }]}>{titleItem.lyrics}</Text>

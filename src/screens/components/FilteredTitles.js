@@ -58,7 +58,7 @@ const FilteredTitles = ({ route, navigation }) => {
                   style={styles.titleContainer}
                   onPress={() => handleTitlePress(item)}
                 >
-                  <Text style={styles.title}>{item.title}</Text>
+                  <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>{item.title}</Text>
                 </TouchableOpacity>
               </View>
             )}

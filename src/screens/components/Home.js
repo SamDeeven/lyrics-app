@@ -188,14 +188,14 @@ const Home = () => {
           />
         )}
         {suggestions.length > 0 && (
-          <ScrollView>
+          <ScrollView style={styles.suggestionContainer}>
             {suggestions.map((suggestion) => (
               <TouchableOpacity
                 key={suggestion}
                 style={styles.suggestionItem}
                 onPress={() => handleSuggestionPress(suggestion)}
               >
-                <Text style={styles.suggestionText}>{suggestion}</Text>
+                <Text numberOfLines={1} ellipsizeMode="tail" style={styles.suggestionText}>{suggestion}</Text>
               </TouchableOpacity>
             ))}
           </ScrollView>
@@ -212,7 +212,7 @@ const Home = () => {
         style={styles.randomBtn}
         onPress={navigateToRandomTitles}
       >
-        <Text style={styles.randomBtnText}>6 Random Songs</Text>
+        <Text style={styles.randomBtnText}>5 Random Songs</Text>
       </TouchableOpacity>
     </View>
   );
@@ -244,8 +244,20 @@ const styles = StyleSheet.create({
     paddingTop: 11,
     right: 15,
   },
+  suggestionContainer: {
+    maxHeight: 300,
+    position: "absolute",
+    top: 70,
+    zIndex: 1,
+    left: 16,
+    right: 16,
+    backgroundColor: "#F2F1EF",
+    borderWidth: 0.5,
+    borderColor: "#ccc",
+    borderRadius: 5,
+  },
   suggestionItem: {
-    paddingHorizontal: 35,
+    paddingHorizontal: 25,
     margin: 3,
     padding: 10,
     borderWidth: 0.5,
