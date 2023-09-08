@@ -1,6 +1,14 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, ScrollView, FlatList } from 'react-native';
-import { useRoute, useNavigation } from '@react-navigation/native';
+import React from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+  FlatList,
+} from "react-native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 import {
   Poppins_100Thin,
   Poppins_100Thin_Italic,
@@ -26,17 +34,15 @@ import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import { useSelector } from "react-redux";
 
-import alphabetData from "../../../data/songsData.js"; 
-
-
+import alphabetData from "../../../data/songsData.js";
 
 const TitlesList = () => {
-   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
   const route = useRoute();
   const navigation = useNavigation();
   const { alphabet } = route.params;
   const data = alphabetData[alphabet];
-  console.log("video link", data)
+  // console.log("video link", data)
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -64,24 +70,25 @@ const TitlesList = () => {
   }
 
   const handleTitlePress = (item) => {
-    navigation.navigate('Lyrics', { titleItem: item});
+    navigation.navigate("Lyrics", { titleItem: item });
   };
   return (
     <View style={[styles.container, isDarkMode && styles.darkContainer]}>
       <Text style={styles.alphabet}>{alphabet}</Text>
-      <SafeAreaView>
-        <ScrollView>
-      {data && data.map((item) => (
-        <TouchableOpacity
-          key={item.id}
-          style={styles.titleContainer}
-          onPress={() => handleTitlePress(item)}
-        >
-          <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>{item.title}</Text>
-        </TouchableOpacity>
-      ))}
-      </ScrollView>
-      </SafeAreaView>
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.titleContainer}
+            onPress={() => handleTitlePress(item)}
+          >
+            <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
+              {item.title}
+            </Text>
+          </TouchableOpacity>
+        )}
+      />
     </View>
   );
 };
@@ -90,29 +97,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    marginBottom:78,
+    marginBottom: 32,
   },
-  darkContainer:{
-
-  },
+  darkContainer: {},
   alphabet: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 10,
   },
   titleContainer: {
-    marginBottom: 10,
+    marginBottom: 8,
     borderWidth: 4,
-    borderColor: 'darkgrey',
+    borderColor: "darkgrey",
     padding: 10,
+    backgroundColor: "white",
     borderTopLeftRadius: 18,
-    borderTopRightRadius:5,
-    borderBottomLeftRadius:5,
-    borderBottomRightRadius:18,
+    borderTopRightRadius: 5,
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 18,
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
 

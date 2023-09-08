@@ -28,17 +28,17 @@ const FilteredTitles = ({ route, navigation }) => {
             ))
         ) {
           matchingTitlesArray.push(item);
-          console.log("Matching Object==>", item);
+          // console.log("Matching Object==>", item);
         }
       });
     });
 
     setMatchingTitles(matchingTitlesArray);
-    console.log("Matching Titles==> ", matchingTitlesArray);
+    // console.log("Matching Titles==> ", matchingTitlesArray);
   }, [searchQuery]);
   
   const handleTitlePress = (item) => {
-    console.log("FilteredTitles.js:", item);
+    // console.log("FilteredTitles.js:", item);
     navigation.navigate("Lyrics", { titleItem: item });
   };
 

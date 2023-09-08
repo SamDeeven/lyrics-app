@@ -7,7 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
   Linking,
-  Alert
+  Alert,
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import {
@@ -35,15 +35,12 @@ import AppLoading from "expo-app-loading";
 import { useSelector } from "react-redux";
 
 const Lyrics = () => {
-
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
 
-  const [fontSize, setFontSize] = useState(17);
+  const [fontSize, setFontSize] = useState(18);
   const route = useRoute();
   const { titleItem } = route.params;
-  console.log("Received from Lyrics.js: ", titleItem);
-
-  
+  // console.log("Received from Lyrics.js: ", titleItem);
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -79,70 +76,66 @@ const Lyrics = () => {
       const videoLink = Linking.openURL(titleItem.video);
       if (videoLink) {
         Linking.openURL(titleItem.video);
-      } 
+      }
     } else {
       Alert.alert("No video link available");
     }
   };
 
   return (
+    <View style={styles.container}>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={[styles.button, fontSize === 14 && styles.selectedButton]}
+          onPress={() => handleFontSize(14)}
+        >
+          <Text style={styles.buttonText}>Small</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, fontSize === 18 && styles.selectedButton]}
+          onPress={() => handleFontSize(18)}
+        >
+          <Text style={styles.buttonText}>Medium</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, fontSize === 22 && styles.selectedButton]}
+          onPress={() => handleFontSize(22)}
+        >
+          <Text style={styles.buttonText}>Large</Text>
+        </TouchableOpacity>
+      </View>
 
-        <View style={styles.container}>
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity
-              style={[styles.button, fontSize === 14 && styles.selectedButton]}
-              onPress={() => handleFontSize(14)}
-            >
-              <Text style={styles.buttonText}>Small</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.button, fontSize === 17 && styles.selectedButton]}
-              onPress={() => handleFontSize(17)}
-            >
-              <Text style={styles.buttonText}>Medium</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.button, fontSize === 20 && styles.selectedButton]}
-              onPress={() => handleFontSize(20)}
-            >
-              <Text style={styles.buttonText}>Large</Text>
-            </TouchableOpacity>
-          </View>
- 
-          {
-            titleItem.video && (
-              <TouchableOpacity
-              style={styles.videoBtn}
-              onPress={handleVideoButton}
-            >
-              <Text style={styles.videoBtnText}>Video Song</Text>
-            </TouchableOpacity>
-            )
-          }
-   
-     
-          <Text style={styles.title}>{titleItem.title}</Text>
-          <SafeAreaView >
+      {titleItem.video && (
+        <TouchableOpacity style={styles.videoBtn} onPress={handleVideoButton}>
+          <Text style={styles.videoBtnText}>Video Song</Text>
+        </TouchableOpacity>
+      )}
 
-<ScrollView>
+      <Text style={styles.title}>{titleItem.title}</Text>
+      <SafeAreaView style={{ flex: 1 }}>
+        <ScrollView contentContainerStyle={styles.lyricsContainer}>
           <View>
-          {titleItem.lyrics !== "" ? (
-            <Text style={[styles.song, { fontSize }]}>{titleItem.lyrics}</Text>
-          ) : (
-            <>
-              <Text style={styles.errorMessage}>
-                No lyrics available. App is still under development.
-              </Text>
-              <Text style={styles.errorMessage}>
-                Kindly contact Sam Deeven (Vinnu)
-              </Text>
-            </>
-          )}
-            </View>
-            </ScrollView>
+            {titleItem.lyrics !== "" ? (
+              titleItem.lyrics.split("\n").map((lyric, index) => (
+                <Text key={index} style={[styles.song, { fontSize }]}>
+                  {lyric}
+                </Text>
+              ))
+            ) : (
+              <>
+                <Text style={styles.errorMessage}>
+                  Sorry for the inconvinience! No lyrics available. App is still
+                  under development.
+                </Text>
+                <Text style={styles.errorMessage}>
+                  Kindly contact Sam Deeven (Vinnu)
+                </Text>
+              </>
+            )}
+          </View>
+        </ScrollView>
       </SafeAreaView>
-
-        </View>
+    </View>
   );
 };
 
@@ -151,9 +144,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#FAFAD2",
     paddingHorizontal: 15,
-    marginBottom:57,
-
-   
+    marginBottom: 56,
   },
   videoBtn: {
     backgroundColor: "#E21717",
@@ -166,7 +157,7 @@ const styles = StyleSheet.create({
   videoBtnText: {
     textAlign: "center",
     color: "white",
-    fontSize:15,
+    fontSize: 15,
     fontWeight: "bold",
   },
   buttonContainer: {
@@ -178,16 +169,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#333",
     padding: 10,
     borderTopLeftRadius: 14,
-    borderTopRightRadius:5,
-    borderBottomLeftRadius:5,
-    borderBottomRightRadius:14,
+    borderTopRightRadius: 5,
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 14,
     borderWidth: 1,
   },
   buttonText: {
     textAlign: "center",
     fontWeight: "bold",
     color: "white",
-    fontSize:17
+    fontSize: 17,
   },
 
   selectedButton: {
@@ -196,17 +187,21 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: 26,
+    fontSize: 22,
     fontWeight: "bold",
     marginBottom: 10,
+    color: "brown",
   },
-
+  lyricsContainer: {
+    paddingTop: 5,
+    flexGrow: 1,
+  },
   song: {
-    fontSize: 17,
-    lineHeight: 25,
+    lineHeight: 27,
     paddingLeft: 5,
-    minHeight: 1200,
-    },
+    marginBottom:3
+
+  },
   errorMessage: {
     fontSize: 20,
     alignSelf: "center",

@@ -36,6 +36,7 @@ import AppLoading from "expo-app-loading";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleDarkMode } from "../../../reducers/darkModeReducer";
 import Icon from "react-native-vector-icons/Ionicons";
+import HorizontalCards from "./HorizontalCards.js";
 
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
@@ -165,7 +166,8 @@ const Home = () => {
   );
 
   return (
-    <View style={[styles.container, isDarkMode && styles.darkModeContainer]}>
+    <View>
+    <View style={[styles.container]}>
       <View style={styles.inputBoxContainer}>
         <TextInput
           style={styles.searchInput}
@@ -214,13 +216,18 @@ const Home = () => {
       >
         <Text style={styles.randomBtnText}>5 Random Songs</Text>
       </TouchableOpacity>
+      </View>
+      <View style={styles.horizontalCards}>
+          <HorizontalCards />
+        </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 18,
+    bottom:22,
   },
   inputBoxContainer: {},
   searchInput: {
@@ -272,32 +279,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    margin: 4,
-    height: 50,
+    margin: 3,
+    height: 45,
     backgroundColor: "#eee",
-    borderRadius: 30,
+    borderRadius: 20,
   },
   alphabetText: {
-    fontSize: 26,
+    fontSize: 23,
     fontWeight: "bold",
   },
-  titleContainer: {
-    marginBottom: 10,
-    borderWidth: 5,
-    borderColor: "grey",
-    backgroundColor: "lightblue",
-    borderRadius: 5,
-    padding: 10,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
+
   randomBtn: {
     backgroundColor: "#CAD5E2",
-    width: 130,
-    padding: 5,
-    marginTop: 15,
+    width: 175,
+    padding: 8,
+    marginTop: 8,
     borderRadius: 10,
     alignSelf: "center",
   },
@@ -305,6 +301,11 @@ const styles = StyleSheet.create({
     color: "#120E43",
     fontSize: 20,
     textAlign: "center",
+  },
+  horizontalCards:{
+    marginTop:25,
+    bottom:50,
+    marginLeft:5
   },
   darkModeContainer: {
     backgroundColor: "black",
