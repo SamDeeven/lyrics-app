@@ -9,7 +9,10 @@ const Contact = () => {
         If you find any mistakes in the lyrics or if you need any song lyrics in
         this app, kindly mail us
       </Text>
-      <View>
+      <Text style={{ fontSize: 22,textAlign:"justify", paddingHorizontal:15, marginTop:15 }}>
+      ఒకవేళ ఎదైన పాటలో మీరు తప్పులు గమనిస్తే లేదా ఎదైన పాట మీకు ఈ ఆప్ లో కావలి అంటే mail చెయ్యండి
+      </Text>
+      <View style={{ marginTop:30}}>
       <Icon style={{position:"absolute"}} name="mail-sharp" size={30} />
       <TouchableOpacity
         onPress={() => Linking.openURL("mailto:samdeeven.lyricsapp@gmail.com")}

@@ -142,11 +142,12 @@ const Lyrics = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FAFAD2",
+    // backgroundColor: "#FAFAD2",
     paddingHorizontal: 15,
-    marginBottom: 56,
+    // marginBottom: 45,
   },
   videoBtn: {
+    marginTop:8,
     backgroundColor: "#E21717",
     padding: 5,
     width: 100,
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-evenly",
-    margin: 10,
+    marginHorizontal: 10,
   },
   button: {
     backgroundColor: "#333",
@@ -190,6 +191,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold",
     marginBottom: 10,
+    marginTop:10,
     color: "brown",
   },
   lyricsContainer: {

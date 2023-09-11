@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Vinnu Lyrics App_3",
+    "name": "Vinnu Lyrics App v1.0.3",
     "slug": "lyrics",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/app-icon.png",
     "userInterfaceStyle": "light",
@@ -30,6 +30,7 @@
     "web": {
       "favicon": "./assets/app-icon.png"
     },
+ 
     "extra": {
       "eas": {
         "projectId": "01984175-cade-4d78-98b4-259294d5a547"

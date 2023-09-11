@@ -83,8 +83,8 @@ const FilteredTitles = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    marginBottom: 85,
+    paddingHorizontal: 20,
+    marginBottom: 44,
   },
   errorContainer: {
     alignItems: "center",
@@ -101,11 +101,16 @@ const styles = StyleSheet.create({
     color: "brown",
   },
   titleContainer: {
-    marginBottom: 10,
-    borderWidth: 5,
-    borderColor: "darkgrey",
+    marginBottom: 8,
+    borderWidth: 4,
+    borderColor: "#049372",
+    backgroundColor: "#049372",
     borderRadius: 5,
     padding: 10,
+    borderTopLeftRadius: 18,
+    borderTopRightRadius: 5,
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 18,
   },
   title: {
     fontSize: 18,

@@ -96,8 +96,8 @@ const TitlesList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    marginBottom: 32,
+    paddingHorizontal: 20,
+    // marginBottom: 45,
   },
   darkContainer: {},
   alphabet: {
@@ -108,9 +108,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     marginBottom: 8,
     borderWidth: 4,
-    borderColor: "darkgrey",
+    borderColor: "#049372",
     padding: 10,
-    backgroundColor: "white",
+    backgroundColor: "#049372",
     borderTopLeftRadius: 18,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: "bold",
+    color:"white"
   },
 });
 

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Linking, SafeAreaView, ScrollView } from 'react-native'
 import React from 'react'
 import Icon from "react-native-vector-icons/Ionicons";
 import {
@@ -26,6 +26,8 @@ const About = () => {
     return <AppLoading />;
   }
   return (
+    <SafeAreaView>
+      <ScrollView>
     <View style={styles.container}>
       <Text style={[styles.aboutTextGreet]}>Praise the Lord</Text>
       <Text style={[styles.bibleVerse]}>“I will praise the LORD all my life; I will sing praise to my God as long as I live.”{"\n"}Psalm 146:2</Text>
@@ -36,12 +38,16 @@ const About = () => {
       <Text style={styles.youtubeText}>Open YouTube Channel</Text>
     </TouchableOpacity>
     </View>
+    </ScrollView>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
     container:{
         alignItems:"center",
+        bottom:50,
+        marginTop:20,
     },
     aboutTextGreet:{
       textAlign:"center",

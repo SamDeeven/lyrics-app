@@ -13,9 +13,10 @@ import {
   Poppins_600SemiBold,
   Poppins_600SemiBold_Italic,
   Poppins_700Bold,
-} from '@expo-google-fonts/poppins';
+} from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import { LinearGradient } from "expo-linear-gradient";
 
 function HorizontalCards() {
   const [isTelugu, setIsTelugu] = useState(false);
@@ -32,7 +33,7 @@ function HorizontalCards() {
   });
 
   if (!fontsLoad) {
-    return <AppLoading />
+    return <AppLoading />;
   }
   const data = [
     {
@@ -49,6 +50,17 @@ function HorizontalCards() {
     },
     {
       id: uuid.v4(),
+      title: "Subscribe to our Church Channel",
+      teluguTitle: "మన సంఘ ఆరధన...",
+      text: "You will find our Church Service Live videos",
+      teluguText:
+        "మన సంఘ ఆరాధన చూడడానికి ఈ యూట్యూబ్ చానల్ ని subscribe చెయ్యండి",
+      image: "",
+      link: "https://www.youtube.com/@HSBCKAKINADA/streams",
+      buttonName: "Subscribe",
+    },
+    {
+      id: uuid.v4(),
       title: "About this App",
       teluguTitle: "ఈ యాప్ గురించి",
       text: "Hello, I am Sam Deeven (Vinnu). I hope this app helps you in your church service for Song Lyrics without internet.",
@@ -57,7 +69,6 @@ function HorizontalCards() {
       image: "",
       link: "",
       buttonName: "",
-      icon: "",
     },
     {
       id: uuid.v4(),
@@ -65,11 +76,10 @@ function HorizontalCards() {
       teluguTitle: "మీకు ఇష్టమైన పాటను వెతకండి",
       text: "Use the search feature on the the top of the Home Screen, and get song suggestions based on your searched words.",
       teluguText:
-        "నచ్చిన పాటని వెతకడం కోసం పైన సెర్చ్(search) మీద నొక్కి పాటని టైప్ చేసి చూడండి. లేదా, మీరు టైప్ చెస్తున్నపుడు ఆ పదాలతో ఉన్న పాటల జాబితా(list) లో కూడా మీరు వెతకచ్చు.",
+        "నచ్చిన పాటని వెతకడం కోసం పైన సెర్చ్(search) మీద నొక్కి పాటని టైప్ చేసి చూడండి. లేదా, మీరు టైప్ చెస్తున్నప్పుడు ఆ పదాలతో ఉన్న పాటల జాబితా(list) లో కూడా మీరు వెతకచ్చు.",
       image: "",
       link: "",
       buttonName: "",
-      icon: "",
     },
     {
       id: uuid.v4(),
@@ -77,34 +87,32 @@ function HorizontalCards() {
       teluguTitle: "ఏదైన 5 పాటలు",
       text: "When you press the '5 Random Songs' button, a list of 5 random songs will be generated, saving your time in searching for a song. If the generated list is not suitable for you at that moment, you can refresh the page by pulling the screen down to get new list.",
       teluguText:
-        "'5 Random Songs' బటన్ నొక్కితే, ఏదైన 5 పాటలు జాబితా వస్తాది. దీనివల్ల మీ సమయం పాట వెకడం లొ వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్ ని కిందకి లాగండి, అప్పుదు వేరే 5 పాటలు జాబితా వస్తుంది.",
+        "'5 Random Songs' బటన్ నొక్కితే, ఏదైన 5 పాటల జాబితా వస్తాది. దీనివల్ల మీ సమయం పాట వెకడం లొ వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్(screen) ని కిందకి లాగండి, అప్పుడు వేరే 5 పాటలు జాబితా వస్తుంది.",
       image: "",
       link: "",
       buttonName: "",
-      icon: "",
     },
     {
       id: uuid.v4(),
       title: "Adjust the font size for Lyrics",
       teluguTitle: "పాట అక్షరాల పరిమాణం/కొలత మార్చుకోవచు",
-      text: "Adjust the font size/letter size for Lyrics page according to your convinience with the available 3 options.",
+      text: "Adjust the font size/letter size for Lyrics screen according to your convinience with the available 3 options.",
       teluguText:
-        "ఇవ్వబడిన 3 ఎంపికలలో పాట లో ఉన్న అక్షరాల పరిమాణం ని మీ అనుకూలతను బత్తి సర్దుకొండి.",
+        "ఇవ్వబడిన 3 ఎంపికలలో పాట లో ఉన్న అక్షరాల పరిమాణం ని మీ అనుకూలతను బట్టి సర్దుకొండి.",
       image: "",
       link: "",
       buttonName: "",
-      icon: "",
     },
     {
       id: uuid.v4(),
       title: "Video Song Option",
       teluguTitle: "వీడియో సాంగ్",
       text: "On the top of Lyrics screen, there will be a 'Video Song' button. When you press it, it will play the YouTube video of that song",
-      teluguText: "పాట చూస్తున్నప్పుడు పైన భాగం లో 'Video Song' అని ఒక బటన్ ఉంటుంది. అది నొక్కితే YouTube లో ఆ పాట వస్తాది.",
+      teluguText:
+        "పాట చూస్తున్నప్పుడు పైన భాగం లో 'Video Song' అని ఒక బటన్ ఉంటుంది. అది నొక్కితే YouTube లో ఆ పాట వస్తాది.",
       image: "",
       link: "",
       buttonName: "",
-      icon: "",
     },
   ];
 
@@ -114,79 +122,81 @@ function HorizontalCards() {
 
   const renderItem = ({ item }) => (
     <View style={styles.card}>
-      <Text
-        style={{
-          color: "brown",
-          fontSize: 21,
-          textAlign: "auto",
-          fontFamily:"Poppins_600SemiBold"
-        }}
+      <LinearGradient
+        start={{ x: 0, y: 1 }}
+        end={{ x: 1, y: 0 }}
+        colors={["#0a3431", "#407A52", "#4a9b7f", "#1c3e35"]}
+        style={styles.gradient}
       >
-        {isTelugu ? item.teluguTitle : item.title}
-      </Text>
-      <Text
-        style={{
-          fontSize: 17,
-          marginTop: 0,
-          marginBottom: 6,
-          textAlign: "justify",
-          fontFamily:"Poppins_500Medium",
-        }}
-      >
-        {isTelugu ? item.teluguText : item.text}
-      </Text>
-
-      {item.buttonName && item.icon && (
-        <View
+        <Text
           style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
+            color: "#E5D68A",
+            fontSize: 18,
+            textAlign: "auto",
+            fontFamily: "Poppins_600SemiBold",
           }}
         >
-          <TouchableOpacity
-            onPress={() => Linking.openURL(item.link)}
-            style={{ padding: 10, width: 130 }}
-          >
-            <Text
-              style={{
-                padding: 6,
-                backgroundColor: "red",
-                textAlign: "center",
-                color: "white",
-                borderRadius: 10,
-                fontSize: 18,
-                fontFamily:"Poppins_400Regular"
-              }}
-            >
-              {item.buttonName}
-            </Text>
-          </TouchableOpacity>
-          <Icon
-            onPress={() => Linking.openURL(item.link)}
-            style={{ marginTop: 1 }}
-            name={item.icon}
-            size={56}
-            color="red"
-          />
-        </View>
-      )}
-      <TouchableOpacity
-        onPress={() => handleLanguage()}
-        style={{
-          position: "absolute",
-          bottom: 8,
-          padding: 5,
-          backgroundColor: "lightblue",
-          width: 150,
-          borderRadius: 5,
-          alignSelf: "center",
-        }}
-      >
-        <Text style={{ textAlign: "center", fontSize: 17,fontFamily:"" }}>
-          {isTelugu ? "Read in English" : "తెలుగు లో చదవండి"}
+          {isTelugu ? item.teluguTitle : item.title}
         </Text>
-      </TouchableOpacity>
+        <Text
+          style={{
+            fontSize: 14,
+            marginTop: 0,
+            marginBottom: 6,
+            textAlign: "justify",
+            fontFamily: "Poppins_400Regular",
+            color:"#ECF0F1"
+          }}
+        >
+          {isTelugu ? item.teluguText : item.text}
+        </Text>
+
+        {item.buttonName && (
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <TouchableOpacity
+              onPress={() => Linking.openURL(item.link)}
+              style={{ width: 130, alignItems:"center" }}
+            >
+              <Text
+                style={{
+                  marginHorizontal:10,
+                  padding: 6,
+                  backgroundColor: "red",
+                  textAlign: "center",
+                  color: "white",
+                  borderRadius: 10,
+                  fontSize: 15,
+                  fontFamily: "Poppins_400Regular",
+                }}
+              >
+                {item.buttonName}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        )}
+        <TouchableOpacity
+          onPress={() => handleLanguage()}
+          style={{
+            position: "absolute",
+            bottom: 8,
+            padding: 3,
+            backgroundColor: "lightblue",
+            width: 130,
+            borderRadius: 5,
+           right:4,
+          }}
+        >
+          <Text style={{textAlign:"center", fontSize: 15, fontFamily: "" }}>
+            {isTelugu ? "Read in English" : "తెలుగు లో చదవండి"}
+          </Text>
+        </TouchableOpacity>
+      </LinearGradient>
     </View>
   );
   return (
@@ -202,17 +212,20 @@ function HorizontalCards() {
   );
 }
 const styles = StyleSheet.create({
-  container: {
-  },
+  container: {},
   card: {
-    width: 320,
-    height: 285,
-    padding: 12,
-    backgroundColor: "white",
-    marginHorizontal: 8,
-    borderRadius: 10,
-    borderColor: "#ccc",
-    borderWidth: 1,
+    width: 365,
+    height: 190,
+    // backgroundColor: "#242B2E",
+    marginHorizontal: 5,
+    // borderRadius: 10,
+    // borderColor: "#392e4a",
+    // borderWidth: 1,
+  },
+  gradient: {
+    flex: 1,
+    borderRadius:10,
+    padding:6
   },
 });
 

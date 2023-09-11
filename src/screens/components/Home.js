@@ -7,7 +7,9 @@ import {
   StyleSheet,
   TextInput,
   Keyboard,
+  SafeAreaView,
   ScrollView,
+  TouchableWithoutFeedback,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.js";
@@ -65,6 +67,12 @@ const Home = () => {
       keyboardDidHideListener.remove();
     };
   }, []);
+
+  const handleTapOutside = () => {
+    if (isKeyboardActive) {
+      Keyboard.dismiss();
+    }
+  };
 
   useEffect(() => {
     if (inputSearch.trim() === "") {
@@ -166,76 +174,92 @@ const Home = () => {
   );
 
   return (
-    <View>
-    <View style={[styles.container]}>
-      <View style={styles.inputBoxContainer}>
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Search Song / పాటను వెతకండి"
-          value={inputSearch}
-          onChangeText={(text) => {
-            setInputSearch(text);
-          }}
-          onSubmitEditing={handleSearch}
-          maxLength={30}
-          selectionColor={"brown"}
-          backgroundColor="white"
-        />
-        {isKeyboardActive && (
-          <Icon
-            onPress={clearText}
-            style={styles.closeBtn}
-            name="close-sharp"
-            size={30}
+    <SafeAreaView>
+      <TouchableWithoutFeedback onPress={handleTapOutside}>
+        <View style={[styles.container]}>
+          <View style={styles.inputBoxContainer}>
+            <View style={{ flexDirection: "row" }}>
+              <TextInput
+                style={styles.searchInput}
+                placeholder="Search Song / పాటను వెతకండి"
+                value={inputSearch}
+                onChangeText={(text) => {
+                  setInputSearch(text);
+                }}
+                onSubmitEditing={handleSearch}
+                maxLength={30}
+                selectionColor={"brown"}
+                backgroundColor="white"
+                onFocus={() => setIsKeyboardActive(true)}
+              />
+            </View>
+            {isKeyboardActive && (
+              <Icon
+                onPress={clearText}
+                style={styles.closeBtn}
+                name="close-sharp"
+                size={30}
+              />
+            )}
+            {suggestions.length > 0 && (
+              <ScrollView style={styles.suggestionContainer}>
+                {suggestions.map((suggestion) => (
+                  <TouchableOpacity
+                    key={suggestion}
+                    style={styles.suggestionItem}
+                    onPress={() => handleSuggestionPress(suggestion)}
+                  >
+                    <Text
+                      numberOfLines={1}
+                      ellipsizeMode="tail"
+                      style={styles.suggestionText}
+                    >
+                      {suggestion}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            )}
+          </View>
+          <FlatList
+            data={Object.keys(alphabetData)}
+            renderItem={renderAlphabetItem}
+            keyExtractor={(item) => item}
+            numColumns={6}
+            contentContainerStyle={styles.alphabetContainer}
           />
-        )}
-        {suggestions.length > 0 && (
-          <ScrollView style={styles.suggestionContainer}>
-            {suggestions.map((suggestion) => (
-              <TouchableOpacity
-                key={suggestion}
-                style={styles.suggestionItem}
-                onPress={() => handleSuggestionPress(suggestion)}
-              >
-                <Text numberOfLines={1} ellipsizeMode="tail" style={styles.suggestionText}>{suggestion}</Text>
-              </TouchableOpacity>
-            ))}
+
+          <ScrollView>
+            <TouchableOpacity
+              style={styles.randomBtn}
+              onPress={navigateToRandomTitles}
+            >
+              <Text style={styles.randomBtnText}>5 Random Songs</Text>
+            </TouchableOpacity>
           </ScrollView>
-        )}
-      </View>
-      <FlatList
-        data={Object.keys(alphabetData)}
-        renderItem={renderAlphabetItem}
-        keyExtractor={(item) => item}
-        numColumns={6}
-        contentContainerStyle={styles.alphabetContainer}
-      />
-      <TouchableOpacity
-        style={styles.randomBtn}
-        onPress={navigateToRandomTitles}
-      >
-        <Text style={styles.randomBtnText}>5 Random Songs</Text>
-      </TouchableOpacity>
-      </View>
-      <View style={styles.horizontalCards}>
-          <HorizontalCards />
         </View>
-    </View>
+      </TouchableWithoutFeedback>
+
+      <View style={styles.horizontalCards}>
+        <HorizontalCards />
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 18,
-    bottom:22,
+    paddingHorizontal: 18,
+    // bottom: 22,
   },
   inputBoxContainer: {},
   searchInput: {
     fontFamily: "Poppins_500Medium",
-    height: 55,
+    height: 40,
+    width: 275,
+    paddingTop: 6,
     margin: 12,
     borderWidth: 1,
-    paddingTop: 5,
     paddingHorizontal: 25,
     alignContent: "center",
     justifyContent: "center",
@@ -243,18 +267,22 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 25,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
-    fontSize: 18,
+    fontSize: 15,
   },
   closeBtn: {
     position: "absolute",
     margin: 12,
-    paddingTop: 11,
-    right: 15,
+    paddingTop: 4,
+    right: 80,
+  },
+  micIcon: {
+    paddingTop: 6,
+    marginTop: 6,
   },
   suggestionContainer: {
     maxHeight: 300,
     position: "absolute",
-    top: 70,
+    top: 60,
     zIndex: 1,
     left: 16,
     right: 16,
@@ -267,45 +295,52 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     margin: 3,
     padding: 10,
-    borderWidth: 0.5,
+    borderWidth: 0.7,
+    borderRadius: 15,
   },
   suggestionText: {
     fontSize: 16,
   },
   alphabetContainer: {
     justifyContent: "space-between",
+    marginTop: -3,
   },
   alphabetItem: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     margin: 3,
-    height: 45,
-    backgroundColor: "#eee",
-    borderRadius: 20,
+    height: 40,
+    backgroundColor: "#02B290",
+    borderRadius: 18,
   },
   alphabetText: {
-    fontSize: 23,
-    fontWeight: "bold",
+    fontSize: 25,
+    fontFamily: "Poppins_600SemiBold",
+    textAlign: "center",
   },
 
   randomBtn: {
-    backgroundColor: "#CAD5E2",
-    width: 175,
-    padding: 8,
+    backgroundColor: "#02B290",
+    width: 250,
+    padding: 5,
     marginTop: 8,
     borderRadius: 10,
     alignSelf: "center",
   },
   randomBtnText: {
     color: "#120E43",
-    fontSize: 20,
+    fontSize: 22,
     textAlign: "center",
+    fontFamily: "Poppins_600SemiBold",
   },
-  horizontalCards:{
-    marginTop:25,
-    bottom:50,
-    marginLeft:5
+  horizontalCards: {
+    marginTop: 15,
+    // top: 315,
+    marginLeft: 5,
+    marginRight: 5,
+
+    // position: "absolute",
   },
   darkModeContainer: {
     backgroundColor: "black",
