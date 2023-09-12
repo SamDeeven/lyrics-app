@@ -9,8 +9,9 @@
     "splash": {
       "image": "./assets/app-splashscreen.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "white"
     },
+   
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -22,7 +23,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/app-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "white"
       },
       "package": "com.samdeeven.lyrics",
       "versionCode": 1

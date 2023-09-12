@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Text,
@@ -72,6 +72,8 @@ const TitlesList = () => {
   const handleTitlePress = (item) => {
     navigation.navigate("Lyrics", { titleItem: item });
   };
+
+  console.log("Loaded Titles==>");
   return (
     <View style={[styles.container, isDarkMode && styles.darkContainer]}>
       <Text style={styles.alphabet}>{alphabet}</Text>
@@ -86,6 +88,9 @@ const TitlesList = () => {
             <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
               {item.title}
             </Text>
+            <Text style={styles.genre}>Genre: {item.genre}</Text>
+            <Text style={styles.timeSignature}>Time Signature: {item.timeSignature}</Text>
+            {item.artist && <Text style={styles.artist}>Artist: {item.artist}</Text>}
           </TouchableOpacity>
         )}
       />
@@ -119,7 +124,19 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "lightyellow",
+  },
+  genre:{
+    fontSize:14,
     color:"white"
+  },
+  timeSignature:{
+    fontSize:14,
+    color:"white"
+  },
+  artist:{
+    fontSize:12,
+    color:"lightpink"
   },
 });
 

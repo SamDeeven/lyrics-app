@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, StatusBar, SafeAreaView } from "react-native";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./src/screens/components/Home";
@@ -16,8 +16,7 @@ import AppLoading from "expo-app-loading";
 import Icon from "react-native-vector-icons/Ionicons";
 import Contact from "./src/screens/components/Contact";
 import About from "./src/screens/components/About";
-import Theme from "./src/screens/components/Theme";
-import { AppRegistry } from 'react-native';
+import CustomHeader from "./src/screens/CustomHeader";
 
 const Stack = createStackNavigator();
 
@@ -27,7 +26,6 @@ const App = () => {
   const handleOptions = () => {
     setShowOptions(!showOptions);
   };
-
   const [fontsLoad] = useFonts({
     Poppins_800ExtraBold,
   });
@@ -38,6 +36,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
+      <StatusBar backgroundColor="#02B290" barStyle="light-content"/>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
@@ -45,65 +44,10 @@ const App = () => {
             name="Home"
             component={Home}
             options={({navigation}) => ({
-              headerTitle: () => (
-                <Text
-                  style={{
-                    fontFamily: "Poppins_800ExtraBold",
-                    fontSize: 25,
-                    bottom: 25,
-                  }}
-                >
-                  Index
-                </Text>
-              ),
-              headerRightContainerStyle: {},
-
-              headerLeft: () => (
-                <View>
-                  {showOptions ? (
-                    <View>
-                      <Icon
-                        onPress={() => handleOptions()}
-                        name="close-sharp"
-                        size={40}
-                        style={{ marginLeft: 18, bottom: 25 }}
-                      />
-                      <View style={styles.menuContainer}>
-                        <TouchableOpacity
-                          style={styles.menuItemsBtn}
-                          onPress={() => {
-                            navigation.navigate("Contact");
-                            setShowOptions(!showOptions);
-                          }}
-                        >
-                          <Text style={styles.menuItemsBtnText}>Contact</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                          onPress={() => {
-                            navigation.navigate("About");
-                            setShowOptions(!showOptions);
-                          }}
-                          style={styles.menuItemsBtn}
-                        >
-                          <Text style={styles.menuItemsBtnText}>About</Text>
-                        </TouchableOpacity>
-                      </View>
-                    </View>
-                  ) : (
-                    <Icon
-                      onPress={() => handleOptions()}
-                      name="menu-sharp"
-                      size={40}
-                      style={{ marginLeft: 18, bottom: 25 }}
-                    />
-                  )}
-                </View>
-              ),
+              header: () => <CustomHeader homeStyle={true} title="Index" showBackButton={false} showHomeButton={false}/>,
+              headerMode:"float",
               headerStyle: {
                 backgroundColor: "#02B290",
-                // height: 80,
-              },
-              headerBackgroundContainerStyle: {
                 height: 70,
               },
               headerTitleStyle: {
@@ -120,45 +64,44 @@ const App = () => {
             name="TitlesList"
             component={TitlesList}
             options={({ navigation }) => ({
-              headerTitle: () => (
-                <Text
-                  style={{
-                    fontFamily: "Poppins_800ExtraBold",
-                    fontSize: 25,
-                    bottom: 25,
-                  }}
-                >
-                  Titles List
-                </Text>
-              ),
-              headerRight: () => (
-                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                  <Icon
-                    name="home-sharp"
-                    size={35}
-                    color="black"
-                    style={{ marginRight: 18, bottom: 25 }}
-                  />
-                </TouchableOpacity>
-              ),
-              headerLeft: () => (
-                <Icon
-                  style={{ bottom: 28, left: 10 }}
-                  name="arrow-back-outline"
-                  size={25}
-                />
-              ),
-              headerBackgroundContainerStyle: {
-                height: 70,
-              },
+              // headerTitle: () => (
+              //   <Text
+              //     style={{
+              //       fontFamily: "Poppins_800ExtraBold",
+              //       fontSize: 25,
+              //       bottom: 5,
+              //     }}
+              //   >
+              //     Titles List
+              //   </Text>
+              // ),
+              // headerRight: () => (
+              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+              //     <Icon
+              //       name="home-sharp"
+              //       size={35}
+              //       color="black"
+              //       style={{ marginRight: 18, bottom: 5 }}
+              //     />
+              //   </TouchableOpacity>
+              // ),
+              // headerLeft: () => (
+              //   <Icon
+              //     style={{ bottom: 5, left: 10 }}
+              //     name="arrow-back-outline"
+              //     size={25}
+              //   />
+              // ),
+            header:()=> <CustomHeader title="Titles List" showBackButton={true} showHomeButton={true}/>,
               headerBackTitle: {
                 height: 49,
               },
+              headerMode:"float",
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
-                // height: 70,
+                height: 70,
               },
 
               cardStyle: {
@@ -171,42 +114,88 @@ const App = () => {
             name="FilteredTitles"
             component={FilteredTitles}
             options={({ navigation }) => ({
-              headerTitle: () => (
-                <Text
-                  style={{
-                    fontFamily: "Poppins_800ExtraBold",
-                    fontSize: 25,
-                    bottom: 25,
-                  }}
-                >
-                  Filtered Titles
-                </Text>
-              ),
-              headerRight: () => (
-                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                  <Icon
-                    name="home-sharp"
-                    size={35}
-                    color="black"
-                    style={{ marginRight: 18, bottom: 25 }}
-                  />
-                </TouchableOpacity>
-              ),
-              headerBackgroundContainerStyle: {
-                height: 70,
-              },
-              headerLeft: () => (
-                <Icon
-                  style={{ bottom: 25, left: 10 }}
-                  name="arrow-back-outline"
-                  size={25}
-                />
-              ),
+              // headerTitle: () => (
+              //   <Text
+              //     style={{
+              //       fontFamily: "Poppins_800ExtraBold",
+              //       fontSize: 25,
+              //       bottom: 5,
+              //     }}
+              //   >
+              //     Filtered Titles
+              //   </Text>
+              // ),
+              // headerRight: () => (
+              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+              //     <Icon
+              //       name="home-sharp"
+              //       size={35}
+              //       color="black"
+              //       style={{ marginRight: 18, bottom: 5 }}
+              //     />
+              //   </TouchableOpacity>
+              // ),
+              // // headerBackgroundContainerStyle: {
+              // //   height: 70,
+              // // },
+              // headerLeft: () => (
+              //   <Icon
+              //     style={{ bottom: 5, left: 10 }}
+              //     name="arrow-back-outline"
+              //     size={25}
+              //   />
+              // ),
+              header: () => <CustomHeader title="Filtered Titles" showBackButton={true} showHomeButton={true}/>,
+              headerMode:"float",
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
-                // height: 70,
+                height: 70,
+              },
+              cardStyle: { backgroundColor: "#ECF0F1" },
+            })}
+          />
+           <Stack.Screen
+            name="RandomTitles"
+            component={RandomTitles}
+            options={({ navigation }) => ({
+              // headerTitle: () => (
+              //   <Text
+              //     style={{
+              //       fontFamily: "Poppins_800ExtraBold",
+              //       fontSize: 25,
+              //       bottom: 5,
+              //     }}
+              //   >
+              //     Random Titles
+              //   </Text>
+              // ),
+              // headerRight: () => (
+              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+              //     <Icon
+              //       name="home-sharp"
+              //       size={35}
+              //       color="black"
+              //       style={{ marginRight: 18, bottom: 5 }}
+              //     />
+              //   </TouchableOpacity>
+              // ),
+              // headerLeft: () => (
+              //   <Icon
+              //     style={{ bottom: 5, left: 10 }}
+              //     name="arrow-back-outline"
+              //     size={25}
+              //   />
+              // ),
+              header: () => <CustomHeader title="Random Titles" showBackButton={true} showHomeButton={true}/>,
+             headerMode:"float",
+              
+              headerTitleAlign: "center",
+              headerStyle: {
+                backgroundColor: "#02B290",
+                borderBottomWidth: 2,
+                height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
             })}
@@ -215,42 +204,41 @@ const App = () => {
             name="Lyrics"
             component={Lyrics}
             options={({ navigation }) => ({
-              headerTitle: () => (
-                <Text
-                  style={{
-                    fontFamily: "Poppins_800ExtraBold",
-                    fontSize: 25,
-                    bottom: 25,
-                  }}
-                >
-                  Lyrics
-                </Text>
-              ),
-              headerRight: () => (
-                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                  <Icon
-                    name="home-sharp"
-                    size={35}
-                    color="black"
-                    style={{ marginRight: 18, bottom: 25 }}
-                  />
-                </TouchableOpacity>
-              ),
-              headerLeft: () => (
-                <Icon
-                  style={{ bottom: 28, left: 10 }}
-                  name="arrow-back-outline"
-                  size={25}
-                />
-              ),
-              headerBackgroundContainerStyle: {
-                height: 70,
-              },
+              // headerTitle: () => (
+              //   <Text
+              //     style={{
+              //       fontFamily: "Poppins_800ExtraBold",
+              //       fontSize: 25,
+              //       bottom: 5,
+              //     }}
+              //   >
+              //     Lyrics
+              //   </Text>
+              // ),
+              // headerRight: () => (
+              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+              //     <Icon
+              //       name="home-sharp"
+              //       size={35}
+              //       color="black"
+              //       style={{ marginRight: 18, bottom: 5 }}
+              //     />
+              //   </TouchableOpacity>
+              // ),
+              // headerLeft: () => (
+              //   <Icon
+              //     style={{ bottom: 5, left: 10 }}
+              //     name="arrow-back-outline"
+              //     size={25}
+              //   />
+              // ),
+              header: () => <CustomHeader title="Lyrics" showBackButton={true} showHomeButton={true}/>,
+             headerMode:"float",
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
-                // height: 70,
+                height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
             })}
@@ -259,42 +247,42 @@ const App = () => {
             name="About"
             component={About}
             options={({ navigation }) => ({
-              headerTitle: () => (
-                <Text
-                  style={{
-                    fontFamily: "Poppins_800ExtraBold",
-                    fontSize: 25,
-                    bottom: 25,
-                  }}
-                >
-                  About
-                </Text>
-              ),
-              headerRight: () => (
-                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                  <Icon
-                    name="home-sharp"
-                    size={35}
-                    color="black"
-                    style={{ marginRight: 18, bottom: 25 }}
-                  />
-                </TouchableOpacity>
-              ),
-              headerLeft: () => (
-                <Icon
-                  style={{ bottom: 28, left: 10 }}
-                  name="arrow-back-outline"
-                  size={25}
-                />
-              ),
-              headerBackgroundContainerStyle: {
-                height: 70,
-              },
+              // headerTitle: () => (
+              //   <Text
+              //     style={{
+              //       fontFamily: "Poppins_800ExtraBold",
+              //       fontSize: 25,
+              //       bottom: 25,
+              //     }}
+              //   >
+              //     About
+              //   </Text>
+              // ),
+              // headerRight: () => (
+              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+              //     <Icon
+              //       name="home-sharp"
+              //       size={35}
+              //       color="black"
+              //       style={{ marginRight: 18, bottom: 25 }}
+              //     />
+              //   </TouchableOpacity>
+              // ),
+              // headerLeft: () => (
+              //   <Icon
+              //     style={{ bottom: 28, left: 10 }}
+              //     name="arrow-back-outline"
+              //     size={25}
+              //   />
+              // ),
+              header: () => <CustomHeader title="About" showBackButton={true} showHomeButton={true}/>,
+              headerMode:"float",
+             
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
-                // height: 70,
+                height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
             })}
@@ -303,90 +291,47 @@ const App = () => {
             name="Contact"
             component={Contact}
             options={({ navigation }) => ({
-              headerTitle: () => (
-                <Text
-                  style={{
-                    fontFamily: "Poppins_800ExtraBold",
-                    fontSize: 25,
-                    bottom: 25,
-                  }}
-                >
-                  Contact
-                </Text>
-              ),
-              headerRight: () => (
-                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                  <Icon
-                    name="home-sharp"
-                    size={35}
-                    color="black"
-                    style={{ marginRight: 18, bottom: 25 }}
-                  />
-                </TouchableOpacity>
-              ),
-              headerLeft: () => (
-                <Icon
-                  style={{ bottom: 28, left: 10 }}
-                  name="arrow-back-outline"
-                  size={25}
-                />
-              ),
-              headerBackgroundContainerStyle: {
-                height: 70,
-              },
+              // headerTitle: () => (
+              //   <Text
+              //     style={{
+              //       fontFamily: "Poppins_800ExtraBold",
+              //       fontSize: 25,
+              //       bottom: 5,
+              //     }}
+              //   >
+              //     Contact
+              //   </Text>
+              // ),
+              // headerRight: () => (
+              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+              //     <Icon
+              //       name="home-sharp"
+              //       size={35}
+              //       color="black"
+              //       style={{ marginRight: 18, bottom: 5 }}
+              //     />
+              //   </TouchableOpacity>
+              // ),
+              // headerLeft: () => (
+              //   <Icon
+              //     style={{ bottom: 28, left: 10 }}
+              //     name="arrow-back-outline"
+              //     size={25}
+              //   />
+              // ),
+              header: () => <CustomHeader title="Contact" showBackButton={true} showHomeButton={true}/>,
+              headerMode:"float",
+
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
-                // height: 70,
-              },
-              cardStyle: { backgroundColor: "#ECF0F1" },
-            })}
-          />
-          <Stack.Screen
-            name="RandomTitles"
-            component={RandomTitles}
-            options={({ navigation }) => ({
-              headerTitle: () => (
-                <Text
-                  style={{
-                    fontFamily: "Poppins_800ExtraBold",
-                    fontSize: 25,
-                    bottom: 25,
-                  }}
-                >
-                  Random Titles
-                </Text>
-              ),
-              headerRight: () => (
-                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                  <Icon
-                    name="home-sharp"
-                    size={35}
-                    color="black"
-                    style={{ marginRight: 18, bottom: 25 }}
-                  />
-                </TouchableOpacity>
-              ),
-              headerLeft: () => (
-                <Icon
-                  style={{ bottom: 28, left: 10 }}
-                  name="arrow-back-outline"
-                  size={25}
-                />
-              ),
-              headerBackgroundContainerStyle: {
                 height: 70,
               },
-              headerTitleAlign: "center",
-              headerStyle: {
-                backgroundColor: "#02B290",
-                borderBottomWidth: 2,
-                // height: 70,
-              },
               cardStyle: { backgroundColor: "#ECF0F1" },
             })}
           />
+         
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

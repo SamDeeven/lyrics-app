@@ -9,7 +9,7 @@ const RandomTitles = ({navigation}) => {
         const allTitles = Object.values(songsData).flat();
         const randomIndexes = [];
     
-        while (randomIndexes.length < 5) {
+        while (randomIndexes.length < 6) {
           const randomIndex = Math.floor(Math.random() * allTitles.length);
           if (!randomIndexes.includes(randomIndex)) {
             randomIndexes.push(randomIndex);
@@ -63,12 +63,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+    color:"white"
   },
   titleContainer: {
     marginBottom: 10,
     borderWidth: 4,
-    borderColor: 'darkgrey',
+    borderColor: "#049372",
     padding: 10,
+    backgroundColor: "#049372",
     borderTopLeftRadius: 18,
     borderTopRightRadius:5,
     borderBottomLeftRadius:5,

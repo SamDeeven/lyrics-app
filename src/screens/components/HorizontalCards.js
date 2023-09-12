@@ -83,11 +83,11 @@ function HorizontalCards() {
     },
     {
       id: uuid.v4(),
-      title: "5 Random Songs Feature",
-      teluguTitle: "ఏదైన 5 పాటలు",
-      text: "When you press the '5 Random Songs' button, a list of 5 random songs will be generated, saving your time in searching for a song. If the generated list is not suitable for you at that moment, you can refresh the page by pulling the screen down to get new list.",
+      title: "6 Random Songs Feature",
+      teluguTitle: "ఏదైన 6 పాటలు",
+      text: "When you press the '6 Random Songs' button, a list of 6 random songs will be generated, saving your time in searching for a song. If the generated list is not suitable for you at that moment, you can refresh the page by pulling the screen down to get new list.",
       teluguText:
-        "'5 Random Songs' బటన్ నొక్కితే, ఏదైన 5 పాటల జాబితా వస్తాది. దీనివల్ల మీ సమయం పాట వెకడం లొ వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్(screen) ని కిందకి లాగండి, అప్పుడు వేరే 5 పాటలు జాబితా వస్తుంది.",
+        "'5 Random Songs' బటన్ నొక్కితే, ఏదైన 6 పాటల జాబితా వస్తాది. దీనివల్ల మీ సమయం పాట వెకడం లొ వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్(screen) ని కిందకి లాగండి, అప్పుడు వేరే 5 పాటలు జాబితా వస్తుంది.",
       image: "",
       link: "",
       buttonName: "",
@@ -202,6 +202,7 @@ function HorizontalCards() {
   return (
     <View style={styles.container}>
       <FlatList
+      nestedScrollEnabled={true}
         showsHorizontalScrollIndicator={false}
         data={data}
         horizontal={true}
@@ -215,7 +216,7 @@ const styles = StyleSheet.create({
   container: {},
   card: {
     width: 365,
-    height: 190,
+    height: 250,
     // backgroundColor: "#242B2E",
     marginHorizontal: 5,
     // borderRadius: 10,

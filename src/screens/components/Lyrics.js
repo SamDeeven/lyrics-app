@@ -174,6 +174,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 14,
     borderWidth: 1,
+    marginTop:10
   },
   buttonText: {
     textAlign: "center",

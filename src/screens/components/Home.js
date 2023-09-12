@@ -14,24 +14,12 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.js";
 import {
-  Poppins_100Thin,
-  Poppins_100Thin_Italic,
-  Poppins_200ExtraLight,
-  Poppins_200ExtraLight_Italic,
   Poppins_300Light,
-  Poppins_300Light_Italic,
   Poppins_400Regular,
-  Poppins_400Regular_Italic,
   Poppins_500Medium,
-  Poppins_500Medium_Italic,
   Poppins_600SemiBold,
-  Poppins_600SemiBold_Italic,
   Poppins_700Bold,
-  Poppins_700Bold_Italic,
   Poppins_800ExtraBold,
-  Poppins_800ExtraBold_Italic,
-  Poppins_900Black,
-  Poppins_900Black_Italic,
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
@@ -72,7 +60,12 @@ const Home = () => {
     if (isKeyboardActive) {
       Keyboard.dismiss();
     }
-  };
+  }
+
+  const clearSuggestions = () => {
+    setSuggestions([])    
+  }
+
 
   useEffect(() => {
     if (inputSearch.trim() === "") {
@@ -100,24 +93,12 @@ const Home = () => {
   }, [inputSearch]);
 
   const [fontsLoad] = useFonts({
-    Poppins_100Thin,
-    Poppins_100Thin_Italic,
-    Poppins_200ExtraLight,
-    Poppins_200ExtraLight_Italic,
     Poppins_300Light,
-    Poppins_300Light_Italic,
     Poppins_400Regular,
-    Poppins_400Regular_Italic,
     Poppins_500Medium,
-    Poppins_500Medium_Italic,
     Poppins_600SemiBold,
-    Poppins_600SemiBold_Italic,
     Poppins_700Bold,
-    Poppins_700Bold_Italic,
     Poppins_800ExtraBold,
-    Poppins_800ExtraBold_Italic,
-    Poppins_900Black,
-    Poppins_900Black_Italic,
   });
 
   if (!fontsLoad) {
@@ -175,91 +156,103 @@ const Home = () => {
 
   return (
     <SafeAreaView>
-      <TouchableWithoutFeedback onPress={handleTapOutside}>
-        <View style={[styles.container]}>
-          <View style={styles.inputBoxContainer}>
-            <View style={{ flexDirection: "row" }}>
-              <TextInput
-                style={styles.searchInput}
-                placeholder="Search Song / పాటను వెతకండి"
-                value={inputSearch}
-                onChangeText={(text) => {
-                  setInputSearch(text);
-                }}
-                onSubmitEditing={handleSearch}
-                maxLength={30}
-                selectionColor={"brown"}
-                backgroundColor="white"
-                onFocus={() => setIsKeyboardActive(true)}
+      <ScrollView keyboardShouldPersistTaps={"handled"} 
+       nestedScrollEnabled={true}
+      >
+        {/* <TouchableWithoutFeedback onPress={handleTapOutside && clearSuggestions}> */}
+          <View style={[styles.topContainer]}>
+            <View style={styles.inputBoxContainer}>
+              <View style={{ flexDirection: "row" }}>
+                <TextInput
+                  style={styles.searchInput}
+                  placeholder="Search Song / పాటను వెతకండి"
+                  value={inputSearch}
+                  onChangeText={(text) => {
+                    setInputSearch(text);
+                  }}
+                  onSubmitEditing={handleSearch}
+                  maxLength={30}
+                  selectionColor={"brown"}
+                  backgroundColor="white"
+                  onFocus={() => setIsKeyboardActive(true)}
+                  clearButtonMode="always"
+                />
+              </View>
+
+              {isKeyboardActive && inputSearch && (
+                <Icon
+                  onPress={clearText}
+                  style={styles.closeBtn}
+                  name="close-sharp"
+                  size={30}
+                />
+              )}
+
+              {suggestions.length > 0 && (
+                <ScrollView
+                  nestedScrollEnabled={true}
+                  style={styles.suggestionContainer}
+                >
+                  {suggestions.map((suggestion) => (
+                    <TouchableOpacity
+                      key={suggestion}
+                      style={styles.suggestionItem}
+                      onPress={() => handleSuggestionPress(suggestion)}
+                    >
+                      <Text
+                        numberOfLines={1}
+                        ellipsizeMode="tail"
+                        style={styles.suggestionText}
+                      >
+                        {suggestion}
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+              )}
+            </View>
+
+            <View>
+              <FlatList
+                data={Object.keys(alphabetData)}
+                renderItem={renderAlphabetItem}
+                keyExtractor={(item) => item}
+                numColumns={6}
+                contentContainerStyle={styles.alphabetContainer}
               />
             </View>
-            {isKeyboardActive && (
-              <Icon
-                onPress={clearText}
-                style={styles.closeBtn}
-                name="close-sharp"
-                size={30}
-              />
-            )}
-            {suggestions.length > 0 && (
-              <ScrollView style={styles.suggestionContainer}>
-                {suggestions.map((suggestion) => (
-                  <TouchableOpacity
-                    key={suggestion}
-                    style={styles.suggestionItem}
-                    onPress={() => handleSuggestionPress(suggestion)}
-                  >
-                    <Text
-                      numberOfLines={1}
-                      ellipsizeMode="tail"
-                      style={styles.suggestionText}
-                    >
-                      {suggestion}
-                    </Text>
-                  </TouchableOpacity>
-                ))}
-              </ScrollView>
-            )}
-          </View>
-          <FlatList
-            data={Object.keys(alphabetData)}
-            renderItem={renderAlphabetItem}
-            keyExtractor={(item) => item}
-            numColumns={6}
-            contentContainerStyle={styles.alphabetContainer}
-          />
 
-          <ScrollView>
             <TouchableOpacity
               style={styles.randomBtn}
               onPress={navigateToRandomTitles}
             >
-              <Text style={styles.randomBtnText}>5 Random Songs</Text>
+              <Text style={styles.randomBtnText}>6 Random Songs</Text>
             </TouchableOpacity>
-          </ScrollView>
-        </View>
-      </TouchableWithoutFeedback>
 
-      <View style={styles.horizontalCards}>
-        <HorizontalCards />
-      </View>
+            <View style={styles.horizontalCards}>
+              <HorizontalCards />
+            </View>
+          </View>
+        {/* </TouchableWithoutFeedback> */}
+      </ScrollView>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  topContainer: {
     paddingHorizontal: 18,
-    // bottom: 22,
   },
-  inputBoxContainer: {},
+  inputBoxContainer: {
+    alignSelf: "center",
+  },
   searchInput: {
     fontFamily: "Poppins_500Medium",
     height: 40,
-    width: 275,
+    width: 325,
     paddingTop: 6,
     margin: 12,
-    borderWidth: 1,
+    // borderWidth: 1,
     paddingHorizontal: 25,
     alignContent: "center",
     justifyContent: "center",
@@ -273,7 +266,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     margin: 12,
     paddingTop: 4,
-    right: 80,
+    right: 10,
+    bottom: 4,
   },
   micIcon: {
     paddingTop: 6,
@@ -303,21 +297,22 @@ const styles = StyleSheet.create({
   },
   alphabetContainer: {
     justifyContent: "space-between",
-    marginTop: -3,
+    // marginTop: -3,
   },
   alphabetItem: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     margin: 3,
-    height: 40,
+    height: 50,
     backgroundColor: "#02B290",
-    borderRadius: 18,
+    borderRadius: 20,
   },
   alphabetText: {
-    fontSize: 25,
+    fontSize: 30,
     fontFamily: "Poppins_600SemiBold",
     textAlign: "center",
+    marginVertical: 3,
   },
 
   randomBtn: {
@@ -337,8 +332,8 @@ const styles = StyleSheet.create({
   horizontalCards: {
     marginTop: 15,
     // top: 315,
-    marginLeft: 5,
-    marginRight: 5,
+    marginLeft: -10,
+    marginRight: -10,
 
     // position: "absolute",
   },
