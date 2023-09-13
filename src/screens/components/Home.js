@@ -123,13 +123,7 @@ const Home = () => {
 
     Object.keys(alphabetData).forEach((alphabet) => {
       alphabetData[alphabet].forEach((item) => {
-        if (
-          item.title.toLowerCase() === suggestion.toLowerCase() ||
-          (item.keywords &&
-            item.keywords.some(
-              (kw) => kw.toLowerCase() === suggestion.toLowerCase()
-            ))
-        ) {
+        if ((item.keywords && item.keywords.some((kw) => kw.toLowerCase() === suggestion.toLowerCase()))) {
           matchingTitlesArray.push(item);
         }
       });
@@ -297,14 +291,13 @@ const styles = StyleSheet.create({
   },
   alphabetContainer: {
     justifyContent: "space-between",
-    // marginTop: -3,
   },
   alphabetItem: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    margin: 3,
-    height: 50,
+    margin: 4,
+    height: 55,
     backgroundColor: "#02B290",
     borderRadius: 20,
   },

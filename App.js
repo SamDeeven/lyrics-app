@@ -17,6 +17,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import Contact from "./src/screens/components/Contact";
 import About from "./src/screens/components/About";
 import CustomHeader from "./src/screens/CustomHeader";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <StatusBar backgroundColor="#02B290" barStyle="light-content"/>
+      <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
@@ -45,7 +47,7 @@ const App = () => {
             component={Home}
             options={({navigation}) => ({
               header: () => <CustomHeader homeStyle={true} title="Index" showBackButton={false} showHomeButton={false}/>,
-              headerMode:"float",
+              animationEnabled:false,
               headerStyle: {
                 backgroundColor: "#02B290",
                 height: 70,
@@ -63,90 +65,29 @@ const App = () => {
           <Stack.Screen
             name="TitlesList"
             component={TitlesList}
-            options={({ navigation }) => ({
-              // headerTitle: () => (
-              //   <Text
-              //     style={{
-              //       fontFamily: "Poppins_800ExtraBold",
-              //       fontSize: 25,
-              //       bottom: 5,
-              //     }}
-              //   >
-              //     Titles List
-              //   </Text>
-              // ),
-              // headerRight: () => (
-              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-              //     <Icon
-              //       name="home-sharp"
-              //       size={35}
-              //       color="black"
-              //       style={{ marginRight: 18, bottom: 5 }}
-              //     />
-              //   </TouchableOpacity>
-              // ),
-              // headerLeft: () => (
-              //   <Icon
-              //     style={{ bottom: 5, left: 10 }}
-              //     name="arrow-back-outline"
-              //     size={25}
-              //   />
-              // ),
-            header:()=> <CustomHeader title="Titles List" showBackButton={true} showHomeButton={true}/>,
+            options={{
+              header:()=> <CustomHeader title="Titles List" showBackButton={true} showHomeButton={true}/>,
               headerBackTitle: {
                 height: 49,
               },
-              headerMode:"float",
+            animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
                 height: 70,
               },
-
               cardStyle: {
                 backgroundColor: "#ECF0F1",
-                height: 1200,
               },
-            })}
+            }}
           />
           <Stack.Screen
             name="FilteredTitles"
             component={FilteredTitles}
-            options={({ navigation }) => ({
-              // headerTitle: () => (
-              //   <Text
-              //     style={{
-              //       fontFamily: "Poppins_800ExtraBold",
-              //       fontSize: 25,
-              //       bottom: 5,
-              //     }}
-              //   >
-              //     Filtered Titles
-              //   </Text>
-              // ),
-              // headerRight: () => (
-              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-              //     <Icon
-              //       name="home-sharp"
-              //       size={35}
-              //       color="black"
-              //       style={{ marginRight: 18, bottom: 5 }}
-              //     />
-              //   </TouchableOpacity>
-              // ),
-              // // headerBackgroundContainerStyle: {
-              // //   height: 70,
-              // // },
-              // headerLeft: () => (
-              //   <Icon
-              //     style={{ bottom: 5, left: 10 }}
-              //     name="arrow-back-outline"
-              //     size={25}
-              //   />
-              // ),
+            options={{
               header: () => <CustomHeader title="Filtered Titles" showBackButton={true} showHomeButton={true}/>,
-              headerMode:"float",
+              animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
@@ -154,43 +95,14 @@ const App = () => {
                 height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
-            })}
+            }}
           />
            <Stack.Screen
             name="RandomTitles"
             component={RandomTitles}
-            options={({ navigation }) => ({
-              // headerTitle: () => (
-              //   <Text
-              //     style={{
-              //       fontFamily: "Poppins_800ExtraBold",
-              //       fontSize: 25,
-              //       bottom: 5,
-              //     }}
-              //   >
-              //     Random Titles
-              //   </Text>
-              // ),
-              // headerRight: () => (
-              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-              //     <Icon
-              //       name="home-sharp"
-              //       size={35}
-              //       color="black"
-              //       style={{ marginRight: 18, bottom: 5 }}
-              //     />
-              //   </TouchableOpacity>
-              // ),
-              // headerLeft: () => (
-              //   <Icon
-              //     style={{ bottom: 5, left: 10 }}
-              //     name="arrow-back-outline"
-              //     size={25}
-              //   />
-              // ),
+            options={{
               header: () => <CustomHeader title="Random Titles" showBackButton={true} showHomeButton={true}/>,
-             headerMode:"float",
-              
+            animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
@@ -198,42 +110,14 @@ const App = () => {
                 height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
-            })}
+            }}
           />
           <Stack.Screen
             name="Lyrics"
             component={Lyrics}
-            options={({ navigation }) => ({
-              // headerTitle: () => (
-              //   <Text
-              //     style={{
-              //       fontFamily: "Poppins_800ExtraBold",
-              //       fontSize: 25,
-              //       bottom: 5,
-              //     }}
-              //   >
-              //     Lyrics
-              //   </Text>
-              // ),
-              // headerRight: () => (
-              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-              //     <Icon
-              //       name="home-sharp"
-              //       size={35}
-              //       color="black"
-              //       style={{ marginRight: 18, bottom: 5 }}
-              //     />
-              //   </TouchableOpacity>
-              // ),
-              // headerLeft: () => (
-              //   <Icon
-              //     style={{ bottom: 5, left: 10 }}
-              //     name="arrow-back-outline"
-              //     size={25}
-              //   />
-              // ),
+            options={{
               header: () => <CustomHeader title="Lyrics" showBackButton={true} showHomeButton={true}/>,
-             headerMode:"float",
+            animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
@@ -241,87 +125,29 @@ const App = () => {
                 height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
-            })}
+            }}
           />
           <Stack.Screen
             name="About"
             component={About}
-            options={({ navigation }) => ({
-              // headerTitle: () => (
-              //   <Text
-              //     style={{
-              //       fontFamily: "Poppins_800ExtraBold",
-              //       fontSize: 25,
-              //       bottom: 25,
-              //     }}
-              //   >
-              //     About
-              //   </Text>
-              // ),
-              // headerRight: () => (
-              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-              //     <Icon
-              //       name="home-sharp"
-              //       size={35}
-              //       color="black"
-              //       style={{ marginRight: 18, bottom: 25 }}
-              //     />
-              //   </TouchableOpacity>
-              // ),
-              // headerLeft: () => (
-              //   <Icon
-              //     style={{ bottom: 28, left: 10 }}
-              //     name="arrow-back-outline"
-              //     size={25}
-              //   />
-              // ),
+            options={{
               header: () => <CustomHeader title="About" showBackButton={true} showHomeButton={true}/>,
-              headerMode:"float",
-             
               headerTitleAlign: "center",
+            animationEnabled:false,
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
                 height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
-            })}
+            }}
           />
           <Stack.Screen
             name="Contact"
             component={Contact}
-            options={({ navigation }) => ({
-              // headerTitle: () => (
-              //   <Text
-              //     style={{
-              //       fontFamily: "Poppins_800ExtraBold",
-              //       fontSize: 25,
-              //       bottom: 5,
-              //     }}
-              //   >
-              //     Contact
-              //   </Text>
-              // ),
-              // headerRight: () => (
-              //   <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-              //     <Icon
-              //       name="home-sharp"
-              //       size={35}
-              //       color="black"
-              //       style={{ marginRight: 18, bottom: 5 }}
-              //     />
-              //   </TouchableOpacity>
-              // ),
-              // headerLeft: () => (
-              //   <Icon
-              //     style={{ bottom: 28, left: 10 }}
-              //     name="arrow-back-outline"
-              //     size={25}
-              //   />
-              // ),
+            options={{
               header: () => <CustomHeader title="Contact" showBackButton={true} showHomeButton={true}/>,
-              headerMode:"float",
-
+              animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
@@ -329,11 +155,12 @@ const App = () => {
                 height: 70,
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
-            })}
+            }}
           />
          
         </Stack.Navigator>
       </NavigationContainer>
+      </SafeAreaProvider>
     </Provider>
   );
 };

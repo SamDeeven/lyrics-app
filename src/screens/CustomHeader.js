@@ -116,16 +116,23 @@ flex:1
     width: 300,
     position: "absolute",
     left: 0,
-    top: 45,
+    top: 65,
     height: 150,
     flexDirection: "column",
     justifyContent: "space-evenly",
+    borderTopLeftRadius:40,
+    borderTopRightRadius:40,
+    paddingVertical:10
+
   },
   menuItemsBtn: {
     margin: 6,
+    marginTop:15,
     paddingVertical: 5,
     backgroundColor: "#53E0BC",
-    borderRadius: 10,
+    // borderRadius: 10,
+    borderTopLeftRadius:40,
+    borderTopRightRadius:40,
   },
   menuItemsBtnText: {
     fontSize: 25,

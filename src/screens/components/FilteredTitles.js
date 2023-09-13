@@ -21,7 +21,6 @@ const FilteredTitles = ({ route, navigation }) => {
     Object.keys(alphabetData).forEach((alphabet) => {
       alphabetData[alphabet].forEach((item) => {
         if (
-          item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           (item.keywords &&
             item.keywords.some((kw) =>
               kw.toLowerCase().startsWith(searchQuery.toLowerCase())

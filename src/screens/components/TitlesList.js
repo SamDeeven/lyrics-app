@@ -88,8 +88,8 @@ const TitlesList = () => {
             <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
               {item.title}
             </Text>
-            <Text style={styles.genre}>Genre: {item.genre}</Text>
-            <Text style={styles.timeSignature}>Time Signature: {item.timeSignature}</Text>
+            {item.genre && item.genre.length > 0 && (<Text style={styles.genre}>Genre: {item.genre.join(" | ")}</Text>)}
+            {item.timeSignature && (<Text style={styles.timeSignature}>Time Signature: {item.timeSignature}</Text>)}
             {item.artist && <Text style={styles.artist}>Artist: {item.artist}</Text>}
           </TouchableOpacity>
         )}

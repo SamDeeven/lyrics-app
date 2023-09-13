@@ -203,7 +203,7 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Worship"],
       timeSignature: "4/4",
     },
     {
@@ -429,7 +429,7 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Lent"],
       timeSignature: "",
     },
   ],
@@ -492,7 +492,7 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Lent"],
       timeSignature: "4/4",
     },
     {
@@ -507,6 +507,7 @@ const songsData = {
         "entakalam nidu krupa lo",
         "inta kalam nedu krupa lo",
         "intha kalam",
+        "4/4"
       ],
       video: "",
       artist: "",
@@ -536,6 +537,7 @@ const songsData = {
         "nenu emathramu",
         "bennyjoshua",
         "benny joshua",
+        "4/4"
       ],
       video: "",
       artist: "Benny Joshua",
@@ -559,6 +561,7 @@ const songsData = {
         "ee dhinamsadha",
         "ee dhinamsada",
         "ee dinamsadha",
+        "6/8"
       ],
       video: "",
       artist: "Bro. Joe Madhu & Sis. Jessie Veena",
@@ -579,10 +582,11 @@ const songsData = {
         "yelatidha",
         "eelatida",
         "yelatida yesu prema",
+        "7/8"
       ],
       video: "",
       artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Love", "Lent"],
       timeSignature: "7/8",
     },
   ],
@@ -598,6 +602,7 @@ const songsData = {
         "utsahinchedan",
         "utsahinchadhan",
         "uthsahinchedan",
+        "2/4"
       ],
       video: "",
       artist: "",
@@ -621,9 +626,9 @@ const songsData = {
         "oohako andhani prema",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Dr. Akumarthi Daniel",
+      genre: ["General", "Love"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -640,9 +645,9 @@ const songsData = {
         "oohako andhani prema",
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Sharon Philip",
+      genre: ["General", "Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -659,8 +664,8 @@ const songsData = {
       ],
       video: "https://www.youtube.com/embed/HHCa-1HSg0o?start=0&end=20",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
   ],
   ఎ: [
@@ -690,9 +695,9 @@ const songsData = {
         "yedabayane",
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Pastor Mathews",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -711,11 +716,12 @@ const songsData = {
         "evariki avaru",
         "evarike yevaru",
         "yevareke yevaru",
+        "4/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -728,11 +734,12 @@ const songsData = {
         "yevaru chupinchaleyni",
         "yevaruchupinchaleni",
         "evaru chupinchaleni",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Pranam Kamlakhar",
+      genre: ["General", "Love"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -744,11 +751,14 @@ const songsData = {
         "yevaru nannu cheyi vidachina",
         "yevaru nanu cheya vidachinaa",
         "evaru nannu cheya vidachina",
+        "avaru nannu cheyi vidachina",
+        "avaru nannu cheyi vidichina",
+        "6/8"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -764,11 +774,12 @@ const songsData = {
         "evarina unara",
         "evarina unnara",
         "yevarina unara",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "A. R. Stevenson",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -788,11 +799,12 @@ const songsData = {
         "enni thalachena",
         "yenni thalachena",
         "yenni talachena",
+        "6/8"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -805,11 +817,13 @@ const songsData = {
         "enthamanchi dhevuda",
         "entha manchi",
         "enthamanchi",
+        "anthamandhi dhevuda",
+        "4/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -827,11 +841,12 @@ const songsData = {
         "entho vintaa",
         "enthoo venthaa",
         "entho ventha",
+        "7/8"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "Lent"],
+      timeSignature: "7/8"
     },
     {
       id: uuid.v4(),
@@ -847,8 +862,8 @@ const songsData = {
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Lent"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -863,11 +878,12 @@ const songsData = {
         "endhukonanninthaga",
         "endhukoo nanninthaga",
         "yendhukoo",
+        "4/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Love", "Lent"],
+      timeSignature: "4/4"
     },
   ],
   ఏ: [
@@ -882,11 +898,14 @@ const songsData = {
         "yepaati dhananaya",
         "ee pati dhananaya",
         "ey pati dhananaya",
+        "a paati dhananaya",
+        "a pati dananaya",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Jonah Samuel",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -906,11 +925,12 @@ const songsData = {
         "ado theliyani badha",
         "Ado teliyani bada",
         "yedho theleyani badha",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Sis Emimah Edwina Moses",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -929,11 +949,12 @@ const songsData = {
         "ey badha ledhu",
         "ey badha ledu",
         "ey bada ledhu",
+        "2/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Satish Kumar",
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -957,11 +978,12 @@ const songsData = {
         "aa naamamulo",
         "aa namamulo",
         "a naamamulo",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/cnmrtwnylrE?start=1176",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Anu Samuel",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
   ],
   ఓ: [
@@ -1031,7 +1053,7 @@ const songsData = {
       video:
         "https://www.youtube.com/embed/KBwT8k8uRxU?list=PLCvcJZhUpB-qJpsgpMgx6vpe_NAKT5qtY",
          artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Prayer"],
       timeSignature: "3/4"
     },
     {
@@ -1224,7 +1246,7 @@ const songsData = {
       ],
       video: "https://www.youtube.com/embed/qWpGaLNgivw?si=jFLc1dAOOWKRov84",
        artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Worship"],
       timeSignature: "3/4"
     },
     {
@@ -1585,7 +1607,7 @@ const songsData = {
       ],
       video: "https://www.youtube.com/embed/HMx9q28tcIA?si=yWrhWinTFZOxrZTh",
        artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Holy Communion"],
       timeSignature: "7/8"
     },
     {
@@ -1772,8 +1794,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -1793,9 +1815,9 @@ const songsData = {
         "denuda ajeyuda",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hosanna Ministries",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -1817,9 +1839,9 @@ const songsData = {
         "dheeva dhrustinchumu maa deesam",
       ],
       video: "https://www.youtube.com/embed/-NmyFqw_n6A?start=1314",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Samy Pachigalla",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -1839,11 +1861,12 @@ const songsData = {
         "dheeva nee saakshigaa",
         "dheeva ni saakshiga",
         "dheeva ni sakshiga",
+        "3/4"
       ],
       video: "https://www.youtube.com/embed/-NmyFqw_n6A?start=1314",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "JK Christopher",
+      genre: ["General"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -1857,11 +1880,12 @@ const songsData = {
         "devuni prema idhigo",
         "dheevuni prema",
         "deevuni preema",
+        "5/8"
       ],
       video: "",
       artist: "",
       genre: [],
-      timeSignature: ""
+      timeSignature: "5/8"
     },
     {
       id: uuid.v4(),
@@ -1874,11 +1898,12 @@ const songsData = {
         "devuni stutinchudi",
         "dheevuni sthutinchudi",
         "Dheevuni sthuthiyinchudi",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -1892,11 +1917,12 @@ const songsData = {
         "dheevuni sthuthiyinchudi",
         "deevuni stutiyinchudi",
         "deevuni sthuthiyinchudi",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -1915,11 +1941,12 @@ const songsData = {
         "sharon sisters",
         "jk christopher",
         "jkchristopher",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Lilian Christopher",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
   ],
   న: [
@@ -1936,9 +1963,9 @@ const songsData = {
         "nadipincho",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Dr. A. B. Masilamani",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -1955,9 +1982,9 @@ const songsData = {
         "nadipisthado",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A. R. Stevenson",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -1974,18 +2001,23 @@ const songsData = {
         "andhra kraisthava keerthanalu",
         "andhra christian song",
         "aandhra kraisthava keerthanalu",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
       title: "నన్ను పిలచిన దేవా (నీ కృపయే కావలెను)",
       lyrics:
         "నన్ను పిలచిన దేవా – నన్ను ముట్టిన ప్రభువా\nనీవు లేనిదే నేను లేనయ్యా (2)\nనే జీవించునది నీ కృప – ఎదుగించునది నీ కృప\nహెచ్చించునది నీ కృప మాత్రమే (2)\nనీ కృపయే కావలెను – నీ కృపయే చాలును\nనీ కృప లేకుంటేనే నేనేమి లేనయ్యా (2) యేసయ్యా …\n\n1. ఒంటరిగా ఏడిచినప్పుడు ఓదార్చువారు లేరు\nతొట్రిల్లి నడిచినప్పుడు ఆదుకొన్నవారు లేరు (2)\nబిగ్గరగా ఏడిచినప్పుడు కన్నీరు తుడిచె కృప (2)\nనీ కృప లేకుంటేనే నేను లేను\nనీ కృప లేకుంటేనే నేనేమి లేను   ||నీ కృపయే|| \n\n2. నేనని చెప్పుటకు నాకేమి లేదు\nసామర్థ్యం అనుటకు నాకని ఏమి లేదు (2)\nఅర్హత లేని నన్ను హెచ్చించినది నీ కృప (2)\nనీ కృప లేకుంటేనే నేను లేను\nనీ కృప లేకుంటేనే నేనేమి లేను  ||నీ కృపయే||",
-      keywords: ["nannu pilichina deva", "nannu pilichina dheva"],
+      keywords: ["nannu pilichina deva", "nannu pilichina dheva", "4/4", "nanu pilichina deva", "nanu pilachina deva", "nanu pilichina dheva", "nanu pilachina dheva"],
+      video:"",
+      artist: "Benny Joshua",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -1999,11 +2031,12 @@ const songsData = {
         "nannu kavaga",
         "nannu kavaga vachina",
         "nannu kaavaga vachina",
+        "7/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "7/8"
     },
     {
       id: uuid.v4(),
@@ -2025,11 +2058,12 @@ const songsData = {
         "entha kalamuga",
         "inta kalamuga",
         "inthaa kalamuga",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "K. Sudharsan",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2048,11 +2082,12 @@ const songsData = {
         "nammakamainaa",
         "ar stevenson",
         "stevenson",
+        "6/8"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A. R. Stevenson",
+      genre: ["General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -2079,11 +2114,12 @@ const songsData = {
         "naa aadaramu",
         "naa aadaaram",
         "naa aadaaramu",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -2096,13 +2132,15 @@ const songsData = {
         "nakosama ee siluva",
         "naakosama ye siluva",
         "lent",
+        "Cross",
         "goodfriday",
         "good friday",
+        "3/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hadlee Xavier",
+      genre: ["Cross"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -2122,11 +2160,12 @@ const songsData = {
         "na chini hrudayamto",
         "nachini hrudayamto",
         "nachinnihrudayamtho",
+        "3/4"
       ],
       video: "https://www.youtube.com/embed/udne5IfgGl4?start=1078",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Vinod Kumar & Benjamin Johnson",
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -2147,11 +2186,12 @@ const songsData = {
         "na cheruvy",
         "naa cheruvy",
         "naa cheruvi",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/udne5IfgGl4?start=1078",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2166,11 +2206,12 @@ const songsData = {
         "najeevithamlo",
         "najivithamulo",
         "naa jivithamulo",
+        "6/8"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -2189,11 +2230,12 @@ const songsData = {
         "na jeevitha kalamantha",
         "na jeevitha kaalamantha",
         "naa jevitha kaalamantha",
+        "3/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hadlee Xavier",
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -2210,11 +2252,12 @@ const songsData = {
         "naa jaavam",
         "na zevam",
         "naa zeevam",
+        "7/8"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Kripal Mohan",
+      genre: ["Worship"],
+      timeSignature: "7/8"
     },
     {
       id: uuid.v4(),
@@ -2234,9 +2277,9 @@ const songsData = {
         "ar stevenson",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A. R. Stevenson",
+      genre: ["General"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -2252,9 +2295,9 @@ const songsData = {
         "naa thodu neeve prabhuva",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2275,11 +2318,12 @@ const songsData = {
         "yeesaya",
         "eesayya",
         "esayya",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Ravinder Vottepu",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2293,11 +2337,12 @@ const songsData = {
         "na dhantu lokanaa",
         "nadhantu lokana",
         "nadantu lokana",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Sirivella Hanok",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2316,9 +2361,9 @@ const songsData = {
         "john wesly",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hosanna Ministries",
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -2334,11 +2379,12 @@ const songsData = {
         "na pranama sanutinchuma",
         "napranama sannuthinchuma",
         "naapranama sannuthinchu maa",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -2356,11 +2402,12 @@ const songsData = {
         "na pranamina yeesu",
         "napranamaina yesu",
         "naapranamaina yesu",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hadlee Xavier",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2377,11 +2424,12 @@ const songsData = {
         "naapriya yesu raaja",
         "naapriya yeesu raaja",
         "napriya yeesuraja",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Dr N Jayapaul",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2400,12 +2448,13 @@ const songsData = {
         "na dhevudu shakthi manthudu",
         "naa devudu shakthi",
         "naa devudu",
+        "4/4"
       ],
       // video: "https://www.youtube.com/live/9ZLlgqI2qB4?si=QM4t8wR468-0jO77&t=1217",
       video: "https://www.youtube.com/watch?v=bYEL5SkLXE4",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "John Vikas Bandili",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2422,11 +2471,12 @@ const songsData = {
         "naa balamantaa",
         "naa balamamthaa",
         "na balamamthaa",
+        "3/4"
       ],
       video: "https://www.youtube.com/embed/-Dux_qsqKnA?start=1348",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Sounds of Zion",
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -2441,11 +2491,12 @@ const songsData = {
         "na brathuku dhenamulu",
         "naa bratuku dinamulu",
         "na brathuku dinamulu",
+        "3/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Joel Kodali",
+      genre: ["General"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -2462,9 +2513,9 @@ const songsData = {
         "pranam kamalakar",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2482,9 +2533,9 @@ const songsData = {
         "john wesly",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hosanna Ministries",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -2880,8 +2931,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "Offerings"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -3162,9 +3213,9 @@ const songsData = {
         "ne mata na pataga",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A.R. Stevenson",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -3414,9 +3465,9 @@ const songsData = {
         "ne padedha",
       ],
       video: "https://www.youtube.com/embed/UAj0Y4Zeg6M?start=803",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Noble Pilli",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -3445,9 +3496,9 @@ const songsData = {
         "abenejarey",
       ],
       video: "https://www.youtube.com/embed/KG2bDwwDgUM?start=1040",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "John Jebaraj",
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -3462,9 +3513,9 @@ const songsData = {
         "stevenson",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A. R. Stevenson",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -3540,7 +3591,7 @@ const songsData = {
       ],
       video: "",
        artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Worship"],
       timeSignature: "7/8"
     },
     {
@@ -3676,7 +3727,7 @@ const songsData = {
       ],
       video: "",
        artist: "",
-      genre: ["Andhra Christian Hymn"],
+      genre: ["Andhra Christian Hymn", "Worship"],
       timeSignature: "4/4"
     },
     {
@@ -3722,11 +3773,12 @@ const songsData = {
         "goodfriday",
         "lent",
         "preyma yeesuni prema",
+        "6/8"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Love", "Lent"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -3743,11 +3795,12 @@ const songsData = {
         "premincho dhevudu",
         "preminchu dhevudu rakshinchu dhevudu",
         "preeminchu dhevudu rakshinchu dheevudu",
+        "6/8"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General", "Love"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -3763,11 +3816,12 @@ const songsData = {
         "preminchedan",
         "premimchedhan",
         "preminchedan",
+        "2/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Barchmans",
+      genre: ["Worship"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -3787,11 +3841,12 @@ const songsData = {
         "divinchave samrudhiga",
         "divinchavey sammruddhiga",
         "samruddiga",
+        "4/4"
       ],
       video: "https://youtu.be/irvw4_562BM",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Dr. Satish Kumar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -3815,11 +3870,12 @@ const songsData = {
         "love",
         "preminchedaa yeesu raja",
         "ప్రేమించెద యేసు రాజా",
+        "4/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
   ],
   బ: [
@@ -3840,11 +3896,12 @@ const songsData = {
         "bopunaadi munupe",
         "boponadi munupe",
         "enosh kumar",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/kj-6CtiogqU?start=1540",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Enosh Kumar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -3859,11 +3916,12 @@ const songsData = {
         "bethlehemulo sandhadi",
         "bethlehemulo sandadi",
         "betlehemu lo sandadi",
+        "6/8"
       ],
       video: "",
        artist: "",
       genre: [],
-      timeSignature: ""
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -3879,11 +3937,12 @@ const songsData = {
         "bhangaaram adagaledhu",
         "bhangaram adagaledu",
         "vajralu adagaledhu",
+        "2/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -3904,11 +3963,12 @@ const songsData = {
         "eesayya ninne sevinthunu",
         "eesayya nenne seevinthunu",
         "eesayya ninne seevinthunu",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "John Vittney",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -3929,11 +3989,12 @@ const songsData = {
         "yaaweh",
         "yaawe",
         "worship",
+        "3/4"
       ],
       video: "https://www.youtube.com/embed/OZ7Ypzfxujc?start=1055",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Sounds of Zion",
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
   ],
   మ: [
@@ -3951,11 +4012,12 @@ const songsData = {
         "maduram madhuram",
         "madhuram madhuramm",
         "madurm",
+        "2/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General", "Love"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -3971,11 +4033,12 @@ const songsData = {
         "maduraminadi",
         "madhuram",
         "madurmainadi",
+        "6/8"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General", "Love"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -3989,11 +4052,14 @@ const songsData = {
         "manasunna manchi deva",
         "Ar stevenson",
         "stevenson",
+        "manasunna mandhi dheeva",
+        "masanunaa mandhi dheva",
+        "6/8"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "A. R. Stevenson",
+      genre: ["General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -4005,11 +4071,15 @@ const songsData = {
         "mahimaku paathrudaa",
         "mahemaku pathruda",
         "mahemaku",
+        "mahimakupathruda",
+        "mahima ku pathruda",
+        "mahimaku patruda",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Immanuel Paul Perli",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4029,11 +4099,12 @@ const songsData = {
         "mahima gala dhevunike",
         "joseph",
         "worship",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Joseph",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4047,11 +4118,12 @@ const songsData = {
         "ma hrudhayamulaloo",
         "maa hrudayamulalo",
         "ma hrudayamulalo",
+        "7/8"
       ],
       video: "https://www.youtube.com/embed/akw5oKlGTdA?start=8612",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Lent", "Love"],
+      timeSignature: "7/8"
     },
     {
       id: uuid.v4(),
@@ -4068,11 +4140,12 @@ const songsData = {
         "allen ganta",
         "worship",
         "psalm 91",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/uMf36_MwegU?start=1092",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4088,11 +4161,12 @@ const songsData = {
         "jkchristopher",
         "sharonsisters",
         "sharon sisters",
+        "2/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Lilian Christopher",
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -4109,11 +4183,12 @@ const songsData = {
         "maa goppa deva",
         "maa goppa deva",
         "enosh kumar",
+        "4/4"
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Enosh Kumar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4132,11 +4207,12 @@ const songsData = {
         "maa madyalo",
         "maa madialo",
         "worship",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/ydLEdBpZcgE?start=1229",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Nations of Worship",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4154,11 +4230,12 @@ const songsData = {
         ",margam",
         "prodigal son",
         "prodigalson",
+        "3/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "Repentence"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -4177,9 +4254,9 @@ const songsData = {
         "worship",
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "Rev. T. Jobdas",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4196,8 +4273,8 @@ const songsData = {
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -4219,8 +4296,8 @@ const songsData = {
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -4233,11 +4310,12 @@ const songsData = {
         "manchi kaapare",
         "manchikapari manakundagaa",
         "manchi kapari manaki undaga",
+        "2/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -4253,11 +4331,12 @@ const songsData = {
         "manchevadu na yesayya",
         "manchevaadu",
         "manchevado na yesayya",
+        "4/4"
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4276,11 +4355,12 @@ const songsData = {
         "john jebaraj",
         "jebaraj",
         "worship",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/N_3krU1ZiLw?start=1591",
-       artist: "",
-      genre: [],
-      timeSignature: ""
+       artist: "John Jebaraj",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
   ],
   య: [
@@ -4301,8 +4381,8 @@ const songsData = {
       ],
       video: "",
        artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4317,9 +4397,9 @@ const songsData = {
         "yudham yehovadhe",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Anil Kumar",
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -4340,8 +4420,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -4357,8 +4437,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4386,9 +4466,9 @@ const songsData = {
         "worship",
       ],
       video: "https://www.youtube.com/embed/Kw_Srg4wuuw?start=1153",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Benny Joshua",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4415,8 +4495,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -4436,11 +4516,12 @@ const songsData = {
         "yehovanidhu melulanu",
         "raj prakash paul",
         "Worship",
+        "3/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Raj Prakash Paul",
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -4454,11 +4535,12 @@ const songsData = {
         "yesayya yesayya needhi entha jaali manasayya",
         "yesayyaa yesayyaa",
         "yasayya yasayyaa",
+        "6/8"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "M. M. Keeravani",
+      genre: ["Lent"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -4475,11 +4557,12 @@ const songsData = {
         "jkchristopher",
         "sharon sisters",
         "sharonsisters",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Lilian Christopher",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4496,11 +4579,12 @@ const songsData = {
         "yeesunamame jayamu",
         "yesunamamejayamu",
         "yesu naamame jayamo",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4523,11 +4607,12 @@ const songsData = {
         "andhra christian songs",
         "andhra kraisthava keerthanalu",
         "Aandhra kraisthava keerthanalu",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4550,11 +4635,12 @@ const songsData = {
         "eesu rakthamu",
         "holy communion",
         "communion",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Lent"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4569,11 +4655,12 @@ const songsData = {
         "yesuu neeve kavalayya",
         "stevenson",
         "ar stevenson",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A.R. Stevenson",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4628,11 +4715,12 @@ const songsData = {
         "yeesu nannu preemincheenavu",
         "yeesu nannu preemincheenaavu",
         "yesunannu premincheenavu",
+        "7/8"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "Lent", "Love"],
+      timeSignature: "7/8"
     },
     {
       id: uuid.v4(),
@@ -4672,11 +4760,12 @@ const songsData = {
         "yesey gopa dhevudu",
         "yesey gopa devudu",
         "yesey goppa dheevudu",
+        "2/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Philip Gariki",
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -4696,11 +4785,12 @@ const songsData = {
         "yeese nakasrayamu",
         "yese naakaasrayamo",
         "yese naakasrayamo",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "K. Amarpaul Jairaj",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4722,11 +4812,12 @@ const songsData = {
         "eese satyam",
         "yesey sathyam",
         "yesey satyam",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4"
     },
   ],
   ర: [
@@ -4744,11 +4835,12 @@ const songsData = {
         "Rammanu chunnadu",
         "rammanu chunadu",
         "rammanu chunnaadu",
+        "3/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "D. G. S Dhinakaran",
+      genre: ["General"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -4763,11 +4855,12 @@ const songsData = {
         "rajiyamo neeve",
         "rajyamu neve",
         "rajyamu neevey",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Ravinder Vottepu",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4784,11 +4877,12 @@ const songsData = {
         "rajaa nee sannidilo",
         "raja ni sannidhi",
         "worship",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "John J",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4808,11 +4902,12 @@ const songsData = {
         "rajanibavanamulo",
         "rajaa nibhavanamulo",
         "worship",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Barchmans",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4838,11 +4933,12 @@ const songsData = {
         "johnerry",
         "john erry",
         "worship",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "John Erry",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
   ],
   ల: [
@@ -4864,11 +4960,12 @@ const songsData = {
         "lekkinchalenii",
         "lekkincha leeni",
         "lekkincha leeni sthothramul",
+        "3/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "3/4"
     },
   ],
   వ: [
@@ -4887,11 +4984,12 @@ const songsData = {
         "vadimpabadina gorre",
         "vadimpabadina gorre",
         "vadhiyimpabadina gorre",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Anil Kumar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4907,11 +5005,12 @@ const songsData = {
         "vijaaya geethamul paadarey",
         "holy communion",
         "communion",
+        "7/8"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8"
     },
     {
       id: uuid.v4(),
@@ -4928,11 +5027,12 @@ const songsData = {
         "vinarandi naayeesuni",
         "kamalakar",
         "pranam kalamakar",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4950,11 +5050,12 @@ const songsData = {
         "veluve lene na jevetham",
         "veluve leni",
         "veluvee leeni",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/sAo6-X8zPZ4?start=1016",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Vinod Kumar & Benjamin Johnson",
+      genre: ["Worship", "Love"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -4971,11 +5072,12 @@ const songsData = {
         "candle light service",
         "christmas",
         "velinchumia",
+        "3/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Light"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -4994,11 +5096,12 @@ const songsData = {
         "vesarena manase",
         "kamalakar",
         "pranam kamalakar",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5017,8 +5120,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5041,9 +5144,9 @@ const songsData = {
         "vindamurandi",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Joseph",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
   ],
   శ: [
@@ -5059,11 +5162,12 @@ const songsData = {
         "saswatha preematho",
         "sasvata prema",
         "sasvatha premato",
+        "6/8"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Love", "General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -5083,11 +5187,12 @@ const songsData = {
         "andhra christian song",
         "andhra kraisthava keerthanalu",
         "aandhra kraisthava keerthanalu",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/udne5IfgGl4?start=236",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5111,11 +5216,12 @@ const songsData = {
         "andhra christian songs",
         "andhra kraisthava keerthanalu",
         "aandhra kraisthava keerthanalu",
+        "4/4"
       ],
       video: "https://www.youtube.com/embed/gzrFgakT7WQ?si=u1QhIn-l3sUK499T",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "Worship"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5136,11 +5242,12 @@ const songsData = {
         "shuddha hrudayam",
         "anil kumar",
         "anilkumar",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Anil Kumar",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5155,11 +5262,12 @@ const songsData = {
         "Sruti chesi ne padeda",
         "sruthi",
         "sruthi chese ne padeda",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
   ],
   స: [
@@ -5178,11 +5286,12 @@ const songsData = {
         "samayamu pooniyaka",
         "samayamu pooniyyaka",
         "samayam pooniyaka",
+        "6/8"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Jonah Samuel",
+      genre: ["General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -5198,11 +5307,12 @@ const songsData = {
         "sadhaa kaalamu nitho nenu",
         "Sadha kalamu netho nenu",
         "sadha kalamu neetho nenu",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5236,6 +5346,7 @@ const songsData = {
         "Sarvaloka nivaasulaara",
         "Saarvalooka nivaasulaara",
         "saarvaloka nevaasulaara",
+        "2/4"
       ],
       video: "",
       artist: "Vijai Roy",
@@ -5257,11 +5368,12 @@ const songsData = {
         "siluvalo",
         "siluvaloo",
         "silvaloo",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Lent"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5280,11 +5392,12 @@ const songsData = {
         "siluvalo saagindi",
         "siluvalosaagindhi",
         "seluvalo",
+        "6/8"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Lent"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -5302,11 +5415,12 @@ const songsData = {
         "siluve na seranaayenu",
         "seluve na saranaayenu",
         "seluva na saranaayenu",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Lent"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5322,11 +5436,12 @@ const songsData = {
         "sudhoramu ee payanamu",
         "sudhuram ee payanamu",
         "suduuramu",
+        "6/8"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Surya Prakash Injarapu",
+      genre: ["General"],
+      timeSignature: "6/8"
     },
     {
       id: uuid.v4(),
@@ -5339,11 +5454,12 @@ const songsData = {
         "sthuti",
         "worship",
         "sthuthi",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -5353,11 +5469,12 @@ const songsData = {
         "sthuthiki paathruda",
         "stutiki pathruda",
         "sthutiki paatruda",
+        "3/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "3/4"
     },
     {
       id: uuid.v4(),
@@ -5373,11 +5490,12 @@ const songsData = {
         "sthuthulu chellintumu",
         "sthutulu chellinthumu",
         "stuthulu chellinthumu",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -5392,11 +5510,12 @@ const songsData = {
         "sevakulaara",
         "sevakularaa",
         "savakulara",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Pastors"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5410,11 +5529,12 @@ const songsData = {
         "soolipovaladhu",
         "soolipovaladho",
         "solipovaladu",
+        "4/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5430,8 +5550,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -5448,11 +5568,12 @@ const songsData = {
         "sharonsisters",
         "santosha vastram",
         "santosa vastram",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Sharon Sisters",
+      genre: ["General"],
+      timeSignature: "4/4"
     },
     {
       id: uuid.v4(),
@@ -5471,11 +5592,12 @@ const songsData = {
         "sundharuda athisayuda",
         "sundaruda atisayuda",
         "sundaruda athisauda",
+        "4/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Sounds of Zion",
+      genre: ["Worship"],
+      timeSignature: "4/4"
     },
   ],
   హ: [
@@ -5495,11 +5617,12 @@ const songsData = {
         "jk christopher",
         "jkchristopher",
         "worship",
+        "2/4"
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Sharon Sisters",
+      genre: ["Worship", "General"],
+      timeSignature: "2/4"
     },
     {
       id: uuid.v4(),
@@ -5520,11 +5643,12 @@ const songsData = {
         "hallelooa sthuthi",
         "haleluya stuti",
         "worship",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "2/4"
     },
   ],
 };
