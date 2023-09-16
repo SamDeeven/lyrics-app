@@ -140,7 +140,7 @@ function HorizontalCards() {
         </Text>
         <Text
           style={{
-            fontSize: 14,
+            fontSize: 15,
             marginTop: 0,
             marginBottom: 6,
             textAlign: "justify",
@@ -161,7 +161,7 @@ function HorizontalCards() {
           >
             <TouchableOpacity
               onPress={() => Linking.openURL(item.link)}
-              style={{ width: 130, alignItems:"center" }}
+              style={{ width: 150, alignItems:"center" }}
             >
               <Text
                 style={{
@@ -187,9 +187,11 @@ function HorizontalCards() {
             bottom: 8,
             padding: 3,
             backgroundColor: "lightblue",
-            width: 130,
+            width: 170,
             borderRadius: 5,
            right:4,
+          // marginLeft:185,
+          // marginTop:220
           }}
         >
           <Text style={{textAlign:"center", fontSize: 15, fontFamily: "" }}>
@@ -216,7 +218,7 @@ const styles = StyleSheet.create({
   container: {},
   card: {
     width: 365,
-    height: 250,
+    height: 260,
     // backgroundColor: "#242B2E",
     marginHorizontal: 5,
     // borderRadius: 10,
@@ -226,7 +228,7 @@ const styles = StyleSheet.create({
   gradient: {
     flex: 1,
     borderRadius:10,
-    padding:6
+    padding:8
   },
 });
 

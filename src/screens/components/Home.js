@@ -31,7 +31,7 @@ import HorizontalCards from "./HorizontalCards.js";
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
   const [isKeyboardActive, setIsKeyboardActive] = useState(false);
-  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  // const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
   const [suggestions, setSuggestions] = useState([]);
   const navigation = useNavigation();
 
@@ -60,12 +60,11 @@ const Home = () => {
     if (isKeyboardActive) {
       Keyboard.dismiss();
     }
-  }
+  };
 
   const clearSuggestions = () => {
-    setSuggestions([])    
-  }
-
+    setSuggestions([]);
+  };
 
   useEffect(() => {
     if (inputSearch.trim() === "") {
@@ -78,7 +77,7 @@ const Home = () => {
     Object.keys(alphabetData).forEach((alphabet) => {
       alphabetData[alphabet].forEach((item) => {
         if (
-          item.title.toLowerCase().includes(inputSearch.toLowerCase()) ||
+          // item.title.toLowerCase().includes(inputSearch.toLowerCase()) ||
           (item.keywords &&
             item.keywords.some((kw) =>
               kw.toLowerCase().startsWith(inputSearch.toLowerCase())
@@ -123,7 +122,13 @@ const Home = () => {
 
     Object.keys(alphabetData).forEach((alphabet) => {
       alphabetData[alphabet].forEach((item) => {
-        if ((item.keywords && item.keywords.some((kw) => kw.toLowerCase() === suggestion.toLowerCase()))) {
+        if (
+          item.title.toLowerCase() === suggestion.toLowerCase() ||
+          (item.keywords &&
+            item.keywords.some(
+              (kw) => kw.toLowerCase() === suggestion.toLowerCase()
+            ))
+        ) {
           matchingTitlesArray.push(item);
         }
       });
@@ -150,83 +155,88 @@ const Home = () => {
 
   return (
     <SafeAreaView>
-      <ScrollView keyboardShouldPersistTaps={"handled"} 
-       nestedScrollEnabled={true}
+      <ScrollView
+        keyboardShouldPersistTaps={"handled"}
+        nestedScrollEnabled={true}
       >
         {/* <TouchableWithoutFeedback onPress={handleTapOutside && clearSuggestions}> */}
-          <View style={[styles.topContainer]}>
-            <View style={styles.inputBoxContainer}>
-              <View style={{ flexDirection: "row" }}>
-                <TextInput
-                  style={styles.searchInput}
-                  placeholder="Search Song / పాటను వెతకండి"
-                  value={inputSearch}
-                  onChangeText={(text) => {
-                    setInputSearch(text);
-                  }}
-                  onSubmitEditing={handleSearch}
-                  maxLength={30}
-                  selectionColor={"brown"}
-                  backgroundColor="white"
-                  onFocus={() => setIsKeyboardActive(true)}
-                  clearButtonMode="always"
-                />
-              </View>
-
-              {isKeyboardActive && inputSearch && (
-                <Icon
-                  onPress={clearText}
-                  style={styles.closeBtn}
-                  name="close-sharp"
-                  size={30}
-                />
-              )}
-
-              {suggestions.length > 0 && (
-                <ScrollView
-                  nestedScrollEnabled={true}
-                  style={styles.suggestionContainer}
-                >
-                  {suggestions.map((suggestion) => (
-                    <TouchableOpacity
-                      key={suggestion}
-                      style={styles.suggestionItem}
-                      onPress={() => handleSuggestionPress(suggestion)}
-                    >
-                      <Text
-                        numberOfLines={1}
-                        ellipsizeMode="tail"
-                        style={styles.suggestionText}
-                      >
-                        {suggestion}
-                      </Text>
-                    </TouchableOpacity>
-                  ))}
-                </ScrollView>
-              )}
-            </View>
-
-            <View>
-              <FlatList
-                data={Object.keys(alphabetData)}
-                renderItem={renderAlphabetItem}
-                keyExtractor={(item) => item}
-                numColumns={6}
-                contentContainerStyle={styles.alphabetContainer}
+        <View style={[styles.topContainer]}>
+          <View style={styles.inputBoxContainer}>
+            <View style={{ flexDirection: "row" }}>
+              <TextInput
+                style={styles.searchInput}
+                placeholder="Search Song / పాటను వెతకండి"
+                textAlign="left"
+                value={inputSearch}
+                onChangeText={(text) => {
+                  setInputSearch(text);
+                }}
+                onSubmitEditing={handleSearch}
+                maxLength={30}
+                selectionColor={"brown"}
+                backgroundColor="white"
+                onFocus={() => setIsKeyboardActive(true)}
               />
             </View>
 
-            <TouchableOpacity
-              style={styles.randomBtn}
-              onPress={navigateToRandomTitles}
-            >
-              <Text style={styles.randomBtnText}>6 Random Songs</Text>
-            </TouchableOpacity>
+            {isKeyboardActive && inputSearch && (
+              <Icon
+                onPress={clearText}
+                style={styles.closeBtn}
+                name="close-sharp"
+                size={30}
+              />
+            )}
 
-            <View style={styles.horizontalCards}>
-              <HorizontalCards />
-            </View>
+            {suggestions.length > 0 && (
+              <ScrollView
+                nestedScrollEnabled={true}
+                style={styles.suggestionContainer}
+              >
+                {suggestions.map((suggestion) => (
+                  <TouchableOpacity
+                    key={suggestion}
+                    style={styles.suggestionItem}
+                    onPress={() => handleSuggestionPress(suggestion)}
+                  >
+                    <Text
+                      numberOfLines={1}
+                      ellipsizeMode="tail"
+                      style={styles.suggestionText}
+                    >
+                      {suggestion}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            )}
           </View>
+
+          <View style={styles.alphabetContainer}>
+            {Object.keys(alphabetData).map((item) => (
+              <TouchableOpacity
+                key={item}
+                style={styles.alphabetItem}
+                onPress={() =>
+                  navigation.navigate("TitlesList", { alphabet: item })
+                }
+              >
+                <Text style={styles.alphabetText}>{item}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+
+          <TouchableOpacity
+            style={styles.randomBtn}
+            onPress={navigateToRandomTitles}
+          >
+            <Text style={styles.randomBtnText}>6 Random Songs</Text>
+          </TouchableOpacity>
+
+          <View style={styles.horizontalCards}>
+            <HorizontalCards />
+          </View>
+        </View>
         {/* </TouchableWithoutFeedback> */}
       </ScrollView>
     </SafeAreaView>
@@ -242,19 +252,17 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     fontFamily: "Poppins_500Medium",
-    height: 40,
-    width: 325,
-    paddingTop: 6,
+    height: 50,
+    width: 300,
+    paddingTop: 5,
     margin: 12,
-    // borderWidth: 1,
+    textAlign:"center",
     paddingHorizontal: 25,
-    alignContent: "center",
-    justifyContent: "center",
     borderTopLeftRadius: 25,
     borderBottomRightRadius: 25,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
-    fontSize: 15,
+    fontSize: 16,
   },
   closeBtn: {
     position: "absolute",
@@ -290,27 +298,29 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   alphabetContainer: {
-    justifyContent: "space-between",
+    justifyContent: "center",
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   alphabetItem: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     margin: 4,
-    height: 55,
+    height: 53,
+    width: 53,
     backgroundColor: "#02B290",
-    borderRadius: 20,
+    borderRadius: 10,
   },
   alphabetText: {
     fontSize: 30,
     fontFamily: "Poppins_600SemiBold",
     textAlign: "center",
-    marginVertical: 3,
+    marginTop: 4,
   },
 
   randomBtn: {
     backgroundColor: "#02B290",
-    width: 250,
+    width: 270,
     padding: 5,
     marginTop: 8,
     borderRadius: 10,
@@ -324,7 +334,7 @@ const styles = StyleSheet.create({
   },
   horizontalCards: {
     marginTop: 15,
-    // top: 315,
+    marginBottom: 7,
     marginLeft: -10,
     marginRight: -10,
 

@@ -12,66 +12,75 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
     setShowOptions(!showOptions);
   };
 
-
   console.log("Loaded Header=>");
   return (
-<View
-    style={homeStyle ? styles.homeHeaderContainer : styles.headerContainer}
-  >
-    {showBackButton ? (
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={styles.backButton}
-      >
-        <Icon style={{}} name="chevron-back-sharp" size={30} />
-      </TouchableOpacity>
-    ) : (
-      <View style={styles.menuOption}>
-        {showOptions ? (
-          <View>
-            <Icon
-              onPress={() => handleOptions()}
-              name="close-sharp"
-              size={40}
-            />
-            <View style={styles.menuContainer}>
-              <TouchableOpacity
-                style={styles.menuItemsBtn}
-                onPress={() => {
-                  navigation.navigate("Contact");
-                  setShowOptions(!showOptions);
-                }}
-              >
-                <Text style={styles.menuItemsBtnText}>Contact</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate("About");
-                  setShowOptions(!showOptions);
-                }}
-                style={styles.menuItemsBtn}
-              >
-                <Text style={styles.menuItemsBtnText}>About</Text>
-              </TouchableOpacity>
+    <View
+      style={homeStyle ? styles.homeHeaderContainer : styles.headerContainer}
+    >
+      {showBackButton ? (
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.backButton}
+        >
+          <Icon style={{}} name="chevron-back-sharp" size={30} />
+        </TouchableOpacity>
+      ) : (
+        <View style={styles.menuOption}>
+          {showOptions ? (
+            <View>
+              <Icon
+                onPress={() => handleOptions()}
+                name="close-sharp"
+                size={40}
+              />
+              <View style={styles.menuContainer}>
+                <TouchableOpacity
+                  style={styles.menuItemsBtn}
+                  onPress={() => {
+                    navigation.navigate("Contact");
+                    setShowOptions(!showOptions);
+                  }}
+                >
+                  <Text style={styles.menuItemsBtnText}>Contact</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate("About");
+                    setShowOptions(!showOptions);
+                  }}
+                  style={styles.menuItemsBtn}
+                >
+                  <Text style={styles.menuItemsBtnText}>About</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate("Favorites");
+                    setShowOptions(!showOptions);
+                  }}
+                  style={styles.menuItemsBtn}
+                >
+                  <Text style={styles.menuItemsBtnText}>Favorites</Text>
+                </TouchableOpacity>
+              </View>
             </View>
-          </View>
-        ) : (
-          <Icon onPress={() => handleOptions()} name="menu-sharp" size={40} />
-        )}
-      </View>
-    )}
-    <Text style={homeStyle ? styles.homeHeader : styles.headerTitle}>
-      {title}
-    </Text>
-    {showHomeButton && (
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Home")}
-        style={styles.homeButton}
-      >
-        <Icon style={{}} name="home-sharp" size={30} />
-      </TouchableOpacity>
-    )}
-  </View>  );
+          ) : (
+            <Icon onPress={() => handleOptions()} name="menu-sharp" size={40} />
+          )}
+        </View>
+      )}
+      <Text style={homeStyle ? styles.homeHeader : styles.headerTitle}>
+        {title}
+      </Text>
+      {showHomeButton && (
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Home")}
+          style={styles.homeButton}
+        >
+          <Icon style={{}} name="home-sharp" size={30} />
+        </TouchableOpacity>
+      )}
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -82,11 +91,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#02B290",
     height: 70,
     borderBottomLeftRadius: 35,
-    borderBottomRightRadius:35,
-   paddingHorizontal:15
+    borderBottomRightRadius: 35,
+    paddingHorizontal: 15,
   },
   homeHeaderContainer: {
-    alignItems:"center",
+    alignItems: "center",
     flexDirection: "row",
     backgroundColor: "#02B290",
     height: 70,
@@ -104,12 +113,11 @@ const styles = StyleSheet.create({
     fontSize: 27,
     fontFamily: "Poppins_800ExtraBold",
     alignItems: "center",
-    justifyContent:"center",
+    justifyContent: "center",
     flex: 1.5,
-
   },
-  menuOption:{
-flex:1
+  menuOption: {
+    flex: 1,
   },
   menuContainer: {
     backgroundColor: "#ECF0F1",
@@ -117,22 +125,21 @@ flex:1
     position: "absolute",
     left: 0,
     top: 65,
-    height: 150,
+    height: 200,
     flexDirection: "column",
     justifyContent: "space-evenly",
-    borderTopLeftRadius:40,
-    borderTopRightRadius:40,
-    paddingVertical:10
-
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    paddingVertical: 10,
   },
   menuItemsBtn: {
     margin: 6,
-    marginTop:15,
+    marginTop: 15,
     paddingVertical: 5,
     backgroundColor: "#53E0BC",
     // borderRadius: 10,
-    borderTopLeftRadius:40,
-    borderTopRightRadius:40,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
   },
   menuItemsBtnText: {
     fontSize: 25,

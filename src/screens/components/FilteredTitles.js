@@ -10,7 +10,7 @@ import alphabetData from "../../../data/songsData.js";
 import { useSelector } from "react-redux";
 
 const FilteredTitles = ({ route, navigation }) => {
-  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  // const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
 
   const { searchQuery } = route.params;
   const [matchingTitles, setMatchingTitles] = useState([]);
@@ -21,6 +21,8 @@ const FilteredTitles = ({ route, navigation }) => {
     Object.keys(alphabetData).forEach((alphabet) => {
       alphabetData[alphabet].forEach((item) => {
         if (
+          // item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+
           (item.keywords &&
             item.keywords.some((kw) =>
               kw.toLowerCase().startsWith(searchQuery.toLowerCase())

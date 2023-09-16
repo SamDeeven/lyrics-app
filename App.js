@@ -18,7 +18,7 @@ import Contact from "./src/screens/components/Contact";
 import About from "./src/screens/components/About";
 import CustomHeader from "./src/screens/CustomHeader";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-
+import Favorites from "./src/screens/components/Favorites";
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -36,16 +36,15 @@ const App = () => {
   }
 
   return (
-    <Provider store={store}>
-      <StatusBar backgroundColor="#02B290" barStyle="light-content"/>
-      <SafeAreaProvider>
+<SafeAreaProvider>      
+  <StatusBar backgroundColor="#02B290" barStyle="light-content"/>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
             style={styles.homeComponent}
             name="Home"
             component={Home}
-            options={({navigation}) => ({
+            options={{
               header: () => <CustomHeader homeStyle={true} title="Index" showBackButton={false} showHomeButton={false}/>,
               animationEnabled:false,
               headerStyle: {
@@ -59,7 +58,7 @@ const App = () => {
               },
               headerTitleAlign: "center",
               cardStyle: { backgroundColor: "#CAD5E2" },
-            })}
+            }}
           />
 
           <Stack.Screen
@@ -157,11 +156,24 @@ const App = () => {
               cardStyle: { backgroundColor: "#ECF0F1" },
             }}
           />
-         
+          <Stack.Screen
+            name="Favorites"
+            component={Favorites}
+            options={{
+              header: () => <CustomHeader title="Favorites" showBackButton={true} showHomeButton={true}/>,
+              animationEnabled:false,
+              headerTitleAlign: "center",
+              headerStyle: {
+                backgroundColor: "#02B290",
+                borderBottomWidth: 2,
+                height: 70,
+              },
+              cardStyle: { backgroundColor: "#ECF0F1" },
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
       </SafeAreaProvider>
-    </Provider>
   );
 };
 

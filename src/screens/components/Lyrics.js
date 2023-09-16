@@ -32,15 +32,38 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import { useSelector } from "react-redux";
+import Icon from "react-native-vector-icons/Ionicons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { LinearGradient } from "expo-linear-gradient";
 
-const Lyrics = () => {
-  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
 
+const Lyrics = ({ navigation }) => {
   const [fontSize, setFontSize] = useState(18);
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [favorites, setFavorites] = useState([]);
+  const [showOptions, setShowOptions] = useState(false);
+
   const route = useRoute();
   const { titleItem } = route.params;
-  // console.log("Received from Lyrics.js: ", titleItem);
+  console.log("TitleItem: ", titleItem.title);
+
+  useEffect(() => {
+    // Check if the current song is a favorite when the component mounts
+    const checkFavorite = async () => {
+      try {
+        const favoritesString = await AsyncStorage.getItem("favorites");
+        let favorites = favoritesString ? JSON.parse(favoritesString) : [];
+        const isSongFavorite = favorites.some(
+          (song) => song.id === titleItem.id
+        );
+        setIsFavorite(isSongFavorite);
+      } catch (error) {
+        console.error("Error checking favorites:", error);
+      }
+    };
+
+    checkFavorite();
+  }, [titleItem.id]);
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -82,40 +105,117 @@ const Lyrics = () => {
     }
   };
 
+  const handleFavoriteButton = async () => {
+    try {
+      const favoritesString = await AsyncStorage.getItem("favorites");
+      let favorites = favoritesString ? JSON.parse(favoritesString) : [];
+
+      const isSongFavorite = favorites.some((song) => song.id === titleItem.id);
+
+      if (isSongFavorite) {
+        favorites = favorites.filter((song) => song.id !== titleItem.id);
+        setIsFavorite(false);
+      } else {
+        favorites = [titleItem, ...favorites];
+        setIsFavorite(true);
+      }
+      await AsyncStorage.setItem("favorites", JSON.stringify(favorites));
+      setFavorites(favorites);
+    } catch (error) {
+      console.error("Error handling favorites:", error);
+    }
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity
-          style={[styles.button, fontSize === 14 && styles.selectedButton]}
-          onPress={() => handleFontSize(14)}
-        >
-          <Text style={styles.buttonText}>Small</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.button, fontSize === 18 && styles.selectedButton]}
-          onPress={() => handleFontSize(18)}
-        >
-          <Text style={styles.buttonText}>Medium</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.button, fontSize === 22 && styles.selectedButton]}
-          onPress={() => handleFontSize(22)}
-        >
-          <Text style={styles.buttonText}>Large</Text>
-        </TouchableOpacity>
+    
+      <View style={styles.options}>
+  
+        <Text onPress={() => setShowOptions(!showOptions)}>Options</Text>
+        
+        {showOptions && (
+        
+          <View style={styles.optionsDropdown}>
+              <LinearGradient
+        start={{ x: 0, y: 1 }}
+        end={{ x: 1, y: 0 }}
+        colors={["#0a3431", "#407A52", "#4a9b7f", "#1c3e35"]}
+        style={styles.gradient}
+      >
+            <View
+              style={[styles.optionTextContainer, { flexDirection: "row" }]}
+            >
+              <View style={styles.optionTextContainer}>
+                <Text style={styles.optionsText}>Add to Favorites</Text>
+              </View>
+              <TouchableOpacity
+                style={styles.favButtonContainer}
+                onPress={handleFavoriteButton}
+              >
+                <Icon
+                  name={isFavorite ? "heart" : "heart-outline"}
+                  size={40}
+                  color={isFavorite ? "red" : "grey"}
+                  style={styles.favButton}
+                />
+              </TouchableOpacity>
+            </View>
+            <View>
+              <View style={styles.optionTextContainer}>
+                <Text style={styles.optionsText}>Font Size</Text>
+                <View style={styles.buttonContainer}>
+                  <TouchableOpacity
+                    style={[
+                      styles.button,
+                      fontSize === 14 && styles.selectedButton,
+                    ]}
+                    onPress={() => handleFontSize(14)}
+                  >
+                    <Text style={styles.buttonText}>Small</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={[
+                      styles.button,
+                      fontSize === 18 && styles.selectedButton,
+                    ]}
+                    onPress={() => handleFontSize(18)}
+                  >
+                    <Text style={styles.buttonText}>Medium</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={[
+                      styles.button,
+                      fontSize === 22 && styles.selectedButton,
+                    ]}
+                    onPress={() => handleFontSize(22)}
+                  >
+                    <Text style={styles.buttonText}>Large</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+            <View>
+              <View style={styles.optionTextContainer}>
+                {titleItem.video && (
+                  <TouchableOpacity
+                    style={styles.videoBtn}
+                    onPress={handleVideoButton}
+                  >
+                    <Text style={styles.videoBtnText}>Video Song</Text>
+                  </TouchableOpacity>
+                )}
+              </View>
+            </View>
+            </LinearGradient>
+          </View>
+        )}
       </View>
-
-      {titleItem.video && (
-        <TouchableOpacity style={styles.videoBtn} onPress={handleVideoButton}>
-          <Text style={styles.videoBtnText}>Video Song</Text>
-        </TouchableOpacity>
-      )}
 
       <Text style={styles.title}>{titleItem.title}</Text>
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={styles.lyricsContainer}>
           <View>
-            {titleItem.lyrics !== "" ? (
+            {titleItem.lyrics ? (
               titleItem.lyrics.split("\n").map((lyric, index) => (
                 <Text key={index} style={[styles.song, { fontSize }]}>
                   {lyric}
@@ -124,7 +224,7 @@ const Lyrics = () => {
             ) : (
               <>
                 <Text style={styles.errorMessage}>
-                  Sorry for the inconvinience! No lyrics available. App is still
+                  Sorry for the inconvenience! No lyrics available. App is still
                   under development.
                 </Text>
                 <Text style={styles.errorMessage}>
@@ -142,15 +242,13 @@ const Lyrics = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "#FAFAD2",
     paddingHorizontal: 15,
-    // marginBottom: 45,
   },
   videoBtn: {
-    marginTop:8,
+    marginTop: 8,
     backgroundColor: "#E21717",
     padding: 5,
-    width: 100,
+    width: 120,
     borderRadius: 15,
     marginBottom: 10,
     alignSelf: "center",
@@ -160,6 +258,47 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 15,
     fontWeight: "bold",
+    height: 30,
+    textAlignVertical: "center",
+  },
+  options: {
+    position: "absolute",
+    zIndex: 1,
+    top: 10,
+    right: 35,
+    alignItems: "flex-end",
+  },
+  optionsDropdown: {
+    backgroundColor: "white",
+    width: 300,
+    padding: 20,
+  },
+  optionTextContainer: {
+    flex: 1,
+    marginBottom: 10,
+    // backgroundColor: "lightyellow",
+    height: 100,
+    justifyContent: "center",
+  },
+  optionsText: {
+    textAlign: "left",
+    textAlignVertical: "center",
+    fontSize: 18,
+    marginLeft:5,
+    // backgroundColor: "#53E0BC",
+    // borderTopLeftRadius: 40,
+    // borderTopRightRadius: 40,
+    // height: 60,
+    marginBottom: 12,
+  },
+  favButtonContainer: {
+    margin: 10,
+    width: 50,
+    flex: 0.3,
+    justifyContent: "center",
+  },
+  favButton: {
+    marginBottom: 12,
   },
   buttonContainer: {
     flexDirection: "row",
@@ -174,7 +313,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 14,
     borderWidth: 1,
-    marginTop:10
+    marginTop: 5,
   },
   buttonText: {
     textAlign: "center",
@@ -182,17 +321,15 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 17,
   },
-
   selectedButton: {
     backgroundColor: "#FF6666",
     color: "#FFD700",
   },
-
   title: {
     fontSize: 22,
     fontWeight: "bold",
     marginBottom: 10,
-    marginTop:10,
+    marginTop: 10,
     color: "brown",
   },
   lyricsContainer: {
@@ -202,8 +339,7 @@ const styles = StyleSheet.create({
   song: {
     lineHeight: 27,
     paddingLeft: 5,
-    marginBottom:3
-
+    marginBottom: 3,
   },
   errorMessage: {
     fontSize: 20,
@@ -211,6 +347,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     fontFamily: "Poppins_700Bold_Italic",
     color: "red",
+  },
+    gradient: {
+    // flex: 1,
+    borderRadius:10,
+    padding:8
   },
 });
 

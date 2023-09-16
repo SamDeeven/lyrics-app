@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -29,20 +29,32 @@ import {
   Poppins_900Black,
   Poppins_900Black_Italic,
 } from "@expo-google-fonts/poppins";
+import Icon from "react-native-vector-icons/Ionicons";
 
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import { useSelector } from "react-redux";
 
 import alphabetData from "../../../data/songsData.js";
+import { showFavorites, addToFavorites, isFavorite, removeFavorite } from "../../../asyncStorage.js";
 
 const TitlesList = () => {
-  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  // const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
   const route = useRoute();
   const navigation = useNavigation();
   const { alphabet } = route.params;
   const data = alphabetData[alphabet];
+  const [isFavoriteItem, setIsFavoriteItem] = useState(false);
+
   // console.log("video link", data)
+  // useEffect(() => {
+  //   const checkFavorite = async () => {
+  //     const favorite = await isFavorite(titleItem.title);
+  //     setIsFavoriteItem(favorite);
+  //   };
+  //   checkFavorite();
+  // }, [titleItem.title]);
+
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -73,25 +85,54 @@ const TitlesList = () => {
     navigation.navigate("Lyrics", { titleItem: item });
   };
 
+  const handleToggleFavorite = async () => {
+    if (isFavoriteItem) {
+      await removeFavorite(titleItem.title);
+    } else {
+      await addToFavorites(titleItem.title);
+    }
+    setIsFavoriteItem(!isFavoriteItem);
+  };
+
   console.log("Loaded Titles==>");
   return (
-    <View style={[styles.container, isDarkMode && styles.darkContainer]}>
+    <View style={[styles.container]}>
       <Text style={styles.alphabet}>{alphabet}</Text>
       <FlatList
         data={data}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.titleContainer}
-            onPress={() => handleTitlePress(item)}
-          >
-            <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
-              {item.title}
-            </Text>
-            {item.genre && item.genre.length > 0 && (<Text style={styles.genre}>Genre: {item.genre.join(" | ")}</Text>)}
-            {item.timeSignature && (<Text style={styles.timeSignature}>Time Signature: {item.timeSignature}</Text>)}
-            {item.artist && <Text style={styles.artist}>Artist: {item.artist}</Text>}
-          </TouchableOpacity>
+          <View>
+            <TouchableOpacity
+              style={styles.titleContainer}
+              onPress={() => handleTitlePress(item)}
+            >
+              <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
+                {item.title}
+              </Text>
+              {item.genre && item.genre.length > 0 && (
+                <Text style={styles.genre}>
+                  Genre: {item.genre.join(" | ")}
+                </Text>
+              )}
+              {item.timeSignature && (
+                <Text style={styles.timeSignature}>
+                  Time Signature: {item.timeSignature}
+                </Text>
+              )}
+              {item.artist && (
+                <Text style={styles.artist}>Artist: {item.artist}</Text>
+              )}
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleToggleFavorite}>
+        <Icon
+          name={isFavoriteItem ? 'heart' : 'heart-outline'}
+          size={30}
+          color={isFavoriteItem ? 'red' : 'gray'}
+        />
+      </TouchableOpacity>
+            </View>
+
         )}
       />
     </View>
@@ -126,17 +167,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "lightyellow",
   },
-  genre:{
-    fontSize:14,
-    color:"white"
+  genre: {
+    fontSize: 14,
+    color: "white",
   },
-  timeSignature:{
-    fontSize:14,
-    color:"white"
+  timeSignature: {
+    fontSize: 14,
+    color: "white",
   },
-  artist:{
-    fontSize:12,
-    color:"lightpink"
+  artist: {
+    fontSize: 12,
+    color: "lightpink",
   },
 });
 

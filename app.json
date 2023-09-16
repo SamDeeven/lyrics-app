@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Vinnu Lyrics App v1.0.3",
+    "name": "Vinnu Lyrics App v1.0.4",
     "slug": "lyrics",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "orientation": "portrait",
     "icon": "./assets/app-icon.png",
     "userInterfaceStyle": "light",
