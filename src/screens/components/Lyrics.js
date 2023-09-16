@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Linking,
   Alert,
+  TouchableWithoutFeedback
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import {
@@ -36,7 +37,6 @@ import Icon from "react-native-vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
 
-
 const Lyrics = ({ navigation }) => {
   const [fontSize, setFontSize] = useState(18);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -46,6 +46,10 @@ const Lyrics = ({ navigation }) => {
   const route = useRoute();
   const { titleItem } = route.params;
   console.log("TitleItem: ", titleItem.title);
+
+  const closeOptions = () => {
+    setShowOptions(false)
+  }
 
   useEffect(() => {
     // Check if the current song is a favorite when the component mounts
@@ -125,95 +129,112 @@ const Lyrics = ({ navigation }) => {
       console.error("Error handling favorites:", error);
     }
   };
-
+  // background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   return (
     <View style={styles.container}>
-    
       <View style={styles.options}>
-  
-        <Text onPress={() => setShowOptions(!showOptions)}>Options</Text>
-        
+        <TouchableOpacity onPress={() => setShowOptions(!showOptions)}>
+          {showOptions ? (
+            <Icon style={{fontSize:40}} name="close-outline"/>
+          ): (
+            <Icon name="options-sharp" size={35} />
+          )}
+        </TouchableOpacity>
         {showOptions && (
-        
           <View style={styles.optionsDropdown}>
-              <LinearGradient
-        start={{ x: 0, y: 1 }}
-        end={{ x: 1, y: 0 }}
-        colors={["#0a3431", "#407A52", "#4a9b7f", "#1c3e35"]}
-        style={styles.gradient}
-      >
-            <View
-              style={[styles.optionTextContainer, { flexDirection: "row" }]}
+            <LinearGradient
+              start={{ x: 0.5, y: 1 }}
+              end={{ x: 1.5, y: 0 }}
+              colors={["#85FFBD", "#FFFB7D", "#B5FFFC", "#2AF598","#84fab0","#8fd3f4" ]}
+              style={styles.gradient}
             >
-              <View style={styles.optionTextContainer}>
-                <Text style={styles.optionsText}>Add to Favorites</Text>
-              </View>
-              <TouchableOpacity
-                style={styles.favButtonContainer}
-                onPress={handleFavoriteButton}
+              <View
+                style={[styles.optionTextContainer, { flexDirection: "row" }]}
               >
-                <Icon
-                  name={isFavorite ? "heart" : "heart-outline"}
-                  size={40}
-                  color={isFavorite ? "red" : "grey"}
-                  style={styles.favButton}
-                />
-              </TouchableOpacity>
-            </View>
-            <View>
-              <View style={styles.optionTextContainer}>
-                <Text style={styles.optionsText}>Font Size</Text>
-                <View style={styles.buttonContainer}>
-                  <TouchableOpacity
-                    style={[
-                      styles.button,
-                      fontSize === 14 && styles.selectedButton,
-                    ]}
-                    onPress={() => handleFontSize(14)}
-                  >
-                    <Text style={styles.buttonText}>Small</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={[
-                      styles.button,
-                      fontSize === 18 && styles.selectedButton,
-                    ]}
-                    onPress={() => handleFontSize(18)}
-                  >
-                    <Text style={styles.buttonText}>Medium</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={[
-                      styles.button,
-                      fontSize === 22 && styles.selectedButton,
-                    ]}
-                    onPress={() => handleFontSize(22)}
-                  >
-                    <Text style={styles.buttonText}>Large</Text>
-                  </TouchableOpacity>
+                <View style={styles.optionTextContainer}>
+                  <Text style={styles.optionsText}>Add to Favorites</Text>
                 </View>
+                <TouchableOpacity
+                  style={styles.favButtonContainer}
+                  onPress={handleFavoriteButton}
+                >
+                  <Icon
+                    name={isFavorite ? "heart" : "heart"}
+                    size={40}
+                    color={isFavorite ? "red" : "white"}
+                    style={styles.favButton}
+                  />
+                </TouchableOpacity>
               </View>
-            </View>
-            <View>
-              <View style={styles.optionTextContainer}>
-                {titleItem.video && (
-                  <TouchableOpacity
-                    style={styles.videoBtn}
-                    onPress={handleVideoButton}
-                  >
-                    <Text style={styles.videoBtnText}>Video Song</Text>
-                  </TouchableOpacity>
-                )}
+                <View style={styles.optionTextContainer}>
+                  <Text style={styles.optionsText}>Font Size</Text>
+                  <View style={styles.buttonContainer}>
+                    <TouchableOpacity
+                      style={[
+                        styles.button,
+                        fontSize === 14 && styles.selectedButton,
+                      ]}
+                      onPress={() => handleFontSize(14)}
+                    >
+                      <Text style={styles.buttonText}>Small</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={[
+                        styles.button,
+                        fontSize === 18 && styles.selectedButton,
+                      ]}
+                      onPress={() => handleFontSize(18)}
+                    >
+                      <Text style={styles.buttonText}>Medium</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={[
+                        styles.button,
+                        fontSize === 22 && styles.selectedButton,
+                      ]}
+                      onPress={() => handleFontSize(22)}
+                    >
+                      <Text style={styles.buttonText}>Large</Text>
+                    </TouchableOpacity>
+                  </View>
               </View>
-            </View>
+              {titleItem.video && (
+                <View style={styles.optionTextContainer}>
+                    <TouchableOpacity
+                      style={styles.videoBtn}
+                      onPress={handleVideoButton}
+                    >
+                      <Text style={styles.videoBtnText}>Video Song</Text>
+                    </TouchableOpacity>
+              </View>
+                  )}
+                  <View style={styles.optionTextContainer}>
+                  {titleItem.genre && titleItem.genre.length > 0 && (
+                <Text style={styles.genre}>
+                  Genre: {titleItem.genre.join(" | ")}
+                </Text>
+              )}
+              {titleItem.timeSignature && (
+                <Text style={styles.timeSignature}>
+                  Time Signature: {titleItem.timeSignature}
+                </Text>
+              )}
+              {titleItem.artist && (
+                <Text style={styles.artist}>Artist: {titleItem.artist}</Text>
+              )}                  
+              </View>
             </LinearGradient>
           </View>
         )}
       </View>
 
       <Text style={styles.title}>{titleItem.title}</Text>
+      
       <SafeAreaView style={{ flex: 1 }}>
+
         <ScrollView contentContainerStyle={styles.lyricsContainer}>
+    <TouchableWithoutFeedback onPress={closeOptions}>
+
           <View>
             {titleItem.lyrics ? (
               titleItem.lyrics.split("\n").map((lyric, index) => (
@@ -233,8 +254,12 @@ const Lyrics = ({ navigation }) => {
               </>
             )}
           </View>
+      </TouchableWithoutFeedback>
+
         </ScrollView>
+
       </SafeAreaView>
+
     </View>
   );
 };
@@ -264,32 +289,30 @@ const styles = StyleSheet.create({
   options: {
     position: "absolute",
     zIndex: 1,
-    top: 10,
-    right: 35,
+    top: 8,
+    right: 25,
     alignItems: "flex-end",
   },
   optionsDropdown: {
-    backgroundColor: "white",
-    width: 300,
-    padding: 20,
+    width: 310,
+    padding: 8,
+    borderRadius:18,
   },
   optionTextContainer: {
     flex: 1,
     marginBottom: 10,
-    // backgroundColor: "lightyellow",
     height: 100,
     justifyContent: "center",
+    marginBottom: 12,
+    paddingHorizontal:5,
+    borderBottomWidth:1,
+    borderBottomColor:"darkgrey",
   },
   optionsText: {
     textAlign: "left",
     textAlignVertical: "center",
     fontSize: 18,
-    marginLeft:5,
-    // backgroundColor: "#53E0BC",
-    // borderTopLeftRadius: 40,
-    // borderTopRightRadius: 40,
-    // height: 60,
-    marginBottom: 12,
+    marginLeft: 5,
   },
   favButtonContainer: {
     margin: 10,
@@ -298,7 +321,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   favButton: {
-    marginBottom: 12,
   },
   buttonContainer: {
     flexDirection: "row",
@@ -331,6 +353,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     color: "brown",
+    width:280
   },
   lyricsContainer: {
     paddingTop: 5,
@@ -341,6 +364,22 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     marginBottom: 3,
   },
+  genre: {
+    fontSize: 18,
+    marginLeft: 5,
+    paddingVertical:5,
+  },
+  timeSignature: {
+    fontSize: 18,
+    marginLeft: 5,
+    paddingVertical:5,
+    
+  },
+  artist: {
+    fontSize: 18,
+    marginLeft: 5,
+    paddingVertical:5,
+  },
   errorMessage: {
     fontSize: 20,
     alignSelf: "center",
@@ -348,10 +387,10 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins_700Bold_Italic",
     color: "red",
   },
-    gradient: {
-    // flex: 1,
-    borderRadius:10,
-    padding:8
+  gradient: {
+    flex: 1,
+    borderRadius: 10,
+    padding: 8,
   },
 });
 

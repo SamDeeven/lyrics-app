@@ -166,7 +166,7 @@ const Home = () => {
               <TextInput
                 style={styles.searchInput}
                 placeholder="Search Song / పాటను వెతకండి"
-                textAlign="left"
+                textAlign="center"
                 value={inputSearch}
                 onChangeText={(text) => {
                   setInputSearch(text);

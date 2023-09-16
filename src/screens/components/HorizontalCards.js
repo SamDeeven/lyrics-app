@@ -87,33 +87,46 @@ function HorizontalCards() {
       teluguTitle: "ఏదైన 6 పాటలు",
       text: "When you press the '6 Random Songs' button, a list of 6 random songs will be generated, saving your time in searching for a song. If the generated list is not suitable for you at that moment, you can refresh the page by pulling the screen down to get new list.",
       teluguText:
-        "'5 Random Songs' బటన్ నొక్కితే, ఏదైన 6 పాటల జాబితా వస్తాది. దీనివల్ల మీ సమయం పాట వెకడం లొ వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్(screen) ని కిందకి లాగండి, అప్పుడు వేరే 5 పాటలు జాబితా వస్తుంది.",
+        "'6 Random Songs' బటన్ నొక్కితే, ఏదైన 6 పాటల జాబితా వస్తాది. దీనివల్ల మీ సమయం పాట వెకడం లొ వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్(screen) ని కిందకి లాగండి, అప్పుడు వేరే 6 పాటలు జాబితా వస్తుంది.",
       image: "",
       link: "",
       buttonName: "",
     },
     {
       id: uuid.v4(),
-      title: "Adjust the font size for Lyrics",
-      teluguTitle: "పాట అక్షరాల పరిమాణం/కొలత మార్చుకోవచు",
-      text: "Adjust the font size/letter size for Lyrics screen according to your convinience with the available 3 options.",
+      title: "Menu Option on Home Screen",
+      teluguTitle: "Menu Option on Home Screen",
+      text: "On the top of Home Screen, there is a Menu option. When you press it, you will see the available options",
       teluguText:
-        "ఇవ్వబడిన 3 ఎంపికలలో పాట లో ఉన్న అక్షరాల పరిమాణం ని మీ అనుకూలతను బట్టి సర్దుకొండి.",
+        "Home స్క్రీన్ పైన, మెనూ ఎంపిక ఉంది. మీరు దాన్ని నొక్కినప్పుడు, మీకు అందుబాటులో ఉన్న ఎంపికలు కనిపిస్తాయి.",
       image: "",
       link: "",
       buttonName: "",
     },
     {
       id: uuid.v4(),
-      title: "Video Song Option",
-      teluguTitle: "వీడియో సాంగ్",
-      text: "On the top of Lyrics screen, there will be a 'Video Song' button. When you press it, it will play the YouTube video of that song",
+      title: "Menu Option on Lyrics Screen",
+      teluguTitle: "Menu Option on Lyrics Screen",
+      text: "In the Lyrics Screen, there is a Menu option, right side of the song title. When you press it, you will see the options for Add to Favorite, Font Size, Video Song option, and Song Details",
       teluguText:
-        "పాట చూస్తున్నప్పుడు పైన భాగం లో 'Video Song' అని ఒక బటన్ ఉంటుంది. అది నొక్కితే YouTube లో ఆ పాట వస్తాది.",
+        "Lyrics స్క్రీన్‌లో, పాట టైటిల్‌లో మెనూ ఆప్షన్, కుడి పక్కన ఉంటుంది. మీరు దాన్ని నొక్కినప్పుడు, ఆ పాటను like చెయ్యచ్చు, అక్షరాల పరిమాణం ని మీ అనుకూలతను బట్టి సర్దుకోవచ్చు, వీడియో సాంగ్ బటన్ నొక్కితే YouTube లో ఆ పాట వస్తాది మరియు పాట వివరాల కనిపిస్తాయి.",
       image: "",
       link: "",
       buttonName: "",
     },
+    {
+      id: uuid.v4(),
+      title: "Add to Favorites",
+      teluguTitle: "Add to Favorites",
+      text: "You can add the lyrics to the Favorites section and later view them without searching for the song. 'Add to Favorite' is there in Lyrics Screen Options.",
+      teluguText:
+        "మీకు ఇష్టమైన పాటని Favorites లో సేవ్ చేసుకుని తరువాత చూసుకోవచ్చు.",
+      image: "",
+      link: "",
+      buttonName: "",
+    },
+    
+    
   ];
 
   const handleLanguage = () => {

@@ -36,7 +36,6 @@ import AppLoading from "expo-app-loading";
 import { useSelector } from "react-redux";
 
 import alphabetData from "../../../data/songsData.js";
-import { showFavorites, addToFavorites, isFavorite, removeFavorite } from "../../../asyncStorage.js";
 
 const TitlesList = () => {
   // const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
@@ -45,15 +44,6 @@ const TitlesList = () => {
   const { alphabet } = route.params;
   const data = alphabetData[alphabet];
   const [isFavoriteItem, setIsFavoriteItem] = useState(false);
-
-  // console.log("video link", data)
-  // useEffect(() => {
-  //   const checkFavorite = async () => {
-  //     const favorite = await isFavorite(titleItem.title);
-  //     setIsFavoriteItem(favorite);
-  //   };
-  //   checkFavorite();
-  // }, [titleItem.title]);
 
 
   const [fontsLoad] = useFonts({
@@ -83,15 +73,6 @@ const TitlesList = () => {
 
   const handleTitlePress = (item) => {
     navigation.navigate("Lyrics", { titleItem: item });
-  };
-
-  const handleToggleFavorite = async () => {
-    if (isFavoriteItem) {
-      await removeFavorite(titleItem.title);
-    } else {
-      await addToFavorites(titleItem.title);
-    }
-    setIsFavoriteItem(!isFavoriteItem);
   };
 
   console.log("Loaded Titles==>");
@@ -124,13 +105,6 @@ const TitlesList = () => {
                 <Text style={styles.artist}>Artist: {item.artist}</Text>
               )}
             </TouchableOpacity>
-            <TouchableOpacity onPress={handleToggleFavorite}>
-        <Icon
-          name={isFavoriteItem ? 'heart' : 'heart-outline'}
-          size={30}
-          color={isFavoriteItem ? 'red' : 'gray'}
-        />
-      </TouchableOpacity>
             </View>
 
         )}

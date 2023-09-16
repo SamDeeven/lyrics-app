@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
+const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, closeOptions }) => {
   const [showOptions, setShowOptions] = useState(false);
   const route = useRoute();
 
@@ -11,6 +11,8 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
   const handleOptions = () => {
     setShowOptions(!showOptions);
   };
+
+  
 
   console.log("Loaded Header=>");
   return (
@@ -64,10 +66,11 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
               </View>
             </View>
           ) : (
-            <Icon onPress={() => handleOptions()} name="menu-sharp" size={40} />
+            <Icon onPress={() => handleOptions()} name="ellipsis-vertical-sharp" size={30} />
           )}
         </View>
       )}
+      
       <Text style={homeStyle ? styles.homeHeader : styles.headerTitle}>
         {title}
       </Text>
@@ -89,7 +92,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#02B290",
-    height: 70,
+    height: 60,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     paddingHorizontal: 15,
@@ -98,7 +101,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     backgroundColor: "#02B290",
-    height: 70,
+    height: 60,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     paddingHorizontal: 16,
@@ -121,15 +124,15 @@ const styles = StyleSheet.create({
   },
   menuContainer: {
     backgroundColor: "#ECF0F1",
-    width: 300,
+    width: 200,
     position: "absolute",
     left: 0,
     top: 65,
     height: 200,
     flexDirection: "column",
     justifyContent: "space-evenly",
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
     paddingVertical: 10,
   },
   menuItemsBtn: {
@@ -138,8 +141,8 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     backgroundColor: "#53E0BC",
     // borderRadius: 10,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
   },
   menuItemsBtnText: {
     fontSize: 25,
