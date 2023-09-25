@@ -7,7 +7,6 @@ import {
   Poppins_500Medium,
   Poppins_600SemiBold,
   Poppins_800ExtraBold,
-  
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";

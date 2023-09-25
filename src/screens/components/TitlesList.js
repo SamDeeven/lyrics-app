@@ -4,8 +4,6 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
-  ScrollView,
   FlatList,
 } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
@@ -29,22 +27,19 @@ import {
   Poppins_900Black,
   Poppins_900Black_Italic,
 } from "@expo-google-fonts/poppins";
-import Icon from "react-native-vector-icons/Ionicons";
 
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import { useSelector } from "react-redux";
-
 import alphabetData from "../../../data/songsData.js";
+import { Picker } from "@react-native-picker/picker";
 
 const TitlesList = () => {
-  // const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  const [selectedGenre, setSelectedGenre] = useState("All");
   const route = useRoute();
   const navigation = useNavigation();
   const { alphabet } = route.params;
   const data = alphabetData[alphabet];
-  const [isFavoriteItem, setIsFavoriteItem] = useState(false);
-
+  const [filteredData, setFilteredData] = useState(data);
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -71,16 +66,54 @@ const TitlesList = () => {
     return <AppLoading />;
   }
 
+  const filterSongsByGenre = (genre) => {
+    setSelectedGenre(genre);
+
+    const filteredSongs =
+      genre === "All"
+        ? data
+        : data.filter((song) => song.genre && song.genre.includes(genre));
+
+    setFilteredData(filteredSongs);
+  };
+
+  const getUniqueGenres = () => {
+    const genres = data.flatMap((song) => song.genre || []);
+    return ["All", ...new Set(genres)];
+  };
+
   const handleTitlePress = (item) => {
     navigation.navigate("Lyrics", { titleItem: item });
   };
 
-  console.log("Loaded Titles==>");
   return (
     <View style={[styles.container]}>
       <Text style={styles.alphabet}>{alphabet}</Text>
+
+      <View>
+        <Text style={{ fontSize: 20 }}>Filter</Text>
+        <Picker
+          prompt="Choose Genre"
+          promptStyle={{ color: "yellow" }}
+          dropdownIconColor={"#049372"}
+          dropdownIconRippleColor={"#049372"}
+          selectedValue={selectedGenre}
+          onValueChange={(itemValue) => filterSongsByGenre(itemValue)}
+          style={styles.picker}
+        >
+          {getUniqueGenres().map((genre) => (
+            <Picker.Item
+              key={genre}
+              label={genre}
+              value={genre}
+              style={styles.pickerItem}
+            />
+          ))}
+        </Picker>
+      </View>
+
       <FlatList
-        data={data}
+        data={filteredData}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View>
@@ -105,8 +138,7 @@ const TitlesList = () => {
                 <Text style={styles.artist}>Artist: {item.artist}</Text>
               )}
             </TouchableOpacity>
-            </View>
-
+          </View>
         )}
       />
     </View>
@@ -126,18 +158,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   titleContainer: {
-    marginBottom: 8,
-    borderWidth: 4,
+    marginBottom: 7,
+    borderWidth: 2,
     borderColor: "#049372",
-    padding: 10,
+    padding: 3,
+    // paddingTop:2,
+    paddingLeft:5,
     backgroundColor: "#049372",
-    borderTopLeftRadius: 18,
+    borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
-    borderBottomRightRadius: 18,
+    borderBottomRightRadius: 20,
   },
   title: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: "bold",
     color: "lightyellow",
   },
@@ -152,6 +186,18 @@ const styles = StyleSheet.create({
   artist: {
     fontSize: 12,
     color: "lightpink",
+  },
+  picker: {
+    width: "100%",
+    marginBottom: 10,
+    backgroundColor: "#C2E4DD",
+    marginHorizontal:5,
+    padding: 3,
+
+  },
+  pickerItem: {
+    color: "#049372",
+    fontSize:22,
   },
 });
 

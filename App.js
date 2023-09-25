@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { Provider } from "react-redux";
-import { store } from "./store";
-import { Text, View, StyleSheet, TouchableOpacity, StatusBar, SafeAreaView } from "react-native";
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import React from "react";
+import { StyleSheet, StatusBar } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./src/screens/components/Home";
 import TitlesList from "./src/screens/components/TitlesList";
@@ -10,10 +8,8 @@ import Lyrics from "./src/screens/components/Lyrics";
 import FilteredTitles from "./src/screens/components/FilteredTitles";
 import RandomTitles from "./src/screens/components/RandomTitles";
 import { Poppins_800ExtraBold } from "@expo-google-fonts/poppins";
-
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import Icon from "react-native-vector-icons/Ionicons";
 import Contact from "./src/screens/components/Contact";
 import About from "./src/screens/components/About";
 import CustomHeader from "./src/screens/CustomHeader";
@@ -22,11 +18,7 @@ import Favorites from "./src/screens/components/Favorites";
 const Stack = createStackNavigator();
 
 const App = () => {
-  const [showOptions, setShowOptions] = useState(false);
 
-  const handleOptions = () => {
-    setShowOptions(!showOptions);
-  };
   const [fontsLoad] = useFonts({
     Poppins_800ExtraBold,
   });

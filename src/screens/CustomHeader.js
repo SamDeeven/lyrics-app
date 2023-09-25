@@ -1,20 +1,16 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, TouchableWithoutFeedback } from "react-native";
-import { useRoute, useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, closeOptions }) => {
+const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
   const [showOptions, setShowOptions] = useState(false);
-  const route = useRoute();
 
   const navigation = useNavigation();
   const handleOptions = () => {
     setShowOptions(!showOptions);
   };
 
-  
-
-  console.log("Loaded Header=>");
   return (
     <View
       style={homeStyle ? styles.homeHeaderContainer : styles.headerContainer}

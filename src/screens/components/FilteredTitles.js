@@ -7,10 +7,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import alphabetData from "../../../data/songsData.js";
-import { useSelector } from "react-redux";
 
 const FilteredTitles = ({ route, navigation }) => {
-  // const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
 
   const { searchQuery } = route.params;
   const [matchingTitles, setMatchingTitles] = useState([]);
@@ -29,7 +27,6 @@ const FilteredTitles = ({ route, navigation }) => {
             ))
         ) {
           matchingTitlesArray.push(item);
-          // console.log("Matching Object==>", item);
         }
       });
     });
@@ -60,7 +57,21 @@ const FilteredTitles = ({ route, navigation }) => {
                   onPress={() => handleTitlePress(item)}
                 >
                   <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>{item.title}</Text>
+                  {item.genre && item.genre.length > 0 && (
+                <Text style={styles.genre}>
+                  Genre: {item.genre.join(" | ")}
+                </Text>
+              )}
+              {item.timeSignature && (
+                <Text style={styles.timeSignature}>
+                  Time Signature: {item.timeSignature}
+                </Text>
+              )}
+              {item.artist && (
+                <Text style={styles.artist}>Artist: {item.artist}</Text>
+              )}
                 </TouchableOpacity>
+                
               </View>
             )}
             keyExtractor={(item) => item.id.toString()}
@@ -102,26 +113,41 @@ const styles = StyleSheet.create({
     color: "brown",
   },
   titleContainer: {
-    marginBottom: 8,
-    borderWidth: 4,
+    marginBottom: 7,
+    borderWidth: 2,
     borderColor: "#049372",
     backgroundColor: "#049372",
     borderRadius: 5,
-    padding: 10,
-    borderTopLeftRadius: 18,
+    padding: 3,
+    // paddingTop:2,
+    paddingLeft:5,
+    borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
-    borderBottomRightRadius: 18,
+    borderBottomRightRadius: 20,
   },
   title: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: "bold",
-    color:"white",
+    color: "lightyellow",
+  },
+  genre: {
+    fontSize: 14,
+    color: "white",
+  },
+  timeSignature: {
+    fontSize: 14,
+    color: "white",
+  },
+  artist: {
+    fontSize: 12,
+    color: "lightpink",
   },
   emoji: {
     fontSize: 100,
     color: "black",
   },
+
 });
 
 export default FilteredTitles;

@@ -23,17 +23,24 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import { useSelector, useDispatch } from "react-redux";
-import { toggleDarkMode } from "../../../reducers/darkModeReducer";
 import Icon from "react-native-vector-icons/Ionicons";
 import HorizontalCards from "./HorizontalCards.js";
 
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
   const [isKeyboardActive, setIsKeyboardActive] = useState(false);
-  // const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
   const [suggestions, setSuggestions] = useState([]);
   const navigation = useNavigation();
+ 
+  let totalObjects = 0;
+
+for (const key in alphabetData) {
+  if (Array.isArray(alphabetData[key])) {
+    totalObjects += alphabetData[key].length;
+  }
+}
+console.log(`Total number of objects: ${totalObjects}`);
+
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(

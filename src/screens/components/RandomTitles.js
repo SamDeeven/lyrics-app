@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import songsData from '../../../data/songsData';
 import {debounce} from 'lodash';
@@ -44,6 +44,19 @@ const RandomTitles = ({navigation}) => {
               onPress={() => handleTitlePress(item)}
             >
               <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>{item.title}</Text>
+              {item.genre && item.genre.length > 0 && (
+                <Text style={styles.genre}>
+                  Genre: {item.genre.join(" | ")}
+                </Text>
+              )}
+              {item.timeSignature && (
+                <Text style={styles.timeSignature}>
+                  Time Signature: {item.timeSignature}
+                </Text>
+              )}
+              {item.artist && (
+                <Text style={styles.artist}>Artist: {item.artist}</Text>
+              )}
             </TouchableOpacity>
           )}
         keyExtractor={(item) => item.id.toString()}
@@ -61,20 +74,34 @@ const styles = StyleSheet.create({
 
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
-    color:"white"
+    color: "lightyellow",
   },
   titleContainer: {
-    marginBottom: 10,
-    borderWidth: 4,
+    marginBottom: 7,
+    borderWidth: 2,
     borderColor: "#049372",
-    padding: 10,
+    padding: 3,
+    // paddingTop:2,
+    paddingLeft:5,
     backgroundColor: "#049372",
-    borderTopLeftRadius: 18,
+    borderTopLeftRadius: 20,
     borderTopRightRadius:5,
     borderBottomLeftRadius:5,
-    borderBottomRightRadius:18,
+    borderBottomRightRadius:20,
+  },
+  genre: {
+    fontSize: 14,
+    color: "white",
+  },
+  timeSignature: {
+    fontSize: 14,
+    color: "white",
+  },
+  artist: {
+    fontSize: 12,
+    color: "lightpink",
   },
 });
 

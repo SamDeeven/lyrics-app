@@ -4,6 +4,26 @@ const songsData = {
   అ: [
     {
       id: uuid.v4(),
+      title: "అందాలతార అరుదెంచె నాకై",
+      lyrics:
+        "అందాలతార అరుదెంచె నాకై అంబర వీధిలో\nఅవతారమూర్తి యేసయ్య కీర్తి అవని చాటుచున్\nఆనందసంద్ర ముప్పొంగె నాలో అమరకాంతిలో\nఆది దేవుని జూడ ఆశింప మనసు పయనమైతిని    ||అందాల తార||\n\n1. విశ్వాసయాత్ర దూరమెంతైన విందుగా దోచెను\nవింతైన శాంతి వర్షించె నాలో విజయపథమున\nవిశ్వాలనేలెడి దేవకుమారుని వీక్షించు దీక్షలో\nవిరజిమ్మె బలము ప్రవహించె ప్రేమ విశ్రాంతి నొసగుచున     ||అందాల తార||\n\n2. యెరూషలేము రాజనగరిలో యేసును వెదకుచు\nఎరిగిన దారి తొలగిన వేళ ఎదలో కృంగితి\nయేసయ్యతార ఎప్పటివోలె ఎదురాయె త్రోవలో\nఎంతో యబ్బురపడుచు విస్మయ మొందుచు ఏగితి స్వామి కడకు    |అందాల తార||\n\n3. ప్రభుజన్మస్ధలము పాకయేగాని పరలోక సౌధమే\nబాలునిజూడ జీవితమెంత పావనమాయెను\nప్రభుపాదపూజ దీవెనకాగా ప్రసరించె పుణ్యము\nబ్రతుకే మందిరమాయె అర్పణలే సిరులాయె ఫలియించె ప్రార్ధన   ||అందాల తార||",
+      keywords: [
+        "andhaala thaara",
+        "andhala thara",
+        "andhaalathaara",
+        "andhalathara",
+        "andala tara",
+        "andala thara",
+        "christmas",
+        "3/4",
+      ],
+      video: "",
+      artist: "Dr. A. B. Masilamani",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
       title: "అత్యున్నత సింహాసనముపై",
       lyrics:
         "అత్యున్నత సింహాసనముపై - ఆశీనుడవైన నా దేవా\nఅత్యంత ప్రేమా స్వరూపివి నీవే - ఆరాధింతును నిన్నే\nఆహహ హల్లెలూయ (3) ఆ.....మేన్\n\n1. ఆశ్చర్యకరుడా స్తోత్రం - ఆలోచన కర్తా స్తోత్రం\nబలమైన దేవా - నిత్యుడవగు తండ్రి\nసమాధాన అధిపతి స్తోత్రం 'ఆహహ'\n\n2. కృపా సత్య సంపూర్ణుడా స్తోత్రం - కృపతో రక్షించితివే స్తోత్రం\nనీ రక్తమిచ్చి విమోచించినావే నా రక్షణ కర్తా స్తోత్రం\n' ఆహహ '\n\n౩.మృత్యుంజయుడా స్తోత్రం - మహా ఘనుడా స్తోత్రం\nమమ్మును కొనిపోవ త్వరలో రానున్న మేఘవాహనుడా స్తో\n' ఆహహ '\n\n4.ఆమేన్ అనువాడా స్తోత్రం - అల్ఫా ఓమేగా స్తోత్రం అగ్ని జ్వాలల\nకన్నులు గలవాడా అత్యున్నతుడా స్తో\n' అహహ '",
@@ -13,12 +33,47 @@ const songsData = {
         "athunatha simhasanamupai",
         "athyunatha simhasanamupay",
         "worship",
-        "3/4"
+        "3/4",
       ],
       video: "https://youtu.be/QmK6L700NqQ",
       artist: "",
-      genre: ["Worship"],
+      genre: ["Andhra Christian Hymn", "Worship"],
       timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "అన్ని నామముల కన్న",
+      lyrics:
+        "అన్ని నామముల కన్న పై నామము – యేసుని నామము\nఎన్ని తరములకైనా ఘనపరచదగినది – క్రైస్తవ నామము (2)\nయేసు నామము జయం జయము\nసాతాను శక్తుల్ లయం లయము (2)\nహల్లెలూయ హొసన్న హల్లెలూయా – హల్లెలూయా ఆమెన్ (2)\n\n1. పాపముల నుండి విడిపించును\nయేసుని నామము (2)\nనిత్య నరకాగ్నిలో నుండి రక్షించును\nక్రీస్తేసు నామము (2) ||యేసు నామము ||\n\n2. సాతాను పై అధికార మిచ్చును\nశక్తి గల యేసు నామము (2)\nశత్రు సమూహము పై జయమునిచ్చును\nజయశీలుడైన యేసు నామము (2) ||యేసు నామము ||",
+      keywords: [
+        "anni naamamulakanna pai naamamu",
+        "ani namamulakanna pai namamu",
+        "anninaamamulakanna",
+        "anni naamamulakanna",
+        "anni naamamula kanna",
+        "2/4",
+      ],
+      video: "https://youtu.be/w_LzUNOC8Vc",
+      artist: "",
+      genre: ["Worship", "General"],
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "అన్ని కాలంబుల",
+      lyrics:
+        "అన్ని కాలంబుల – నున్న యెహోవా ని\nనెన్నదరంబయో – కన్న తండ్రి\nవన్నె కెక్కిన మోక్ష – వాసాళి సన్నుతు\nలున్నతమై యుండ – మున్నె నీకు     |అన్ని||\n\n1. నిన్ను బ్రకటన సేయ – నిఖిల లోకములను\nబన్నుగ జేసిన – బలుడ వీవె\nఉన్న లోకంబుల – నుడుగక కరుణా సం\nపన్నతతో నేలు – ప్రభుడ వీవె\nఅన్ని జీవుల నెరిగి – యాహార మిచ్చుచు\nనున్న సర్వజ్ఞుo – డవు నీవే\nఎన్న శక్యముగాక – ఉన్న లక్షణముల\nసన్నుతించుటకు నే – జాలుదునా   ||అన్ని||\n\n2. పుట్టింప నీవంచు – బోషింప నీవంచు\nగిట్టింప నీవంచు – గీర్తింతును\nనట్టి పనికి మాలి – నట్టి మానవుల చే\nపట్టి రక్షింప బా – ధ్యుండ వంచు\nదట్టమైన కృపను దరి జేర్చ నాకిచ్చి\nపట్టయు నిలచియుండు – ప్రభుడ వంచు\nగట్టడచే గడ – ముట్టుదనుక నా\nపట్టుకొలది నిన్ను – బ్రస్తుతింతు    ||అన్ని||\n\n3. కారుణ్య నిధి వీవు – కఠినాత్ముడను నేను\nభూరి శుద్ధుడ వీవు – పాపి నేను\nసార భాగ్యుడ వీవు – జగతిలో నాకన్న\nదారిద్రుడే లేడు – తరచి చూడ\nసార సద్గుణముల – సంపన్నుడవు నీవు\nఘోర దుర్గుణ సం – చారి, నేను\nఏ రీతి స్తుతియింతు – నే రీతి సేవింతు\nనేర మెన్నక ప్రోవ – నెర నమ్మితి     ||అన్ని||",
+      keywords: [
+        "anni kalambula",
+        "anni kaalambula",
+        "annikalambula",
+        "andhra christian hymns",
+        "7/8",
+      ],
+      video: "",
+      artist: "Beethala John",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -32,12 +87,30 @@ const songsData = {
         "naa dhairyam",
         "nadairyam",
         "anuksanam",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Surya Prakash Injarapu",
       genre: ["General"],
       timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "అనుకరించెద నే ననుదినమును బాలుఁ డేసు",
+      lyrics:
+        "అనుకరించెద నే ననుదినమును బాలుఁ డేసు ననువుగాను జ్ఞానమునం\nదును వయస్సునందును దే వుని ప్రేమను మానవుల ద యను బెరిగిన\nబాలుఁడేసు ||ననుకరించెద||\n\n1. పరదేశంబున వసించి పరమాత్తుని మదిఁ దలంచి దురితమును\nజయించిన స చ్చరితుఁడైన యోసేపు ||ననుకరించెద||\n\n2. తల్లి యానతి నెరవేర్చి తమ్ముని కష్టములఁ దీర్చి యెల్లకాలముండు కీర్తి\nనిల గడించిన మిర్యాము ||ననుకరించెద||\n\n3. పాలు మరచినది మొదలు ప్రభు సేవా సంపదలు ఆలయమునఁ\nబూసిన సు బాలకుండు సమూయేలు ||ననుకరించెద||\n\n4. శత్రువులను బరిమార్చి మిత్రులకు జయంబొనర్చి స్తోత్రగీతములు\nరచించిన సుందరుండౌ దావీదు ||ననుకరించెద||\n\n5. పరులకు న్యాయంబుఁ దీర్పఁ బ్రజలకు క్షేమంబుఁ గూర్పఁ పరమ\nవివేకంబుఁ గోరి ప్రభు నడిగిన సొలొమోను ||ననుకరించెద||\n\n6. యజమానుని కుష్ఠుఁ గాంచి స్వజనుల దేవుని గురించి నిజ సాక్ష్య\nమిడి సన్మా నించిన హెబ్రీయ బాల ||ననుకరించెద||\n\n7. అపవిత్ర రాజ భోజ నాదుల విడి దైవ పూజఁ గపట మింత లేక చేసి\nఘనత నొందిన దానియేలు ||ననుకరించెద||\n\n8. ప్రార్థన కూటమునఁ జేరి ప్రత్యుత్తర మపుడె కోరి సార్ధకముగఁ బేతురుని\nసమాచార మిడిన రొదే ||ననుకరించెద||\n\n9. భక్తిభయములందుఁ బెరిగి బహు ప్రేదేశములను దిరిగి శక్తి కొలఁది\nసంఘ పరి చర్య నొనర్చిన తిమోతి ||ననుకరించెద||",
+      keywords: [
+        "anukarinchedha",
+        "anukarincheda",
+        "anukarinchada",
+        "anukarenchedha",
+        "anukarinchedhaa",
+        "3/4"
+      ],
+      video: "",
+      artist: "Mallela Dhaveedhu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -57,30 +130,25 @@ const songsData = {
         "lent",
         "holy communion",
         "communion",
-        "4/4"
+        "4/4",
       ],
       video: "https://youtu.be/eglqFuBC0eY",
-      artist: "",
-      genre: ["Lent"],
+      artist: "Siripurapu Krupanandam",
+      genre: ["Andhra Christian Hymn", "Lent"],
       timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
-      title: "అన్ని నామముల కన్న",
+      title: "అభిషేకమా ఆత్మాభిషేకమా",
       lyrics:
-        "అన్ని నామముల కన్న పై నామము – యేసుని నామము\nఎన్ని తరములకైనా ఘనపరచదగినది – క్రైస్తవ నామము (2)\nయేసు నామము జయం జయము\nసాతాను శక్తుల్ లయం లయము (2)\nహల్లెలూయ హొసన్న హల్లెలూయా – హల్లెలూయా ఆమెన్ (2)\n\n1. పాపముల నుండి విడిపించును\nయేసుని నామము (2)\nనిత్య నరకాగ్నిలో నుండి రక్షించును\nక్రీస్తేసు నామము (2) ||యేసు నామము ||\n\n2. సాతాను పై అధికార మిచ్చును\nశక్తి గల యేసు నామము (2)\nశత్రు సమూహము పై జయమునిచ్చును\nజయశీలుడైన యేసు నామము (2) ||యేసు నామము ||",
+      "అభిషేకమా ఆత్మాభిషేకమా\nనన్ను దీవింప నా పైకి దిగిరమ్మయ్యా\n\n1. నీవు నలోనుండ నాకు భయమే లేదు \nనేను దావీదు వలెనుందును\nగొల్యాతును పడగొట్టి జయమొందెదన్\n\n2. నీవు నాలోనుండ నేను ఎలీషా వలె\nయొర్ధానును విడగొట్టెదన్\nఎన్నో ఘనమైన కార్యములు చేయగలను\n\n3. నీవు నలో నుండ నేను స్తెఫనువలె\nఆత్మ జ్ఞానముతో మాట్లాడెదన్\nదేవ దూతల రూపములో మారిపోదును",
       keywords: [
-        "anni naamamulakanna pai naamamu",
-        "ani namamulakanna pai namamu",
-        "anninaamamulakanna",
-        "anni naamamulakanna",
-        "anni naamamula kanna",
-        "2/4"
+      "abhishekama aathmabishekama", "abishekama athmabishekama", "jyothi raju", "4/4"
       ],
-      video: "https://youtu.be/w_LzUNOC8Vc",
-      artist: "",
-      genre: ["Worship", "General"],
-      timeSignature: "2/4",
+      video: "",
+      artist: "Pastor M. Jyothi Raju",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -93,7 +161,7 @@ const songsData = {
         "asaadhya mainadi leneledu",
         "asadhyamainadhi leneledhu",
         "asadhyamainadi leneledu",
-        "2/4"
+        "2/4",
       ],
       video: "https://youtu.be/TtlkrIWJdVE",
       artist: "",
@@ -113,10 +181,29 @@ const songsData = {
         "ayya vandanaalu",
         "ayya wandanaalu",
         "worship",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/DRSpEmfgPXY?start=1226",
       artist: "James Ezekiel",
+      genre: ["Worship"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "అర్హుడవు నీవే నీవే నా దేవా",
+      lyrics:
+        "అర్హుడవు నీవే నీవే నా దేవా\nఅర్హుడవు నీవే మా గొప్ప దేవా\n\nనీ నామమందే మేము ఆనందింతుము\nనీ దివ్య సన్నిధిలోనే ఆరాధింతుము  (2)\n\n1. కృంగియున్న వేళల్లోన - భంగపడిన తావుల్లోన (2)\nకంటిపాప రీతి నన్ను - కాచినట్టు యేసు నీవే (2)\n\n2. దప్పిగొన్న జీవితాన - జీవజలము నిచ్చినావు (2)\nదారితప్పినట్టి నాకు - ప్రేమ మార్గం చూపినావు (2)\n\n3. రాజులకు రాజునీవే - ప్రభులకు ప్రభు నీవే (2)\nరాజానాకు చాలిన వాడా - నిన్నె పోలిన వాడెలేడు (2)",
+      keywords: [
+        "arhudavu neeve",
+        "Arhudavu nive",
+        "Arhudav nive",
+        "Arhudavneeve",
+        "Arhudavuneeve",
+        "worship",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
       genre: ["Worship"],
       timeSignature: "4/4",
     },
@@ -138,11 +225,62 @@ const songsData = {
         "aajale premanu",
         "raj prakash paul",
         "rajprakashpaul",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/q9JTtJWpMmg?start=546",
       artist: "Raj Prakash Paul",
-      genre: ["Love","General"],
+      genre: ["Love", "General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఆత్మా నడుపు సత్యము లోని కిపుడే",
+      lyrics:
+        "ఆత్మా నడుపు స-త్యము లోని కిపుడే యాత్మా నడుపు\nఆత్మా నీ సాయంబు నధికంబుగా నిచ్చి ఆత్మానందముతో\nదై వారాధనమున ||కాత్మా||\n\n1. ఘోర కలుషంబుల దూరంబుగాఁ దోలి పారమార్థిక బుద్ధిఁ గోరు నట్టులను ||ఆత్మా||\n\n2. అంధత్వంబు వలన మందమైయుండు మా డెందంబు లెల్ల నీ యందు వెలుఁగుటకు ||ఆత్మా||\n\n3. నిర్మల హృదయంబు నిరతంబు మా కిచ్చి కూర్మిన్ నీ వరములఁ గూర్చి దీవించి ||ఆత్మా||\n\n4. సకల మానవులతో అకలంక శుభవార్తఁ బ్రకటించు బలజ్ఞాన నిక రంబు నిచ్చి ||ఆత్మా||\n\n5. దీవించి పంపు మో దైవాత్మా మమ్మును భావజ్ఞాన మొసంగి ప్రభు సేవలోన ||ఆత్మా||",
+      keywords: [
+        "aathma nadupu sathyamu looni",
+        "aathma nadupu",
+        "athma nadupu sathyamu",
+        "atma nadupu",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Thalluri Kornelius",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఆనంద మగు ముక్తి",
+      lyrics:
+        "1.ఆనంద మగు ముక్తి యే నా మందిరము\nజ్ఞాని మానుగఁ జూచు దాని సుందరము ||ఆనందమగు||\n\n2.పరదేశివలె దేహ వరణమం దుందున్ ధరణి కాననముగా దర్శించు చుందున్ నెరి\nదుఃఖసుఖములు సరిగా భావింతున్ పరిశుద్ధాత్ముని వేఁ డి పరితృప్తి నుండు ||నానంద మగు||\n\n3.బహు శోధనలు నాపైఁ బడి వచ్చునపుడు నహితాంధతమము న న్నడ్డుకొన్నపుడు\nనిహబాధ లన్నిన న్నెదిరించినపుడు నహహ యేసునివల్ల నమృతుఁడ నెపుడు ||నానంద మగు||\n\n4.ముందు నా మనసు దేవుని కప్పగింతు నందరి నస్మత్తు లయముగాఁ ప్రేమింతున్\nసందేహ రాహిత్య సరణిలో నిల్తుఁ పొందఁ బోయెడి ముక్తి భువి యందె గాంతు ||నానంద మగు||",
+      keywords: [
+        "aanandha magu mukthi",
+        "aanandhammagu mukthi",
+        "anandham magu mukthi",
+        "7/8",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఆనంద యాత్ర ఇది ఆత్మీయ యాత్ర",
+      lyrics:
+        "ఆనంద యాత్ర\nఇది ఆత్మీయ యాత్ర\nయేసుతో నూతన\nయెరుషలేము యాత్ర (2) ||ఆనంద యాత్ర||\n\n1. యేసుని రక్తము\nపాపములనుండి విడిపించును\nవేయి నోళ్ళతో స్తుతించినను\nతీర్చలేము ఆ ఋణమును ||ఆనంద యాత్ర||\n\n2. రాత్రియు పగలును\nపాదములకు రాయి తగలకుండా\nమనకు పరిచర్య చేయుట కొరకు\nదేవదూతలు మనకుండగా ||ఆనంద యాత్ర||\n\n3. కృతజ్ఞత లేని వారు\nవేలకొలదిగ కూలినను\nకృపా వాక్యమునకు సాక్షులమై\nకృప వెంబడి కృప పొందెదము ||ఆనంద యాత్ర||\n\n4. ఆనందం ఆనందం\nయేసుని చూచే క్షణం ఆసన్నం\nఆత్మానంద భరితులమై\nఆగమనాకాంక్షతో సాగెదన్ ||ఆనంద యాత్ర||",
+      keywords: [
+        "aanandha yathra",
+        "anandha yatra",
+        "aananda yathra",
+        "aananda yatra",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
       timeSignature: "4/4",
     },
     {
@@ -189,6 +327,19 @@ const songsData = {
     },
     {
       id: uuid.v4(),
+      title: "ఆపత్కాలమున తన పర్ణశాలలో దాచెను",
+      lyrics:
+      "ఆపత్కాలమున తన పర్ణశాలలో దాచెను\nతన గుడారపు మాటున నన్ను దాచెను\nఆశ్రయ దుర్గముపై నన్ను ఎక్కించెను\n\nయెహోవా నా ప్రాణ దుర్గము\nనేను ఎవరికి వెరతును\nనా చేయి విడువని దేవుడుండగా\nనేను భయపడను\n\n1. ఇహలోక దుఃఖ బాధలలో\nనీవు నాతో ఉన్నావు\nముదిమి వచ్చువరకు నన్ను\nఎత్తుకొనే దేవుడవు\nనీవుగాక వేరే ఆశ నాకు లేనేలేదు\n\nనిత్యము నీ పై ఆనుకొని\nనిశ్చింతగా సాగేదన్\nఆ...హల్లెలూయ....ఆ హల్లెలూయ....ఆ హల్లెలూయ....ఆ...ఆ...ఆ  హల్లెలూయ\n\n2. లెక్కించలేని అధ్భుతములు\nమక్కువతో చేసిన దేవా\nనీవు చేసిన కార్యములకై నేను\nఏమి అర్పింతును స్వచ్ఛమైన\nనిత్య ప్రేమను నా పై చూపినదేవుడవు\nకొట్లా కొలది స్తోత్రములు నిరతము నీకే ప్రభువా\nఆ...హల్లెలూయ....ఆ హల్లెలూయ....ఆ హల్లెలూయ....ఆ...ఆ...ఆ  హల్లెలూయ",
+      keywords: [
+        "aapathkalamuna", "aapath kalamuna", "Aapatkalamuna", "2/4"
+      ],
+      video: "",
+      artist: "",
+      genre: ["General"],
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
       title: "ఆయనే నా సంగీతము",
       lyrics:
         "ఆయనే నా సంగీతము బలమైన కోటయును\nజీవాధిపతియు ఆయనే\nజీవిత కాలమెల్ల స్తుతించెదము ||ఆయనే||\n\n1. స్తుతుల మధ్యలో నివాసం చేసి\nదూతలెల్ల పొగడే దేవుడాయనే (2)\nవేడుచుండు భక్తుల స్వరము విని\nదిక్కు లేని పిల్లలకు దేవుడాయనే (2) ||ఆయనే||\n\n2. ఇద్దరు ముగ్గురు నా నామమున\nఏకీభవించిన వారి మధ్యలోన (2)\nఉండెదననిన మన దేవుని\nకరములు తట్టి నిత్యం స్తుతించెదము (2) ||ఆయనే||\n\n3. సృష్టికర్త క్రీస్తు యేసు నామమున\nజీవిత కాలమెల్ల కీర్తించెదము (2)\nరాకడలో ప్రభుతో నిత్యముందుము\nమ్రొక్కెదము స్తుతించెదం పొగడెదము (2) ||ఆయనే||",
@@ -203,7 +354,7 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: ["Andhra Christian Hymn", "Worship"],
+      genre: ["Worship"],
       timeSignature: "4/4",
     },
     {
@@ -218,10 +369,10 @@ const songsData = {
         "aradanaku yogyuda",
         "aaradanaku yoogyuda",
         "worship",
-        "3/4"
+        "3/4",
       ],
       video: "",
-      artist: "",
+      artist: "Pastor Jyothi Raju",
       genre: ["Worship"],
       timeSignature: "3/4",
     },
@@ -243,8 +394,8 @@ const songsData = {
         "aaraadhanayesu",
         "aaradana eesu nike",
         "aradana esu nike",
-        "worship", 
-        "4/4"
+        "worship",
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/mmhJWYp_DlM?start=1079",
       artist: "",
@@ -285,9 +436,9 @@ const songsData = {
     },
     {
       id: uuid.v4(),
-      title: "ఆలోచి౦చావ – ఓ నేస్తం ఆలోచి౦చావ",
+      title: "ఆలోచించావ – ఓ నేస్తం ఆలోచించావ",
       lyrics:
-        "ఆలోచి౦చావ – ఓ నేస్తం ఆలోచి౦చావ\nఏ సమయంలో ఏమవుతుందో –అని ఆలోచి౦చావ\nఆలోచి౦చావ – ఓ నేస్తం ఆలోచి౦చావ\nఏ సమయంలో ప్రభు పిలుపు౦దో – అని ఎవరికి తెలియదుగా\nఈ సమయమ౦దే అ౦తా – కనుమరుగైపోతే\nఏ చోటికి నువ్వు వెళ్తావో – అని ఆలోచి౦చావ\nఈ సమయమ౦దే అ౦తా – విడిచి వెళ్ళ వస్తే\nఏ చోటికి నువ్వు వెళ్తావో – అని ఆలోచి౦చావ ॥ఆలోచి౦చావ॥\n\n1. ఏదేదో అనుకుంటాము – ఏవేవో కలగ౦టాము\nవ్యర్థమైన లోకాశలకు – లోబడుతూ ఉ౦టాము ॥2॥\nప్రభు నిన్ను చూచుచున్నాడని,\nతన ప్రేమతో పిలచుచున్నాడని,\nతెలిసి కూడా ఎ౦తో నిర్లక్ష్యం ..!\nమేలుకో….. సోదరా ..!\nరానైయు౦దిగా – ప్రభు రాకడ\nమేలుకో ….. సోదరీ ..!\nరానైయు౦దిగా – ప్రభు రాకడ ॥ఆలోచి౦చావ॥\n\n2. అన్నీ తెలుసనుకు౦టాము – నాకేదీ కాద౦టాము\nతెలియకు౦డా సాతానుచే – మోసపోతూ ఉ౦టాము ॥2॥\nప్రభు నిన్ను చూచుచున్నాడని,\nతన ప్రేమతో పిలచుచున్నాడని,\nతెలిసి కూడా ఎ౦తో నిర్లక్ష్యం ..!\nమేలుకో ….. సోదరా ..!\nరానైయు౦దిగా – ప్రభు రాకడ\nమేలుకో ….. సోదరీ ..!\nరానైయు౦దిగా – ప్రభు రాకడ ॥ఆలోచి౦చావ॥",
+        "ఆలోచించావ – ఓ నేస్తం ఆలోచించావ\nఏ సమయంలో ఏమవుతుందో – అని ఆలోచించావ\nఆలోచించావ – ఓ నేస్తం ఆలోచించావ\nఏ సమయంలో ప్రభు పిలుపుందో – అని ఎవరికి తెలియదుగా\nఈ సమయమందే అంతా – కనుమరుగైపోతే\nఏ చోటికి నువ్వు వెళ్తావో – అని ఆలోచి౦చావ\nఈ సమయమందే అ౦తా – విడిచి వెళ్ళ వస్తే\nఏ చోటికి నువ్వు వెళ్తావో – అని ఆలోచించావ ॥ఆలోచించావ॥\n\n1. ఏదేదో అనుకుంటాము – ఏవేవో కలగంటాము\nవ్యర్థమైన లోకాశలకు – లోబడుతూ ఉంటాము (2)\nప్రభు నిన్ను చూచుచున్నాడని,\nతన ప్రేమతో పిలచుచున్నాడని,\nతెలిసి కూడా ఎంతో నిర్లక్ష్యం ..!\nమేలుకో….. సోదరా ..!\nరానైయు౦దిగా – ప్రభు రాకడ\nమేలుకో ….. సోదరీ ..!\nరానైయుందిగా – ప్రభు రాకడ ॥ఆలోచించావ॥\n\n2. అన్నీ తెలుసనుకుంటాము – నాకేదీ కాదంటాము\nతెలియకుండా సాతానుచే – మోసపోతూ ఉంటాము (2)\nప్రభు నిన్ను చూచుచున్నాడని,\nతన ప్రేమతో పిలచుచున్నాడని,\nతెలిసి కూడా ఎంతో నిర్లక్ష్యం ..!\nమేలుకో ….. సోదరా ..!\nరానైయుందిగా – ప్రభు రాకడ\nమేలుకో ….. సోదరీ ..!\nరానైయుందిగా – ప్రభు రాకడ ॥ఆలోచించావ॥",
       keywords: ["aaloochinchava oo nestham", "aalochinchava oo nestham"],
       video: "",
       artist: "Enosh Kumar",
@@ -309,7 +460,7 @@ const songsData = {
         "worship",
       ],
       video: "https://www.youtube.com/embed/_yc-5wajD8k?start=985",
-      artist: "",
+      artist: "Joel Kodali & Hadlee Xavier",
       genre: ["Worship"],
       timeSignature: "4/4",
     },
@@ -345,12 +496,12 @@ const songsData = {
         "Ascharya maina prema",
         "ascharyamyna prema",
         "Aschariya mayna prema",
-        "love", 
-        "4/4"
+        "love",
+        "4/4",
       ],
       video: "",
-      artist: "",
-      genre: ["Love","General"],
+      artist: "Jikki Devaraj",
+      genre: ["Love", "General", "Lent"],
       timeSignature: "4/4",
     },
     {
@@ -376,12 +527,28 @@ const songsData = {
         "vijai roy",
         "vijayroi",
         "vijayroy",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "Vijai Roy",
       genre: ["General"],
       timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఆశీర్వాదంబుల్ మా మీద",
+      lyrics:
+        "1. ఆశీర్వాదంబుల్ మా మీద\nవర్షింపజేయు మీశ\nఆశతో నమ్మి యున్నాము\nనీ సత్య వాగ్దత్తము\n\nఇమ్మాహి మీద\nక్రుమ్మరించుము దేవా\nక్రమ్మర ప్రేమ వర్షంబున్\nగ్రుమ్మరించుము దేవా\n\n2. ఓ దేవా పంపింపవయ్యా\nనీ దీవెన ధారలన్\nమా దాహమెల్లను బాపు\nమాధుర్యమౌ వర్షమున్      || ఇమ్మాహి ||\n\n3. మా మీద కురియించు మీశ\nప్రేమ ప్రవాహంబులన్\nసమస్త దేశంబు మీద\nక్షామంబు పోనట్లుగన్        || ఇమ్మాహి ||\n\n4. ఈనాడే వర్షింపు మీశ\nనీ నిండు దీవెనలన్\nనీ నామమందున వేడి\nసన్నుతి బ్రౌర్ధింతుము     || ఇమ్మాహి ||",
+      keywords: [
+        "aaseervaadhambulmameedha",
+        "aseerva dhambulmamidha",
+        "aasirvadhambulmami",
+        "3/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -405,7 +572,7 @@ const songsData = {
         "jkchristopher",
         "sharon sisters",
         "sharonsisters",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "Lilian Christopher",
@@ -428,12 +595,30 @@ const songsData = {
         "aha mahaathma",
       ],
       video: "",
-      artist: "",
+      artist: "Panthagaani Paradhesi",
       genre: ["Andhra Christian Hymn", "Lent"],
       timeSignature: "",
     },
   ],
   ఇ: [
+    {
+      id: uuid.v4(),
+      title: "ఇది కోతకు సమయం",
+      lyrics:
+        "ఇది కోతకు సమయం\nపనివారి తరుణం - ప్రార్ధన చేయుదమా (2)\nపైరును చూచెదమా – పంటను కోయుదమా (2) ||ఇది కోతకు||\n\n1. కోతెంతో విస్తారమాయెనే\nకోతకు పనివారు కొదువాయెనే (2)\nప్రియయేసు నిధులన్ని నిలువాయెనే (2) ||ఇది కోతకు||\n\n2. సంఘమా మౌనము దాల్చకుమా\nకోసెడి పనిలోన పాల్గొందుమా (2)\nయజమాని నిధులన్ని మీకే కదా (2) ||ఇది కోతకు||\n\n3. శ్రమలేని ఫలితంబు మీకీయగా\nకోసెడి పనిలోన పాల్గొందుమా (2)\nజీవార్ధ ఫలములను భుజియింతమా (2) ||ఇది కోతకు||",
+      keywords: [
+        "idhi koothaku samayam",
+        "idhi kothaku samayam",
+        "idhi koothaku samayamu",
+        "edhi kothaku samayam",
+        "edhi koothaku samayam",
+        "3/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["General"],
+      timeSignature: "3/4",
+    },
     {
       id: uuid.v4(),
       title: "ఇదిగో దేవా నా జీవితం",
@@ -446,7 +631,7 @@ const songsData = {
         "idigoo deva",
         "edhigo deva",
         "edhigo dheva na jeevitham",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "",
@@ -465,11 +650,30 @@ const songsData = {
         "idi devuni nernayam",
         "edhi devuni",
         "edhi dhevuni",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Jonah Samuel",
       genre: ["General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఇన్నాళ్లు మాకు సాయమై",
+      lyrics:
+        "ఇన్నాళ్లు మాకు సాయమై యీ ముందుకును మా\nయున్నత గృహ మండవై యొప్పెడు దైవమా!\n\n2. ఏలాటి యీతిబాధయు నీవచ్చు యేఁటిలో\nకలుగకుండఁ బ్రోవవే ఘనంపు ప్రేమతో\n\n3. నీ సింహాసన నీడలో నిలుచు భక్తులు\nభయంబు చింతబాధలన్ జయించి మందురు\n\n4. చరాచరంబు లెల్లను జనించుకంటె\nముందార తరాలనుండియున్ నీరాజ్య మండెడున్\n\n5. ఇన్నాళ్లు మాకు సాయమై యేలుచుఁ గాచిన\nఉన్నత ప్రభు ప్రేమతో మన్నించు మింకనున్",
+      keywords: [
+        "ennallu maaku sayamai",
+        "innallu maaku sayamai",
+        "enalu maku sayamai",
+        "inalu maku sayamai",
+        "inalu maaku saayamai",
+        "ennalu maaku sayamai",
+        "4/4",
+      ],
+      video: "",
+      artist: "Issaic Watson",
+      genre: ["Andhra Christian Hymn"],
       timeSignature: "4/4",
     },
     {
@@ -488,10 +692,10 @@ const songsData = {
         "good friday",
         "holy communion",
         "communion",
-        "4/4"
+        "4/4",
       ],
       video: "",
-      artist: "",
+      artist: "H. Haarms",
       genre: ["Andhra Christian Hymn", "Lent"],
       timeSignature: "4/4",
     },
@@ -507,10 +711,10 @@ const songsData = {
         "entakalam nidu krupa lo",
         "inta kalam nedu krupa lo",
         "intha kalam",
-        "4/4"
+        "4/4",
       ],
       video: "",
-      artist: "",
+      artist: "T. Subhanand",
       genre: ["General"],
       timeSignature: "4/4",
     },
@@ -537,7 +741,7 @@ const songsData = {
         "nenu emathramu",
         "bennyjoshua",
         "benny joshua",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Benny Joshua",
@@ -561,7 +765,7 @@ const songsData = {
         "ee dhinamsadha",
         "ee dhinamsada",
         "ee dinamsadha",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "Bro. Joe Madhu & Sis. Jessie Veena",
@@ -582,11 +786,26 @@ const songsData = {
         "yelatidha",
         "eelatida",
         "yelatida yesu prema",
-        "7/8"
+        "7/8",
       ],
       video: "",
-      artist: "",
+      artist: "Raapuri Rangayya",
       genre: ["Andhra Christian Hymn", "Love", "Lent"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఈ సంఘం పునాది",
+      lyrics:
+        "1. ఈ సంఘం పునాది\nక్రీస్తే సాధీశుఁడే\nదక్కించె యేసు దీని\nవాక్కాపుల్ రెట్టించే\nపై నుండి వచ్చి యేసు\nపెండ్లాడె నీమెనే\nకోరుచు రక్త మిచ్చి\nకొనె నీ కన్యనే\n\n2. ఒక్కఁడే దేవుఁడిందు\nఒక్క విశ్వాసము\nఒక్కటే జన్మ మిందు\nఒక్క కుటుంబము\nఒక్క ప్రసాద విందు\nఒకే సునామము\nనిరీక్షణొక్క టిందు\nనిరంత ప్రాప్తికే\n\n3. అసత్య మార్గమంచు\nఅనేకుల్ నవ్వినన్\nవిభాగ మై శ్రమంబుల్\nవిశేష మొందినన్\nసుభక్తుల్ వేడుచుంద్రు\nఅభయ కాంతికై\nయీ నింద లెల్లఁ బోయె\nఆనంద నాటికై\n\n4. కఠిన దుఃఖ బాధల్\nకల్గిన నోర్చుచు\nవిభ వానంద ప్రాప్తి\nలభింపఁ గోరుచు\nఆ స్వర్గ పంక్తిఁజేరి\nయానంద మొందుచున్\nయీ సంఘ మేసుఁ గూడి\nవిశ్రాంతి బొందును",
+      keywords: [
+        "Eesangam punadhi",
+        "Ee sangam punaadhi",
+        "Ee sangham punadhi",
+      ],
+      video: "",
+      artist: "Alfred Thyagaraju Pamar",
+      genre: ["Andhra Christian Hymn"],
       timeSignature: "7/8",
     },
   ],
@@ -602,12 +821,52 @@ const songsData = {
         "utsahinchedan",
         "utsahinchadhan",
         "uthsahinchedan",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఉన్నట్టు నేను వచ్చెదన్",
+      lyrics:
+        "1. ఉన్నట్టు నేను వచ్చెదన్\nపాపిష్ఠు న్నీవు పిల్వఁగన్\nనీ నెత్రుచేతఁ గడ్గుమా\nయో గొఱ్ఱె పిల్ల దేవుఁడా!\n\n2. ఉన్నట్టు నేను వచ్చెదన్\nనే నొప్పుకొందుఁ దప్పులన్\nనీ మాటతో హరించుమా\nయో గొఱ్ఱె పిల్ల దేవుఁడా!\n\n3. ఉన్నట్టు నేను వచ్చెదన్\nదుఃఖంబు బాధపర్చఁగన్\nబాపంబుఁ జేయనీకుమా\nయో గొఱ్ఱె పిల్ల దేవుఁడా!\n\n4. ఉన్నట్టు నేను వచ్చెదన్\nయేసూ, కబోది నుండగన్\nఆత్మీయదృష్టి నీయుమా\nయో గొఱ్ఱె పిల్ల దేవుఁడా!\n\n5. ఉన్నట్టు నేను వచ్చెదన్\nనీ మాట నమ్మునట్టి నన్\nమన్నించి చేర్చుకొమ్మయా\nయో గొఱ్ఱె పిల్ల దేవుఁడా!\n\n6. ఉన్నట్టు నేను వచ్చెదన్\nనీ ప్రేమ నన్నుఁ బిల్వగన్\nనీ వాఁడ నౌదు సర్వదా\nయో గొఱ్ఱె పిల్ల దేవుఁడా!",
+      keywords: [
+        "unnattu nenu vachedhan",
+        "unatu nenu vachedhan",
+        "unnatu nenu nenu vachedan",
+        "unatu nenu vachedan",
+        "unnattunenu vachedhan",
+        "unnattu nenuvachedhan",
+        "andhra christian hymn",
+        "3/4",
+      ],
+      video: "",
+      artist: "H. Harms",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఉన్నపాటున వచ్చు",
+      lyrics:
+        "ఉన్నపాటున వచ్చు-చున్నాను నీ పాద సన్నిధి-కో రక్షకా\nఎన్న శక్యము గాని పాపము-లన్ని మోపుగ వీపు పైబడి\nయున్న విదె నడలేక తొట్రిలు-చున్నవాడను నన్ను దయగను ||ఉన్న||\n\n1. కారుణ్య నిధి యేసు – నా రక్షకా నీ శ-రీర రక్తము చిందుట\nభూరి దయతో నన్ను నీ దరి – జేర రమ్మని పిలుచుటయు ని\nష్కారణపు నీ ప్రేమ యిది మరి – వేరే హేతువు లేదు నా యెడ ||ఉన్న||\n\n2. మసి బొగ్గు వలె నా మా-నస మెల్ల గప్పె దో-ష సమూహములు మచ్చలై\nఅసిత మగు ప్రతి డాగు తుడువను – గసుటు గడిగి పవిత్ర పరపను\nఅసువు లిడు నీ రక్తమే యని – మాసల కిప్పుడు సిలువ నిదె గని ||ఉన్న||\n\n3. వెలుపట బహు యుద్ధ-ములు లోపటను భయము – కలిగె నెమ్మది దొలాగెను\nపలు విధములగు సందియంబుల – వలన పోరాటములచే నే\nనలసి యిటునటు గొట్టబడి దు-ర్బలుడనై గాయములతో నిదె ||ఉన్న||\n\n4. కడు బీద వాడ నం-ధుడను దౌర్భాగ్యుడను చెడిపోయి పడియున్నాను\nసుడివడిన నా మదికి స్వస్థత – చెడిన కనులకు దృష్టి భాగ్యము\nబడయ వలసిన వన్ని నీ చే – బడయుటకు నా యొడ యడా యిదె ||ఉన్న||\n\n5. నీ వాగ్దత్తము నమ్మి – నీపై భారము పెట్టి – జీవ మార్గము గంటిని\nకేవలంబగు ప్రేమ చేతను – నీవు నన్ను క్షమించి చేకొని\nభావ శుద్ధి నొనర్చి సంతో-షావసరముల నిడుదువని యిదె ||ఉన్న||\n\n6. దరిలేని యానంద-కరమైన నీ ప్రేమ – తరమే వర్ణన చేయను\nతెరవు కడ్డం బైన యన్నిటి – విరుగ గొట్టెను గాన నే నిపు\nడరుదుగా నీ వాడ నవుటకు – మరి నిజము నీ వాడ నవుటకే ||ఉన్న||",
+      keywords: [
+        "unna paatuna vachu",
+        "unna patuna vachu",
+        "unnapatuna vachu",
+        "unnaa paatuna vachu",
+        "una patunavachu",
+        "unapatuna vachu",
+        "unnapaatuna vachu",
+        "7/8",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
   ],
   ఊ: [
@@ -628,7 +887,7 @@ const songsData = {
       video: "",
       artist: "Dr. Akumarthi Daniel",
       genre: ["General", "Love"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -645,9 +904,9 @@ const songsData = {
         "oohako andhani prema",
       ],
       video: "",
-       artist: "Sharon Philip",
+      artist: "Sharon Philip",
       genre: ["General", "Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -663,12 +922,27 @@ const songsData = {
         "vohinchaleni",
       ],
       video: "https://www.youtube.com/embed/HHCa-1HSg0o?start=0&end=20",
-       artist: "",
+      artist: "",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
   ],
   ఎ: [
+    {
+      id: uuid.v4(),
+      title: "ఎంత పాపినైనను యేసు చేర్చుకొనును",
+      lyrics:
+        "1. ఎంత పాపినైనను\nయేసు చేర్చుకొనును\nఅంచు నీ సువార్తను\nఅంత జాటించుడి\n\nహల్లెలూయ హల్లెలూయ\nఎంత పాపినైనను\nయేసు చేర్చుకొనున\nటంచు బ్రకటించుడి\n\n2. మెండుగా క్షమాపణన్\nపూర్ణ సమాధానము\nనెంత పాపి కైన దా\nనిచ్చి చేర్చుకొనును     ||హల్లెలూయ||\n\n3. తన దివ్య సిల్వచే\nదీసి పాప శాపమున్\nనను బవిత్రపర్చెను\nనాకు హాయి నిచ్చెను     ||హల్లెలూయ||\n\n4. ఘోర పాపినైనను\nనన్ను జేర్చుకొనును\nపూర్ణ శుద్ధి నిచ్చును\nస్వర్గమందు జేర్చును     ||హల్లెలూయ||",
+      keywords: [
+        "yentha paapi nainanu",
+        "entha papi nainanu",
+        "enta papi nainanu",
+      ],
+      video: "",
+      artist: "Alluri Pedhaveeraswami",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "",
+    },
     {
       id: uuid.v4(),
       title: "ఎడబాయని నీ కృప",
@@ -695,9 +969,40 @@ const songsData = {
         "yedabayane",
       ],
       video: "",
-       artist: "Pastor Mathews",
+      artist: "Pastor Mathews",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఎబినేజరే/నేను నా ఇల్లు",
+      lyrics:
+        "నేను నా ఇల్లు నా ఇంటి వారందరు\nమానక స్తుతించేదము (2)\nనీ కనుపాపలే నన్ను కాచి\nనేను చెదరక మోసావు స్తోత్రం  (2)\n \nఎబినేజరే - ఎబినేజరే \nఇంత కాలము కాచితివే \nఎబినేజరే - ఎబినేజరే\nనా తోడువై నడిచితివే\nస్తోత్రం స్తోత్రం స్తోత్రం \nకనుపాపగా కాచితివి స్తోత్రం\nస్తోత్రం స్తోత్రం స్తోత్రం \nకౌగిలిలో  దాచితివి స్తోత్రం\n\n1. ఎడారిలో ఉన్న నా జీవితమును\nమేళ్లతో నింపితివి (2)\nఒక కీడైన దరి చేరక నన్ను\nతండ్రిగా కాచావు స్తోత్రం (2)  ||ఎబెనేజరే||\n \n2. ఆశలే లేని నా బ్రతుకును\nనీ కృపతో నింపితివి\nఏ ఆశలే లేని నా బ్రతుకును\nనీ కృపతో నింపితివి\nనీవు చూపిన ప్రేమను పాడగా \nపదములు సరిపోవు తండ్రి (2)  ||ఎబెనేజరే||",
+      keywords: [
+        "ebenesare",
+        "ebeynezare",
+        "ebenezare",
+        "abenejare",
+        "ebenejare",
+        "ebenijare",
+        "ebenejarey",
+        "nenu na illu",
+        "nenu naa illu",
+        "nanu na illu",
+        "nenu na ellu",
+        "neynu na illu",
+        "john jebaraj",
+        "jebaraj",
+        "nenu na ilu",
+        "neynu naa ilu",
+        "abenesare",
+        "abenisare",
+        "abenejarey",
+      ],
+      video: "https://www.youtube.com/embed/KG2bDwwDgUM?start=1040",
+      artist: "John Jebaraj",
+      genre: ["Worship"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -716,12 +1021,12 @@ const songsData = {
         "evariki avaru",
         "evarike yevaru",
         "yevareke yevaru",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -734,12 +1039,12 @@ const songsData = {
         "yevaru chupinchaleyni",
         "yevaruchupinchaleni",
         "evaru chupinchaleni",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Pranam Kamlakhar",
+      artist: "Pranam Kamlakhar",
       genre: ["General", "Love"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -753,12 +1058,12 @@ const songsData = {
         "evaru nannu cheya vidachina",
         "avaru nannu cheyi vidachina",
         "avaru nannu cheyi vidichina",
-        "6/8"
+        "6/8",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -774,12 +1079,12 @@ const songsData = {
         "evarina unara",
         "evarina unnara",
         "yevarina unara",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "A. R. Stevenson",
+      artist: "A. R. Stevenson",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -799,12 +1104,12 @@ const songsData = {
         "enni thalachena",
         "yenni thalachena",
         "yenni talachena",
-        "6/8"
+        "6/8",
       ],
       video: "",
-       artist: "",
+      artist: "Bro. Joe Madhu & Sis. Jessie Veena",
       genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -818,12 +1123,30 @@ const songsData = {
         "entha manchi",
         "enthamanchi",
         "anthamandhi dhevuda",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఎల్లవేళలందు – కష్టకాలమందు",
+      lyrics:
+        "ఎల్లవేళలందు – కష్టకాలమందు\nవల్లభుండా యేసున్‌ స్తుతింతున్‌\nఎల్లను నీవే నా కెల్లెడల\nవల్లపడదే వివరింపన్‌ (2)\n\n1. విమోచకుడా – విమోచన నీవే\nరక్షకుడవు – నా రక్షణ నీవే (2)  ||ఎల్లవేళలందు||\n\n2. సృష్టికర్తవు – సహాయము నీవే\nఇష్టుడ నీవు – త్రిత్వము నీవే (2)  ||ఎల్లవేళలందు||\n\n3. జ్ఞానము నీవే – నా పానము నీవే\nదానము నీవే – నా గానము నీవే (2)  ||ఎల్లవేళలందు||\n\n4. జ్యోతివి నీవే – నా నీతివి నీవే\nఆదియు నీవే – నా అంతము నీవే (2)  ||ఎల్లవేళలందు||\n\n5. నిత్యుడ నీవే – నా సత్యుండ నీవే\nస్తోత్రము నీవే – నా నేత్రము నీవే (2)  ||ఎల్లవేళలందు||\n\n6. జీవము నీవే – నా దేవుడవు నీవే\nపావన నీవే – నా కావలి నీవే (2)  ||ఎల్లవేళలందు||\n\n7. కాంతియు నీవే – నా శాంతియు నీవే\nసంతస నీవే – నాకంతయు నీవే (2)  ||ఎల్లవేళలందు||",
+      keywords: [
+        "yella veelayandhu kashtakalamandhu",
+        "ella veelayandhu",
+        "ellavelayandhu",
+        "yellavelayandhu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -841,12 +1164,12 @@ const songsData = {
         "entho vintaa",
         "enthoo venthaa",
         "entho ventha",
-        "7/8"
+        "7/8",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["Andhra Christian Hymn", "Lent"],
-      timeSignature: "7/8"
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -861,9 +1184,9 @@ const songsData = {
         "yendhuko ye gorapapini",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["Lent"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -878,12 +1201,30 @@ const songsData = {
         "endhukonanninthaga",
         "endhukoo nanninthaga",
         "yendhukoo",
-        "4/4"
+        "andhra christian hymn",
+        "4/4",
       ],
       video: "",
-       artist: "",
-      genre: ["Love", "Lent"],
-      timeSignature: "4/4"
+      artist: "",
+      genre: ["Andhra Christian Hymn", "Love", "Lent"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఎఱింగి యెఱిఁగి చెడిపోతివి మనసా",
+      lyrics:
+        "ఎఱింగి యెఱిఁగి చెడిపోతివి మనసా యిఁక నీ దిక్కెవ్వరు చెపుమా\nదురితం బిది స చ్ఛరితం బిది యని యెరుక సరకు గొన కేమియు నీ\n||యెఱిఁగి||\n\n1. ఇది దేవుని దయ యిది క్రీస్తుని ప్రియ మిది విమలాత్ముని గుణ మనుచు\nఎదలో ననుభవ మెఱింగి మరల దు ర్మదమున దుష్కృత పదమున\nబడితివి ||యెఱిఁగి||\n\n2. సకలముఁ జూచెడు దేవుని కంటికిఁ జాటుగ జరిగెడి పని యేది ఇఁక\nజెవి గుసగుస లెల్లను దిక్కులఁ బ్రకటముఁ జేసెడు ప్రభు వున్నాఁడని\n||యెఱిఁగి||\n\n3. ఎన్నిమార్లు సిలువను వేయుచుఁ ప్రభు యేసుని వెతబడఁ జేసెదవు\nతిన్నని మార్గము తెలిసియుండి నీ కన్నుల గంతలు గట్టితి వయ్యో\n||యెఱిఁగి||\n\n4. గద్దించెడు మనస్సాక్షికి గడ లాడక పోతివి నీవు హద్దుమీరి దై\nవాజ్ఞలు ద్రోయుచు నెద్దు లాగు పరు గెత్తితి వయ్యో ||యెఱిఁగి||\n\n5. పలువిధ శోధన బాధలలో ఘన ప్రభు క్రీస్తుడై నీ దిక్కునుకో తాళుచు\nబశ్చాత్తాపముపడి యిక జాలించుము కలు షపు యత్నంబు ||యెఱిఁగి||\n\n6. అపరిమిత దయా శాంతులు గల ప్రభు వనిశము కోపింపఁడు నీపై\nకృపా వాగ్దద్తము లెపుడు దలఁచి నీ యపవిత్రతఁ గని హా యని\nయేడ్వుము ||యెఱిఁగి||",
+      keywords: [
+        "yerigi yerigi chedipothivi manasa",
+        "erigi erigi chedi pothivi manasa",
+        "arigi arigi chedipothivi manasa",
+        "Andhra Christian Hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
   ],
   ఏ: [
@@ -900,12 +1241,53 @@ const songsData = {
         "ey pati dhananaya",
         "a paati dhananaya",
         "a pati dananaya",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Jonah Samuel",
+      artist: "Jonah Samuel",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఏ పాప మెఱుఁగని యోపావన మూర్తిపాప విమోచకుండ",
+      lyrics:
+        "ఏ పాప మెఱుఁగని యోపావన మూర్తిపాప విమోచకుండ\nనా పాలి దైవమా నా పాపముల కొఱ కీ పాట్లు నొందినావా\n\n1. ముళ్ళతో కిరీట – మల్లి నీ శిరముపై – జల్లాటమున మొత్తిరా\nముళ్ళ పోట్లకు శిరము – తల్లడిల్లగ సోమ్మ – సిల్లిపోతివ రక్షకా  ||ఏ పాప||\n\n2. కలువరి గిరి దనుక – సిలువ మోయలేక – కలవరము నొందినావా\nసిలువ నీతో మోయ – తులువలు వేరొకని – తోడుగా నిచ్చినారా  ||ఏ పాప||\n\n3. చెడుగు యూదులు బెట్టు – పడరాని పాట్లకు – సుడివడి నడచినావా\nకడకు కల్వరి గిరి – కడ కేగి సిల్వను – గ్రక్కున దించినావా  ||ఏ పాప||\n\n4. ఆ కాల కర్ములు – భీకరంబుగ నిన్ను – ఆ కొయ్యపై నుంచిరా\nనీ కాలు సేతులు – ఆ కొయ్యకే సూది – మేకులతో గ్రుచ్చినారా  ||ఏ పాప||\n\n5. పలువిధంబుల శ్రమలు – చెలరేగ దండ్రికి – నెలుగెత్తి మొరలిడితివా\nసిలువపై పలుమారు – కలుగుచుండెడి బాధ – వలన దాహము నాయెనా  ||ఏ పాప||\n\n6. బల్లిదుండగు బంటు – బల్లెమున నీ ప్రక్క – జిల్లి బడ బొడచినాడా\nఉల్లోలములవలె నల్ల నీరుబుకంగ జల్లారె గద కోపము  ||ఏ పాప||\n\n7. కట కటా పాప సం – కటము బాపుట కింత – పటు బాధ నొందినావా\nఎటువంటిదీ ప్రేమ – యెటువంటిదీ శాంత – మెటుల వర్ణింతు స్వామి  ||ఏ పాప||",
+      keywords: [
+        "ye paapa merugani",
+        "yepapamerugani",
+        "yee paapa merugani",
+        "ye papamerugani",
+        "ye papa merugani",
+        "Eepaapa merugani",
+        "epapamerugani",
+        "ee paapa merugani",
+        "eepapamerugani",
+        "apapamerugani",
+        "aapapamerugani",
+        "Andhra Christian Hymn",
+        "5/8",
+      ],
+      video: "",
+      artist: "Yarmani Setti Dhaveedhu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "5/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఏదేన్ వనంబునందు ఆది వివాహమున్",
+      lyrics:
+        "1. ఏదేన్ వనంబునందు\nఆది వివాహమున్\nవిధించినట్టి వాక్కు\nవర్థిల్లు నిప్పుడున్.\n\n2. పవిత్ర కల్యాణంబున్\nపదిలపర్చుచు\nదైవ త్రిత్వంబు నేఁడున్\nదీవింప వత్తురు.\n\n3. సంతాన వరమును\nసంతోష ప్రేమయు\nవింతైన యైక్యత్వంబు\nనెంతయు నిత్తురు.\n\n4. ఆదామునకుఁ దండ్రీ,\nహవ్వ నొ సంగితి\nవాదరముగ నీమె\nనీ ధన్యున కిమ్ము\n\n5. నీ ఱెక్క క్రింద వీరిఁ\nబరిగ్రహించుచు\nవైరి తంత్రంబునుండి\nదూరంబుఁ జేయుము.\n\n6. ఈ రీతిన్ బ్రత్కి యంత\nక్రీస్తేసు పెండ్లికి\nవీరిద్దరును జేరి\nబరంగఁ జేయుమి.",
+      keywords: [
+        "yedhen vanambu aadhi vivahamun",
+        "yeedhen vanambu",
+        "andhra christian hymns",
+        "4/4",
+      ],
+      video: "",
+      artist: "Alfred Thyagaraju Pamar",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -925,12 +1307,12 @@ const songsData = {
         "ado theliyani badha",
         "Ado teliyani bada",
         "yedho theleyani badha",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Sis Emimah Edwina Moses",
+      artist: "Sis Emimah Edwina Moses",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -949,25 +1331,32 @@ const songsData = {
         "ey badha ledhu",
         "ey badha ledu",
         "ey bada ledhu",
-        "2/4"
+        "2/4",
       ],
       video: "",
-       artist: "Satish Kumar",
+      artist: "Satish Kumar",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
       title: "ఏ భాషకందని భావం నీవు",
       lyrics:
-      "ఏ భాషకందని భావం నీవు\nవెలకట్టలేని ముత్యం నీవు\nదేవుడిచ్చిన వరమే నీవు తీర్చలేని ఓ ఋణం\nఎదలో దాగిన పలుకే నీవు నా ప్రేమకు తొలిరూపం\nఅమ్మా నిను మించిన బంధం ఏదియు లేదే\nలోకంలో ఈ తీయని బంధం కానరాలేదే\n\n1. నవ మాసాలు నీలో నన్ను దాచావు\nనా ఊపిరికి ప్రాణం పణంగా పెట్టావు\nరేయి పగలంతా నాకై శ్రమపడినా\nతీరని అనురాగం నీలో దాచావే\nనీ సుఖ సంతోషం వదిలిన నాకై\nతరగని మమకారం నీలో చూసానే\nయేసయ్య ప్రేమే నిన్ను నాకై సృష్టించిందే\nఅమ్మా నిను మించిన బంధం ఇలలో లేనే లేదే\nలోకంలో ఈ తీయని బంధం కానరానే లేదే\n\n2. భయ భక్తులే ఉగ్గి పాలుగా పోసావు\nదేవుని మాటలే గోరు ముద్దగా చేసావు\nతప్పటడుగులే నాలో సరి చేసి\nప్రభు సన్నిధిలో నన్ను సాక్షిగా నిలిపావు\nప్రతి వేకువలో నాకై నీవు\nచేసే ప్రార్థనలే పెంచెను నా బలమే\nనీలో కలిగిన విశ్వాసం నాతో సహవాసించెనే\nఅమ్మా నిను మించిన బంధం ఇలలో లేనే లేదే\nలోకంలో ఈ తీయని బంధం కానరానే లేదే",
+        "ఏ భాషకందని భావం నీవు\nవెలకట్టలేని ముత్యం నీవు\nదేవుడిచ్చిన వరమే నీవు తీర్చలేని ఓ ఋణం\nఎదలో దాగిన పలుకే నీవు నా ప్రేమకు తొలిరూపం\nఅమ్మా నిను మించిన బంధం ఏదియు లేదే\nలోకంలో ఈ తీయని బంధం కానరాలేదే\n\n1. నవ మాసాలు నీలో నన్ను దాచావు\nనా ఊపిరికి ప్రాణం పణంగా పెట్టావు\nరేయి పగలంతా నాకై శ్రమపడినా\nతీరని అనురాగం నీలో దాచావే\nనీ సుఖ సంతోషం వదిలిన నాకై\nతరగని మమకారం నీలో చూసానే\nయేసయ్య ప్రేమే నిన్ను నాకై సృష్టించిందే\nఅమ్మా నిను మించిన బంధం ఇలలో లేనే లేదే\nలోకంలో ఈ తీయని బంధం కానరానే లేదే\n\n2. భయ భక్తులే ఉగ్గి పాలుగా పోసావు\nదేవుని మాటలే గోరు ముద్దగా చేసావు\nతప్పటడుగులే నాలో సరి చేసి\nప్రభు సన్నిధిలో నన్ను సాక్షిగా నిలిపావు\nప్రతి వేకువలో నాకై నీవు\nచేసే ప్రార్థనలే పెంచెను నా బలమే\nనీలో కలిగిన విశ్వాసం నాతో సహవాసించెనే\nఅమ్మా నిను మించిన బంధం ఇలలో లేనే లేదే\nలోకంలో ఈ తీయని బంధం కానరానే లేదే",
       keywords: [
-        "ye baashakandhani baavam neevu", "a bashakandhani bhaavam neevu", "yee bashakandhani", "a bashaku andhani","ye bashakandhani","ye bashaku", "mothers day","4/4"
+        "ye baashakandhani baavam neevu",
+        "a bashakandhani bhaavam neevu",
+        "yee bashakandhani",
+        "a bashaku andhani",
+        "ye bashakandhani",
+        "ye bashaku",
+        "mothers day",
+        "4/4",
       ],
       video: "",
-       artist: "Swapna Edwards",
+      artist: "Swapna Edwards",
       genre: ["Mother"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -991,12 +1380,32 @@ const songsData = {
         "aa naamamulo",
         "aa namamulo",
         "a naamamulo",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/cnmrtwnylrE?start=1176",
-       artist: "Anu Samuel",
+      artist: "Anu Samuel",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఏ ముఖాంబుతోడ వత్తు",
+      lyrics:
+        "ఏ ముఖాంబుతోడ వత్తు యేసు నాధనీదు మ్రోల కావరించి నిన్నుమఱచి యేక మైతి బామరులతో నేది దారి నిన్నుఁ జేర నేమో తెలియదాయెను ||ఏ ముఖంబు||\n1. నీచ పాప వర్తనంబు పేచ మెల్లఁ బాపి ముందు కాచి పెంచి నియము నిష్ఠ లాచరణము నిలుపుకొరకు దోషభార మెల్ల బాపఁ బూచినీ దె నిజముగా ||ఏ ముఖంబు||\n2. తుట్టతుదకు నిన్ను ఁ జేరఁ గట్టినాఁడం గంకణమును వట్టిమాటకాదు నిజము పట్టి నడుపు పరమ పురికిఁ బట్టికొనుమునాదు చేయి మట్టి పాలు కాకమునుపే ||ఏ ముఖంబు||",
+      keywords: [
+        "yemukambu thoda vathu",
+        "ye mukambu thoda vathu",
+        "ee mukambu thoda vathu",
+        "emukambu thoda vathu",
+        "amukambu thoda vathu",
+        "aa mukambu thoda vathu",
+        "andhra christian hymn",
+        "3/4",
+      ],
+      video: "",
+      artist: "Jonnakuti Dheva Dhanam",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
     },
   ],
   ఒ: [
@@ -1004,40 +1413,26 @@ const songsData = {
       id: uuid.v4(),
       title: "ఒక్కసారి ఆగి చూడుమా",
       lyrics:
-      "ఒక్కసారి ఆగి చూడుమా మార్గములో\nనిలిచి నీవు ఆలోచించుమా\nమరల మరల తిరిగి రాదురా జీవితం \nఒక్కసారి మనకి సొంతము\nఅల్పకాల జీవితాన్ని ఆలోచించినంతగా\nనిత్య జీవమును గూర్చి ఆలోచించవా\n\n1. ప్రేమ మత్తులో నీకు ఎవ్వరు గుర్తురారు\nMummy, Daddy నీకు అందరూ శత్రువులే (2)\nప్రేమించిన వారు మోసం చేసాకా\nఎందుకీ బ్రతుకని తనువు చాలించాలని\nఎన్నడు కాదని యేసుని చేరు ||ఒక్కసారి||\n\n2.రంగు రగుల పాలపొంగురా జీవితం\nపొంగి పొంగి బయట చిమ్మకురా యవ్వనం (2)\nO.T duty అని మరుల గొల్బోకురా\nదాంపత్య జీవితం నిర్వీరం చేయకురా\nవ్యసనాలకు నీవు బానిస కావద్దు\nకుటుంబ ప్రార్ధనలు చేయుట ముద్దు ||ఒక్కసారి||",
+        "ఒక్కసారి ఆగి చూడుమా మార్గములో\nనిలిచి నీవు ఆలోచించుమా\nమరల మరల తిరిగి రాదురా జీవితం \nఒక్కసారి మనకి సొంతము\nఅల్పకాల జీవితాన్ని ఆలోచించినంతగా\nనిత్య జీవమును గూర్చి ఆలోచించవా\n\n1. ప్రేమ మత్తులో నీకు ఎవ్వరు గుర్తురారు\nMummy, Daddy నీకు అందరూ శత్రువులే (2)\nప్రేమించిన వారు మోసం చేసాకా\nఎందుకీ బ్రతుకని తనువు చాలించాలని\nఎన్నడు కాదని యేసుని చేరు ||ఒక్కసారి||\n\n2.రంగు రగుల పాలపొంగురా జీవితం\nపొంగి పొంగి బయట చిమ్మకురా యవ్వనం (2)\nO.T duty అని మరుల గొల్బోకురా\nదాంపత్య జీవితం నిర్వీరం చేయకురా\nవ్యసనాలకు నీవు బానిస కావద్దు\nకుటుంబ ప్రార్ధనలు చేయుట ముద్దు ||ఒక్కసారి||",
       keywords: [
-        "okkasari aagichudumaa", "okkasari aagi chuduma", "okasari agi chuduma", "okkasaari aagi chuduma", "okasari aagi chuduma", "akumarthi daniel", "6/8"
+        "okkasari aagichudumaa",
+        "okkasari aagi chuduma",
+        "okasari agi chuduma",
+        "okkasaari aagi chuduma",
+        "okasari aagi chuduma",
+        "akumarthi daniel",
+        "6/8",
       ],
       video: "",
-       artist: "Dr. Akumarthi Daniel",
+      artist: "Dr. Akumarthi Daniel",
       genre: ["General"],
-      timeSignature: "6/8"
-    },
-  ],
-  ఓ: [
-    {
-      id: uuid.v4(),
-      title: "ఓ తల్లి కన్నను",
-      lyrics:
-        "ఓ తల్లి కన్నను ఓ తండ్రి కన్నను  - ప్రేమించు \nదేవుడు క్షమించు దేవుడు  (2)  \nఆప్తులకన్నా ప్రేమించు  దేవుడు \nప్రాణాన్ని త్యాగమిచ్చిన నిజ స్నేహితుడు  ( ఓ తల్లి ) \n\n1. కాలాలు మారిన కరిగిపోని ప్రేమ \nకలువరిలో చూపిన క్రీస్తేసు ప్రేమ (2) \nముదిమి వచ్చు వరకు నిన్నేత్తుకునే  ప్రేమ (2) \nతల్లియైన మరచిన నిను మరువని ప్రేమ \nప్రేమా... ప్రేమా... ఏ లోపం లేనిది క్రీస్తు ప్రేమ \nప్రేమా... ప్రేమా... ఏ బదులాసిన్చనిది  యేసు ప్రేమ ( ఓ తల్లి ) \n\n2. పర్వతాలు తొలగిన తొలగిపోని ప్రేమ \nపాపులను త్రోయక దరిచేర్చు ప్రేమ (2) \nప్రాణ స్నేహితుడై ప్రాణ మిచ్చిన ప్రేమ (2) \nపరలోకమునకు నిన్ను చేర్చు ప్రేమ \nప్రేమా... ప్రేమా... ఏ లోపం లేనిది క్రీస్తు ప్రేమ \nప్రేమా... ప్రేమా... ఏ బదులాసిన్చనిది  యేసు ప్రేమ ( ఓ తల్లి )",
-      keywords: [
-        "oo thalli kannanu",
-        "o thalli kannanu",
-        "oo talli kannanu",
-        "o thalli kananu",
-        "oo talli kananu",
-        "oo thalli kananu",
-      ],
-      video: "",
-       artist: "Dr. Akumarthi Daniel",
-      genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
-      title: "ఓడ్డుచేరి నీ యెదుట",
+      title: "ఒడ్డుచేరి నీ యెదుట",
       lyrics:
-        "1. ఓడ్డుచేరి నీ యెదుట నిల్పునపుడు రక్షకా\nఒక్క యాత్మనైన తేక సిగ్గుపడిపోదునా\n\nఒక్క యాత్మనైన నేను రక్షింప యేసువా\nవట్టి చేతులతో నిన్ను దర్శించుట తగునా\n\n2. ఆత్మలందు వాంఛలేక సోమరులై కాలమున్\nవ్యర్థపరచు వారానాడు చింతతోడ నిల్తురు ||ఒక్క యాత్మనై...||\n\n3. యేసువా! నా స్వరక్షణ నిశ్చయంబు యైనదే\nఐనఫలితంబుజూడ కష్టపడనైతినే  ||ఒక్క యాత్మనై...||\n\n4. కాలమెల్ల గడ్చిపోయెన్\n మోసపోతినేనయ్యో\nగడ్చినట్టి కాలమైతే ఏడ్చినను రాదది ||ఒక్క యాత్మనై...|| \n\n5. భక్తులారా! ధైర్యంతోడ లేచి ప్రకాశించుడీ\nఆత్మలెల్ల యేసుయొద్ద చేరునట్లు చేయుడి.  ||ఒక్క యాత్మనై...||",
+        "1. ఒడ్డుచేరి నీ యెదుట నిల్పునపుడు రక్షకా\nఒక్క యాత్మనైన తేక సిగ్గుపడిపోదునా\n\nఒక్క యాత్మనైన నేను రక్షింప యేసువా\nవట్టి చేతులతో నిన్ను దర్శించుట తగునా\n\n2. ఆత్మలందు వాంఛలేక సోమరులై కాలమున్\nవ్యర్థపరచు వారానాడు చింతతోడ నిల్తురు ||ఒక్క యాత్మనై...||\n\n3. యేసువా! నా స్వరక్షణ నిశ్చయంబు యైనదే\nఐనఫలితంబుజూడ కష్టపడనైతినే  ||ఒక్క యాత్మనై...||\n\n4. కాలమెల్ల గడ్చిపోయెన్\n మోసపోతినేనయ్యో\nగడ్చినట్టి కాలమైతే ఏడ్చినను రాదది ||ఒక్క యాత్మనై...|| \n\n5. భక్తులారా! ధైర్యంతోడ లేచి ప్రకాశించుడీ\nఆత్మలెల్ల యేసుయొద్ద చేరునట్లు చేయుడి.  ||ఒక్క యాత్మనై...||",
       keywords: [
         "oddu cheri",
         "oddu cheeri nee yedhuta",
@@ -1056,9 +1451,48 @@ const songsData = {
         "andhra kraisthava keerthanalu",
       ],
       video: "https://www.youtube.com/embed/u1aook9mHtA?start=1624",
-       artist: "",
+      artist: "",
       genre: ["Andhra Christian Hymn"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+  ],
+  ఓ: [
+    {
+      id: uuid.v4(),
+      title: "ఓ తల్లి కన్నను",
+      lyrics:
+        "ఓ తల్లి కన్నను ఓ తండ్రి కన్నను  - ప్రేమించు \nదేవుడు క్షమించు దేవుడు  (2)  \nప్రేయసి కన్నా ప్రేమించు దేవుడు \nప్రాణాన్ని త్యాగమిచ్చిన నిజ స్నేహితుడు  ( ఓ తల్లి ) \n\n1. కాలాలు మారిన కరిగిపోని ప్రేమ \nకలువరిలో చూపిన క్రీస్తేసు ప్రేమ (2) \nముదిమి వచ్చు వరకు నిన్నేత్తుకునే  ప్రేమ (2) \nతల్లియైన మరచిన నిను మరువని ప్రేమ \nప్రేమా... ప్రేమా... ఏ లోపం లేనిది క్రీస్తు ప్రేమ \nప్రేమా... ప్రేమా... ఏ బదులాసిన్చనిది  యేసు ప్రేమ ( ఓ తల్లి ) \n\n2. పర్వతాలు తొలగిన తొలగిపోని ప్రేమ \nపాపులను త్రోయక దరిచేర్చు ప్రేమ (2) \nప్రాణ స్నేహితుడై ప్రాణ మిచ్చిన ప్రేమ (2) \nపరలోకమునకు నిన్ను చేర్చు ప్రేమ \nప్రేమా... ప్రేమా... ఏ లోపం లేనిది క్రీస్తు ప్రేమ \nప్రేమా... ప్రేమా... ఏ బదులాసిన్చనిది  యేసు ప్రేమ ( ఓ తల్లి )",
+      keywords: [
+        "oo thalli kannanu",
+        "o thalli kannanu",
+        "oo talli kannanu",
+        "o thalli kananu",
+        "oo talli kananu",
+        "oo thalli kananu",
+      ],
+      video: "",
+      artist: "Dr. Akumarthi Daniel",
+      genre: ["General"],
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఓ బెత్లెహేము గ్రామమా",
+      lyrics:
+        "1. ఓ బెత్లెహేము గ్రామమా! సద్దేమిలేకయు\nనీవొంద గాఢనిద్రపై వెలుంగు తారలు\nకానేమి, నిత్యజ్యోతి జ్వలించు నీతమిన్\nపెక్కేండ్ల భీతివాంఛలీ రాత్రి తీరె నీలోన్మ\n\n2. రియకేసుపుట్టెను నిద్రింప మర్త్యులు\nపై గూడి దూతల్వింతయౌ ప్రేమన్వీక్షింతురు\nచాటుడో వేగుచుక్కల్ ఈ శుద్ధజన్మము\nదైవానకు నున్నతుల్ భువిన్ శాంతంచు పాడుడీ\n\n3. సద్దేమి లేక వచ్చెగా! ఈ వింత దానము\nఆరీతి దేవుడిచ్చుపై వరాల్ నరాళికి\nనరుండెరుంగకున్నన్ ఈ పాపధాత్రిలో\nదీనులంగీకరించిన యేసుందుజొచ్చును.\n\n4. ఓ బెల్లెహేము పావన వతా! మా పై దిగు\nపోగొట్టి పాపముల్ మాలో నీ వేళ పుట్టుము\nసువార్త క్రిస్మస్ దూతల్ చెప్పంగ విందుము \nమా యొద్ద నుండరమ్ము మా ప్రభూ! ఇమ్మానుయేల్, ఆమేన్.",
+      keywords: [
+        "oo bethlehemu gramamu",
+        "obethlehemu gramamu",
+        "oo bethlehem",
+        "o bethlehemu",
+        "christmas",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Philip Brukse",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1080,9 +1514,9 @@ const songsData = {
       ],
       video:
         "https://www.youtube.com/embed/KBwT8k8uRxU?list=PLCvcJZhUpB-qJpsgpMgx6vpe_NAKT5qtY",
-         artist: "",
+      artist: "William Wall Ford",
       genre: ["Andhra Christian Hymn", "Prayer"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -1098,9 +1532,27 @@ const songsData = {
         "oo maanavaa",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఓ యేసు భక్తులారా",
+      lyrics:
+        "1. ఓ యేసు భక్తులారా - మీ రాజు ధ్వజము\nగ్రహించి సాహసించి పోరాడి గెల్వుడీ\nవిశ్వాసులారా, రండి - మీ రక్షణార్థమై \nప్రయాసపడ్డ యేసు - విజయమిచ్చును\n\n2. మీ యందసూయబట్టి - మీ ఆత్మ నాశనము\nనెల్లప్పుడు గోరునట్టి యనేకులుందురు\nమీ రెల్ల రేసు పేరు - వచించి యాయనే\nసర్వాధికారి యంచు - సేవింపవలెను\n\n3. ప్రచండమైన దండు - పోరాడ లేచినన్\nవిరోధి శక్తికొద్ది మరీ తెగించుడీ\nస్వకీయ శక్తిగాక - శ్రీ యేసు నామమున్\nస్మరించి వానియందు - విశ్వాస ముంచుడి",
+      keywords: [
+        "o yesu bakthulara",
+        "oo yesu bakthulara",
+        "oo yeesu bakthulara",
+        "oo yeesu bakthulaara",
+        "ooyesu balthulara",
+        "oyesu bakthulara",
+      ],
+      video: "",
+      artist: "John Hay",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1116,12 +1568,54 @@ const songsData = {
         "orannaa oorannaa",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ఓ సద్భాక్తులారా – లోక రక్షకుండు",
+      lyrics:
+        "1. ఓ సద్భాక్తులారా – లోక రక్షకుండు\nబెత్లేహేమందు నేడు జన్మించెన్\nరాజాధి రాజు – ప్రభువైన యేసు\nనమస్కరింప రండి నమస్కరింప రండి\nనమస్కరింప రండి ఉత్సాహముతో\n\n2. సర్వేశ్వరుండు – నర రూపమెత్తి\nకన్యకు బుట్టి నేడు వేంచేసెన్\nమానవ జన్మ – మెత్తిన శ్రీ యేసూ\nనీకు నమస్కరించి నీకు నమస్కరించి\nనీకు నమస్కరించి పూజింతుము\n\n3. ఓ దూతలారా – ఉత్సాహించి పాడి\nరక్షకుండైన యేసున్ స్తుతించుడి\nపరాత్పరుండా – నీకు స్తోత్రమంచు\nనమస్కరింప రండి నమస్కరింప రండి\nనమస్కరింప రండి ఉత్సాహముతో\n\n4. యేసు ధ్యానించి – నీ పవిత్ర జన్మ\nఈ వేల స్తోత్రము నర్పింతుము\nఅనాది వాక్య – మాయే నర రూప\nనమస్కరింప రండి నమస్కరింప రండి\nనమస్కరింప రండి ఉత్సాహముతో",
+      keywords: [
+        "o sadhbakthulara",
+        "oo sadhbakthulaara",
+        "oo sadbaktulara",
+        "o sadbaktulara",
+        "andhra christian hymn",
+        "christmas",
+        "4/4",
+      ],
+      video: "",
+      artist: "Bernard Lucas",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
     },
   ],
   క: [
+    {
+      id: uuid.v4(),
+      title: "కంటి పాపను కాయు రెప్పలా",
+      lyrics:
+        "కంటి పాపను కాయు రెప్పలా- నను కాచెడి యేసయ్యా\nచంటి పాపను సాకు అమ్మలా - దాచెడి మా అయ్యా\nనీవేగా నీడగా తోడుగా - నీతోనే నేనునూ జీవింతు\nనీకన్నా మిన్నగా ఎవరయ్యా - నాకు నీవే చాలయ్యా  ||కంటి పాపను కాయు||\n\n1. మార్పులేని మత్సరపడని - ప్రేమ చూపించినావు\nదీర్ఘ కాలం సహనము చూపే - ప్రేమ నేర్పించినావు\nఇది ఎవరూ చూపించని ప్రేమ - ఇది లాభం ఆశించని ప్రేమ\nఇది ఎవరూ ఎడబాపని ప్రేమ\nఇది మరణం వరకు - కరుణను చూపిన ప్రేమ  ||కంటి పాపను కాయు||\n\n2. ఢంబము లేని హద్దులెరుగని - ప్రేమ కురిపించినావు\nనిర్మలమైన నిస్స్వార్ధ ప్రేమను - మాపై కనుపరచినావు\nఇది ఎవరూ చూపించని ప్రేమ - ఇది లాభం ఆశించని ప్రేమ\nఇది ఎవరూ ఎడబాపని ప్రేమ\nఇది మరణం వరకు - కరుణను చూపిన ప్రేమ   ||కంటి పాపను కాయు||",
+      keywords: [
+        "kanti paapanu",
+        "kanti papanu",
+        "kante papanu",
+        "kante paapanu",
+        "kanti papano",
+        "kanti papa",
+        "kanti paapanu",
+        "kanthi paapanu",
+        "kanthi paapa",
+        "jk christopher",
+        "eye",
+      ],
+      video: "https://www.youtube.com/embed/udne5IfgGl4?start=1662",
+      artist: "Rev. Mani Prakash & J. K Christopher",
+      genre: ["General"],
+      timeSignature: "4/4",
+    },
     {
       id: uuid.v4(),
       title: "కన్న తల్లి చేర్చునట్లు",
@@ -1139,9 +1633,9 @@ const songsData = {
         "kana talle",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1159,9 +1653,46 @@ const songsData = {
         "pranam kamalakar",
       ],
       video: "",
-       artist: "Pranam Kamlakhar",
+      artist: "Pranam Kamlakhar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "కర్తా మమ్మును దీవించి",
+      lyrics:
+        "1. కర్తా మమ్మును దీవించి\nక్షేమమిచ్చి పంపుము\nజీవాహార వార్త నిచ్చి\nమమ్మును పోషించుము\n\n2. ఇహ నిన్ను వేడుకొని\nబహుగా స్తుతింతుము\nపరమందు చేరి యింక\nస్తోత్రము చెల్లంతుము",
+      keywords: [
+        "kartha mammu dheevinchi",
+        "karta mammu dhevinchi",
+        "kartha mammu dhivinchi",
+        "andhra christian hymns",
+        "4/4",
+      ],
+      video: "",
+      artist: "John Faset",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "కలుగును గాక – దేవునికి మహిమ",
+      lyrics:
+        "కలుగును గాక – దేవునికి మహిమ – కలుగును గాక\nకలుగు నున్నతమైన – ఘన స్థలములందున\nనిలకు సమాధానం – నరుల కాయన దయ     ||కలుగును||\n\n1. ప్రభువైన దేవా – పరమరాజా – సర్వపరిపాలా\nపరిపూర్ణ శక్తిగల– పరమ జనక నిన్ను\nమహిమ స్తుతించుచు – మరి పొగడుచున్నాము     ||కలుగును||\n\n2. మహిమపర్చుచు – ఆరాధించు – చున్నాము నిన్ను\nమహిమాతిశయమును – మది దలంచియు నీకు\nమహిని మా స్తుతి కృత – జ్ఞత నిచ్చు చున్నాము     ||కలుగును||\n\n3. ఏక కుమారా – యేసు ప్రభువా – యెహోవా తనయా\nలోక పాపము మోయు – ఏక దేవుని గొఱ్రె\nపిల్ల మమ్మును కనిన – రించుము చల్లగ     ||కలుగును||\n\n4. లోకపాపములు - మోయుచుఁ బోవు  యేసు రక్షకా \nవాసిగ జనకుని కుడివైపునఁ గూర్చుండి\nయేసూ మా ప్రార్థన నాలించి కనికరించు  ||కలుగును||\n\n5. పరిశుద్ధుడవు – ప్రభుడవు నీవో – ప్రభువైన క్రీస్తూ\nపరిశుద్ధాత్మతో తండ్రి – యైన దేవునియందు\nబరిపూర్ణ మహిమతో – బ్రబలుచున్నామామేన్     ||కలుగును||",
+      keywords: [
+        "kalgunu gaaka",
+        "kalugunu gaaka",
+        "kalgunu gaka",
+        "kalugunu gaka",
+        "kalgunugaka",
+        "kalgunugaaka",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Yerpula Moshe",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -1184,9 +1715,9 @@ const songsData = {
         "kalamu ledu tvarapadumu",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -1206,9 +1737,9 @@ const songsData = {
         "kaalaalu maarena kaani",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1226,11 +1757,13 @@ const songsData = {
         "keerthinchi koneyadi",
         "kirthinchi koniyadi",
         "kirthinche",
+        "kerthinche",
+        "keerthinche",
       ],
       video: "",
-       artist: "M.A.P Vijaya Kumar",
+      artist: "M.A.P Vijaya Kumar",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1246,9 +1779,28 @@ const songsData = {
         "kummare kummare",
       ],
       video: "",
-       artist: "",
-      genre: ["General"],
-      timeSignature: "3/4"
+      artist: "",
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "కూడికొని యున్నాము",
+      lyrics:
+        "కూడికొని యున్నాము సంఘ ప్రభో కూడికొని యున్నాము తోడ\nనుండెద ననుచు నమ్ముచు దొడ్డ దగు నీ పాద సన్నిధి ||కూడికొని||\n\n1. ఎచట నా ప్రియ భక్తులెలమిఁ గూడియున్న నచటికి నేతెంతునని పల్కితి\nవిచట నుండు మమ్ము వీక్షించి కృపచేత నిపుడు దీవించు\nమీ యేసు క్రీస్తునాధా ||కూడికొని||\n\n2. గత కాలమందున గాని చేఁతలచే దుర్గతి నొంది యుండఁగాఁ\nగనుఁగొంటివి శత సంఖ్య గల పాపచయ మీవు క్షమియించి యతి\nశాంతి నిడితివి యాత్మస్వరూపా ||కూడికొని||\n\n3. నిరతము నీ ప్రేమ నెనరున ధ్యానించి పరమ ధర్మములందుఁ బరతఁ\nగల్గి యరులకు శుభములు నిరతంబుఁ జేయఁగఁ దిరత మా కొసఁగుము\nదేవుని ప్రియ తనయా ||కూడికొని||\n\n4. అన్ని శోధనముల నన్ని విపత్తుల నన్ని కాలములందు నాదరించి\nనిన్ను నమ్మిన జనుల నీ సందిటను జేర్చి పన్నుగఁ గాపాడు\nప్రభు యేసు క్రీస్తు ||కూడికొని||\n\n5. అమలుఁడ నగు నన్ననుకరించుండనుచు నాన తిచ్చినాఁడ వాత్మజులకు\nనమల మార్గము నందు నరుగంగ మాకీవు విమలాత్మ దయసేయు\nవేగంబు మా తండ్రీ ||కూడికొని||",
+      keywords: [
+        "kudikoniyunnamu",
+        "koodikoni yunnamu",
+        "koodikoniyunnamu",
+        "kudi koni yunnamu",
+        "kudikoni yunnamu",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Pulipaka Jagannadham",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -1273,9 +1825,9 @@ const songsData = {
         "andhra kraisthava keerthanalu",
       ],
       video: "https://www.youtube.com/embed/qWpGaLNgivw?si=jFLc1dAOOWKRov84",
-       artist: "",
+      artist: "Raavuri Ratnam",
       genre: ["Andhra Christian Hymn", "Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -1291,11 +1843,30 @@ const songsData = {
         "kruthagnyatha",
         "dhanyavaadh in telugu",
         "dhanyavadh in telugu",
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/dXuxJJU20mg?start=1177",
-       artist: "",
+      artist: "",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "కృపామయుడా నీలోనా",
+      lyrics:
+        "కృపామయుడా నీలోనా - నివసింప జేసినందునా -\nఇదిగో నా స్తుతుల సింహాసనం\nనీలో నివసింప జేసినందునా - ఇదిగో నా స్తుతుల సింహాసనం - కృపామయుడా.... ఆ అ\n\n1. ఏ అపాయము నా గుడారము - సమీపించనియ్యక (2)\nనా మార్గములన్నిటిలో - నీవే నా ఆశ్రయమైనందున (2)\n\n2. చీకటి నుండి వెలుగులోనికి - నన్ను పిలచిన తేజోమయా (2)\nరాజ వంశములో - యాజకత్వము చేసెదను (2)\n\n3. నీలో నిలచి ఆత్మ ఫలములు - ఫలియించుట కొరకు (2)\nనాపైనా నిండుగా - ఆత్మ వర్షము కుమ్మరించు (2)\n\n4. ఏ యోగ్యత లేని నాకు - జీవకిరీట మిచ్చుటకు (2)\nనీ కృప నను వీడక - శాశ్వత కృపగా మారెను (2)",
+      keywords: [
+        "krupaamayuda",
+        "krupa mayuda",
+        "krupaa mayudaa",
+        "krupamayuda",
+        "yesanna",
+        "4/4",
+      ],
+      video: "",
+      artist: "Bro. Yesanna",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1308,32 +1879,69 @@ const songsData = {
         "kondala thattu na kannulethi",
       ],
       video: "",
-       artist: "",
+      artist: "Vijay Kondapuram & Allen Ganta",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
-      title: "కంటి పాపను కాయు రెప్పలా",
+      title: "క్రొత్త యేడు మొదలు బెట్టెను",
       lyrics:
-        "కంటి పాపను కాయు రెప్పలా- నను కాచెడి యేసయ్యా\nచంటి పాపను సాకు అమ్మలా - దాచెడి మా అయ్యా\nనీవేగా నీడగా తోడుగా - నీతోనే నేనునూ జీవింతు\nనీకన్నా మిన్నగా ఎవరయ్యా - నాకు నీవే చాలయ్యా  ||కంటి పాపను కాయు||\n\n1. మార్పులేని మత్సరపడని - ప్రేమ చూపించినావు\nదీర్ఘ కాలం సహనము చూపే - ప్రేమ నేర్పించినావు\nఇది ఎవరూ చూపించని ప్రేమ - ఇది లాభం ఆశించని ప్రేమ\nఇది ఎవరూ ఎడబాపని ప్రేమ\nఇది మరణం వరకు - కరుణను చూపిన ప్రేమ  ||కంటి పాపను కాయు||\n\n2. ఢంబము లేని హద్దులెరుగని - ప్రేమ కురిపించినావు\nనిర్మలమైన నిస్స్వార్ధ ప్రేమను - మాపై కనుపరచినావు\nఇది ఎవరూ చూపించని ప్రేమ - ఇది లాభం ఆశించని ప్రేమ\nఇది ఎవరూ ఎడబాపని ప్రేమ\nఇది మరణం వరకు - కరుణను చూపిన ప్రేమ   ||కంటి పాపను కాయు||",
+        "క్రొత్త యేడు మొదలు బెట్టెను మన బ్రతుకు నందు\nక్రొత్త యేడు మొదలు బెట్టెను\nక్రొత్త మనసు తోడ మీరు క్రొత్త యేట ప్రభుని సేవ\nతత్తర పడకుండ జేయు టుత్తమొత్తమంబు జూడ    ||క్రొత్త||\n\n1. పొందియున్న మేలులన్నియు బొంకంబు మీర\nడెందమందు స్మరణ జేయుడి\nఇందు మీరు మొదలుపెట్టు పందెమందు గెల్వ వలయు\nఅందముగను రవిని బోలి అలయకుండా మెలయకుండా  ||క్రొత్త||\n\n2. మేలు చేయదడవొనర్చగా - మీరెఱగునట్లు కాలమంత నిరుడు\nగడచెగా - ప్రాలుమాలి యుండకుండ - జాలమేల సేయవలయు\nజాల జనము కిమ్మాను - యేలు నామ ఘనత కొరకు    ||క్రొత్త||\n\n3. బలము లేని వారమయ్యీను బలమొందవచ్చు\nకలిమి మీర గర్త వాక్కున\nఅలయకుండా అడుగుచుండ నలగకుండా మోదమొంది\nబలమొసంగు సర్వ విధుల నెలమి మీర నొచ్చుచుండ    ||క్రొత్త||\n\n4. ఇద్దరిత్రి నుండునప్పుడే - ఈశ్వరుని జనులు - వృద్ధి బొంద జూడ\nవలయును - బుద్ధి నీతిశుద్ధులందు - వృద్ధినొంద శ్రద్ధజేయు - శుద్దులైన\nవారిలొ - బ్ర - సిద్దులగుచు వెలుగవచ్చు   |క్రొత్త||\n\n5. పాప పంకమంటినప్పుడు ప్రభు క్రీస్తు యేసు\nప్రాపు జేరి మీరు వేడగా\nసేపు మీర తనదు కరుణ పాపమంతా కడిగివేసి\nపాప రోగ చిహ్నలన్ని బాపి వేసి శుద్ది చేయు      ||క్రొత్త||",
       keywords: [
-        "kanti paapanu",
-        "kanti papanu",
-        "kante papanu",
-        "kante paapanu",
-        "kanti papano",
-        "kanti papa",
-        "kanti paapanu",
-        "kanthi paapanu",
-        "kanthi paapa",
-        "jk christopher",
-        "eye",
+        "krotha yedu modhalu pettenu",
+        "kotha yedu modhalu pettenu",
+        "krotha eedu modhalu pettenu",
+        "kotha eedu modhalu pettenu",
+        "kotha adu modhalu pettenu",
+        "new year",
+        "andhra christian hymns",
+        "7/8",
+        "4/4",
       ],
-      video: "https://www.youtube.com/embed/udne5IfgGl4?start=1662",
-       artist: "",
-      genre: ["General"],
-      timeSignature: "4/4"
+      video: "",
+      artist: "Pulipaaka Jagannadham",
+      genre: ["Andhra Christian Hymn", "New Year"],
+      timeSignature: "7/8 or 4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "క్రైస్తవులారా! లెండి యీనాడు",
+      lyrics:
+        "1. క్రైస్తవులారా! లెండి యీనాడు క్రీస్తు పుట్టెనంచు పాడుఁడి; \nప్రసన్నుఁడైన ప్రేమను ఆసక్తిపరులై కీర్తించుఁడి\nక్రీస్తేను మానవాళితోడను నశింపవచ్చెనంచు పాడుఁడి.\n\n2. దేవుని దూత గొల్లవారికి ఈ రీతిగాను ప్రకటించెను:- \n'ఈ వేళ మహా సంతోషంబగు సువార్త నేను ఎరిగింతును.\nదావీదు పట్నమం దీదినము దైవరక్షకుఁడు జన్మించెను.'\n\n3. త్వరగానే ఆకాశ సైన్యము హర్షించుచు నీలాగు పాడెను\n'సర్వోన్న తాకాశంబునందుండు సర్వేశ్వరునికి ప్రభావము \nనరులయందు సమాధానము ధరణిలో వ్యాపింపనియ్యుఁడు'.\n\n4. పరమతండ్రి దయారసము నరులకెంతో నాశ్చర్యము\nనరావతారుఁడగు దేవుఁడు నిరపరాధిగాను జీవించి\nనిర్దోషమైన త్రోవ చూపించి విరోధులన్ ప్రేమించుచుండెను.\n\n5. శ్రీ మాత సైన్యముతో మేమును వాద్యములు వాయించుచుందుము;\nఈ దినమందు నుద్భవించిన యా దివ్యకర్తను వీక్షింతుము; \nసదయుఁడైన యేసు ప్రేమను సదా స్తుతించి పాడుచుందుము.",
+      keywords: [
+        "kraisthavulara",
+        "kraisthavulaara",
+        "kraisthavu lara",
+        "kraystavulara",
+        "kraistavulara",
+        "kraisthaulara",
+        "andhra christian hymns",
+        "christmas",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "కొనియాడ దరమే నిన్ను",
+      lyrics:
+        "కొనియాడ దరమే నిన్ను\nకోమల హృదయ – కొనియాడ తరమే నిన్ను\nతనరారు దినకరు – బెను తారలను మించు (2)\nఘన తేజమున నొప్పు – కాంతిమంతుడ వీవు    ||కొనియాడ||\n\n1. కెరుబులు సెరుపులు – మరి దూత గణములు (2)\nనురుతరంబుగ గొలువ – నొప్పు శ్రేష్ఠుడ వీవు   ||కొనియాడ||\n\n2. సర్వ లోకంబుల – బర్వు దేవుడ వయ్యు (2)\nనుర్వి స్త్రీ గర్భాన – నుద్భవించితి వీవు  ||కొనియాడ||\n\n3. విశ్వమంతయు నేలు – వీరాసనుడ వయ్యు (2)\nపశ్వాళితో దొట్టి – పండియుంటివి వీవు   ||కొనియాడ||\n\n4. దోసంబులను మడియు – దాసాళి కరుణించి (2)\nయేసు పేరున జగతి – కేగుదెంచితి నీవు   ||కొనియాడ||\n\n5. నరులయందున కరుణ – ధర సమాధానంబు (2)\nచిరకాలమును మహిమ – పరగ జేయుదు వీవు   ||కొనియాడ||\n\n6. ఓ యేసు పాన్పుగ – నా యాత్మ జేకొని (2)\nశ్రేయముగ పవళించు – శ్రీకర వరసుత   ||కొనియాడ||",
+      keywords: [
+        "koniyada tharame ninnu",
+        "koniada tharame ninnu",
+        "koniyaada tharamee ninnu",
+        "koniyaada tharaame ninnu",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Panthagaani Paradeshi",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
   ],
   గ: [
@@ -1356,9 +1964,9 @@ const songsData = {
         "gathakalam antha",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -1384,9 +1992,9 @@ const songsData = {
         "joseph",
       ],
       video: "",
-       artist: "Joseph",
+      artist: "Joseph",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1405,9 +2013,9 @@ const songsData = {
         "goppa karyamulu cheyuvaada",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1427,24 +2035,53 @@ const songsData = {
         "goppadhevudavane",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "గొప్ప దేవ నాకు తండ్రివి",
+      lyrics:
+        "గొప్ప దేవ నాకు తండ్రివి యాకాశమందు గొప్ప దేవ నాకుఁ దండ్రివి\nతప్పకుండ వత్తు నీదరికి యేసు నామమందు గొప్ప కరుణ చేత\nనన్నిప్పుడు తగఁ జేర్చుకొనుము ||గొప్ప||\n\n1.నీవు మిగుల గొప్ప వాఁడవు నా సృష్టి కర్త యీవు లెపుడు నిచ్చు వాఁడవు\nభావమందు నినుఁ దలంచి పావనాత్మ నాకు నిచ్చి జీవమార్గమందు\nనిలిపి కావు మనుచు వేఁడుకొందు ||గొప్ప||\n\n2. చిన్నవాని నంగి ప్రార్థన నీ లోకమందు మున్ను దయను నిన్న వాఁడవు\nసన్నుతుఁడగు యేసు నీదు సన్నిధి సున్నాఁడు గాన నన్నుఁ గనికరించు\nమనుచు నిన్ను నమ్మి వత్తు నిపుడు ||గొప్ప||\n\n3. విలువ గల్గు నీదు నాజ్ఞలు నా హృదయమందు బలు విధములఁ దలఁచు\nచుందును బలుకులందుఁబనులయందు బలముఁ జూపి నిన్నుఁ\nగొలిచి యిలను నిన్నుఁ బ్రీతిపరుతు నలయక నీ కరుణ మెయిని ||గొప్ప||\n\n4. మీఁది రాజ్యమందుఁ జేర్చుము కరుణాసముద్ర బీద నైన నన్నుఁ గరుణచే\nసోదరులను గూడికొనుచు మోద మొప్పఁగ నీదు సేవఁ\nబాదుకొనుచు నుందును నీ పాదపద్మములనుబట్టి ||గొప్ప||",
+      keywords: [
+        "goppa dheva naku thandrivi",
+        "goppa deva",
+        "gopa deva",
+        "gopa dheva naku thandri",
+        "gopha dheva",
+        "goppa deva",
+        "goppa dheva",
+        "goppadheva",
+        "goppadeva",
+        "goppadheva",
+        "4/4",
+      ],
+      video: "",
+      artist: "Pulipaaka Jagannadham",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
       title: "గమ్యం చేరాలని నీతో ఉండాలని",
       lyrics:
-      "గమ్యం చేరాలని నీతో ఉండాలని\nపగలు రేయి పరవశించాలని\nఈ నింగి నేల కనుమరుగైన \nశాశ్వత జీవం పొందాలని\n\nసాగిపోతున్నాను నిన్ను చూడాలని\nనిరీక్షిస్తున్నాను నిన్ను చేరాలని\n\n1. భువి అంతా తిరిగి జగమంతా నడచి \nనీ జ్జానమునకు స్పందించాలని\nనాకున్నవన్నీ సమస్తం వెచ్చించి\nనీ ప్రేమ ఎంతో కొలవాలని\nఅది ఎంత ఎత్తున ఉందో అది ఎంత లోతున ఉందో\nఅది ఏ రూపంలో ఉందో అది ఏ మాటల్లో ఉందో  ||సాగిపోతున్నాను||\n\n2. అలలెన్నో రేగినా శ్రమలెన్నో వచ్చిన \nశిరమును వంచి సహించాలని\nవేదన బాధలు గుండెను పిండిన\nనీదు సిలువను మోయాలని\nనా గుండె కోవెలలోన నిన్నే నే ప్రతిష్టించి\nనీ సేవలోనే ఇలలో నా తుది శ్వాసను విడవాలని  ||సాగిపోతున్నాను||",
-        keywords: [
-          "gamyam cheralani", 
-          "gamyamu cheralani", "gamyamcheralani", "gamyam cheeralani", 
-          "gamyam cheraalani", "gamyam cheeraalani", "gamyam cheralane","john wesly", "4/4"
+        "గమ్యం చేరాలని నీతో ఉండాలని\nపగలు రేయి పరవశించాలని\nఈ నింగి నేల కనుమరుగైన \nశాశ్వత జీవం పొందాలని\n\nసాగిపోతున్నాను నిన్ను చూడాలని\nనిరీక్షిస్తున్నాను నిన్ను చేరాలని\n\n1. భువి అంతా తిరిగి జగమంతా నడచి \nనీ జ్జానమునకు స్పందించాలని\nనాకున్నవన్నీ సమస్తం వెచ్చించి\nనీ ప్రేమ ఎంతో కొలవాలని\nఅది ఎంత ఎత్తున ఉందో అది ఎంత లోతున ఉందో\nఅది ఏ రూపంలో ఉందో అది ఏ మాటల్లో ఉందో  ||సాగిపోతున్నాను||\n\n2. అలలెన్నో రేగినా శ్రమలెన్నో వచ్చిన \nశిరమును వంచి సహించాలని\nవేదన బాధలు గుండెను పిండిన\nనీదు సిలువను మోయాలని\nనా గుండె కోవెలలోన నిన్నే నే ప్రతిష్టించి\nనీ సేవలోనే ఇలలో నా తుది శ్వాసను విడవాలని  ||సాగిపోతున్నాను||",
+      keywords: [
+        "gamyam cheralani",
+        "gamyamu cheralani",
+        "gamyamcheralani",
+        "gamyam cheeralani",
+        "gamyam cheraalani",
+        "gamyam cheeraalani",
+        "gamyam cheralane",
+        "john wesly",
+        "4/4",
       ],
       video: "",
-       artist: "Dr. John Wesly",
+      artist: "Dr. John Wesly",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
   ],
   ఘ: [
@@ -1468,32 +2105,45 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
   ],
   చ: [
     {
       id: uuid.v4(),
-      title: "చెమ్మగిల్లు కళ్ళలోన కన్నీళ్లెంత కాలం",
+      title: "చాటించుడి మనుష్యజాతి కేసు నామము",
       lyrics:
-        "చెమ్మగిల్లు కళ్ళలోన కన్నీళ్లెంత కాలం\nకష్టాల బాటలోనె సాగదు పయనం\nవిడుదల సమీపించెను నీకు వెలుగు ఉదయించును\n\n1. నీవు మోసిన నిందకు ప్రతిగా - పూదండ ప్రభువు యిచ్చునులె\nనీవు పొందిన వేదనలన్ని - త్వరలో తీరిపోవునులె\nనీ స్థితి చూసి నవ్వినవారే - సిగ్గుపడే దినమొచ్చేనులే\nవిడుదల సమీపించెను నీకు వెలుగు ఉదయించును || చెమ్మగిల్లు||\n\n2. అనుభవించిన లేమి బాధలు - ఇకపై నీకు వుండవులే\nఅక్కరలోన ఉన్నవారికి - నీవే మేలు చేసే వులే\nమొదట నీ స్థితి కోంచమె ఉన్న - తుదకు వృద్ధిని పొందునులే\nవిడుదల సమీపించెను నీకు వెలుగు ఉదయించును || చెమ్మగిల్లు ||",
+        "1. చాటించుడి మనుష్యజాతి కేసు నామము\nచాటించుడి యవశ్యమేసు – ప్రేమసారము\nజనాదులు విశేష రక్షణ సునాదము – విను పర్యంతము\nచాటుదాము చాటుదాము – చాటుదాము చాటుదాము\nచాటుదాము చాటుదాము శ్రీయేసు నామము\n\n2. కన్నీళ్ళతో విత్తెడు వార లానందంబుతో\nనెన్నడు గోయుడు రనెడి వాగ్ధత్తంబుతో\nమన్నన గోరు భక్తులారా నిండు మైత్రితో మానవ ప్రేమతో\nచాటుదాము చాటుదాము – చాటుదాము చాటుదాము\nచాటుదాము చాటుదాము – చక్కని మార్గము\n\n3. సమీపమందు నుండునేమో చావు కాలము\nసదా నశించిపోవువారికీ సుభాగ్యము\nవిధంబు జూపగోరి యాశతోడ నిత్యము విన్పించు చుందము\nచాటుదాము చాటుదాము – చాటుదాము చాటుదాము\nచాటుదాము చాటుదాము – సత్య సువార్తను",
       keywords: [
-        "chammagillu",
-        "chammagillu kallaloona kannillentha kaalam",
-        "chamagilu",
-        "chammagilu",
-        "chamagillu",
-        "chamma gillu",
-        "chama gilu",
-        "chama gelu",
-        "chamma gellu",
-        "chama geelu",
-        "chammagillu kalla lona",
+        "chatinchudi manushya jaathi",
+        "chatinchudi manusha jathi",
+        "chatinchude manushya jaathi",
+        "chaatinchudi manushya jaathi",
+        "andhra christisn hymns",
+        "6/8",
       ],
       video: "",
-      artist: "Bro. Shalem Raju",
-      genre: ["General"],
-      timeSignature: "4/4"
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "చింత లేదిక యేసు పుట్టెను",
+      lyrics:
+        "చింత లేదిక యేసు పుట్టెను - వింతగను బెత్లెహేమందున\nచెంతజేరను రండి సర్వజనంగమా - సంతస మొందుమా ||చింత||\n\n1. దూత తెల్పెను గొల్లలకు శుభవార్త నా దివసంబు వింతగా\nఖ్యాతి మీరగ వారు యేసుని గాంచిరి - స్తుతు లొనరించిరి  ||చింత||\n\n2. చుక్కగనుగొని జ్ఞానులెంతో మక్కువతో నా ప్రభుని గనుగొని\nచక్కగా బెత్లెహెము పురమున జొచ్చిరి - కానుక లిచ్చిరి  ||చింత||\n\n3. కన్య గర్భమునందు బుట్టెను - కరుణ గల రక్షకుడు క్రీస్తుడు\nధన్యులగుటకు రండి వేగమే దీనులై - సర్వమాన్యులై  ||చింత||\n\n4. పాప మెల్లను పరిహరింపను - పరమ రక్షకుడవతరించెను\nదాపు జేరిన వారి కీడు గడు భాగ్యము - మోక్షభాగ్యము   ||చింత||",
+      keywords: [
+        "chintha ledhika yesu puttenu",
+        "chinta ledika",
+        "chintha ledheka",
+        "andhra christian hymn",
+        "Christmas",
+        "7/8",
+      ],
+      video: "",
+      artist: "N. D. Abel",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -1510,9 +2160,9 @@ const songsData = {
         "chirakala snehituda",
       ],
       video: "",
-       artist: "Lilian Christopher",
+      artist: "Lilian Christopher",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1538,9 +2188,27 @@ const songsData = {
         "johnerry",
       ],
       video: "https://www.youtube.com/embed/DBNFNTNO33M?start=1407",
-       artist: "John Erry",
+      artist: "John Erry",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "చూచుచున్నాము నీ వైపు",
+      lyrics:
+        "చూచుచున్నాము నీ వైపు\nమా ప్రియ జనక – చూచుచున్నాము నీ వైపు\nచూచుచు నీ ప్రేమ – సొంపు సువార్తను\nజాచుచు గరములు – చక్కగా నీవైపు  ||చూచు||\n\n1. మేమరులమై యుంటిమి\nమార్గము వీడి – మేమందరము పోతిమి\nప్రేమచే నప్పుడు – ప్రియ తనయు నంపించి\nక్షేమ మార్గము మాకు – బ్రేమను జూపితివి  ||చూచు||\n\n2. నిను నమ్ము పాపులకు\nవారెవరైనా – నీ శరము జొచ్చువారలకు\nఇనుడవు కేడెంబు – నీ జగతిలో నగుచు\nగనుపరచుచుందువు – ఘనమైన నీ కృప  ||చూచు||\n\n3. నీ భయము మాయెదలను\nనిలుపుము నీదు – ప్రాభవ మొనరంగను\nనీ భయముచే మేము – వైభవ మొందుచు\nనే భయము లేకుండ – నీ భువిని గొన్నాళ్ళు   ||చూచు||\n\n4. దయ జూచి మము నెప్పుడు\nమంచివి యన్ని – దయచేయు మెల్లప్పుడు\nదయచేయరానివి – దయచేయుమని కోర\nదయ జూపి మన్నించు – దయగల మా తండ్రి   ||చూచు||",
+      keywords: [
+        "chuchu chunnamu ni vaipu",
+        "chuchuchunnamu ni vaipu",
+        "chu chu chunnamu nivaipu",
+        "chuchu chunamu vi vaipu",
+        "andhra christian hymns",
+        "7/8",
+      ],
+      video: "",
+      artist: "Pulipaaka Jagannaathamu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8 or 4/4",
     },
     {
       id: uuid.v4(),
@@ -1555,12 +2223,70 @@ const songsData = {
         "chudumu ee kshanamee",
       ],
       video: "",
-       artist: "",
+      artist: "",
+      genre: ["General", "Lent"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "చెమ్మగిల్లు కళ్ళలోన కన్నీళ్లెంత కాలం",
+      lyrics:
+        "చెమ్మగిల్లు కళ్ళలోన కన్నీళ్లెంత కాలం\nకష్టాల బాటలోనె సాగదు పయనం\nవిడుదల సమీపించెను నీకు వెలుగు ఉదయించును\n\n1. నీవు మోసిన నిందకు ప్రతిగా - పూదండ ప్రభువు యిచ్చునులె\nనీవు పొందిన వేదనలన్ని - త్వరలో తీరిపోవునులె\nనీ స్థితి చూసి నవ్వినవారే - సిగ్గుపడే దినమొచ్చేనులే\nవిడుదల సమీపించెను నీకు వెలుగు ఉదయించును || చెమ్మగిల్లు||\n\n2. అనుభవించిన లేమి బాధలు - ఇకపై నీకు వుండవులే\nఅక్కరలోన ఉన్నవారికి - నీవే మేలు చేసే వులే\nమొదట నీ స్థితి కోంచమె ఉన్న - తుదకు వృద్ధిని పొందునులే\nవిడుదల సమీపించెను నీకు వెలుగు ఉదయించును || చెమ్మగిల్లు ||",
+      keywords: [
+        "chammagillu",
+        "chammagillu kallaloona kannillentha kaalam",
+        "chamagilu",
+        "chammagilu",
+        "chamagillu",
+        "chamma gillu",
+        "chama gilu",
+        "chama gelu",
+        "chamma gellu",
+        "chama geelu",
+        "chammagillu kalla lona",
+      ],
+      video: "",
+      artist: "Bro. Shalem Raju",
       genre: ["General"],
-      timeSignature: "3/4"
+      timeSignature: "4/4",
     },
   ],
   జ: [
+    {
+      id: uuid.v4(),
+      title: "జన గణ మన అధినాయక జయహే",
+      lyrics:
+        "జన గణ మన అధినాయక జయహే..\nభారత భాగ్య విధాతా..\nపంజాబ, సింధు, గుజరాత, మరాఠా,\nద్రావిడ, ఉత్కళ, వంగ..\nవింధ్య, హిమాచల, యమునా, గంగ,\nఉచ్చల జలధితరంగ..\n\nతవ శుభనామే జాగే..\nతవ శుభ ఆశిష మాగే..\nగాహే తవ జయ గాథా..\nజనగణ మంగళదాయక జయహే భారత భాగ్యవిధాతా..\nజయహే! జయహే! జయహే… జయ జయ జయ జయహే…",
+      keywords: [
+        "janaganamana",
+        "jana gana mana",
+        "jana ganamana",
+        "janagana mana",
+      ],
+      video: "",
+      artist: "Rabindranath Tagore",
+      genre: ["Andhra Christian Hymn", "India"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "జయప్రభు యేసునె వెంబడించుచు",
+      lyrics:
+        "జయప్రభు యేసునె వెంబడించుచు జయముగ నడచెదము యేసుతో\nజయముగ వెడలెదము ప్రియుడగు యేసుని ప్రేమను చవిగొని పయనము\nజేసెద మా ప్రభు వెంబడి ||జయప్రభు||\n\n1. ఆదరణయు అధికబలమును ఆత్మఖడ్గమును అవనిలో అందరి రక్షయును\nఆదర్శంబౌ ఆయన వాక్యమే అనిశము మనకిల మార్గము చూపగ\n||జయప్రభు||\n\n2. ధర విరోధులు మమ్ము జుట్టగ దరి జేరెద మేసున్ ప్రభుని దరిజేరెద\nమేము ధాత్రి దురాశల డంబములన్నిటి మైత్రిని వీడి నడచెద మేసుతో\n||జయప్రభు||\n\n3. మా ప్రభు జూముము నీదు మార్గపు మాదిరి జాడలను నీ దగు\nమాదిరి జాడలను మా పాదములను తొట్రిలకుండగ మా కిడు బలమును\nయీ కృపాదినమున ||జయ ప్రభు||\n\n4. మా కొరకై నీవు నడచిన మార్గము జూడగను మేము మార్గము జూడగను\nమా రక్షక నీ అడుగుజాడలు మరువక విడువక నడువగ కృపనిడు\n||జయప్రభు||\n\n5. ఇహపరముల నినుగాక ప్రేమతో ఎవరిని గొలిచెదము? ఎవరిని ప్రేమింప\nవశమె? విహరించెదము యేసుని వెంబడి మహిమ రాజ్యమున యేసుని\nగొలువగ ||జయప్రభు||",
+      keywords: [
+        "jaya prabhu yesune venbadinchuchu",
+        "jaya prabhu yeesuni",
+        "jaya prabhu yeesune",
+        "jayaprabhu yeesuni",
+        "jayaprabhu yesuni venbadinchuchu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "lo",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
     {
       id: uuid.v4(),
       title: "జయము నీకే ఇశ్రాయేలు కాపరి",
@@ -1577,9 +2303,9 @@ const songsData = {
         "jayamu nikey",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -1598,9 +2324,9 @@ const songsData = {
         "jivanadhine",
       ],
       video: "",
-       artist: "",
-      genre: ["General"],
-      timeSignature: "4/4"
+      artist: "",
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1622,9 +2348,9 @@ const songsData = {
         "pranam kamalakar",
       ],
       video: "https://www.youtube.com/embed/Ro_VHJC0aSg",
-       artist: "",
+      artist: "Pranam Kamlakhar",
       genre: ["Christmas"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -1648,9 +2374,9 @@ const songsData = {
         "jevaaharamu",
       ],
       video: "https://www.youtube.com/embed/HMx9q28tcIA?si=yWrhWinTFZOxrZTh",
-       artist: "",
+      artist: "Dr. A. B. Masilamani",
       genre: ["Andhra Christian Hymn", "Holy Communion"],
-      timeSignature: "7/8"
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -1670,9 +2396,9 @@ const songsData = {
         "akumarthi daniel",
       ],
       video: "",
-       artist: "",
+      artist: "Dr. Akumarthi Daniel",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1693,9 +2419,27 @@ const songsData = {
         "jevitamlo nerchukunanu",
       ],
       video: "",
-       artist: "",
+      artist: "Sister Blessy Wesly",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "జీవితాంతము వరకు నీకే",
+      lyrics:
+        "జీవితాంతము వరకు నీకే – సేవ సల్పుదునంటిని\nనీవు నాతో నుండి ధైర్యము – నిచ్చి నడుపుము రక్షకా   ||జీవితాంతము||\n\n1. ఎన్ని యాటంకంబులున్నను – ఎన్ని భయములు కల్గిన\nఅన్ని పోవును నీవు నాకడ – నున్న నిజమిది రక్షకా   ||జీవితాంతము||\n\n2. అన్ని వేళల నీవు చెంతనె – యున్న యను భవమీయవె\nతిన్నగా నీ మార్గమందున – పూనినడచెద రక్షకా   ||జీవితాంతము||\n\n3. నేత్రములు మిరుమిట్లు గొలిపెడి – చిత్రదృశ్యములున్నను\nశత్రువగు సాతాను గెల్వను – చాలు నీ కృప రక్షకా   ||జీవితాంతము||\n\n4. నాదు హృదయమునందు వెలుపట – నావరించిన శత్రులన్\nచెదర గొట్టుము రూపుమాపుము – శ్రీఘ్రముగ నారక్షకా   ||జీవితాంతము||\n\n5. మహిమలో నీవుండు చోటికి – మమ్ము జేర్చెదనంటివే\nఇహము దాటినదాక నిన్ను – వీడనంటిని రక్షకా   ||జీవితాంతము||\n\n6. పాప మార్గము దరికి బోవక – పాత యాశల గోరక\nఎపుడు నిన్నే వెంబడింపగ – కృప నొసంగుము రక్షకా   ||జీవితాంతము||",
+      keywords: [
+        "jeevithaanthamu varaku neeke",
+        "jevithanthamu varaku neke",
+        "jevithanthamu varaku nike",
+        "jivithanthamu varaku neke",
+        "Andhra Christian Hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "P. D. Shubhaamani",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -1714,9 +2458,9 @@ const songsData = {
         "zuntey thene kanna",
       ],
       video: "",
-       artist: "",
+      artist: "Joel Kodali",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1733,9 +2477,49 @@ const songsData = {
         "junte tene daralakana",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "జ్యోతిగ మము జేయుమో దేవా",
+      lyrics:
+        "జ్యోతిగ మము జేయుమో దేవా యీ లోకమున నీ ఖ్యాతి నిలుపగ జేయుమో\nదేవా జ్యోతిగ మము జేసి మాలో క్రీస్తు మార్గము బయలు పరచి నీతి\nప్రేమలతోడ హృదయము నింపి మమునడిపింపు మయ్యా ||జ్యోతిగ||\n\n1. మా కుటుంబము లోన నీ వెలుగు ప్రసరించు నట్లుగ నాదు బ్రదుకును\nశుద్ధి జేయుమయ్యా మా కుటుంబములోని వారలు మానకను నీ వెలుగు\nజూపగ మమ్ము నీ మార్గంబునందున మనుప పరిశుద్ధాత్మ నిడుమా ||జ్యోతిగ||\n\n2. సంఘమున నీ కీర్తి కనపడగ పరిశుద్ధ సహవాసంబులో నను వృద్ధి\nజేయు మయా భంగపరచెడి కక్షలన్నిటి బాధపరచెడి శక్తులన్నిటి పార\nదోలగ శక్తినిడి నీ భక్తి కాంతిని జూపి నాలో ||జ్యోతిగ||\n\n3. నిన్ను దెలియని యాత్మ లెన్నెన్నో మా చుట్టునున్నవి నీ కొరకు\nకనిపెట్టుచున్నవయా అన్నివేళల నీ సువార్తను అందరికి ప్రకటింప\nమనసున నాశనిడి నీ వార్త వెలుగును అన్ని దిశలకు జాటునట్లుగ ||జ్యోతిగ||\n\n4. సమయమును వరముల నొసంగితివి మా రక్షకా ధన సంపదను నీవే\nయొసంగితివి విమల జీవితమందు వానిని విరివిగా నితరుల కొసంగి వీర\nత్యాగార్పణములతో నీ వెలుగు ప్రసరింపంగజేయను ||జ్యోతిగ||",
+      keywords: [
+        "jyothiga mamu cheyimudheva",
+        "jothiga mamu cheyumudheva",
+        "jyothiga mamu jeyumu dheva",
+        "jothiga mamu jeyumu dheva",
+        "andhra christian hymn",
+        "7/8",
+        "4/4",
+      ],
+      video: "",
+      artist: "P. D. Shubhamani",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8 or 4/4",
+    },
+  ],
+  డ: [
+    {
+      id: uuid.v4(),
+      title: "డాగు నేది మాపును",
+      lyrics:
+        "1. డాగు నేది మాపును\nవేగ యేసు రక్త ధారే\nరోగి కేయౌషథము\nబాగుగా నా రక్త ధారె\n\n|| హా దివ్య రక్తము\nఆ బుగ్గ వినహా\nయేదియు లేదుగా\nయేసు యొక్క రక్త ధారె ||\n\n2. పాప పరిహారము\nప్రాపు యేసు రక్త ధారె\nశాపపు సంహారము\nస్వామి యేసు రక్త ధారె\n\n3. ఇదే నా సుతీర్థము\nయేసు యొక్క రక్తధారె\nనాదు క్షమాపణము\nసాధు వేసు రక్త ధారె\n\n4. నాకు సమాధానము\nనాధుఁ డేసు రక్త ధారె\nసాకు నేను గానను\nజయ యేసు రక్త ధారె",
+      keywords: [
+        "daagu needhi maapunu",
+        "daagu nedhi maapunu",
+        "dagu nedhi mapunu",
+        "dagu needhi mapunu",
+        "daagu neti mapunu",
+        "andhra christian hymns",
+        "4/4",
+      ],
+      video: "",
+      artist: "Jacob Chambarles",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
   ],
   త: [
@@ -1754,7 +2538,24 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["Worship"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "త్రాహి మాం క్రీస్తు నాధ",
+      lyrics:
+        "త్రాహి మాం క్రీస్తు నాధ దయఁ జూడ రావే \n  నేను దేహి యనుచు నీ పాదములే దిక్కుగాఁ జేరితి నిపుడు ||త్రాహి||\n\n1. గవ్వ చేయురాని చెడ్డ కర్మేంద్రియాధీనుఁడనై \n  రవ్వ పాలై నే నెంతో నెవ్వఁ బొందితిఁ   \n  త్రవ్వుచున్న కొలఁదిఁ పెరుఁగుఁ దరగదు నా పాప రాశి \n  యివ్విధమునఁ జెడిపోతినినే నేమి సేతు నోహోహోహో ||త్రాహి||\n\n2. నీ యందు భయభక్తులు లేని నిర్లజ్జాచిత్తముఁ బూని \n  చేయరాని దుష్కర్మములు చేసినాఁడను \n  దయ్యాలరాజు చేతిలోఁ జేయి వేసి వాని పనులఁ \n  జేయ సాగి నే నిబ్భంగిఁ జెడిపోయితి నే నయ్యయ్యయ్యొ ||త్రాహి||\n\n3. నిబ్బర మొక్కించుకై నిజము రవ్వంతైన లేక \n  దబ్బర లాడుటకు ము త్తా నైతిని \n  అబ్బురమైన ఘోర పా పాంధకార కూపమందు \n  దబ్బున బడిపోతి నయ్యో దారి చెడి నేనబ్బబ్బబ్బా ||త్రాహి||\n\n4. నిన్నుఁ జేరి సాటిలేని నిత్యానంద మందఁబోవు \n  చున్నప్పుడు నిందలు నా కెన్ని చేరినా \n  విన్నదనము లేకుండ నీ వే నా మదికి ధైర్యమిచ్చి \n  యన్నిట రక్షించి తివి నా యన్న నీకు స్తోత్ర మహాహా ||త్రాహి||",
+      keywords: [
+        "thrahimam kreesthu naadha",
+        "trahimam kresthu nadha",
+        "thraahimaam kreesthu naadha",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1770,7 +2571,7 @@ const songsData = {
       video: "https://www.youtube.com/embed/X5q7xykqRYU?start=1817",
       artist: "Pranam Kamlakhar",
       genre: ["General"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -1792,7 +2593,7 @@ const songsData = {
       video: "https://www.youtube.com/embed/xsPNhroOvl8?si=XQeZIOylFPcd-wxs",
       artist: "Pranam Kamlakhar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1816,10 +2617,81 @@ const songsData = {
       video: "",
       artist: "Sounds of Zion",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "తనువు నా దిదిగో గై",
+      lyrics:
+        "తనువు నా దిదిగో గై – కొనుమీ యో ప్రభువా నీ – పనికి బ్రతిష్టించుమీ\nదినములు క్షణములు – దీసికొని యవి నీదు\nవినతిన్ ప్రవహింప జే – యను శక్తి నీయుమీ      ||తనువు||\n\n1. ఘనమైన నీ ప్రేమ – కారణంబున నీకై – పని చేయ జేతు లివిగో\nయనయంబు నీ విషయ – మై సొగసుగా జురుకు\nదనముతో పరుగెత్త – వినయ పాదము లివిగో      ||తనువు||\n\n2. స్వర మిదిగో కొనుమీ – వరరాజ నిను గూర్చి – నిరతమ్ము పాడనిమ్ము\nమరియు పెదవు లివిగో – మహనీయమైన నీ\nపరిశుద్ధ వార్తతో – పరి పూర్ణముగా నింపు      ||తనువు||\n\n3. వెండి పసిడి యివిగో – వీస మైనను నాకై – యుండవలె నని కోరను\nనిండైన నీ యిష్ట – నియమంబు చొప్పున\nమెండుగా వాడ పరి – మితియవు జ్ఞానం బిదిగో      ||తనువు||\n\n4. నా యిష్ట మిదిగో యిది – నీ యిషముగ జేయ – నా యిష్ట మిక గాదది\nనా యిఛ్చ యున్నట్టి – నా హృదయ మిదిగో నీ\nకే యియ్యది రాజ – కీయ సింహాసనామౌ      ||తనువు||\n\n5. ఉన్న నా ప్రేమ నీ – సన్నిధానమున నే – నెన్నడు ధార వోయన్\nనన్ను నీ వానిగ – నాథా గైకొను మెపుడు\nచెన్నుగ నీ వశమై – స్థిర ముగ నుండెద      ||తనువు||",
+      keywords: [
+        "thanuvu na dhidhigo gai",
+        "thanuvu na dhidhigogai",
+        "tanuvu na dhidhigivai",
+        "tanuvu na didigogai",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Mungamoori Devadaasu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "తెల్లవారిన వేళఁ దెలి వొంది మన క్రీస్తు",
+      lyrics:
+        "తెల్లవారిన వేళఁ దెలి వొంది మన క్రీస్తు దివ్య నామముఁ బాడెరె యో ప్రియులార దివస రక్షణ వేఁడరే తల్లి రొమ్మున దాఁచు పిల్ల రీతిని మనలఁ జల్లదనముగ రాతి రెల్లఁ గాచిన విభునిఁ ||దెల్లవారిన వేళ||\n\n1. నిద్రపోయిన వేళ నిఖిలాపదులఁబాపి నిశలన్ని గడుపు విభునిన్ భద్రముగ వినతించి భయభక్తితో మనము ముద్రి తాక్షులఁ గేలు మోడ్చి మ్రొక్కుచును  ||దెల్లవారిన వేళ||\n\n2. భానుఁడుదయం బయ్యెఁ బద్మములు వికసిల్లె గానమలు జేసెఁ బక్షుల్ మానసాబ్జము లలర మనము కల్వరి మెట్టపై నెక్కు నినుఁ డనెడి ప్రభుఁ జూచి వేడ్కన్  ||దెల్లవారిన వేళ||\n3. దిట్టముగ మానసేంద్రియ కాయ శోధనలు పట్టుకొని, యుండు దినమున్ దట్టముగ మన నాల్గు తట్ల యేసుని కరుణఁ జుట్టుకొని రక్షించు శుభమడుగుకొనుచున్  ||దెల్లవారిన వేళ||\n\n4. పాప భారము మనము ప్రభుని పై నిడి గురుని పాదములు చెంత నొరగి కాపు కర్త విశాల కరము మాటున డాఁగి యాపదలఁ దొలఁగించు మని వేఁడుకొనుచున్  ||దెల్లవారిన వేళ||",
+      keywords: [
+        "thellavaarina veela",
+        "tellavarina vela",
+        "thella varina vela",
+        "thela varina vela",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
   ],
   ద: [
+    {
+      id: uuid.v4(),
+      title: "దాతృత్వమును గలిగి పెరుగుదమ",
+      lyrics:
+        "దాతృత్వమును గలిగి పెరుగుదమ ధనము ధాత్రి దేవుని దంచు నెఱు\nగుదమ ||దాతృ||\n\n1. శక్తికొలఁది కాన్కలర్పింతమ మన భుక్తినుండి కొంతఁ దీయుదమ\n||దాతృ||\n\n2. సంతోషముగ నియ్య సాగుదమ మన స్సంతటితోఁ జేయ నేగు దమ\n||దాతృ||\n\n3. గర్వఘనములు వీడి యర్పింతమ యుర్వి సర్వ మాయనందు\nనేర్పింతమ ||దాతృ||\n\n4. సంఘ సేవకు సొమ్ము సమకూర్తమ క్రీస్తు సంఘ యక్కఱ లన్ని తీర్చుదమ\n||దాతృ||\n\n5. ప్రతియాదివార మిది మది నుంతమ దీని ప్రతి సంఘస్థుఁడు చేయ\nబోధింతమ ||దాతృ||\n\n6. విధిఁ దలఁచి దుర్బలుల రక్షింతమ సంఘ విధవాళి దానముతో\nదర్శింతము ||దాతృ||\n\n7. దిక్కులేని జనుల దీవింతమ వారి యక్కఱలలో మేలుఁ గావింతమ ||దాతృ||\n\n8. పుచ్చుకొనుటకంటె నిచ్చుదమ మఱల నిచ్చు తండ్రికి స్తుతుల నిచ్చెదమ\n||దాతృ||\n\n9. వెదజల్లి యభివృద్ది పొందుదమ మోక్ష పదవు లను భవింపఁ బరుగిడుదమ\n||దాతృ||\n\n10. వర్ధిల్లిన కొలది చెల్లింతము లోక వ్యర్థ ఖర్చులనెల్ల మళ్లింతమ ||దాతృ||",
+      keywords: [
+        "dhathruthvamunu kaligi",
+        "dhathruthvamunu galigi",
+        "dhathruthvamunu kaligi",
+        "dhathvuthvamu kaligi",
+        "andhra christian hymns",
+        "7/8",
+      ],
+      video: "",
+      artist: "Mortha Prakasam",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "దిక్కులేని వాఁడనో ప్రభో",
+      lyrics:
+        "దిక్కులేని వాఁడనో ప్రభో నీ యండజేరి మ్రొక్కి సేవఁజేతు నో ప్రభో మ్రొక్కి విన్నవించు వారి యక్కరలను దీర్చు సత్యము గ్రక్కున నిడి యాదరించు మక్కువైన దేవ తనయ ||దిక్కులేని||\n\n1.ఘోర పాప భరము నెల్లను మోయుచు నలయు వారలార రండటంచును భూరి దయను బిలిచి యున్న సార వాక్కు లెఱుఁగ కధిక భార మొంది తుదిని నీ దరిఁ జేరితి నన్నాదరించుము ||దిక్కులేని||\n\n2.బలము లేని వాఁడనో ప్రభో కేవలము పాప ములను జేసి యలసితిని ప్రభో ఇలను నే నొనర్చునట్టి కలుష జాలములను నీవు తొలఁగ జేసి యాత్మ కధిక బలము నొసగి మునుపు మయ్య ||దిక్కులేని||\n\n3.పామరుండ నౌట వల్లను నే నెఱుఁగనైతి క్షేమ మిచ్చు పదవులెల్లను కామ క్రోధ లోభములను దీమసమున విడిచి యేసు నామ మందు విశ్వసించి ప్రేమను వర్తింపజేయు ||దిక్కులేని||\n\n4.వందనం బొనర్తునో ప్రభో నా డెందమందలి సందియము లణంచు మో ప్రభో సందియ మెడబాపి శాస్త్ర మందు నుండు సార వాక్యానంద పదవు లనుభవింప డెందము వెలిఁగింప వయ్య ||దిక్కులేని||",
+      keywords: [
+        "dhikkuleni vadano prabho",
+        "dhikku leni vadano prabho",
+        "dhikku leeni vaadano prabho",
+        "Andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
     {
       id: uuid.v4(),
       title: "దినదినంబు యేసుకు",
@@ -1837,29 +2709,80 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
-      title: "ధీనుడా అజేయుడా ఆధరణ కిరణమా",
+      title: "దూత పాట పాడుడి – రక్షకున్ స్తుతించుడి",
       lyrics:
-        "ధీనుడా అజేయుడా ఆధరణ కిరణమా\nపూజ్యుడా పరిపూర్ణుడా ఆనంద నిలయమా\n\nధీనుడా అజేయుడా… ఆధరణ కిరణమా\nపూజ్యుడా పరిపూర్ణుడా… ఆనంద నిలయమా\nజీవధాతవు నీవని… శృతిమించి పాడనా\nజీవధారవు నీవని… కానుకనై పూజించనా\nఅక్షయదీపము నీవే… నా రక్షణ శృంగము నీవే\nస్వరార్చన చేసెద నీకే… నా స్తుతులర్పించెద నీకేే  ||ధీనుడా అజేయుడా…||\n\n1. సమ్మతిలేని సుడిగుండాలే ఆవరించగా\nగమనములేని పోరాటాలే తరుముచుండగా\nనిరుపేదనైన నా యెడల… సందేహమేమి లేకుండ\nహేతువే లేని ప్రేమ చూపించి… సిలువ చాటునే దాచావు\nసంతోషము నీవే… అమృత సంగీతము నీవే\nస్తుతిమాలిక నీకే… వజ్ర సంకల్పము నీవే  ||ధీనుడా అజేయుడా…||   \n\n2. సత్య ప్రమాణము… నెరవేర్చుటకే మార్గదర్శివై\nనిత్య నిబంధన… నాతో చేసిన సత్యవంతుడా\nవిరిగి నలిగిన మనస్సుతో… హృదయార్చనే చేసెద\nకరుణ నీడలో కృపావాడలో… నీతో ఉంటే చాలయ్యా\nకర్తవ్యము నీవే… కనుల పండుగ నీవేగా\nవిశ్వాసము నీవే… విజయ శిఖరము నీవేగా  ||ధీనుడా అజేయుడా…||\n\n3. ఊహకందని ఉన్నతమైనది దివ్య నగరమే\nస్పటికము పోలిన… సుందరమైనది నీ రాజ్యమే\nఆ నగరమే లక్ష్యమై మహిమాత్మతో నింపినావు\nఅమరలోకాన నీ సన్నిధిలో… క్రొత్త కీర్తనే పాడెదను\nఉత్సాహము నీవే… నయనోత్సవం నీవేగా\nఉల్లాసము నీలో… ఊహల పల్లకి నీవేగా   ||ధీనుడా అజేయుడా…||",
+        "1. దూత పాట పాడుడి – రక్షకున్ స్తుతించుడి\nఆ ప్రభుండు పుట్టెను – బెత్లెహేము నందున\nభూజనంబు కెల్లను – సౌఖ్య సంభ్రమాయెను\nఆకసంబు నందున – మ్రోగు పాట చాటుడి\nదూత పాట పాడుడి – రక్షకున్ స్తుతించుడి\n\n2. ఊర్ధ్వ లోకమందున – గొల్వగాను శుద్దులు\nఅంత్య కాలమందున – కన్య గర్భమందున\nబుట్టినట్టి రక్షకా – ఓ ఇమ్మానుయేల్ ప్రభో\nఓ నరావతారుడా – నిన్ను నెన్న శక్యమా\nదూత పాట పాడుడి – రక్షకున్ స్తుతించుడి\n\n3. రావే నీతి సూర్యుడా – రావే దేవా పుత్రుడా\nనీదు రాక వల్లను – లోక సౌఖ్య మాయెను\nభూ నివాసులందరూ – మృత్యు భీతి గెల్తురు\nనిన్ను నమ్ము వారికి – ఆత్మ శుద్ది కల్గును\nదూత పాట పాడుడి – రక్షకున్ స్తుతించుడి",
       keywords: [
-        "dheenuda ajeeyuda",
-        "dhenuda ajeyuda",
-        "dhinuda ajeyuda",
-        "dheenudaa ajeyuda",
-        "deenuda ajeyuda",
-        "hosanna ministries",
-        "john wesly",
-        "johnwesly",
-        "dinuda ajeyuda",
-        "denuda ajeyuda",
+        "dhutha paata padudi",
+        "dhuta pata padudi",
+        "dhutha pata padudi",
+        "duta pata padudi",
+        "andhra christian hymn",
+        "christmas",
+        "4/4",
       ],
       video: "",
-      artist: "Hosanna Ministries",
-      genre: ["General"],
-      timeSignature: "4/4"
+      artist: "J. E. Fard Field",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవ కావవే నేడు మమ్ములన్",
+      lyrics:
+        "దేవ కావవే నేడు మమ్ములన్ నీవెరాత్రి కాచినావు నీకు స్తోత్రము ||దేవ||\n\n1. ఆపదలు మమున్ అంటకుండను కావుమయ్య నేడు నీదు కఱుణ\nతోడను ||దేవ||\n\n2. నేటి కార్యముల్ నేడె చేయగా సూటియైన త్రోవ మాకు చూపుమోప్రభో\n||దేవ||\n\n3. చెడ్డ కార్యముల్ చేయకుండను దొడ్డబుద్ధి నిచ్చి మమ్ము నుద్ధరించుము\nదేవ ||దేవ||",
+      keywords: [
+        "dheva kaavane needu mammulan",
+        "deva kavane neydu mammulan",
+        "dheva kavane neydu mammulan",
+        "dheva kaavane nedu mammulan",
+        "andhra christian hymns",
+        "6/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవర నీ దీవెనలు",
+      lyrics:
+        "దేవర నీ దీవెనలు\nధారాళముగను వీరలపై\nబాగుగ వేగమే దిగనిమ్ము\nపావన యేసుని ద్వారగను (2)\n\n1. దంపతులు దండిగ నీ\nధాత్రిలో వెలయుచు సంపదలన్\nసొంపుగ నింపుగ పెంపగుచు\nసహింపున వీరు సుఖించుటకై  ||దేవర నీ||\n\n2. ఈ కవను నీ కరుణన్\nఆకరు వరకును లోకములో\nశోకము లేకయే ఏకముగా\nబ్రాకటముగను జేకొనుము ||దేవర నీ||\n\n3. ఇప్పగిది నెప్పుడును\nగొప్పగు ప్రేమతో నొప్పుచు దా\nమొప్పిన చొప్పున దప్పకను\nమెప్పుగ బ్రతుకగ బంపు కృపన్    ||దేవర నీ||\n\n4. తాపములు పాపములు\nమోపుగ వీరిపై రాకుండగా\nగాపుగ బ్రాపుగ దాపునుండి\nయాపదలన్నియు బాపుచును    దేవర నీ||\n\n5. సాధులుగన్ జేయుటకై\nశోధనలచే నీవు శోధింపగా\nకదలక వదలక ముదమున నీ\nపాదము దాపున బాదుకొనన్   ||దేవర నీ||\n\n6. మెండుగ భూమండలపు\nగండములలో వీరుండగను\nతండ్రిగ దండిగ నండనుండి\nవెండియు వానిని ఖండించావే  ||దేవర నీ||\n\n7. యిద్దరు వీరిద్దరును\nశుద్ధులై నిన్ను సేవించుటకై\nశ్రద్ధతో బుద్ధిగ సిధ్ధపడన్\nదిద్దుము నీ ప్రియ బిడ్డలుగాన్    ||దేవర నీ||\n\n8. వాసిగ నీ దాసులము\nచేసిన ఈ మొఱ్ఱల్ దీసికొని\nమా సకలేశ్వర నీ సుతుడ\nయేసుని పేరిట బ్రోవుమామేన్     ||దేవర నీ||",
+      keywords: [
+        "dhevara ni dhevenalu",
+        "dhevara nee dheevenalu",
+        "andhra christian hymns",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవ సంస్తుతి చేయవే మనసా",
+      lyrics:
+        "దేవ సంస్తుతి చేయవే మనసా\nశ్రీ-మంతుడగు యెహోవ సంస్తుతి చేయవే మనసా\nదేవ సంస్తుతి చేయుమా నా – జీవమా యెహోవా దేవుని\nపావన నామము నుతించుమా – నా యంతరంగము\nలో వసించు నో సమస్తమా ||దేవ||\n\n1. జీవమా, యెహోవా నీకు – జేసిన మేళ్ళన్ మరువకు (2)\nనీవు చేసిన పాతకంబులను – మన్నించి జబ్బు\nలేవియున్ లేకుండ జేయును – ఆ కారణముచే ||దేవ||\n\n2. చావు గోతినుండి నిన్ను – లేవనెత్తి దయను గృపను (2)\nజీవ కిరీటముగ వేయును – నీ శిరసు మీద\nజీవ కిరీటముగ వేయును – ఆ కారణముచే ||దేవ||\n\n3. యవ్వనంబు పక్షిరాజు – యవ్వనంబు వలెనే క్రొత్త (2)\nయవ్వనంబై వెలయునట్లుగా – మే లిచ్చి నీదు\nభావమును సంతుష్టిపరచునుగా – ఆ కారణముచే ||దేవ||\n\n4. ప్రభువు నీతి పనులు చేయును – బాధితులకు న్యాయ మిచ్చున్ (2)\nవిభుండు మార్గము తెలిపె మోషేకు – దన కార్యములను\nవిప్పె నిశ్రాయేలు జనమునకు – ఆ కారణముచే ||దేవ||\n\n5. అత్యధిక ప్రేమ స్వరూపి-యైన దీర్ఘ శాంతపరుండు (2)\nనిత్యము వ్యాజ్యంబు చేయడు – ఆ కృపొన్నతుడు\nనీ పయి నెపుడు కోప ముంచడు – ఆ కారణముచే ||దేవ||\n\n6. పామరుల మని ప్రత్యుపకార – ప్రతి ఫలంబుల్ పంపలేదు (2)\nభూమి కన్న నాకాసంబున్న – ఎత్తుండు దైవ\nప్రేమ భక్తి జనులయందున – ఆ కారణముచే ||దేవ||\n\n7. పడమటికి తూర్పెంతా ఎడమో – పాపములను మనకు నంత (2)\nఎడముజేసియున్నాడు – మన పాపములను\nఎడమగానే చేసియున్నాడు – ఆ కారణముచే ||దేవ||\n\n8. కొడుకులపై తండ్రి జాలి – పాడు విధముగా భక్తిపరుల (2)\nయెడల జాలి పడును దేవుండు – తన భక్తిపరుల\nయెడల జాలిపడును దేవుండు – ఆ కారణముచే ||దేవ||\n\n9. మనము నిర్మితమయిన రీతి – తనకు దెలిసియున్న సంగతి (2)\nమనము మంటి వారమంచును – జ్ఞాపకము చేసి\nకొను కరుణ జూపుచుండును – ఆ కారణముచే ||దేవ||\n\n10. పూసి గాలి వీవ నెగిరి – పోయి బసను దెలియని వన (2)\nవాస పుష్పము వలెనె నరుడుండు – నరు నాయువు తృణ\nప్రాయము మన దేవ కృప మెండు – ఆ కారణముచే ||దేవ||\n\n11. పరమ దేవ నిబంధ నాజ్ఞల్ – భక్తితో గైకొను జనులకు (2)\nనిరతమును గృప నిలిచి యుండును – యెహోవ నీతి\nతరములు పిల్లలకు నుండును – ఆ కారణముచే ||దేవ||",
+      keywords: [
+        "dheva samsthuthi cheyave manasaa",
+        "dheva samstuti",
+        "dheva samsthuthi",
+        "deva samsthuthi",
+        "deva samstuti",
+        "dhevasamsthuthi",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Mangamuri Devadasu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1883,7 +2806,7 @@ const songsData = {
       video: "https://www.youtube.com/embed/-NmyFqw_n6A?start=1314",
       artist: "Samy Pachigalla",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1903,12 +2826,82 @@ const songsData = {
         "dheeva nee saakshigaa",
         "dheeva ni saakshiga",
         "dheeva ni sakshiga",
-        "3/4"
+        "3/4",
       ],
       video: "https://www.youtube.com/embed/-NmyFqw_n6A?start=1314",
       artist: "JK Christopher",
       genre: ["General"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవా మా కుటుంబము",
+      lyrics:
+        "దేవా మా కుటుంబము – నీ సేవకే అంకితము (2)\nఈ శాప లోకాన – నీ సాక్షులుగా నిలువ\nనీ ఆత్మతో నింపుమా (2)   ||దేవా||\n\n1. కాపరి మా యేసు ప్రభువే – కొదువేమి లేదు మాకు\nమాకేమి భయము – మాకేమి దిగులు\nనీకే వందనములయ్యా\nలోబడి జీవింతుము – లోపంబులు సవరించుము\nలోకాశలు వీడి – లోకంబులోన\nనీ మందగా ఉందుము   ||దేవా||\n\n2. సమృద్ధి జీవంబును – సమృద్ధిగా మాకిమ్ము\nనెమ్మది గల ఇల్లు – నిమ్మళమగు మనస్సు\nఇమ్మహిలో మాకిమ్మయ్యా\nఇమ్ముగ దయచేయుము – గిన్నె నిండిన అనుభవము\nఎన్నో కుటుంబాల ధన్యులుగా జేయంగా\nమమ్ములను బలపరచుము||దేవా||\n\n3. ఏ కీడు రాకుండగా – కాపాడుము మా పిల్లలను\nలోక దురు వ్యసనంలా – తాకుడు లేకుండా\nదాచుము నీ చేతులలో\nఒలీవ మొక్కల వలెను ద్రాక్షా తీగెలను పోలి\nఫల సంపదలతోను – కలకాలము జీవించ\nకురుపించుము నీ దీవెనలన్   ||దేవా||\n\n4. పెంపారు జేయుము మాలో – సొంపుగ నీ ఘన ప్రేమన్\nనింపుమా హృదయములు – శాంతి భాగ్యంబులతో\nసంతసంబుగ సాగెదము\nవింతైన నీ ప్రేమను – అంతట ప్రకటింతుము\nకొంత కాలమే మేము – ఉందుము లోకాన\nచెంత చేరగ కోరెదము\nనీ చెంత చేరగ కోరెదము    ||దేవా||",
+      keywords: [
+        "dheva ma kutumbamu",
+        "deva ma kutumbamu",
+        "deva maa kutumbamu",
+        "dheeva maa kutumbamu",
+        "dheeva ma kutumbamu",
+        "3/4",
+      ],
+      video: "",
+      artist: "D. J. Augustine",
+      genre: ["General"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవా సహాయము నిమ్మా",
+      lyrics:
+        "దేవా సహాయము నిమ్మా జీవంపు టూటలు ద్రావుట కిమ్మా ||దేవా||\n\n1. గడియ గడియకు నెగసెఁ నమ్ము లెంతో వడిగా నాపై వచ్చె నరక\nబాణములు ఎగతెగని శోధనములు నీవు పడఁగొట్టి వేగమె దృఢభక్తి\nనిమ్మా ||దేవా||\n\n2. కోటాన కోటి కష్టములు నాకు మాటి మాటికి వచ్చె మరి నికృష్టములు\nసాతాను సాధనములు నేను దాఁటి నీ రెక్కల చాటున నుండ ||దేవా||\n\n3. దారా పుత్రుల పైన భ్రమలు నన్ను సారె సారెకు నీడ్చు లోక భాగ్యములు\nఘోరమగు నాత్మకములు న న్నీ రీతి భ్రమ పెట్టు ధారుణిలోన ||దేవా||\n\n4. మా యావువుదినములు చెట్టు చాయవలెఁ దరుగుచు మంటి పాలౌను\nచాలు నీ లోకంబు మేలు మేము పరలోకరాజ్యము చేరుట మేలు\n||దేవా||\n\n5. మంచి మరణం బిమ్ము దేవ మమ్ము వచించు సాతాను వల నుండి\nకావ నెంచి దూతల నంపినావ మాకై పంచగాయములొంద ప్రభు\nవచ్చినావా ||దేవా||",
+      keywords: [
+        "dheva sahayamu nimma",
+        "dheva sahaayamu nimma",
+        "deva sahayamu nimma",
+        "deeva sahayamu nimma",
+        "Andhra christian hymn",
+        "3/4",
+      ],
+      video: "",
+      artist: "Mikkili Dhevasahaayamu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవుడే నాకాశ్రయంబు",
+      lyrics:
+        "దేవుడే నాకాశ్రయంబు – దివ్యమైన దుర్గము\nమహా వినోదు డాపదల – సహాయుడై నన్ బ్రోచును\nఅభయ మభయ మభయ మెప్పు\nడానంద మానంద మానంద మౌగ   ||దేవుడే||\n\n1. పర్వతములు కదిలిన నీ – యుర్వి మారు పడినను\nసర్వమున్ ఘోషించుచు నీ – సంద్ర ముప్పొంగినన్ ||అభయ||\n\n2. దేవుడెప్డు తోడుగాగ – దేశము వర్ధిల్లును\nఆ తావు నందు ప్రజలు మిగుల – ధన్యులై వసింతురు   ||అభయ||\n\n3. రాజ్యముల్ కంపించిన భూ – రాష్ట్రముల్ ఘోషించిన\nపూజ్యుండౌ యెహోవా వైరి – బూని సంహరించును  ||అభయ||\n\n4. విల్లు విరచు నాయన తెగ – బల్లెము నరకు నాయన\nచెల్ల చెదర జేసి రిపుల – నెల్లద్రుంచు నాయనే   ||అభయ||\n\n5. పిశాచి పూర్ణ బలము నాతో – బెనుగులాడ జడియును\nనశించి శత్రు గణము దేవు – నాజ్ఞ వలన మడియును   ||అభయ||\n\n6. కోటయు నాశ్రయమునై యా – కోబు దేవు డుండగా\nఏటి కింక వెరవ వలయు – నెప్డు నాకు బండుగ   ||అభయ||",
+      keywords: [
+        "dhevude nakasryayambu",
+        "dhevude naku asrayambu",
+        "Devude nakasryayambu",
+        "andhra christian hymn",
+        "3/4",
+      ],
+      video: "",
+      artist: "Panthagaani Paradhesi",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవునికి స్తోత్రము గానము చేయుటయే మంచిది",
+      lyrics:
+        "దేవునికి స్తోత్రము గానము చేయుటయే మంచిది\nమనమందరము స్తుతిగానము చేయుటయే మంచిది\n\n1. యెరుషలేము యెహోవాయే కట్టుచున్నవాడని\nఇశ్రయేలీయులను పోగుచేయువాడని    ||దేవునికి||\n\n2. గుండె చెదరిన వారిని బాగుచేయువాడని\nవారి గాయములన్నియు కట్టుచున్నవాడని        ||దేవునికి||\n\n3. నక్షత్రముల సంఖ్యను ఆయనే నియమించును\nవాటికన్నియు పేరులు పెట్టుచున్నవాడని           ||దేవునికి||\n\n4. ప్రభువు గొప్పవాడును అధిక శక్తి సంపన్నుడు\nజ్ఞానమునకు ఆయనే మితియు లేనివాడని         ||దేవునికి||\n\n5. దీనులకు అండాయెనే భక్తిహీనుల కూల్చును\nసితారాతో దేవుని స్తుతులతో కీర్తించుడి               ||దేవునికి||\n\n6. ఆయన ఆకాశమున్ మేఘములతో కప్పును\nభూమికొరకు వర్షము సిద్ధపరచువాడని              ||దేవునికి||\n\n7. పర్వతములలో గడ్డిని పశువులకు మొలపించెను\nఅరచు పిల్లకాకులకును ఆహారము తానీయును  ||దేవునికి||\n\n8. గుర్రముల నరులందలి బలము నానందించడు\nకృప వేడు వారిలో సంతసించువాడని                ||దేవునికి||\n\n9. యెరుషలేము యెహోవను సీయోను నీ దేవుని\nకీర్తించుము కొనియాడుము ఆనందించువాడని    ||దేవునికి||\n\n10. పిల్లల నాశీర్వదించియు బలపరచు నీ గుమ్మముల్\nమంచి గోధుమపంటతో నిన్ను తృప్తిగనుంచును   ||దేవునికి||\n\n11. భూమికి తనయాజ్ఞను ఇచ్చువాడు ఆయనే\nవేగముగను దేవుని వాక్యము పరుగెత్తును   ||దేవునికి||\n\n12. వాక్యమును యాకోబుకు తెలియచేసినవాడని\nఏ జనముకీలాగున చేసియుండలేదని    ||దేవునికి||",
+      keywords: [
+        "dhevuni sthothramu gaanamu",
+        "devuniki stotramu ganamu",
+        "andhra christiuan hymn",
+        "worship",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "Worship"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1922,12 +2915,29 @@ const songsData = {
         "devuni prema idhigo",
         "dheevuni prema",
         "deevuni preema",
-        "5/8"
+        "5/8",
+      ],
+      video: "",
+      artist: "Gollapalli Nathaaniyelu",
+      genre: ["Andhra Christian Hymn", "General", "Love"],
+      timeSignature: "5/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "దేవుని వారసులం – ప్రేమ నివాసులము",
+      lyrics:
+        "దేవుని వారసులం – ప్రేమ నివాసులము\nజీవన యాత్రికులం – యేసుని దాసులము\nనవ యుగ సైనికులం – పరలోక పౌరులము\nహల్లెలూయ – నవ యుగ సైనికులం – పరలోక పౌరులము       ||దేవుని||\n\n1. దారుణ హింస లలో – దేవుని దూతలుగా\nఆరని జ్వాలలలో – ఆగని జయములతో\nమారని ప్రేమ సమర్పణతో\nసర్వత్ర యేసుని కీర్తింతుము (2)      ||దేవుని||\n\n2. పరిశుద్దాత్మునికై – ప్రార్థన సలుపుదము\nపరమాత్ముని రాక – బలము ప్రసాదింప\nధరణిలో ప్రభువును జూపుటకై\nసర్వాంగ హోమము జేయుదము (2)      ||దేవుని||\n\n3. అనుదిన కూటములు – అందరి గృహములలో\nఆనందముతోను – ఆరాధనలాయే\nవీనుల విందగు పాటలతో\nధ్యానము చేయుచు మురియుదము (2)      ||దేవుని||\n\n4. సజీవ సిలువ ప్రభు – సమాధి గెలుచుటచే\nవిజేత ప్రేమికులం – విధేయ బోధకులం\nనిజముగ రక్షణ ప్రబలుటకై\nధ్వజముగ సిలువను నిలుపుదుము (2)      ||దేవుని||\n\n5. గోధుమ గింజలవలె - క్రీస్తుడు చావగను\nనాధుని మరణములో - శాశ్వత జీవమును \nనిధులుగ పండించి లేవగను \nమాధుర్య రక్షణ లభియించెను (2)  ||దేవుని||\n\n7. ప్రభువును చూచుటకై ప్రజలందరు రాగా\nవిభు మహిమను గాంచ – విశ్వమే మేము గోల\nశుభములు గూర్చుచు మాలోన\nశోభిల్లు యేసుని చూపుదుము (2)      ||దేవుని||\n\n6. హత సాక్షుల కాలం – అవనిలో చెలరేగ\nగతకాలపు సేవ – గొల్గొతా గిరి జేర\nభీతులలో బహు రీతులలో\nనూతన లోకము కాంక్షింతుము (2)       ||దేవుని||",
+      keywords: [
+        "dhevuni varasulam",
+        "dheevuni vaarasulam",
+        "dheevuni varasulam",
+        "andhra christian hymn",
+        "4/4",
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: "5/8"
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -1940,12 +2950,12 @@ const songsData = {
         "devuni stutinchudi",
         "dheevuni sthutinchudi",
         "Dheevuni sthuthiyinchudi",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -1959,12 +2969,12 @@ const songsData = {
         "dheevuni sthuthiyinchudi",
         "deevuni stutiyinchudi",
         "deevuni sthuthiyinchudi",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
-      genre: ["Worship"],
-      timeSignature: "2/4"
+      genre: ["Andhra Christian Hymn", "Worship"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -1983,12 +2993,55 @@ const songsData = {
         "sharon sisters",
         "jk christopher",
         "jkchristopher",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Lilian Christopher",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+  ],
+  ధ: [
+    {
+      id: uuid.v4(),
+      title: "ధ్యానింప నే చిత్తమా",
+      lyrics:
+        "ధ్యానింప నే చిత్తమా వర్షాంతమున ధ్యానింపనే చిత్తమా ధ్యానించ\nవాసక్తి జ్ఞానంబుఁ గలిగించు జ్ఞాన స్వరూపుఁడు జ్ఞానాత్మచే నీకు ||ధ్యానింపవే||\n\n1. అరయ నీ తలఁపుల నఘము లగుపడు నీకుఁ పరిశుద్ధుఁ డీక్షింప\nబహుగా గనుపడుచుండు ||ధ్యానింపవే||\n\n2. పరికింపఁ బలుకులఁ పాప మగుపడు నీకు పరిశుద్ధుఁ డరయుఁ గ\nన్పడకుండు నే యది ||ధ్యానింపవే||\n\n3. క్రియలను జింతింప మయిల గనపడు గాన భయ మొంది నమ్మికను\nబదవే క్రీస్తుని దరికి ||ధ్యానింపవే||\n\n4. దేవుని ఘన ప్రేమ దినదినముఁ దలపోయ నీవు పొందఁగ వచ్చు\nనిక్కమైన శుద్ధి ||ధ్యానింపవే||\n\n5. స్మరియింప నీలోన వర రక్షకుని పాట్లు భరియింప నోపుదువె పాప\nమొక నిమిషంబు ||ధ్యానింపవే||\n\n6. హృదయంబు విమలాత్మ సదనంబుఁ గావింపఁ పదవే శ్రీఘ్రంబుగఁ\nపరమ జనకుని కడకు ||ధ్యానింపవే||\n\n7. దేవుని సేవింపఁ దిరముగ నాశించి దేవాత్మ కొర కీవు దినము\nదేవుని వేఁడ ||ధ్యానింపవే||",
+      keywords: [
+        "dhyanimpa ney chithama",
+        "dhyanimoa ne chithama",
+        "dyanimpa ney chithama",
+        "dhianimpa ney chithama",
+        "dhinanimpa ne chithama",
+        "andhra christian hymns",
+        "7/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "New Year"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ధీనుడా అజేయుడా ఆధరణ కిరణమా",
+      lyrics:
+        "ధీనుడా అజేయుడా ఆధరణ కిరణమా\nపూజ్యుడా పరిపూర్ణుడా ఆనంద నిలయమా\n\nధీనుడా అజేయుడా… ఆధరణ కిరణమా\nపూజ్యుడా పరిపూర్ణుడా… ఆనంద నిలయమా\nజీవధాతవు నీవని… శృతిమించి పాడనా\nజీవధారవు నీవని… కానుకనై పూజించనా\nఅక్షయదీపము నీవే… నా రక్షణ శృంగము నీవే\nస్వరార్చన చేసెద నీకే… నా స్తుతులర్పించెద నీకేే  ||ధీనుడా అజేయుడా…||\n\n1. సమ్మతిలేని సుడిగుండాలే ఆవరించగా\nగమనములేని పోరాటాలే తరుముచుండగా\nనిరుపేదనైన నా యెడల… సందేహమేమి లేకుండ\nహేతువే లేని ప్రేమ చూపించి… సిలువ చాటునే దాచావు\nసంతోషము నీవే… అమృత సంగీతము నీవే\nస్తుతిమాలిక నీకే… వజ్ర సంకల్పము నీవే  ||ధీనుడా అజేయుడా…||   \n\n2. సత్య ప్రమాణము… నెరవేర్చుటకే మార్గదర్శివై\nనిత్య నిబంధన… నాతో చేసిన సత్యవంతుడా\nవిరిగి నలిగిన మనస్సుతో… హృదయార్చనే చేసెద\nకరుణ నీడలో కృపావాడలో… నీతో ఉంటే చాలయ్యా\nకర్తవ్యము నీవే… కనుల పండుగ నీవేగా\nవిశ్వాసము నీవే… విజయ శిఖరము నీవేగా  ||ధీనుడా అజేయుడా…||\n\n3. ఊహకందని ఉన్నతమైనది దివ్య నగరమే\nస్పటికము పోలిన… సుందరమైనది నీ రాజ్యమే\nఆ నగరమే లక్ష్యమై మహిమాత్మతో నింపినావు\nఅమరలోకాన నీ సన్నిధిలో… క్రొత్త కీర్తనే పాడెదను\nఉత్సాహము నీవే… నయనోత్సవం నీవేగా\nఉల్లాసము నీలో… ఊహల పల్లకి నీవేగా   ||ధీనుడా అజేయుడా…||",
+      keywords: [
+        "dheenuda ajeeyuda",
+        "dhenuda ajeyuda",
+        "dhinuda ajeyuda",
+        "dheenudaa ajeyuda",
+        "deenuda ajeyuda",
+        "hosanna ministries",
+        "john wesly",
+        "johnwesly",
+        "dinuda ajeyuda",
+        "denuda ajeyuda",
+      ],
+      video: "",
+      artist: "Hosanna Ministries",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
   ],
   న: [
@@ -2003,11 +3056,14 @@ const songsData = {
         "nadipinchu nanava",
         "nadipinchu naanaava",
         "nadipincho",
+        "andhra christian hymn",
+        "andhra christian songs",
+        "4/4",
       ],
       video: "",
       artist: "Dr. A. B. Masilamani",
-      genre: ["General"],
-      timeSignature: "4/4"
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2022,11 +3078,12 @@ const songsData = {
         "nadipisthadu na devudu",
         "nadipistadu na devudu",
         "nadipisthado",
+        "4/4",
       ],
       video: "",
       artist: "A. R. Stevenson",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2043,23 +3100,31 @@ const songsData = {
         "andhra kraisthava keerthanalu",
         "andhra christian song",
         "aandhra kraisthava keerthanalu",
-        "4/4"
+        "4/4",
       ],
       video: "",
-      artist: "",
+      artist: "William Williams",
       genre: ["Andhra Christian Hymn"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
       title: "నన్ను పిలచిన దేవా (నీ కృపయే కావలెను)",
       lyrics:
         "నన్ను పిలచిన దేవా – నన్ను ముట్టిన ప్రభువా\nనీవు లేనిదే నేను లేనయ్యా (2)\nనే జీవించునది నీ కృప – ఎదుగించునది నీ కృప\nహెచ్చించునది నీ కృప మాత్రమే (2)\nనీ కృపయే కావలెను – నీ కృపయే చాలును\nనీ కృప లేకుంటేనే నేనేమి లేనయ్యా (2) యేసయ్యా …\n\n1. ఒంటరిగా ఏడిచినప్పుడు ఓదార్చువారు లేరు\nతొట్రిల్లి నడిచినప్పుడు ఆదుకొన్నవారు లేరు (2)\nబిగ్గరగా ఏడిచినప్పుడు కన్నీరు తుడిచె కృప (2)\nనీ కృప లేకుంటేనే నేను లేను\nనీ కృప లేకుంటేనే నేనేమి లేను   ||నీ కృపయే|| \n\n2. నేనని చెప్పుటకు నాకేమి లేదు\nసామర్థ్యం అనుటకు నాకని ఏమి లేదు (2)\nఅర్హత లేని నన్ను హెచ్చించినది నీ కృప (2)\nనీ కృప లేకుంటేనే నేను లేను\nనీ కృప లేకుంటేనే నేనేమి లేను  ||నీ కృపయే||",
-      keywords: ["nannu pilichina deva", "nannu pilichina dheva", "4/4", "nanu pilichina deva", "nanu pilachina deva", "nanu pilichina dheva", "nanu pilachina dheva"],
-      video:"",
+      keywords: [
+        "nannu pilichina deva",
+        "nannu pilichina dheva",
+        "4/4",
+        "nanu pilichina deva",
+        "nanu pilachina deva",
+        "nanu pilichina dheva",
+        "nanu pilachina dheva",
+      ],
+      video: "",
       artist: "Benny Joshua",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2073,12 +3138,12 @@ const songsData = {
         "nannu kavaga",
         "nannu kavaga vachina",
         "nannu kaavaga vachina",
-        "7/4"
+        "7/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "7/8"
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -2100,12 +3165,48 @@ const songsData = {
         "entha kalamuga",
         "inta kalamuga",
         "inthaa kalamuga",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "K. Sudharsan",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నన్ను గన్నయ్య రావె నా యేసు",
+      lyrics:
+        "నన్ను గన్నయ్య రావె నా యేసు\nనన్ను గన్నయ్య రావె నా ప్రభువా        ||నన్ను||\n\n1. ముందు నీ పాదారవిందము\nలందు నిశ్చల భక్తి ప్రేమను (2)\nపొందికగా జేయరావే నా\nడెందమానంద మనంతమైయుప్పొంగ       ||నన్ను||\n\n2. హద్దులేనట్టి దురాశల\nనవివేకినై కూడి యాడితి (2)\nమొద్దులతో నింక కూటమి\nవద్దయ్య వద్దయ్య వద్దయ్య తండ్రి       ||నన్ను||\n\n3. కాలము పెక్కు గతించెను\nగర్వాదు లెడదెగవాయెను (2)\nఈ లోకమాయ సుఖేచ్ఛలు\nచాలును జాలును జాలు నోతండ్రి       ||నన్ను||\n\n4. దారుణ సంసార వారధి\nదరి జూపి ప్రోవ నీ కన్నను (2)\nకారణ గురువు లింకెవ్వరు\nలేరయ్య – లేరయ్య లేరయ్య తండ్రి       ||నన్ను||\n\n5. నా వంటి దుష్కర్మ జీవిని\nకేవలమగు నీదు పేర్మిని (2)\nదీవించి రక్షింపనిప్పుడే\nరావయ్య రావయ్య రావయ్య తండ్రి       ||నన్ను||",
+      keywords: [
+        "nannu gannayya raave na yesu",
+        "nannu gannayya",
+        "nanu ganayarave",
+        "nanu ganaye",
+        "nannu ganaya",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Purushotham CHowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నన్ను దిద్దుము చిన్న ప్రాయము",
+      lyrics:
+        "నన్ను దిద్దుము చిన్న ప్రాయము – సన్నుతుండగు నాయనా\nనీవు కన్న తండ్రి వనుచు నేను – నిన్ను చేరితి నాయనా  ||నన్ను||\n\n1. దూరమునకు బోయి నీ దరి – జేర నైతిని నాయనా\nనేను కారు మూర్ఖపు పిల్లనై కా – రడవి దిరిగితి నాయనా   ||నన్ను||\n\n2. మంచి మార్గము లేదు నాలో – మరణ పాత్రుండ నాయనా\nనేను వంచితుండ నైతిని ప్ర-పంచమందున నాయనా    ||నన్ను||\n\n3. చాల మారులు తప్పిపోతిని – మేలు గానక నాయనా\nనా చాల మొరల నాలకించుము – జాలిగల నా నాయనా   ||నన్ను||\n\n4. జ్ఞాన మంతయు బాడుచేసి- కాన నైతిని నాయనా\nనీవు జ్ఞానము గల తండ్రి మంచు – జ్ఞప్తి వచ్చెను నాయనా   ||నన్ను||\n\n5. కొద్ది నరుడను దిద్ది నను నీ – యొద్ద జేర్చుము నాయనా\nనీ యొద్ద జేర్చి బుద్ధి చెప్పుము – మొద్దు నైతిని నాయనా   ||నన్ను||\n\n6. ఎక్కడను నీవంటి మార్గము – నెరుగ నైతిని నాయనా\nనీ రెక్క చాటున నన్ను జేర్చి – చక్కపరచుము నాయనా   ||నన్ను||\n\n7. శత్రువగు సాతాను నన్ను – మిత్రు జేయను నాయనా\nయెన్నో సూత్రములు గల్పించెను నా – నేత్రముల కో నాయనా   ||నన్ను||\n\n8. వాసిగా నే బాప లోకపు – వాసుడ నో నాయనా\nనీ దాసులలో నొకనిగా నను జెసి కావుము నాయనా   ||నన్ను||",
+      keywords: [
+        "nannu dhuddhumu chinna prayamu",
+        "nannu dhidhumu chinna prayamu",
+        "nannu dhidhumu chinna prayamu",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Mangamuri Devadasu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -2124,12 +3225,12 @@ const songsData = {
         "nammakamainaa",
         "ar stevenson",
         "stevenson",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "A. R. Stevenson",
       genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -2156,12 +3257,29 @@ const songsData = {
         "naa aadaramu",
         "naa aadaaram",
         "naa aadaaramu",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నా కింత ప్రోత్సాహా",
+      lyrics:
+        "నా కింత ప్రోత్సాహా - నందంబుల్ గల్గుట - కే కర్త ఘనమైన - హేతువై యుండు\n\nనాకు గల యున్నత కతమ్మే - నాధుఁ డగును నేను మురియు - శ్రీకరంబగు నామ మేది - సిల్వఁబడ్డ యేసు క్రీస్తే ॥నా కింత॥\n\n1.ఎవరు నా భక్తికి - హితమైనట్టి పునాది - యెవరు నా కంఠంబు - నెత్తెన్ పాటలతో\nఎవరు నా పాపముల - భారము నెత్తుకొని దేవునికి నాకును - చివరకున్ స్నేహంబు కలిపిరి - సిల్వఁబడ్డ యేసు క్రీస్తే ॥నా కింత॥\n\n2.నేను నా విధు లెల్ల - నిశ్చయంబుగ నెఱుఁగ - జ్ఞాన మిచ్చుచునుండు జ్ఞాని యెవ్వారు\nవాని యెడల నను యధార్థ - పరునిగాఁ గావించి యవినా - చే నెరవేర్పించు నెవరు - సిల్వఁబడ్డ యేసు క్రీస్తే ॥నా కింత॥\n\n3.ఎవరు నా శత్రువు - నెదిరించి గెల్చిరి - యెవరు నా శోకంబు - నెగురం గొట్టిరి\nఎవరు నా హృదయంపు మూర్ఛను - నీడ్చి సేదను దీర్చి మనసు - చివుకు మను గాయంబు మాన్పిరి - సిల్వఁబడ్డ యేసుక్రీస్తే ॥నా కింత॥\n\n4.మరణంబులో నాకుఁ - జిర జీవ మెవ్వారు - మరణంబునకె గొప్ప మరణ మెవ్వారు\nవిరివిలేని మహిమ సేలు - దరిని నుండఁగ నన్నుఁ జెంతను - స్థిరముగ స్థాపించు నెవరు - సిల్వఁబడ్డ యేసుక్రీస్తే ॥నా కింత॥\n\n5.నన్ను రక్షింప మర ణం బొందియు సమాధి - నెన్నటికిని గెల్చి - యున్న ప్రభునందు\nనున్న విశ్వాంసబె నాకు నుత్సవంబును గలుగ జేయును - చెన్నగు నా ప్రభు విఁ కెవ్వరు - సిల్వఁ బడ్డ యేసు క్రీస్తే ॥నా కింత॥",
+      keywords: [
+        "nakintha prothsaha",
+        "naku nintha prothsaha",
+        "nakentha prothsaha",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "Mangamuri Devadasu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -2177,12 +3295,23 @@ const songsData = {
         "Cross",
         "goodfriday",
         "good friday",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "Hadlee Xavier",
       genre: ["Cross"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నాకై చీల్చబడ్డ యో",
+      lyrics:
+        "1. నాకై చీల్చబడ్డ యో\nనా యనంత నగమా\nనిన్ను దాగి యందున్న\nచేను మీర బారెడు\nరక్త జలధారలా\nశక్తి గ్రోలగా నిమ్ము\n\n2. నేను నాదు శక్తిచే\nనిన్ను గొల్వజాలను\nకాల మెల్ల నేడ్చినన్\nవేళా క్రతుల్ చేసినన్\nనేను చేయు పాపము\nనేనే బాప జాలను\n\n3. వట్టి చేయి చాచుచున్\nముట్టి సిల్వ జేరెదన్\nదిక్కు లేని పాపిని\nప్రక్క జేర్చి ప్రోవుము\nనా కళంక మెల్లను\nయేసునాథ, పాపుము\n\n4. ఈ ధరిత్రియందున\nనీరు దాటునప్పుడు\nనాదరించి నీ కడన్\nనాకై చీల్చబడ్డయో\nనా యనంత శైలమా\nనన్ను జేర దీయుమా",
+      keywords: ["nakai cheelcha badda yo", "andhra christian hymns", "4/4"],
+      video: "",
+      artist: "H. Harms",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2202,12 +3331,12 @@ const songsData = {
         "na chini hrudayamto",
         "nachini hrudayamto",
         "nachinnihrudayamtho",
-        "3/4"
+        "3/4",
       ],
       video: "https://www.youtube.com/embed/udne5IfgGl4?start=1078",
       artist: "Vinod Kumar & Benjamin Johnson",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2228,12 +3357,12 @@ const songsData = {
         "na cheruvy",
         "naa cheruvy",
         "naa cheruvi",
-        "4/4"
+        "4/4",
       ],
-      video: "https://www.youtube.com/embed/udne5IfgGl4?start=1078",
+      video: "",
       artist: "Pranam Kamlakhar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2248,12 +3377,12 @@ const songsData = {
         "najeevithamlo",
         "najivithamulo",
         "naa jivithamulo",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -2272,12 +3401,12 @@ const songsData = {
         "na jeevitha kalamantha",
         "na jeevitha kaalamantha",
         "naa jevitha kaalamantha",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "Hadlee Xavier",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2294,12 +3423,12 @@ const songsData = {
         "naa jaavam",
         "na zevam",
         "naa zeevam",
-        "7/8"
+        "7/8",
       ],
       video: "",
       artist: "Kripal Mohan",
       genre: ["Worship"],
-      timeSignature: "7/8"
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -2321,7 +3450,7 @@ const songsData = {
       video: "",
       artist: "A. R. Stevenson",
       genre: ["General"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2339,7 +3468,7 @@ const songsData = {
       video: "",
       artist: "Pranam Kamlakhar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2360,12 +3489,12 @@ const songsData = {
         "yeesaya",
         "eesayya",
         "esayya",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Ravinder Vottepu",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2379,12 +3508,12 @@ const songsData = {
         "na dhantu lokanaa",
         "nadhantu lokana",
         "nadantu lokana",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Sirivella Hanok",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2405,7 +3534,7 @@ const songsData = {
       video: "",
       artist: "Hosanna Ministries",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -2421,12 +3550,12 @@ const songsData = {
         "na pranama sanutinchuma",
         "napranama sannuthinchuma",
         "naapranama sannuthinchu maa",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["Worship", "General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -2444,12 +3573,12 @@ const songsData = {
         "na pranamina yeesu",
         "napranamaina yesu",
         "naapranamaina yesu",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Hadlee Xavier",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2466,12 +3595,12 @@ const songsData = {
         "naapriya yesu raaja",
         "naapriya yeesu raaja",
         "napriya yeesuraja",
-        "4/4"
+        "4/4",
       ],
       video: "",
-      artist: "Dr N Jayapaul",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2490,13 +3619,13 @@ const songsData = {
         "na dhevudu shakthi manthudu",
         "naa devudu shakthi",
         "naa devudu",
-        "4/4"
+        "4/4",
       ],
       // video: "https://www.youtube.com/live/9ZLlgqI2qB4?si=QM4t8wR468-0jO77&t=1217",
       video: "https://www.youtube.com/watch?v=bYEL5SkLXE4",
       artist: "John Vikas Bandili",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2513,12 +3642,12 @@ const songsData = {
         "naa balamantaa",
         "naa balamamthaa",
         "na balamamthaa",
-        "3/4"
+        "3/4",
       ],
       video: "https://www.youtube.com/embed/-Dux_qsqKnA?start=1348",
       artist: "Sounds of Zion",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2533,12 +3662,12 @@ const songsData = {
         "na brathuku dhenamulu",
         "naa bratuku dinamulu",
         "na brathuku dinamulu",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "Joel Kodali",
       genre: ["General"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2557,7 +3686,40 @@ const songsData = {
       video: "",
       artist: "Pranam Kamlakhar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నా రక్షకుని వెంబడింతు నన్నిటన్",
+      lyrics:
+        "1. నా రక్షకుని వెంబడింతు నన్నిటన్\nఘోరమైన కొండలైన జంకొందను\nసురక్షితంబుగాను నేను వెళ్లుదున్\nబరమ కిరీట మొందువరకు.\n||యేసున్ నేను ఎన్నఁ డెన్నడును\nఆసతో నన్నిటన్ వెంబడింతును\nభాసురంబౌ ప్రభు వెంట కన్నుల్\nమూసికొని యొక్కఁడేని వెళ్లుదున్||\n\n2. నా యేసు తోడ వెళ్లుచుందు\nనెల్లడన్\nప్రయాసమైన లోయలై భయ\nపడన్\nదయఁ జూపు యేసు నన్ను వెం\nడించుచో\nభయ మేల భువనంబులోదగన్\n\n3. నా కాలమెల్ల యేసుసందునమ్ము\nదున్\nభీకరింపు వాధియైన నేదాటుదున్\nనా కర్తతోడ నెందునైన నేగుదున్\nనాక మెక్కితండ్రిఁ చువరకున్.",
+      keywords: [
+        "na rakshakuni venbadinthu nannitan",
+        "naa rakshakuni venbadinthu nannitan",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Alfred Thyaagaraju Pamar",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నావన్ని యంగీకరించుమీ దేవా",
+      lyrics:
+        "నావన్ని యంగీకరించుమీ దేవా \nనన్నెప్పుడు నీవు కరుణించుమీ\n\nనావన్ని కృపచేత నీవలన నొందిన (2)\nభావంబునను నేను బహుదైర్యమొందెద  ||నావన్ని||\n\n1. నీకు నా ప్రాణము నిజముగా నర్పించి (2)\nనీకు మీదుగట్టి నీ కొరకు నిల్పెద  ||నావన్ని||\n\n2. సత్యంబు నీ ప్రేమ చక్కగా మది బూని (2)\nనిత్యంబు గరముల నీ సేవ జేసెద  ||నావన్ని||\n\n3. నీ సేవ జరిగెడు నీ ఆలయమునకు (2)\nఆశచే నడిపించు మరల నా పదములు   ||నావన్ని||\n\n4. పెదవులతో నేను బెంపుగ నీ వార్త (2)\nగదలక ప్రకటింప గలిగించు దృఢ భక్తి   ||నావన్ని||\n\n5. నా వెండి కనకంబు నా తండ్రి గైకొనిమీ (2)\nయావంత యైనను నాశింప మదిలోన   ||నావన్ని||\n\n6. నీవు నా కొసగిన నిర్మల బుద్దిచే (2)\nసేవ జేయగ నిమ్ము స్థిర భక్తితో నీకు   ||నావన్ని||\n\n7. చిత్తము నీ కృపా యత్తంబు గావించి (2)\nమత్తిల్ల కుండగ మార్గంబు దెలుపుము  ||నావన్ని||\n\n8. హృదయంబు నీకిత్తు సదనంబు గావించి (2)\nపదిలంబుగా దాని బట్టి కాపాడుము   ||నావన్ని||",
+      keywords: [
+        "navanni angeeka rinchumi dheva",
+        "navanni angika rinchumidheva",
+        "navanni angikarichumi dheva",
+        "Andhra Christian Hymn",
+        "3/4",
+      ],
+      video: "",
+      artist: "Pulipaaka Jagannaathamu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2577,7 +3739,7 @@ const songsData = {
       video: "",
       artist: "Hosanna Ministries",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2597,8 +3759,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Love", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2622,10 +3784,10 @@ const songsData = {
         "papa in telugu",
         "father",
       ],
-      video: "https://youtu.be/RPUtSxYdDuM",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      video: "",
+      artist: "Enosh Kumar",
+      genre: ["Worship"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2646,9 +3808,9 @@ const songsData = {
         "worship",
       ],
       video: "https://www.youtube.com/embed/kj-6CtiogqU?start=1184",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Benny Joshua",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2669,8 +3831,8 @@ const songsData = {
       ],
       video: "https://www.youtube.com/embed/wqf7C2U3Rjs?start=3404",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2686,8 +3848,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2702,8 +3864,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2718,9 +3880,9 @@ const songsData = {
         "ninu naminacho",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A. R. Stevenson",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2735,8 +3897,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -2750,11 +3912,30 @@ const songsData = {
         "ninnu kapaduvadu",
         "ninnukaapaduvaadu",
         "ninu kapaduvadu",
+        "2/4"
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నిను కాపాడువాడు కునికడు నిదురపోడు",
+      lyrics:
+      "నిను కాపాడువాడు కునికడు నిదురపోడు\nఆయనే నా యేసయ్యా (8)\n\n1. ఏ అపాయము రానేరాదు\nనీ పాదములకు రాయి తగలదు\nదేవదూతలు నిను కాయును కాపాడును ||నిను కాపాడువాడు||\n\n2. బాకా లోయలో నే నడచినను\nగాఢాంధకారపు లోయలో నేనున్న\nదుడ్డు కర్రయు నను కాయును కాపాడును  ||నిను కాపాడువాడు||\n\n3. కొదమ సింహమై నా ప్రభువు\nమేఘాల మీద ఏతెంచువరకు\nవాక్యమే నను కాయును కాపాడును  ||నిను కాపాడువాడు||",
+      keywords: [
+        "ninu kaapadu vaadu",
+        "ninnu kaapaadu vaadu kunukadu",
+        "ninnu kapaduvaadu kunukadu nidhurapodu",
+        "ninnu kapaduvadu",
+        "ninnukaapaduvaadu",
+        "ninu kapaduvadu",
+      ],
+      video: "",
+      artist: "",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2770,9 +3951,9 @@ const songsData = {
         "nee kanna lookana",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "A. R Stevenson",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2788,9 +3969,9 @@ const songsData = {
         "ni kanikaramulu",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2815,9 +3996,9 @@ const songsData = {
         "cross",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hadlee Xavier",
+      genre: ["Lent"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2837,9 +4018,9 @@ const songsData = {
         "praise",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Vinod Kumar & Benjamin Johnson",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2874,8 +4055,24 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship", "General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నీ చరణములే నమ్మితి నమ్మితి",
+      lyrics:
+        "నీ చరణములే నమ్మితి నమ్మితి నీ పాదములే పట్టితిఁ బట్టితిఁ బట్టితి  ||నీ చరణములే||\n\n1. దిక్కిఁక నీవే చక్కఁగ రావే మిక్కిలి మ్రొక్కుదు మ్రొక్కుదు మ్రొక్కుదు  ||నీ చరణములే||\n\n2. ఐహిక సుఖము నరసితి నిత్యము ఆహాహా ద్రోహిని ద్రోహిని ద్రోహిని  ||నీ చరణములే||\n\n3. న్యాయము గాని నా క్రియ లన్ని రోయుచుఁ ద్రోయకు త్రోయకు\nత్రోయకు ||నీ చరణములే||\n\n4. భావము మార్చి నావెతఁ దీర్చి దేవర ప్రోవవే ప్రోవవే ప్రోవవే  ||నీ చరణములే||\n\n5. చంచల బుద్ధి వంచన యెద్ది ఉంచక త్రుంచవే త్రుంచవే త్రుంచవే  ||నీ చరణములే||\n\n6. చుట్టుకొని యున్న శోధన లున్నఁ పట్టు విడఁ గొట్టవే కొట్టవే కొట్టవే   ||నీ చరణములే||\n\n7. నాచు పిశాచి నరుకుట గాచి కాచుకో దాఁచవే దాఁచవే దాఁచవే  ||నీ చరణములే||\n\n8. యేసుని తోడ నెన్వరు సాటి దోసముఁ బాపును బాపును బాపును  ||నీ చరణములే||",
+      keywords: [
+        "ni charanamule nammithi nammithi",
+        "ne charanamule nammithi nammithi",
+        "nee charanamule nammithi",
+        "Andhra Christian Hymn",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2887,9 +4084,9 @@ const songsData = {
         "nee chithamune neraverchutakai",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Hadlee Xavier",
+      genre: ["Worship", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2914,8 +4111,27 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నీతిగల యెహోవా",
+      lyrics:
+        "నీతిగల యెహోవా స్తుతి మీ – ఆత్మతో నర్పించుడి\nమీ ఆత్మతో నర్పించుడి – దాతయవు మన క్రీస్తు నీతిని\nదాల్చుకొని సేవించుడి   ||నీతి||\n\n1. చదల బుడమియు రవియు జలధియు – నదులు గిరులును జక్కగా\nసదమలంబగు దైవ నామము – సర్వదా నుతి జేయును ||నీతి||\n\n2. సర్వశక్తుని కార్యముల కీ – సర్వ రాష్ట్రము లన్నియు\nగర్వములు విడి తలలు వంచుచు – నుర్విలో నుతిజేయను   ||నీతి||\n\n3. గీత తాండవ వాద్యములచే – బ్రీతి పరచెడు సేవతో\nపాతకంబులు పరిహరించెడు – దాతనే సేవించుడి  ||నీతి||\n\n4. పరమ దూతలు నరులు పుడమిని – మొరలుబెట్టుచు దేవుని\nపరము నందున్నట్టి యేసుని – పాదములు సేవింతురు  ||నీతి||\n\n5. ఇలను భక్తులు గూడుకొనియా – బలము గల్గిన దేవుని\nవెలయు స్తుతి వే నోళ్ళతోడను – విసుగు జెందక జేయుడి  ||నీతి||\n\n6. ఆత్మ నీవిక మేలుకొని శు – ధ్ధాత్మ యేసుని దండ్రిని\nత్రిత్వమగునా యేక దేవుని – హర్షమున సేవింపవే   ||నీతి||",
+      keywords: [
+        "neethi gala yehova",
+        "nitho gala yehova",
+        "neethigala yehova",
+        "nithogala yehova",
+        "neethi gala ehova",
+        "neetigala",
+        "nitigala yehova",
+      ],
+      video: "",
+      artist: "Pasupuleti Dhaveedhu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -2944,8 +4160,27 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నీతోనే ఉండుటయే నా జీవిత వాంచయ్యా",
+      lyrics:
+        "నీతోనే ఉండుటయే\nనా జీవిత వాంచయ్యా\nనీ చిత్తం నెరవేర్చుటయే\nనా హృదయ తపనయ్యా (2)\nయేసయ్యా నిన్నే కదా\nనా ముందు నిలిపేను (2)   ||నీతోనే||\n\n1. కరుణయు కృపయు నిరంతరం శాంతి\nఅన్నియు చేయువాడా (2)\nనా జీవితం.. నశియింపగా.. (2)\nకాపాడువాడా… నా కాపరి… (2)    ||యేసయ్యా||\n\n2. నా కొరకు అన్నియు చేయువాడా\nచేసి ముగించువాడా (2)\nనా బరువు.. నా బాధ్యత.. (2)\nనీ పాద చెంత… నుంచితివి… (2)  ||యేసయ్యా||",
+      keywords: [
+        "nithone undutaye",
+        "neethone undutaye",
+        "nithone unduta",
+        "nithoneundutaye",
+        "nitone undutaye",
+        "nitone ondutaye",
+        "nithone ondutaye",
+      ],
+      video: "",
+      artist: "",
+      genre: ["General"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2972,9 +4207,9 @@ const songsData = {
         "andhra christian song",
       ],
       video: "",
-      artist: "",
+      artist: "Bontha Samuyelu",
       genre: ["Andhra Christian Hymn", "Offerings"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -2994,9 +4229,9 @@ const songsData = {
         "benny joshua",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Benny Joshua",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3016,9 +4251,9 @@ const songsData = {
         "Satish kumar",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Dr. Satish Kumar",
+      genre: ["General", "Love"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -3035,8 +4270,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3054,8 +4289,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3082,9 +4317,9 @@ const songsData = {
         "neevu lene rooju",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Samuel Karmoji",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3104,8 +4339,25 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నీ సమాధానము దాసుని కిప్పుడు",
+      lyrics:
+        "నీ సమాధానము దాసుని కిప్పుడు నాధా దేవా యిచ్చి నీ\nమాటచొప్పున పోనిచ్చుచున్నావు నాధా దేవా ||నీ సమాధానము||\n\n1. అన్యులకు నిన్ను బయలు పరచెడి వెలుగుఁగాను నీకు నణఁగు\nప్రజలైన యిశ్రాయేల్ వారికి మహిమ గాను ||నీ సమాధానము||\n\n2. నరులకై నీవు ఏ ర్పరచిన రక్షణన్ నాధా దేవా యిదిగో నాకనులు\nచూచి యా నందించుచున్నవి నాధా దేవా ||నీ సమాధానము||\n\n3. తండ్రికి సుతునికిఁ బరిశుద్ధాత్మకును గలుగుగాక మహిమ తరుగక\nసదాకాలము యుగయుగములకును గలుగు నామేన్ ||నీ సమాధానము||",
+      keywords: [
+        "nee samaadhanamu dhasunikippudu",
+        "nisamadhanamu",
+        "nisaaadhanamu",
+        "neesamaadhanamu",
+        "andhra christian hymn",
+      ],
+      video: "",
+      artist: "Samuyelu Saakshyabaadham",
+      genre: ["General"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -3122,8 +4374,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3141,8 +4393,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3160,8 +4412,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3184,9 +4436,9 @@ const songsData = {
         "love",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Dr. Satish Kumar",
+      genre: ["General", "Love"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -3212,8 +4464,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General", "Love"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3231,9 +4483,9 @@ const songsData = {
         "kripalmohan",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Kripal Mohan",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3257,7 +4509,7 @@ const songsData = {
       video: "",
       artist: "A.R. Stevenson",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3279,8 +4531,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3306,8 +4558,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -3330,8 +4582,21 @@ const songsData = {
       ],
       video: "https://www.youtube.com/embed/BfgyN7DHv3w?start=1859",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["Worship"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నీవే చాలయ్య - యేసు నీవే చాలయ్య",
+      lyrics:
+      "నీవే చాలయ్య - యేసు నీవే చాలయ్య\nనా జీవితానికి - నీవే మేలయ్య (2)\nప్రేమించువాడవు - పాలించువాడవు\nక్షమియించువాడవు - నీవే యేసయ్య (2)\n\nనా కన్నిటి లోయలో నను లేవదీసిన \nనీవే చాలయ్య - యేసు నీవే చాలయ్య (2)\n\n1. ప్రేమించువారు లేక పక్షినైతిని\nదరిచేర్చేవారు లేక దూరమైతిని (2)\nక్షమియించేవారు లేక దోషినైతిని (2)\nనా పాపన్ని నీ ఓర్చి నను మనిషి చేసిన ||నీవే చాలయ్య||\n\n2. నేను పుట్టకుముందే నీవు - నన్ను  చూచితివి\nరూపించ బడకముందే - నన్ను ఎరిగితివి\nపిండముగా ఉన్నప్పుడే - నన్ను ఏర్పరచితివి \nఏ అర్హత లేకున్న - నన్ను ప్రేమించితివి \nనీ కల్వరి ప్రేమతో - నన్ను గెలుచుకొన్నట్టి ||నీవే చాలయ్య||",
+      keywords: [
+        "neeve chalayya yesu neeve chalayya", "nive chalayya yesu nive chayalla", "neeve chalayya", "nive chalayya", "nivechalayya", "neevechalayya", "akumarthi daniel"
+      ],
+      video: "",
+      artist: "Dr. Akumarthi Daniel",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3348,9 +4613,9 @@ const songsData = {
         "neeve naku chalunu",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Pastor Jyothi Raju",
+      genre: ["General"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -3371,9 +4636,9 @@ const songsData = {
         "kripalmohan",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Kripal Mohan",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3393,8 +4658,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3420,8 +4685,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3441,9 +4706,9 @@ const songsData = {
         "john erry",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Allen Ganta, John Erry and Sam Alex",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3461,9 +4726,9 @@ const songsData = {
         "newyear",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Jonah Samuel",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3483,9 +4748,9 @@ const songsData = {
         "sharonsisters",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Lilian Christopher",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3509,38 +4774,27 @@ const songsData = {
       video: "https://www.youtube.com/embed/UAj0Y4Zeg6M?start=803",
       artist: "Noble Pilli",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
-      title: "నేను నా ఇల్లు/ఎబినేజరే",
+      title: "నే నీవాడనై యుండఁ గోరెదన్",
       lyrics:
-        "నేను నా ఇల్లు నా ఇంటి వారందరు\nమానక స్తుతించేదము (2)\nనీ కనుపాపలే నన్ను కాచి\nనేను చెదరక మోసావు స్తోత్రం  (2)\n \nఎబినేజరే - ఎబినేజరే \nఇంత కాలము కాచితివే \nఎబినేజరే - ఎబినేజరే\nనా తోడువై నడిచితివే\nస్తోత్రం స్తోత్రం స్తోత్రం \nకనుపాపగా కాచితివి స్తోత్రం\nస్తోత్రం స్తోత్రం స్తోత్రం \nకౌగిలిలో  దాచితివి స్తోత్రం\n\n1. ఎడారిలో ఉన్న నా జీవితమును\nమేళ్లతో నింపితివి (2)\nఒక కీడైన దరి చేరక నన్ను\nతండ్రిగా కాచావు స్తోత్రం (2)  ||ఎబెనేజరే||\n \n2. ఆశలే లేని నా బ్రతుకును\nనీ కృపతో నింపితివి\nఏ ఆశలే లేని నా బ్రతుకును\nనీ కృపతో నింపితివి\nనీవు చూపిన ప్రేమను పాడగా \nపదములు సరిపోవు తండ్రి (2)  ||ఎబెనేజరే||",
+        "1. నే నీవాడనై యుండఁ గోరెదన్\nయేసు ప్రియ రక్షకా\nనీవు చూపు ప్రేమను గాంచితిన్\nనన్నుఁ  జేర్చు నీ దరిన్\n\n||నన్నుఁ  జేర్చు చేర్చు చేర్చు రక్షకా\nనీవు పడ్డ సిల్వకున్\nనన్నుఁ  జేర్చు చేర్చు చేర్చు రక్షకా\nగాయపడ్డ ప్రక్కకున్ ||\n\n2. నన్నుఁ బ్రతిష్ఠ పర్చుమీ నాధా\nనీదు కృపవల్లనే\nనాదు నాత్మ నిన్ను నిరీక్షించు\nనీ చిత్తంబు నాదగున్\n\n3. నీదు సన్నిధిలో నిఁక నుండ\nనెంత తుష్టి నాకగున్\nస్నేహితుని మాటలాడెదన్\nసర్వశక్త ప్రభుతో\n\n4. నీదు దివ్య ప్రేమాతిశయము\nఇహ బుద్ధి కందదు\nపరమందున దాని శ్రేష్ఠత\nనే ననుభవించెదన్",
       keywords: [
-        "ebenesare",
-        "ebeynezare",
-        "ebenezare",
-        "abenejare",
-        "ebenejare",
-        "ebenijare",
-        "ebenejarey",
-        "nenu na illu",
-        "nenu naa illu",
-        "nanu na illu",
-        "nenu na ellu",
-        "neynu na illu",
-        "john jebaraj",
-        "jebaraj",
-        "nenu na ilu",
-        "neynu naa ilu",
-        "abenesare",
-        "abenisare",
-        "abenejarey",
+        "neni vadanu yunda goredhan",
+        "ney ni vadanu",
+        "nene vadanu unda goredhan",
+        "neney vaadanu yunda goredhan",
+        "nenivadanai",
+        "nenivaadanai",
+        "andhra christian hymns",
+        "6/8",
       ],
-      video: "https://www.youtube.com/embed/KG2bDwwDgUM?start=1040",
-      artist: "John Jebaraj",
-      genre: ["Worship"],
-      timeSignature: "3/4"
+      video: "",
+      artist: "Jacob Chambarlen",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -3557,7 +4811,23 @@ const songsData = {
       video: "",
       artist: "A. R. Stevenson",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "నేనును నా ఇంటి వారును నీతి సూర్యుని గొలుతుము",
+      lyrics:
+        "నేనును నా ఇంటి వారును నీతి సూర్యుని గొలుతుము – దీన మనసు కలిగి దేవుని దివ్య సేవను చేతుము \n1. అనుదినంబును ప్రభుని దలచుచు – అలయకను ప్రార్ధింతుము – అనవరతమా ప్రభుని చిత్తము – ననుకరింతుము పనులలో \n2. వేదవాక్య పఠనమందు – విసుగు – జెందక నుందుము = ఆదరంబున దైవ చిత్తము – ననుసరించుచు నడుతుము \n3. ఆశతోడను ప్రభుని దినమును – నాచరింతుము మరువక = విసుకు జెందక నాలయమునకు – పిన్న పెద్దల దెత్తుము \n4. సంఘ కార్యక్రమములందు – సహకరింతుము ప్రీతితో = భంగ పరచెడి పనులన్నిటి – కృంగదీసెదమనిశము\n5. ప్రేమతోడను పొరుగువారిని – ప్రియులుగను భావింతుము = క్షమయు స్నేహము నేర్చి ప్రభుకడ – శాంతితో జీవింతము \n6. శక్తికొలది శరీరబలమును – శ్రమను క్రీస్తుకు నిత్తుము = భక్తితో హృదయమును పూర్తిగ – ప్రభునికే యర్పింతుము \n7. చిన్నవారలు దైవరాజ్యపు – చిరుత వారసులంచును = అన్నివేళల వారి వృద్ధికి – మిన్నగ దొడ్పడెదము\n8. పెద్దవారలు దైవజనులని – పేర్మితో భావింతుము = శుద్దుడగు ప్రభు క్రీస్తు మనసును – శ్రద్ధతోడను జూపుచు \n9. జీవితంబున ప్రభును ప్రేమా – శీస్సులను ప్రసరింతుము = దివ్య జ్యోతుల రీతి వెలుగుచు – దివ్య సన్నిధి నుందుము",
+      keywords: [
+        "nenu nu na intivarunu needhi suryuni goluthumu",
+        "nenunu na inti varunu",
+        "andhra christian hymns",
+        "7/8",
+      ],
+      video: "",
+      artist: "A. Charles Kinsinger",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -3597,6 +4867,24 @@ const songsData = {
   ప: [
     {
       id: uuid.v4(),
+      title: "పంపుము దేవా దీవెనలతో",
+      lyrics:
+        "పంపుము దేవా దీవెనలతో – పంపుము దేవా (2)\nపంపుము దయ చేత పతిత పావన నామ\nపెంపుగ నీ సేవ ప్రియమొప్ప నొనరింప    ||పంపుము||\n\n1. మా సేవ నుండిన మా వెల్తు లన్నియు (2)\nయేసుని కొరకు నీ వెసఁగఁ క్షమియించుచు    ||పంపుము||\n\n2. వినిన సత్యంబును – విమలాత్మ మది నిల్పి (2)\nదినదినము ఫలములు దివ్యముగ ఫలియింప     ||పంపుము||\n\n3. ఆసక్తితో ని-న్ననిశము సేవింప (2)\nభాసురంబగు నాత్మ వాసి-కెక్కగ నిచ్చి     ||పంపుము||",
+      keywords: [
+        "pampumu dheva",
+        "pampumu deva",
+        "pampumudeva",
+        "pampumudheva",
+        "Andhra Christian Hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Pulipaaka Jagannaathamu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
       title: "పదములు చాలని ప్రేమ ఇది",
       lyrics:
         "పదములు చాలని ప్రేమ ఇది\nస్వరములు చాలని వర్ణనిది (2)\nకరములు చాపి నిను కౌగలించి పెంచిన\nకన్నవారికంటే ఇది మిన్నయైన ప్రేమ\nవారిని సహితము కన్న ప్రేమ\n\nప్రేమ ఇది యేసు ప్రేమ \nప్రేమ ఇది తండ్రి ప్రేమ\nప్రేమ ఇది ప్రాణమిచ్చిన ప్రేమ\nకలువరి ప్రేమ ||పదములు||\n\n1. నవ మాసం మోసి ప్రయోజకులను చేసినా\nకన్నబిడ్డలే నిను వెలివేసినా (2)\nతన కరములు చాపి ముదిమి వచ్చు వరకు\nనిన్నెత్తుకొని ఆదరించు ప్రేమ\nఆ వేదనంత తొలగించును ప్రేమ ||ప్రేమ||\n\n2. మేలులెన్నో పొంది ఉన్నత స్థితికెదిగిన\nస్నేహితులే హృదయమును గాయపరచగా (2)\nమేలులతో నింపి అద్భుతములు చేసి\nక్షమియించుట నేర్పించెడి ప్రేమా\nశాంతితో నిను నడిపించెడి ప్రేమ ||ప్రేమ||",
@@ -3608,13 +4896,30 @@ const songsData = {
         "paddamulu",
         "padhamulu chalane prema",
         "padhamulu chaalane",
-        "love", 
-        "6/8"
+        "love",
+        "6/8",
       ],
       video: "",
       artist: "Philip",
       genre: ["Love"],
       timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "పరమ జీవము నాకు నివ్వ",
+      lyrics:
+        "పరమ జీవము నాకు నివ్వ\nతిరిగి లేచెను నాతో నుండ\nనిరంతరము నన్ను నడిపించును\nమరల వచ్చి యేసు కొని పోవును\n\nయేసు చాలును – యేసు చాలును\nయే సమయమైన యే స్థితికైన\nనా జీవితములో యేసు చాలును\n\n1. సాతాను శోధనలధికమైన\nసొమ్మసిల్లక సాగి వెళ్ళెదను\nలోకము శరీరము లాగినను\nలోబడక నేను వెళ్ళెదను   ||యేసు||\n\n2. పచ్చిక బయలులో పరుండజేయున్\nశాంతి జలము చెంత నడిపించును\nఅనిశము ప్రాణము తృప్తిపరచున్\nమరణ లోయలో నన్ను కాపాడును   ||యేసు||\n\n3. నరులెల్లరు నన్ను విడిచినను\nశరీరము కుళ్ళి కృశించినను\nహరించినన్ నా ఐశ్వర్యము\nవిరోధివలె నన్ను విడచినను   ||యేసు||",
+      keywords: [
+        "parama jeevamu naku nivva",
+        "parama jevamu naku nivva",
+        "pramajevamu naku nivva",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3632,9 +4937,45 @@ const songsData = {
         "holy",
       ],
       video: "",
-       artist: "",
-      genre: ["Andhra Christian Hymn", "Worship"],
-      timeSignature: "7/8"
+      artist: "Yeshaya Veera Martyn",
+      genre: ["Andhra Christian Hymn", "Worship", "Marriage"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "ప్రబలముగనే ప్రస్తుతించెద",
+      lyrics:
+        "ప్రబలముగనే ప్రస్తుతించెద ప్రభుని కృపలన్ని\nప్రతి దినము నిను ప్రచురపరచెద ప్రభుడ నావిభుడా ||ప్ర||\n\n1. పొందుగోరి నా యందు నిలిచిన బంధుమిత్రుడవు\nమందమతి కా నందమొసగిన మహిమతేజుడవు ||ప్ర||\n\n2. చింతదీర్చి నా భ్రాంతి మార్చితి వెంట వింతదియో\nస్వాంతమున కడు శాంతిగూర్చితి వెంట కరుణదియో ||ప్ర||\n\n3. నీతి కరపిన జాతి మరపిన ఖ్యాతి యేసునిదే\nనీరసుడ నను గారవించిన నీతిరాజితడే ||ప్ర||\n\n4. జీవమిచ్చిన జావచ్చిన దేవసుత నీవే\nజీవదాయక బ్రోవరా యిక జాలమేలనురా ||ప్ర||\n\n5. నిమిషనిమిషము నిను భజించెద నెమ్మనంబునను\nశమదమాది సుగుణశోభిత సమ్మదిని నిమ్మ ||ప్ర||",
+      keywords: [
+        "prabalamugane",
+        "pragalamugane prasthuthinchedha",
+        "prabalamuganey prasthuthinchedha",
+        "prabhalamugane",
+        "Andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Chetti Bhanu Murthi",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ప్రభు ప్రేమ తొలికేక",
+      lyrics:
+        "ప్రభు ప్రేమ తొలికేక - హృదయములో ప్రతిధ్వనియించే\nపాప క్షమా యేసునిలో- శరణు నొసంగుచు కనిపించే\n\n1. పాపవికారము పొడసూప - జీవిత విలువలు మరుగాయె\nఫలితముగా లోకములో- బ్రతుకుటయే నా గతియాయె\nపలువురిలో కనబడలేకా - దాహము తోనే నొంటరిగా\nబావికని పయనింపా - నాధుని దర్శన మెదురాయే\nపావనుడు దాహముతో - జలమును ఇమ్మని ననుగోరె ||ప్రభు||\n\n2. జాతినిచూడని నేత్రముతో - పాపము శోకని హృదయముతో\nజాలిని చాటించుచునే - తాకెను నామది వేదనతో\nజాప్యము చేయక తెమ్మనియే - దాచుకొనిన నా పాపమును\nజడియుచునే తెలిపితిని - ప్రభు వెరిగిన నా నిజస్థితిని\nజయమొందె నాతనువూ - సరిగ నుడితివని ప్రభు తెలుపా ||ప్రభు||\n\n3.దేహమునే నా సర్వముగా - భావించుచు మది పూజింపా\nదినదినమూ జీవితమూ - చావుగ మారిన కాలములో\nదేవునిగా నా బంధువుగా - మరణ ప్రవాహము ఛేదించి\nదరిజేర్చి దీవించి - నూతన జన్మ ప్రసాదించే\nదయ్యాల కుహరమును - స్తుతి మందిరముగ రూపించే||ప్రభు||\n\n4.పాపము దాగును నాబావి - లోతును ఎరిగినవారెవరు\nపోరాట వాటికయౌ - నా బ్రతుకును చూచినదెవరు\nపాపికిని పాపమునకునూ - భేదము చూపిన వారెవరూ\nపాపిని కాపాడుటకు - సిలువను మోసినవారెవరూ\nప్రకటించె దైవకృప - తెరచెను జీవన జలనిధులు ||ప్రభు||\n\n5. ఘటముతో వెడలితి నొంటరిగా - పితరుల త్రానజనములకై\nకనబడెను బావికడ - రక్షణయూటల ప్రభుయేసు\nకుండను వీడి పరుగిడితి - బావిని చేకొని హృదయములో\nఘనమైన శుభవార్త - ఆతృతతో ప్రజలకు తెలుసా\nగ్రామ ప్రజా కనుగొనిరి - విశ్వ విమోచకుడగు యేసున్  ||ప్రభు||",
+      keywords: [
+        "prabhu prema tholi keka",
+        "prabhu prema tholikeka",
+        "prabhuprema tholi keka",
+        "prabuprema tholikeka",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3655,16 +4996,16 @@ const songsData = {
         "sharonsisters",
         "jk christopher",
         "philip",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Philip",
+      artist: "Philip",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
-      title: "ప్రభు యేసు నా రక్షకా ",
+      title: "ప్రభు యేసు నా రక్షకా",
       lyrics:
         "ప్రభు యేసు నా రక్షకా\nనొసగు కన్నులు నాకు\nనిరతము నే నిన్ను జూడ (2)\nఅల్ఫయు నీవే – ఒమేగయు నీవే (2)   ||ప్రభు యేసు||\n\n1. ప్రియుడైన యోహాను పత్మాసులో\nప్రియమైన యేసు నీ స్వరూపము (2)\nప్రియమార జూచి బహు ధన్యుడయ్యె\nప్రియ ప్రభు నిన్ను జూడనిమ్ము (2)    ||ప్రభు యేసు||\n\n2. లెక్కలేని మార్లు పడిపోతిని\nదిక్కులేనివాడ నేనైతిని (2)\nచక్కజేసి నా నేత్రాలు దెరచి\nగ్రక్కున నిన్ను జూడనిమ్ము (2)     ||ప్రభు యేసు||\n\n3. ఎరిగి యెరిగి నే చెడిపోతిని\nయేసు నీ గాయము రేపితిని (2)\nమోసపోతి నేను దృష్టి దొలగితి\nదాసుడ నన్ను జూడనిమ్ము (2)  ||ప్రభు యేసు||\n\n4. ఎందరేసుని వైపు చూచెదరో\nపొందెదరు వెల్గు ముఖమున (2)\nసందియంబు లేక సంతోషించుచు\nముందుకు పరుగెత్తెదరు (2)  ||ప్రభు యేసు||\n\n5. విశ్వాసకర్తా ఓ యేసు ప్రభూ\nకొనసాగించువాడా యేసు ప్రభూ (2)\nవినయముతో నేను నీ వైపు జూచుచు\nవిసుగక పరుగెత్త నేర్పు (2)     ||ప్రభు యేసు||\n\n6. కంటికి కనబడని వెన్నియో\nచెవికి వినబడని వెన్నియో (2)\nహృదయ గోచరము కాని వెన్నియో\nసిద్ధపరచితివ నాకై (2)   ||ప్రభు యేసు||\n\n7. లోక భోగాలపై నా నేత్రాలు\nసోకకుండునట్లు కృప జూపుము (2)\nనీ మహిమ దివ్య స్వరూపమును\nనిండార నను జూడనిమ్ము (2)  ||ప్రభు యేసు||",
       keywords: [
@@ -3675,12 +5016,12 @@ const songsData = {
         "prabhu yeesu na rakshaka",
         "prabhu yeesu naa rakshaka",
         "prabhu yesu naa rakshaka",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: "4/4"
+      artist: "",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3695,12 +5036,30 @@ const songsData = {
         "prabhuva nii kaaryamulu",
         "prabhuva nee kariyamulu",
         "sharon sisters",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Sharon Sisters",
+      artist: "Sharon Sisters",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ప్రభువా మమ్మును దీవించి",
+      lyrics:
+        "ప్రభువా మమ్మును దీవించి – పంపుము నీకృప నందించి \nఅభినందనముల జేకొనుమా – విభవము మహిమొన్నతి కీర్తి యుగయుగములకు నీకగుతన్ \n\n1. పగతుర ప్రేమించేడు శక్తిన్ – తగబొరుగును జూచెమా రక్తిన్ మిగులందయ\n  చేయుము దైవ – జగదీక కుమారా కీర్తి- యుగయుగములకు నీకగుతన్\n\n2. గుడిలో వినిన నీవాక్యము మా -గుండెల బదిలము జేయగను \nగుదిబయటను నా చారములో – నడువగ దోడ్పడుమో కీర్తి యుగయుగములకు నీకగుతన్\n\n3. క్రైస్తవ మైత్రిని సంఘములో – విస్తరణము జెయగనిమ్ము నేస్తవ భావము \nలోకములో – నెరపగ దయగనుమో కీర్తి యుగయుగములకు నీకగుతన్",
+      keywords: [
+        "prabhuva mammunu dheevinchi",
+        "prabuva mammunu dhevinchi",
+        "prabuva mamunu devinchi",
+        "prabhuva mammunu dhevinche",
+        "Andhra Christian Hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Molathaati Vidhyanandhamu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3719,12 +5078,12 @@ const songsData = {
         "padedhem halleluya",
         "padedhamhaleluya",
         "paadedhamhaleluya",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3741,12 +5100,30 @@ const songsData = {
         "prardhana valanepayanamu",
         "prayer",
         "prayer song",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Chinni Savarapu",
+      artist: "Chinni Savarapu",
       genre: ["Prayer", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ప్రార్థన వినెడి పావనుడా",
+      lyrics:
+        "ప్రార్థన వినెడి పావనుడా\nప్రార్థన మాకు నేర్పుమయా   ||ప్రార్థన||\n\n1. శ్రేష్టమైన భావము గూర్చి\nశిష్య బృందముకు నేర్పితివి\nపరముడ నిన్ను ప్రనుతించెదము\nపరలోక ప్రార్థన నేర్పుమయా   ||ప్రార్థన||\n\n2. పరమ దేవుడవని తెలిసి\nకరము లెత్తి జంటగా మోడ్చి\nశిరమునువంచి సరిగను వేడిన\nసుంకరి ప్రార్థన నేర్పుమయా   ||ప్రార్థన||\n\n3. దినదినంబు చేసిన సేవ\nదైవ చిత్తముకు సరిపోవ\nదీనుడవయ్యి దిటముగా కొండను\nచేసిన ప్రార్థన నేర్పుమయా   ||ప్రార్థన||\n\n4. శత్రుమూక నిను చుట్టుకొని\nసిలువపైన నిను జంపగను\nశాంతముతో నీ శత్రుల బ్రోవగ\nసలిపిన ప్రార్థన నేర్పుమయా   ||ప్రార్థన||",
+      keywords: [
+        "prardhana vinedi paavanuda",
+        "prardhana vinedi pavanuda",
+        "pradhana vinedi pavanuda",
+        "prardhana vinede pavanuda",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3765,12 +5142,33 @@ const songsData = {
         "pithro pothra",
         "pethru puthra",
         "peethro putra",
-        "4/4"
+        "doxology",
+        "4/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["Andhra Christian Hymn", "Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "ప్రియుడా నీ ప్రేమ – పాదముల్  చేరితి",
+      lyrics:
+        "ప్రియుడా నీ ప్రేమ – పాదముల్  చేరితి - నెమ్మది నెమ్మదియే\n ఆసక్తితో నిన్ను పాడి స్తుతించెద ఆనందం - ఆనందమే \nఅద్భుతమే  ఆశ్చర్యమే – ఆరాధనా ఆరాధనా (2)\n\n1. నీ శక్తి కార్యముల్ తలంచి తలంచి - ఉల్లము పొంగెనయ్యా \nమంచివాడా మంచి చేయువాడా - స్తోత్రము స్తోత్రమయా \nమంచివాడా మహోన్నతుడా - ఆరాధనా ఆరాధనా (2)\n\n2. బలియైన గొఱ్ఱెగా -  పాపములన్నిటిని మోసి తీర్చితివే \nపరిశుద్ద రక్తము నా కొరకేనయ్యా – నాకెంతో భాగ్యమయ్యా\n పరిశుద్దుడా - పరమాత్ముడా - ఆరాధనా ఆరాధనా\n\n3. ఎన్నెన్నో ఇక్కట్లు బ్రతుకులో వచ్చినా - నిన్ను నేవిడవనయ్యా\n రక్తము చిందిన సాక్షిగా యుందున్ - నిశ్చయం  నిశ్చయమే\n రక్షకుడా - యేసునాధా - ఆరాధనా ఆరాధనా",
+      keywords: [
+        "priyuda ni prema",
+        "preyuda ni prema",
+        "priyuda nee prema",
+        "preyuda nee prema",
+        "priyudani prema",
+        "priyuda niprema",
+        "Worship",
+        "3/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Worship"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -3790,12 +5188,32 @@ const songsData = {
         "what a friend we have in jesus",
         "andhra christian songs",
         "andhra christian song",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/gkTavnjWIaY?si=pZk3-tZ8aTaqFKlB",
-       artist: "",
+      artist: "Joseph M. Screeven",
       genre: ["Andhra Christian Hymn"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "పుట్టె యేసుడు నేడు",
+      lyrics:
+        "పుట్టె యేసుడు నేడు – మనకు – పుణ్య మార్గము జూపను\nపట్టి యయ్యె బరమ గురుఁడు – ప్రాయశ్చిత్తుడు శ్రీ యేసు  ||పుట్టె||\n\n1. ధర బిశాచిని వేడిన – దు –ర్నరుల బ్రోచుటకై యా\nపరమవాసి పాపహరుఁడు – వరభక్త జన పోషుడు (2) ||పుట్టె||\n\n2. యూద దేశములోన – బెత్లె -హేమను గ్రామమున\nనాదరింప నుద్భవించెను – అధములమైన మనలను (2)   ||పుట్టె||\n\n3. తూర్పు దేశపు జ్ఞానులు – పూర్వ – దిక్కు చుక్కను గాంచి\nసర్వోన్నతుని మరియ తనయుని – మ్రొక్కిరి అర్పణంబులిచ్చిరి (2)   ||పుట్టె||",
+      keywords: [
+        "puttenesudu nedu",
+        "puttenesudu needu",
+        "putenesudu nedu",
+        "putte yesudu nedu",
+        "putte yeesudu needu",
+        "putte yesudunedu",
+        "6/8",
+        "andhra christian hymn",
+      ],
+      video: "",
+      artist: "Feliks Andrew",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -3815,12 +5233,12 @@ const songsData = {
         "goodfriday",
         "lent",
         "preyma yeesuni prema",
-        "6/8"
+        "6/8",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["Love", "Lent"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -3837,12 +5255,12 @@ const songsData = {
         "premincho dhevudu",
         "preminchu dhevudu rakshinchu dhevudu",
         "preeminchu dhevudu rakshinchu dheevudu",
-        "6/8"
+        "6/8",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General", "Love"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -3858,12 +5276,12 @@ const songsData = {
         "preminchedan",
         "premimchedhan",
         "preminchedan",
-        "2/4"
+        "2/4",
       ],
       video: "",
-       artist: "Barchmans",
+      artist: "Barchmans",
       genre: ["Worship"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -3883,12 +5301,30 @@ const songsData = {
         "divinchave samrudhiga",
         "divinchavey sammruddhiga",
         "samruddiga",
-        "4/4"
+        "4/4",
       ],
-      video: "https://youtu.be/irvw4_562BM",
-       artist: "Dr. Satish Kumar",
+      video: "",
+      artist: "Dr. Satish Kumar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "దీవెనలే ఇలకురిసెనులే",
+      lyrics:
+        "దీవెనలే ఇలకురిసెనులే - దీనుడై ప్రభు ఇల వెలసెనులె\nపశువులశాలలో ఈ రేయి - పసిబాలుడుగా జనియించె\nనిజక్రిస్మస్ ఇదే ఈ ధరలోన - ప్రభుయేసు జన్మించెను మదిలోన\nఆ...ఆ...ఆ... (4)\n\n1. దూతలు తెల్పెరి ఈ శుభవార్త - గొల్లలు చేరిరి ఆ ప్రభుచెంత\nశుభములు కురిసెనులే - అభయము కలిగెనులే\nWe wish you a Happy Christmas\nఆ...ఆ...ఆ... (4)\n\n2. తాతను గాంచి బాలుని చేరి - తూరుపు జ్ఞానులు కానుకలిడిరి\nశుభములు కురిసెనులే - అభయము కలిగెనులే\nWe wish you a Happy Christmas\nఆ...ఆ...ఆ... (4)\n\n3. మా మదిలో జనియింపుము నేడే - ఈ దరలో నిజదేవుని సుతుడై \nశుభములు కురిసెనులే - అభయము కలిగెనులే\nWe wish you a Happy Christmas\nఆ...ఆ...ఆ... (4)",
+      keywords: [
+        "dheevenale ila kurisenule",
+        "dheevenale ela kurisenule",
+        "deevenale ila kurisenule",
+        "divenale ila kurisenule",
+        "dhivenale ila kurisenule",
+        "christmas",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Christmas"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -3912,12 +5348,12 @@ const songsData = {
         "love",
         "preminchedaa yeesu raja",
         "ప్రేమించెద యేసు రాజా",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
   ],
   బ: [
@@ -3938,12 +5374,12 @@ const songsData = {
         "bopunaadi munupe",
         "boponadi munupe",
         "enosh kumar",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/kj-6CtiogqU?start=1540",
-       artist: "Enosh Kumar",
+      artist: "Enosh Kumar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -3958,12 +5394,12 @@ const songsData = {
         "bethlehemulo sandhadi",
         "bethlehemulo sandadi",
         "betlehemu lo sandadi",
-        "6/8"
+        "6/8",
       ],
       video: "",
-       artist: "",
-      genre: [],
-      timeSignature: "6/8"
+      artist: "",
+      genre: ["Christmas"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -3979,12 +5415,12 @@ const songsData = {
         "bhangaaram adagaledhu",
         "bhangaram adagaledu",
         "vajralu adagaledhu",
-        "2/4"
+        "2/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4005,12 +5441,32 @@ const songsData = {
         "eesayya ninne sevinthunu",
         "eesayya nenne seevinthunu",
         "eesayya ninne seevinthunu",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "John Vittney",
+      artist: "John Vittney",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+  ],
+  భ: [
+    {
+      id: uuid.v4(),
+      title: "భజన చేయుచు భక్తపాలక",
+      lyrics:
+        "భజన చేయుచు భక్తపాలక\nప్రస్తుతింతు నీ నామమును (2)\nవృజినములపై జయము నిచ్చిన (2)\nవిజయుడా నిను వేడుకొందు  ||భజన||\n\n1. దివ్య పదవిని విడిచి నీవు\nదీనుడవై పుట్టినావు (2)\nభవ్యమైన బోధలెన్నో (2)\nబాగుగా ధర నేర్పినావు   ||భజన||\n\n2. నరుల గావను పరమునుండి\nధరకు నీవు వచ్చినావు (2)\nపరుడ నైన నా కొరకు నీ (2)\nప్రాణము నర్పించినావు    ||భజన||\n\n3. చెడినవాడ నైన నన్ను\nజేరదీసి ప్రోచినావు (2)\nపడిన నాడు గోతి నుండి (2)\nపైకి లేవనెత్తి నావు   ||భజన||\n\n4. ఎంత ప్రేమ ఎంత దయ\nఎంత కృప యేసయ్య నీకు (2)\nఇంతయని వర్ణింప నిలలో (2)\nనెవనికిని సాధ్యంబు కాదు   ||భజన||",
+      keywords: [
+        "bhajana cheyuchu",
+        "bajana cheyuchu",
+        "bhajana cheyuchu baktha paalaka",
+        "bajana cheeyuchu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4031,15 +5487,84 @@ const songsData = {
         "yaaweh",
         "yaawe",
         "worship",
-        "3/4"
+        "3/4",
       ],
       video: "https://www.youtube.com/embed/OZ7Ypzfxujc?start=1055",
-       artist: "Sounds of Zion",
+      artist: "Sounds of Zion",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "భారత దేశమా యేసుకే",
+      lyrics:
+      "భారత దేశమా యేసుకే\nనా భారత దేశమా ప్రియ యేసుకే (2)\nనువ్వు సొంతం కావాలన్నదే నా ప్రార్థన\nనిను సొంతం చేయాలన్నదే నా ధ్యేయం (2)\nయేసు నామమే జయము జయమని ఇహమంత మారుమ్రోగిపోవాలి\nపని చేయుచున్న సాతాను శక్తులు పటా పంచలైపోవాలి (2)\nభారత దేశమా నా భారత దేశమా\nనా ప్రియ యేసునికే నీవు సొంతం కావాలి\nభారత దేశమా నా భారత దేశమా\nఉగ్రతలోనుండి నీవు రక్షణ పొందాలి\n\n1. సృష్టికర్తనే మరచి – భారత దేశమా\nసృష్టిని పూజించుట తగునా – నా భారత దేశమా (2)\nఈ లోకమును సృష్టించిన యేసే – భారత దేశమా\nనిను రక్షించుటకు ప్రాణం పెట్టెను – భారత దేశమా (2)\nభారత దేశమా యేసుని చేరుమా\nనూతన సృష్టిగ మార్చబడుదువు భారత దేశమా (2)\nభారత దేశమా నా భారత దేశమా\nనా ప్రియ యేసునికే నీవు సొంతం కావాలి\nభారత దేశమా నా భారత దేశమా\nఉగ్రతలోనుండి నీవు రక్షణ పొందాలి\n\n2. శాంతికి అధిపతి ఆ యేసే – భారత దేశమా\nశాంతి రాజ్యమును స్థాపించును – నా భారత దేశమా (2)\nలోకమంతయు లయమైపోవును – భారత దేశమా\nలోకాశలన్నియు గతించిపోవును – భారత దేశమా (2)\nభారత దేశమా యేసుని చేరుమా\nశాంతి సమాధానములను పొందుము భారత దేశమా (2)\nభారత దేశమా నా భారత దేశమా\nనా ప్రియ యేసునికే నీవు సొంతం కావాలి\nభారత దేశమా నా భారత దేశమా\nఉగ్రతలోనుండి నీవు రక్షణ పొందాలి\n\n3. రాజుల రాజుగ మన యేసే – భారత దేశమా\nపెండ్లి కుమారుడై రానుండె – నా భారత దేశమా (2)\nయేసుని నమ్మిన దేశములన్ని – భారత దేశమా\nయేసుతో కూడ కోనిపోబడును – భారత దేశమా (2)\nభారత దేశమా యేసుని చేరుమా\nసువర్ణ దేశముగ మార్చబడుదువు భారత దేశమా (2)\nభారత దేశమా నా భారత దేశమా\nనా ప్రియ యేసునికే నీవు సొంతం కావాలి\nభారత దేశమా నా భారత దేశమా\nఉగ్రతలోనుండి నీవు రక్షణ పొందాలి\n\n4. భారత దేశమా నా యేసుకే\nభారత దేశమా ప్రియ యేసుకే (2)\nనువ్వు సొంతం కావాలన్నదే నా ప్రార్థన\nనిను సొంతం చేయాలన్నదే నా ధ్యేయం (2)\nయేసు నామమే జయము జయమని ఇహమంత మారుమ్రోగిపోవాలి\nపని చేయుచున్న సాతాను శక్తులు పటా పంచలైపోవాలి (2)\nభారత దేశమా నా భారత దేశమా\nనా ప్రియ యేసునికే నీవు సొంతం కావాలి\nభారత దేశమా నా భారత దేశమా\nఉగ్రతలోనుండి నీవు రక్షణ పొందాలి",
+      keywords: [
+      "bharatha dhesama yesuke", "baratha desama yesume", "barata desama", "bhaaratha desama", "bharathadhesama yeesuke", "india"
+      ],
+      video: "",
+      artist: "",
+      genre: ["India"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "భాసిల్లెను సిలువలో పాపక్షమా",
+      lyrics:
+        "భాసిల్లెను సిలువలో పాపక్షమా\nయేసు ప్రభూ నీ దివ్య క్షమా      ||భాసిల్లెను||\n\n1. కలువరిలో నా పాపము పొంచి\nసిలువకు నిన్ను యాహుతి చేసి\nకలుషహరా కరుణించితివి (2)      ||భాసిల్లెను||\n\n2. దోషము చేసినది నేనెకదా\nమోసముతో బ్రతికిన నేనెకదా\nమోసితివా నా శాపభారం (2)     ||భాసిల్లెను||\n\n3. పాపము చేసి గడించితి మరణం\nశాపమెగా నేనార్జించినది\nకాపరివై నను బ్రోచితివి (2)     ||భాసిల్లెను||\n\n4. నీ మరణపు వేదన వృధా గాదు\nనా మది నీ వేదనలో మునిగెను\nక్షేమము కలిగెను హృదయములో (2)     ||భాసిల్లెను||\n\n5. ఎందులకో నాపై ఈ ప్రేమ\nఅందదయ్యా స్వామీ నా మదికి\nఅందులకే భయమొందితిని (2)     ||భాసిల్లెను||\n\n6. నమ్మిన వారిని కాదన వనియు\nనెమ్మది నొసగెడి నా ప్రభుడవని\nనమ్మితి నీ పాదంబులను (2)      ||భాసిల్లెను||",
+      keywords: [
+        "baasillenu siluvalo",
+        "bhaasillenu siluvanu",
+        "baasillenu",
+        "basilenu",
+        "baasilenu siluvalo",
+        "lent",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "Lent"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "భీకరుండౌ మా యెహోవా",
+      lyrics:
+        "భీకరుండౌ మా యెహోవా – పీఠ మెదుటన్ గూడరే\nఏకమై సాష్టాంగపడి సర్వేశ్వరుని గొనియాడరే     ||భీకరుండౌ||\n\n1. మట్టితోనే మమ్ము నెల్ల – మానవులుగ సృజించెను\nఇట్టి శక్తుండౌ ప్రభున్ మే-మెచ్చుగా మది నెంతుము   || భీకరుండౌ ||\n\n2. ఏరితోడు లేక మము స-ర్వేశ్వరుడు సృష్టించెను\nధారుణిన్ దానొక్కడే మా – దైవమని పూజింతుము   || భీకరుండౌ ||\n\n3. పుట్టగిట్టన్ జేయ దానై – నట్టి దేవుని శక్తిని\nబట్టుగా లోకస్తులారా – ప్రస్తుతింపరే భక్తిని                 || భీకరుండౌ ||\n\n4. మేటి సంగీతంబులపై – మింట నారవ మొందను\nజాటరే వేవేల నోళ్ళన్ – సన్నుతుల్ ప్రభు వందను       || భీకరుండౌ ||\n\n5. మిక్కిలి కష్టంబులతో – మిత్తికిని బాల్పొందను\nదిక్కు లేని గొర్రెలట్లు – దిరుగ జేర్పన్ మందను      || భీకరుండౌ ||",
+      keywords: [
+        "bhikarundav ma yehova",
+        "bheekarundavu ma yehova",
+        "bhikarundavu ma yehova",
+        "bhikarundav ma yehova",
+        "bhekarundav ma yehova",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
   ],
   మ: [
+    {
+      id: uuid.v4(),
+      title: "మంగళమే యేసునకు",
+      lyrics:
+        "మంగళమే యేసునకు – మానుజావతారునకు (3)\nశృంగార ప్రభువునకు (2)\nక్షేమాధిపతికి మంగళమే  ||మంగళమే||\n\n1. పరమ పవిత్రునకు – వర దివ్య తేజునకు (3)\nనిరుపమానందునకు (2)\nనిపుణ వేద్యునకు మంగళమే  ||మంగళమే||\n\n2. దురిత సంహారునకు – వర సుగుణోదారునకు (3)\nకరుణా సంపన్నునకు (2)\nజ్ఞాన దీప్తునకు మంగళమే   ||మంగళమే||\n\n3. సత్య ప్రవర్తునకు – సద్ధర్మ శీలునకు (3)\nనిత్య స్వయంజీవునకు (2)\nనిర్మలాత్మునకు మంగళమే   ||మంగళమే||\n\n4. యుక్త స్తోత్రార్హునకు – భక్త రక్షామణికి (3)\nసత్య పరంజ్యోతి యగు (2)\nసార్వభౌమునకు మంగళమే   ||మంగళమే||\n\n5. నర ఘోర కలుషముల – నురుమారంగ నిల (3)\nకరుదెంచిన మా పాలి (2)\nవర రక్షకునకు మంగళమే  ||మంగళమే||\n\n6. పరమపురి వాసునకు – నర దైవ రూపునకు (3)\nపరమేశ్వర తనయునకు (2)\nబ్రణుతింతుము నిన్ను మంగళమే   ||మంగళమే||",
+      keywords: [
+        "mangalame yesunaku",
+        "mangalamu yesunaku",
+        "mangalame yeesunaku",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
     {
       id: uuid.v4(),
       title: "మధురం మధురం నీ ప్రేమ ఎంతో మధురం",
@@ -4054,12 +5579,12 @@ const songsData = {
         "maduram madhuram",
         "madhuram madhuramm",
         "madurm",
-        "2/4"
+        "2/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General", "Love"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4075,12 +5600,12 @@ const songsData = {
         "maduraminadi",
         "madhuram",
         "madurmainadi",
-        "6/8"
+        "6/8",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General", "Love"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -4096,12 +5621,30 @@ const songsData = {
         "stevenson",
         "manasunna mandhi dheeva",
         "masanunaa mandhi dheva",
-        "6/8"
+        "6/8",
       ],
       video: "",
-       artist: "A. R. Stevenson",
+      artist: "A. R. Stevenson",
       genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "మహాత్ముడైన నా ప్రభు",
+      lyrics:
+        "1. మహాత్ముడైన నా ప్రభు\nవిచిత్ర సిల్వ జూడ నా\nయాస్తిన్ నష్టంబుగా నెంచి\nగర్వం బణంగ ద్రొక్కుదున్\n\n2. నీ సిల్వ గాక యో దేవా\nదేనిన్ బ్రేమింప నీయకు\nనాన్నాహరించు సర్వమున్\nనీ సిల్వకై త్యజింతును\n\n3. శిరంబు పాద హస్తముల్\nసూచించు దుఃఖ ప్రేమలు\nమరెన్నడైన గూడెనా\nవిషాద ప్రేమ లీ గతిన్?\n\n4. ముండ్లన్ దుర్మార్గులల్లిన\nకిరీట మేసు కుండినన్\nఈ భూ కిరీటములన్ని\nదానం దూగంగ జాలు నే?\n\n5. లోకంబు నే నేర్పించిన\nనయోగ్యమైన యీవి యౌ\nవింతైన యేసు ప్రేమకై\nనా యావజ్జీవ మిత్తును\n\n6. రక్షింప బడ్డ లోకమా\nరక్షింప జావు బొందిన\nరక్షకు-డేసు నిన్ సదా\nరావంబు తోడ గొల్వుమా",
+      keywords: [
+        "mahathmudaina na prabhu",
+        "mahaathmudaina na prabhu",
+        "mahaathmudaina na prabu",
+        "mahathmudaina na prabu",
+        "andhra christian hymn",
+        "3/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -4116,12 +5659,12 @@ const songsData = {
         "mahimakupathruda",
         "mahima ku pathruda",
         "mahimaku patruda",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Immanuel Paul Perli",
+      artist: "Immanuel Paul Perli",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4141,12 +5684,32 @@ const songsData = {
         "mahima gala dhevunike",
         "joseph",
         "worship",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Joseph",
+      artist: "Joseph",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "మహిమ ఘనతకు అర్హుడవు",
+      lyrics:
+        "మహిమ ఘనతకు అర్హుడవు\nనీవే నా దైవము\nసృష్టికర్త ముక్తి దాత (2)\nమా స్తుతులకు పాత్రుడా\nఆరాధనా నీకే ఆరాధనా నీకే\nఆరాధనా స్తుతి ఆరాధనా ఆరాధనా నీకే (2)\nఆరాధనా నీకే ఆరాధనా నీకే\n\n1. మన్నాను కురిపించినావు\nబండనుండి నీల్లిచ్చినావు (2)\nయెహోవా ఈరే చూచుకొనును\nసర్వము సమకూర్చును   ||ఆరాధనా||\n\n2. వ్యాధులను తొలగించినావు\nమృతులను మరి లేపినావు (2)\nయెహోవా రాఫా స్వస్థపరచును\nనను స్వస్థపరచును   ||ఆరాధనా||",
+      keywords: [
+        "mahima ganathaku",
+        "mahima ghanathaku",
+        "mahima ganataku",
+        "mahimaganataku",
+        "mahimaganathaku",
+        "mahima ganathako",
+        "worship",
+        "2/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Worship"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4160,12 +5723,12 @@ const songsData = {
         "ma hrudhayamulaloo",
         "maa hrudayamulalo",
         "ma hrudayamulalo",
-        "7/8"
+        "7/8",
       ],
       video: "https://www.youtube.com/embed/akw5oKlGTdA?start=8612",
-       artist: "",
+      artist: "",
       genre: ["Lent", "Love"],
-      timeSignature: "7/8"
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -4182,12 +5745,12 @@ const songsData = {
         "allen ganta",
         "worship",
         "psalm 91",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/uMf36_MwegU?start=1092",
-       artist: "",
+      artist: "Vijay Kondapuram & Allen Ganta",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4203,12 +5766,12 @@ const songsData = {
         "jkchristopher",
         "sharonsisters",
         "sharon sisters",
-        "2/4"
+        "2/4",
       ],
       video: "",
-       artist: "Lilian Christopher",
+      artist: "Lilian Christopher",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4225,12 +5788,28 @@ const songsData = {
         "maa goppa deva",
         "maa goppa deva",
         "enosh kumar",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "Enosh Kumar",
+      artist: "Enosh Kumar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "మానవుల మేలు కొరకు",
+      lyrics:
+        "మానవుల మేలు కొరకు జ్ఞానియైన దేవుఁడు మానుగఁ కల్యాణ పద్ధతి\nమహిని నిర్ణయించెగా ||మానవుల||\n\n1. కానాయను నూరిలో మన కర్త చూచెఁ బెండ్లిని పానముగను ద్రాక్షరసము\nదాన మొసఁగెఁ బ్రీతిని ||మానవుల||\n\n2. యేసూ వీరిద్దరిని ఏకముగాఁ జేయుమీ దాసులుగను జేసి వీరి దోసము\nలెడబాపుమీ ||మానవుల||\n\n3. కర్త వీరలకు భార్య భర్తల ప్రేమంబును బూర్తిగ నీ విచ్చి వీరిఁ బొందుగాను\nనడుపుమీ ||మానవుల||\n\n4. భక్తియు విశ్వాస ప్రేమలు భావమందు వ్రాయుమీ ముక్తి సరణి వెదక\nవీరి భక్తి మిగులఁ జేయుఁమీ ||మానవుల||",
+      keywords: [
+        "maanavula meelu koraku",
+        "manavuka melu koraku",
+        "andhra christian hymns",
+        "6/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "Marriage"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -4249,12 +5828,12 @@ const songsData = {
         "maa madyalo",
         "maa madialo",
         "worship",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/ydLEdBpZcgE?start=1229",
-       artist: "Nations of Worship",
+      artist: "Nations of Worship",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4272,25 +5851,30 @@ const songsData = {
         ",margam",
         "prodigal son",
         "prodigalson",
-        "3/4"
+        "3/4",
       ],
       video: "",
-       artist: "",
+      artist: "Dr. A. B. Maasilamani",
       genre: ["Andhra Christian Hymn", "Repentence"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
       title: "మార్గం సత్యం జీవం నీవే యేసు దైవం",
       lyrics:
-      "మార్గం సత్యం జీవం నీవే యేసు దైవం \nనీవే గాక ఇలలో వేరే దైవం లేనేలేదయ్యా \nప్రాణాన్ని వెలపోసి రక్తాన్ని చిందించి \nపరిహారం చెల్లించి పాప ముల్లు విరిచావేసయ్యా\n\nఎవరవునన్నా కాదన్న నీవే దేవుడవు \nమరణాన్నే మట్టుపెట్టిన మహా దేవుడవు (2)\nయేసు రక్తమే జయం జయం-సిలువ రక్తమే జయం జయం \nయేసు నామమే జయం జయం సాతాను క్రియలకు లయం లయం\n\n1. మరణించుటకే జన్మించావు \nచావును చంపి జీవము పంచావు \nసత్యం బోధించి మార్గము చూపావు \nచీకటి తొలగించి వెలుగును నింపావు (2)\nనీవంటివారు ఎవరున్నారు-పాప్తికై ప్రాణం పెట్టినవారు (2)  ||ఎవరవునన్నా||\n\n2. సృష్టికర్తను ఆరాధించక\nసృష్టమునే ఇల ఆరాధించావు (2) \nతెలిసి తెలియక మతములు వెదికావు \nవ్రతములు చేసియు వ్యధలలో వున్నావు (2)\nసిలువలో నీ వధ నాదే ఆ కథ\nలయమయ్యే నాకై క్రయమయ్యావు (2)   ||ఎవరవునన్నా||",
+        "మార్గం సత్యం జీవం నీవే యేసు దైవం \nనీవే గాక ఇలలో వేరే దైవం లేనేలేదయ్యా \nప్రాణాన్ని వెలపోసి రక్తాన్ని చిందించి \nపరిహారం చెల్లించి పాప ముల్లు విరిచావేసయ్యా\n\nఎవరవునన్నా కాదన్న నీవే దేవుడవు \nమరణాన్నే మట్టుపెట్టిన మహా దేవుడవు (2)\nయేసు రక్తమే జయం జయం-సిలువ రక్తమే జయం జయం \nయేసు నామమే జయం జయం సాతాను క్రియలకు లయం లయం\n\n1. మరణించుటకే జన్మించావు \nచావును చంపి జీవము పంచావు \nసత్యం బోధించి మార్గము చూపావు \nచీకటి తొలగించి వెలుగును నింపావు (2)\nనీవంటివారు ఎవరున్నారు-పాప్తికై ప్రాణం పెట్టినవారు (2)  ||ఎవరవునన్నా||\n\n2. సృష్టికర్తను ఆరాధించక\nసృష్టమునే ఇల ఆరాధించావు (2) \nతెలిసి తెలియక మతములు వెదికావు \nవ్రతములు చేసియు వ్యధలలో వున్నావు (2)\nసిలువలో నీ వధ నాదే ఆ కథ\nలయమయ్యే నాకై క్రయమయ్యావు (2)   ||ఎవరవునన్నా||",
       keywords: [
-        "margam sathyam jeevam", "margam satyam jevam", "margam sathyam jevam", "margam satyam jeevam", "akumarthi daniel", "4/4"
+        "margam sathyam jeevam",
+        "margam satyam jevam",
+        "margam sathyam jevam",
+        "margam satyam jeevam",
+        "akumarthi daniel",
+        "4/4",
       ],
       video: "",
-       artist: "Dr. Akumarthi Daniel",
+      artist: "Dr. Akumarthi Daniel",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4309,9 +5893,9 @@ const songsData = {
         "worship",
       ],
       video: "",
-       artist: "Rev. T. Jobdas",
+      artist: "Rev. T. Jobdas",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4327,9 +5911,9 @@ const songsData = {
         "meelulu ne meelulu",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["Worship"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4350,9 +5934,27 @@ const songsData = {
         "maluleno chasi",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "మేళ్ళన్ని యిచ్చు దేవునిన్",
+      lyrics:
+        "మేళ్ళన్ని యిచ్చు దేవునిన్\nస్తుతించు సర్వ సృష్టియన్\nస్తుతించు మోక్ష సైన్యముల్\nపితృ పుత్ర శుద్ధాత్మలన్",
+      keywords: [
+        "meellanichu dhevunin",
+        "meella nichu dhevuni",
+        "mellanichu dhevuni",
+        "meellanichu dhevuni",
+        "andhra christian hymns",
+        "4/4",
+      ],
+      video: "",
+      artist: "C. James",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4365,12 +5967,12 @@ const songsData = {
         "manchi kaapare",
         "manchikapari manakundagaa",
         "manchi kapari manaki undaga",
-        "2/4"
+        "2/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4386,12 +5988,12 @@ const songsData = {
         "manchevadu na yesayya",
         "manchevaadu",
         "manchevado na yesayya",
-        "4/4"
+        "4/4",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4410,12 +6012,12 @@ const songsData = {
         "john jebaraj",
         "jebaraj",
         "worship",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/N_3krU1ZiLw?start=1591",
-       artist: "John Jebaraj",
+      artist: "John Jebaraj",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
   ],
   య: [
@@ -4435,9 +6037,9 @@ const songsData = {
         "ugauga mulaku raju vaina",
       ],
       video: "",
-       artist: "",
+      artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4454,7 +6056,26 @@ const songsData = {
       video: "",
       artist: "Anil Kumar",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యెహోవా గద్దె ముందట",
+      lyrics:
+        "1. యెహోవా గద్దె ముందట\nజనంబులార మ్రొక్కుడి\nయెహోవా దేవుడే సుమీ\nసృజింప జంప గర్తయే   ||యెహోవా||\n\n2. స్వశక్తిచేత నాయనే\nమమున్ సృజించె మట్టిచే\nభ్రమించు గొర్రే రీతిగా\nదప్పంగ మళ్లీ చేర్చెను    ||యెహోవా||\n\n3. సుకీర్తి పాడి గుంపులై\nప్రసిద్ధిచేత మాయనన్\nజగత్తు వేయ్యి నోళ్ళతో\nస్తుతించు దివ్యమౌ ధ్వనిన్    ||యెహోవా||\n\n4. ప్రభుత్వ ముండు  నంతకున్\nఅగున్ నీ ప్రేమ నిత్యము\nచిరంబు నీదు సత్యము\nవసించు నెల్లకాలము     ||యెహోవా||",
+      keywords: [
+        "yehova gadhe mundata",
+        "yehova gadhe mundataa",
+        "yehova gadhemundata",
+        "yehova gadhe mundhata",
+        "yehova gadhe mundhataa",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4476,7 +6097,45 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["Worship"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యెహోవ నా మొర లాలించెను",
+      lyrics:
+        "యెహోవ నా మొర లాలించెను\nదన మహా దయను నను గనించెను\nఅహర్నిశల దీనహీనుడగు నా\nదు హాయనెడు ధ్వని గ్రహించి మనిపెను     ||యెహోవ||\n\nపిశాచి గడిమి బడగొట్టెను\nదన వశాన నను నిలువ బెట్టెను\nప్రశాంత మధుర సు విశేష వాక్ఫల\nనిశాంతమున జే ర్చి సేద దీర్చెను     ||యెహోవ||\n\nమదావలము బోలు నా మదిన్\nదన ప్రదీప్త వాక్యం కూశా హతిన్\nయధేచ్చలన్నిటి గుదించి పాపపు\nమొదల్ తుదల్ నరి కి దరికి జేర్చెను     ||యెహోవ||\n\nఅనీతి వస్త్ర మెడలించెను\nయే సునాథు రక్తమున ముంచెను\nవినూత్న యత్నమే ద నూని యెన్నడు\nగనన్ వినన్ బ్రే మ నాకు జూపెను      ||యెహోవ||\n\nవిలాపములకు జెవి నిచ్చెను\nశ్రమ కలాపములకు సెలవిచ్చెను\nశిలానగము పై కిలాగి నను సుఖ\nకళావళుల్ మన సులోన నిలిపెను   ||యెహోవ||\n\nఅగణ్య పాపియని త్రోయక\nన న్ను గూర్చి తన సుతుని దా చక\nతెగించి మృతి కొ ప్పగించి పాపపు\nనెగుల్ దిగుల్ సొగ సుగా నణంచెను    ||యెహోవ||",
+      keywords: [
+        "yehova na mora laalinchenu",
+        "yehova namora lalinchenu",
+        "yeehova naamora laalinchenu",
+        "yehovanamora laalinchenu",
+        "yehova namora laalinchenu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Worship"],
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యెహోవా మా తండ్రి గాఁడ",
+      lyrics:
+        "యెహోవా మా తండ్రి గాఁడ యేసుఁడు మా యన్న గాఁడ మహిమ\nగల శుద్ధాత్మ యిట్టి వరుసఁ దెలిపెం గద మాతోడ ||యెహోవా||\n\n1. మోక్ష నగరు మా పుట్టిల్లు ముఖ్య దూతల్ మా స్నేహితులు సాక్షాత్కారమై\nయున్నపుడు లక్ష్యపెట్ట మిహ బాధలకు ||యెహోవా||\n\n2. అబ్రాహాము దావీదు మొదలై నట్టి వర భక్తాగ్రేసరులే శుభ్రముగ మా\nచుట్టా లైనన్ హర్షమిఁక మా కేమి కొదువ ||యెహోవా||\n\n3. పేతు రాది సకలాపోస్తుల్ పేర్మిగల మా నిజ వర కూటస్థుల్ ఖ్యాతి సభలో\nమే మున్నప్పుడు ఘనతలిక మాకేమి వెలితి ||యెహోవా||\n\n\n4. తనువు బలిపెట్టెను మా యన్న తప్పు ల్విడఁ గొట్టెను మా తండ్రి\nమనసులో సాక్ష్యమిట్లున్న మనుజు లెట్లన్నను మా కేమి ||యెహోవా||\n\n5. పరమ విభు జీవగ్రంథములోఁ బ్రభుని రక్తాక్షరముద్రితమె చిరముగా\nనుండు మా పేరు చెఱుపు బెట్టెడువా రింకెవరు ||యెహోవా||\n\n6. కరములతో నంట రాని కన్నులకు గోచరము గాని పరమ ఫలముల్\nమా కున్నపుడు సరకు గొన మిక్కడి లేములకు ||యెహోవా||",
+      keywords: [
+        "yehova maa thandri gaada",
+        "yehova ma tandri gada",
+        "yahova ma thandri gada",
+        "yahova maa thandri gaada",
+        "yahova ma thandri gaada",
+        "andhra christian hymns",
+        "7/8",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -4493,7 +6152,7 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4523,7 +6182,7 @@ const songsData = {
       video: "https://www.youtube.com/embed/Kw_Srg4wuuw?start=1153",
       artist: "Benny Joshua",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4551,7 +6210,7 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["Worship", "General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4563,7 +6222,7 @@ const songsData = {
         "yehoova needhu meelulanu",
         "yehova needhu melulanu",
         "yavoha nedhu melulanu",
-        "yehiva nedu melulanu",
+        "yehova nedu melulanu",
         "yehova nidhu melulanu",
         "yehova nidu melulanu",
         "yehova nedhumelulanu",
@@ -4571,12 +6230,45 @@ const songsData = {
         "yehovanidhu melulanu",
         "raj prakash paul",
         "Worship",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "Raj Prakash Paul",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యెహోవా నీ నామము ఎంతో బలమైనది",
+      lyrics:
+        "యెహోవా నీ నామము ఎంతో బలమైనది\nఆ…ఆ…ఆ… ఎంతో బలమైనది\nయేసయ్య నీ నామము ఎంతో ఘనమైనది\nఆ…ఆ…ఆ…  ఎంతో ఘనమైనది  || యెహోవా ||\n\n1. మోషే ప్రార్ధించగా మన్నాను కురిపించితివి (2)\nయెహోషువా ప్రార్ధించగా సూర్యచంద్రుల నాపితివి (2)  || యెహోవా ||\n\n2. నీ ప్రజల పక్షముగా యుద్దములు చేసిన దేవా (2)\nఅగ్నిలో పడవేసినా భయమేమి లేకుండిరి (2)   || యెహోవా ||\n\n3. సింహాల బోనుకైనా సంతోషముగా వెళ్ళిరి (2)\nప్రార్ధించిన వెంటనే రక్షించె నీ హస్తము (2)    || యెహోవా ||\n\n4. చెరసాలలో వేసినా సంకెళ్ళు బిగియించినా (2)\nసంఘము ప్రార్ధించగా సంకెళ్ళు విడిపోయెను (2)  || యెహోవా ||\n\n5. పౌలు సీలను బంధించి చెరసాలలో వేసినా (2)\nపాటలతో ప్రార్ధించగా చెరసాల బ్రద్దలాయే (2)   ||యెహోవ||",
+      keywords: [
+        "yehova ni naanamu",
+        "yehova ni namamu",
+        "andhra christian hymn",
+        "worship",
+        "3/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "General", "Worship"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యెహోవ సన్నిధిని నీ",
+      lyrics:
+        "యెహోవ సన్నిధిని నీ స్తోత్రగానముతో మహోపకారునకు మానుగ\nనర్పణ సమర్పించుఁడి ||యెహోవ||\n\n1. ప్రభు వడుగు నర్పణలు ప్రేమ కృతజ్ఞతలు అభయ ప్రధానములు\nవిభునకు నియ్యుఁడు విరివిగను ||యెహోవ||\n\n2. రిక్తహస్తములతో రావలదు సన్నిధికి భక్తవత్సలునకు శక్తికొలఁది\nమీ రర్పించుఁడి ||యెహోవ||\n\n3. శృంగారాలయ మీలలోఁ పొంగారఁ గట్టుటకు బంగారు వెండి యును\nబాగుగ నియ్యుఁడి ప్రభుపేర ||యెహోవ||\n\n4. వరుమానములచేత వాంఛింప వలదండి గురు నాజ్ఞ చొప్పునను\nవిరివిగ హృదయము లర్పించుఁడి ||యెహోవ||\n\n5. యెహోవ జనులారా యియ్యుండి మనసార యెహోవ యిచ్చి నది\nయేసున కర్పణ చెల్లింతము ||యెహోవ||",
+      keywords: [
+        "yehova sannidhini",
+        "yehova sanidhini",
+        "ehova sannidhini",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4590,12 +6282,29 @@ const songsData = {
         "yesayya yesayya needhi entha jaali manasayya",
         "yesayyaa yesayyaa",
         "yasayya yasayyaa",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "M. M. Keeravani",
       genre: ["Lent"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "యేసుతో ఠీవిగాను పోదమా",
+      lyrics:
+        "యేసుతో ఠీవిగాను పోదమా\nఅడ్డుగా వచ్చు వైరి గెల్వను\nయుద్ధనాదంబుతో బోదము  ||యేసుతో||\n\n1. రారాజు సైన్యమందు చేరను\nఆ రాజు దివ్య సేవ చేయను (2)\nయేసు రాజు ముందుగా ధ్వజము బట్టి నడువగా (2)\nయేసుతో ఠీవిగాను వెడలను    ||యేసుతో||\n\n2. విశ్వాస కవచమును ధరించుచు\nఆ రాజు నాజ్ఞ మదిని నిల్పుచు (2)\nఅనుదినంబు శక్తిని పొందుచున్నవారమై (2)\nయేసుతో ఠీవిగాను వెడలను    ||యేసుతో||\n\n3. శోధనలు మనల చుట్టి వచ్చినా\nసాతాను అంబులెన్ని తగిలినా (2)\nభయములేదు మనకిక ప్రభువు చెంత నుందుము (2)\nయేసుతో ఠీవిగాను వెడలను   ||యేసుతో||\n\n4. ఓ యువతి యువకులారా చేరుడి\nశ్రీ యేసురాజు వార్త చాటుడి (2)\nలోకమంత ఏకమై యేసునాథు గొల్వను (2)\nసాధనంబెవరు నీవు నేనెగా    ||యేసుతో||",
+      keywords: [
+        "yesu tho teeviganu podhama",
+        "yeesu tho teevigaanu podhama",
+        "yesu tho teeviga podhama",
+        "andhra christian hymns",
+        "6/8",
+      ],
+      video: "",
+      artist: "A. C. Kinsingar, P. D. Shubhamani",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -4612,12 +6321,12 @@ const songsData = {
         "jkchristopher",
         "sharon sisters",
         "sharonsisters",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Lilian Christopher",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4634,12 +6343,45 @@ const songsData = {
         "yeesunamame jayamu",
         "yesunamamejayamu",
         "yesu naamame jayamo",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యేసు నీ నామామృతము",
+      lyrics:
+        "యేసు నీ నామామృతము మా – కెంతో రుచి యయ్యా (2) దేవ\nమా – దోషములను హరించి మోక్షని\nవాసులుగా జేయుటకు – భాసుర ప్రకాశమైన  ||యేసు||\n\n1. వేడు కలరగ గూడి నిను గొని – యాడు వారికి (2) దేవ\nయెంతో – కీడు జేసిన పాడు వైరిని\nగోడుగో డనంగ వాని – తాడనము జేసితివి   ||యేసు||\n\n2. పాపములు హరింప నీవే – ప్రాపు మాకయ్యా (2) దేవ\nనీ – దాపు జేరిన వారి కందరి\nకాపదలు బాపి నిత్య కాపుగతి జూపినావు   ||యేసు||\n\n3. అక్షయ కరుణేక్ష భువన – రక్షకా నీవే (2) దేవ\nమమ్ము పక్షముగ రక్షించి మోక్షసు\nరక్షణకు దీక్ష గొని – వీక్షితులమైన మాకు   ||యేసు||\n\n4. అందమగు నీ మందిరమున – బొందుగా మేము (2) దేవ\nనీ – సుందర కరుణామృతము మా\nడెందముల యందు గ్రోలు – టందుకు సుందరమైన  ||యేసు||",
+      keywords: [
+        "yesu ni naamaamruthamu",
+        "yesuni namamruthamu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యేసుని ప్రేమను నేమారకను",
+      lyrics:
+        "యేసుని ప్రేమను నేమారకను నెప్పుడు దలచవే యో మనసా\nవాసిగ నాతని వర నామంబును వదలక పొగడవె యో మనసా\n\n1. పాపుల కొరకై ప్రాణం బెట్టిన ప్రభునిల దలచవె యో మనసా\nశాపమ నంతయు జక్కగ నోర్చిన శాంతుని పొగడవె యో మనసా\n\n2. కష్టములలో మన కండగ నుండి కర్తను దలచవె యో మనసా\nనష్టము లన్నియు నణచిన యాగురు శ్రేష్ఠునిపొగడవె యో మనసా\n\n3. మరణతఱిని మన శరణుగ నుండెడు మాన్యుని దలచవె యో మనసా\nకరుణను మన కన్నీటిని దుడిచిన కర్తను పొగడవె యో మనసా\n\n4. ప్రార్ధనలు విని ఫలముల నొసగిన ప్రభునిక దలచవె యో మనసా\nవర్ధన గోరుచు శ్రద్ధతో దిద్దిన వంద్యుని పొగడవె యో మనసా\n\n5. వంచనలేక వరముల నొసగిన వరదుని దలచవె యో మనసా\nకొంచము కాని కూర్మితో దేవుని కొమరుని పొగడవె యో మనసా",
+      keywords: [
+        "yesuni premanu nemarakanu",
+        "yesuni premanu ney marakanu",
+        "yesuni preemanu nee maarakanu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4662,12 +6404,12 @@ const songsData = {
         "andhra christian songs",
         "andhra kraisthava keerthanalu",
         "Aandhra kraisthava keerthanalu",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
       genre: ["Andhra Christian Hymn"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4690,12 +6432,31 @@ const songsData = {
         "eesu rakthamu",
         "holy communion",
         "communion",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
       genre: ["Lent"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యేసు సామి నీకు నేను",
+      lyrics:
+        "యేసు సామి నీకు నేను నా సమస్త మిత్తును\nనీ సన్నిధిలో వసించి ఆశతో సేవింతును\nనా సమస్తము నా సమస్తము \nనా సురక్షకా నీకిత్తు నా సమస్తము\n\n1. యేసు సామి నీకె నేను దోసి లొగ్గి మ్రొక్కెదన్\nతీసివేతు లోకయాశల్ యేసు చేర్చుమిప్పుడే\n\n2. నేను నీవాడను యేసు నీవును నావాడవు\nనీవు నేను నేకమాయె నీ శుద్ధాత్మ సాక్ష్యము\n\n౩. నీకు నన్ను యేసు ప్రభూ ఈయనేనె యేగితి\nనీదు ప్రేమశక్తి నింపు నీదు దీవెనియ్యవే\n\n4. యేసు నీదె నా సర్వాస్తి హా సుజ్వాలన్ బొందితి\nహా సురక్షణానందమా హాల్లెలూయా స్తోత్రము",
+      keywords: [
+        "yesu sami niku nenu",
+        "yeesu saami niku nenu",
+        "yesu sami neku nenu",
+        "yesu swamy niku nenu",
+        "yeesu swamy neku nenu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "M. G. Ramanjulu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4710,12 +6471,12 @@ const songsData = {
         "yesuu neeve kavalayya",
         "stevenson",
         "ar stevenson",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "A.R. Stevenson",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4731,11 +6492,13 @@ const songsData = {
         "yesu kosame jivedham",
         "yesu kusame jevidam",
         "enosh kumar",
+        "yesukosame jeevidham",
+        "4/4",
       ],
       video: "",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Enosh Kumar",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4754,8 +6517,8 @@ const songsData = {
       ],
       video: "",
       artist: "",
-      genre: [],
-      timeSignature: ""
+      genre: ["General"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -4770,12 +6533,12 @@ const songsData = {
         "yeesu nannu preemincheenavu",
         "yeesu nannu preemincheenaavu",
         "yesunannu premincheenavu",
-        "7/8"
+        "7/8",
       ],
       video: "",
-      artist: "",
+      artist: "Beethaala John",
       genre: ["Andhra Christian Hymn", "Lent", "Love"],
-      timeSignature: "7/8"
+      timeSignature: "7/8",
     },
     {
       id: uuid.v4(),
@@ -4796,9 +6559,27 @@ const songsData = {
         "yesu navadani",
       ],
       video: "https://www.youtube.com/embed/X5q7xykqRYU?start=248",
-      artist: "",
-      genre: [],
-      timeSignature: ""
+      artist: "Fransis Jenven Alsteen",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యేసుని కొరకై యిల జీవించెద",
+      lyrics:
+        "యేసుని కొరకై యిల జీవించెద\nభాసురముగ నే ననుదినము\nదోసములన్నియు బాపెను మోక్ష\nని వాసమున ప్రభు జేర్చునుగా ||యేసుని||\n\n1. నాశనకరమగు గుంటలోనుండియు\nమోసకరంబగు యూబినుండి - 2\nనాశచె నిలపై కెత్తెను నన్ను\nపి - శాచి పథంబున దొలగించెన్ ||యేసుని||\n\n2. పలువిధముల పాపంబును జేసితి\nవలదని ద్రోసితి వాక్యమును - 2\nకలుషము బాపెను కరుణను బిలిచెను\nసిలువలో నన్నాకర్షించెను ||యేసుని||\n\n3. అలయక సొలయక సాగిపోదును\nవెలయగ నా ప్రభు మార్గములన్ - 2\nకలిగెను నెమ్మది కలువరిగిరిలో\nవిలువగు రక్తము చిందించిన ప్రభు||యేసుని||\n\n4. శోధన బాధలు శ్రమలిల కల్గిన\nఆదుకొనును నా ప్రభువనిశం - 2\nవ్యాధులు లేములు మరణము\nవచ్చిన నాధుడే నా నిరీక్షణగున్||యేసుని||\n\n5. బుద్ధి విజ్ఞాన సర్వసంపదలు\nగుప్తమై యున్నవి ప్రభునందు - 2\nఅద్భుతముగ ప్రభు వన్నియునొసగి\nదిద్దును నా బ్రతుకంటిని ||యేసుని||\n\n6. అర్పించెను దన ప్రాణమునకై\nరక్షించెను నా ప్రియ ప్రభువు - 2\nఅర్పింతును నా యావజ్జీవము\nరక్షకు డేసుని సేవింప||యేసుని||\n\n7. ప్రభునందానందింతును నిరతము\nప్రార్థన విజ్ఞాపనములతో విభుడే - 2\nదీర్చునుయిలనా చింతలు\nఅభయముతో స్తుతియింతు ప్రభున్ ||యేసుని||\n\n8. యౌవన జనమా యిదియే\nసమయము యేసుని చాటను - 2\nరారండి పావన నామము పరిశుద్ధ నామము\nజీవపు మార్గము ప్రచురింపన్ ||యేసుని||",
+      keywords: [
+        "yesuni korake ila jeevinchedha",
+        "yesuni korake ela jevinchedha",
+        "yesu ni korake ila jevinchedha",
+        "yesuni korake ilajeevinchedha",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Raavi John Sundharavu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4815,12 +6596,12 @@ const songsData = {
         "yesey gopa dhevudu",
         "yesey gopa devudu",
         "yesey goppa dheevudu",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "Philip Gariki",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -4840,12 +6621,29 @@ const songsData = {
         "yeese nakasrayamu",
         "yese naakaasrayamo",
         "yese naakasrayamo",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "K. Amarpaul Jairaj",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "యేసే నా పరిహారి",
+      lyrics:
+        "యేసే నా పరిహారి\nప్రియ యేసే నా పరిహారి\nనా జీవిత కాలమెల్ల\nప్రియ ప్రభువే నా పరిహారి (2)  ||యేసే నా||\n\n1. ఎన్ని కష్టాలు కలిగిననూ\nనన్ను కృంగించె భాదలెన్నో (2)\nఎన్ని నష్టాలు వాటిల్లినా\nప్రియ ప్రభువే నా పరిహారి (2)         ||యేసే నా||\n\n2. నన్ను సాతాను వెంబడించినా\nనన్ను శత్రువు ఎదిరించినా (2)\nపలు నిందలు నను చుట్టినా\nప్రియ ప్రభువే నా పరిహారి (2)   ||యేసే నా||\n\n3. మణి మాన్యాలు లేకున్ననూ\nపలు వేదనలు వేధించినా (2)\nనరులెల్లరు నను విడచినా\nప్రియ ప్రభువే నా పరిహారి (2)   ||యేసే నా||\n\n4. బహు వ్యాధులు నను సోకినా\nనాకు శాంతి కరువైనా (2)\nనను శోధకుడు శోధించినా\nప్రియ ప్రభువే నా పరిహారి (2)   ||యేసే నా||\n\n5. దేవా నీవే నా ఆధారం\nనీ ప్రేమకు సాటెవ్వరూ (2)\nనా జీవిత కాలమంతా\nనిన్ను పాడి స్తుతించెదను (2)  ||యేసే నా||",
+      keywords: [
+        "yese na parihaari",
+        "yese na parihari",
+        "yeese na parihari",
+        "yeese naa parihaari",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4867,15 +6665,84 @@ const songsData = {
         "eese satyam",
         "yesey sathyam",
         "yesey satyam",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
   ],
   ర: [
+    {
+      id: uuid.v4(),
+      title: "రక్షకుండుదయించినాడట",
+      lyrics:
+        "రక్షకుండుదయించినాడట – మన కొరకు పరమ\nరక్షకుండుదయించినాడట\nరక్షకుండుదయించినాడు – రారే గొల్ల బోయలార\nతక్షనమున బోయి మన ని – రీక్షణ ఫల మొందెదము ||రక్షకుండు||\n\n1. దావీదు వంశమందు ధన్యుడు జన్మించినాడు (2)\nదేవుడగు యెహోవా మన – దిక్కు దేరి చూచినాడు ||రక్షకుండు||\n\n2. గగనము నుండి డిగ్గి – ఘనుడు గాబ్రియేలు దూత (2)\nతగినట్టు చెప్పే వారికి – మిగుల సంతోష వార్త ||రక్షకుండు||\n\n3. వర్తమానము జెప్పి దూత – వైభవమున పోవుచున్నాడు (2)\nకర్తను జూచిన వెనుక – కాంతుము విశ్రమం బప్పుడు ||రక్షకుండు||\n\n4. పశువుల తొట్టిలోన – భాసిల్లు వస్త్రముల జుట్టి (2)\nశిశువును గనుగొందురని – శీఘ్రముగను దూత తెల్పె ||రక్షకుండు||\n\n5. అనుచు గొల్ల లొకరి కొకరు – ఆనవాలు జెప్పుకొనుచు (2)\nఅనుమతించి కడకు క్రీస్తు – నందరికినీ దెల్పినారు ||రక్షకుండు||",
+      keywords: [
+        "Rakshakudu udhayinchi naadata",
+        "andhra christian hymn",
+        "christmas",
+        "7/8",
+        "4/4",
+      ],
+      video: "",
+      artist: "Mocharla Raghavayya",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "7/8 or 4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "రండి ఉత్సాహించి పాడుదము",
+      lyrics:
+        "రండి ఉత్సాహించి పాడుదము\nరక్షణ దుర్గము మన ప్రభువే (2)\n\n1. రండి కృతజ్ఞత స్తోత్రముతో\nరారాజు సన్నిధికేగుదము (2)\nసత్ప్రభు నామము కీర్తనలన్\nసంతోష గానము చేయుదము  ||రండి||\n\n2. మన ప్రభువే మహా దేవుండు\nఘన మహాత్యము గల రాజు (2)\nభూమ్యాగాధపు లోయలును\nభూధర శిఖరములాయనవే     ||రండి||\n\n3. సముద్రము సృష్టించెనాయనదే\nసత్యుని హస్తమే భువిజేసెన్ (2)\nఆయన దైవము పాలితుల\nఆయన మేపెడి గొర్రెలము  ||రండి||\n\n4. ఆ ప్రభు సన్నిధి మోకరించి\nఆయన ముందర మ్రొక్కుదము (2)\nఆయన మాటలు గైకొనిన\nఅయ్యవి మనకెంతో మేలగును   ||రండి||\n\n5. తండ్రి కుమార శుద్దాత్మకును\nతగు స్తుతి మహిమలు కల్గు గాక (2)\nఆదిని ఇప్పుడు ఎల్లప్పుడూ\nఅయినట్లు యుగములనౌను ఆమెన్    ||రండి||",
+      keywords: [
+        "randi uthsahinchi padudhamu",
+        "randi uthsahinchedham",
+        "randi uthsahinche padedhamu",
+        "Andhra Christian Hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Samuyelu Paakyanaadhamu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "రండి పాడ దూతలారా నిండు సంతోషంబుతో",
+      lyrics:
+        "1. రండి పాడ దూతలారా నిండు సంతోషంబుతో \nయేసుని జన్మంబు గూర్చి ఈ భూలోకమంతట \nరండి నేడు పుట్టినట్టి రాజు నారాధించుడి.\n\n2. మందగాయు గొల్లలార! మనుష్యులతో నేడు \nవాసంబు జేయుచున్నాఁడు వాసిగాను దేవుండు\nరండి నేడు పుట్టినట్టి రాజు నారాధించుడి.\n\n3. జ్ఞానులారా! మానుడింక యోచనలం జేయుట \nమానుగాను వెదకుడేసున్ చూచుచు నక్షత్రమున్\nరండి నేడు పుట్టినట్టి రాజు నారాధించుడి.\n\n4. పరిశుద్ధులారా! విూరు నిరీక్షించుచుండిన \nయేసు ప్రభువాలయంబు యేతెంచెను చూడుడి \nరండి నేడు పుట్టినట్టి రాజు నారాధించుఁడి.\n\n5. పశ్చాత్తాప మొందియున్న పాపులార! మీకు వి\nముక్తి గల్గె; శక్తి నొంది రక్తి నేసుంజేరుడి\nరండి నేడు పుట్టినట్టి రాజు నారాధించుడి.",
+      keywords: [
+        "Randi paada dhuthalaara",
+        "rando pada dhuthalara",
+        "christmas",
+        "Andhra christian hymn",
+        "christmas",
+        "4/4",
+      ],
+      video: "",
+      artist: "Ongolu Dhaveedhu",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "రండి సువార్త సునాదముతో",
+      lyrics:
+        "రండి సువార్త సునాదముతో – రంజిలు సిలువ నినాదముతో\nతంబుర సితార నాదముతో – ప్రభుయేసు దయానిధి సన్నిధికి\n\n1. యేసే మానవజాతి వికాసం – యేసే మానవ నీతి విలాసం\nయేసే పతిత పావన నామం – భాసుర క్రైస్తవ శుభనామం ||రండి||\n\n2. యేసే దేవుని ప్రేమ స్వరూపం – యేసే సర్వేశ్వర ప్రతిరూపం\nయేసే ప్రజాపతి పరమేశం – ఆశ్రిత జనముల సుఖవాసం ||రండి||\n\n3. యేసే సిలువను మోసిన దైవం – యేసే ఆత్మల శాశ్వత జీవం\nయేసే క్షమాపణ అధికారం – దాసుల ప్రార్ధన సహకారం ||రండి||\n\n4. యేసే సంఘములో మన కాంతి – యేసే హృదయములో ఘనశాంతి\nయేసే కుటుంబ జీవన జ్యోతి – పసిపాపల దీవెన మూర్తి ||రండి||\n\n5. యేసే జీవన ముక్తికి మార్గం – యేసే భక్తుల భూతల స్వర్గం\nయేసే ప్రపంచ శాంతికి సూత్రం – వాసిగ నమ్మిన జనస్తోత్రం ||రండి||",
+      keywords: [
+        "randi suvartha sunadhamutho",
+        "Randi suvartha sunaadhamutho",
+        "randi suvaartha sunaadhamuto",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Dr. A. B. Masilamani",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
     {
       id: uuid.v4(),
       title: "రమ్మనుచున్నాడు నిన్ను ప్రభు యేసు",
@@ -4890,12 +6757,12 @@ const songsData = {
         "Rammanu chunnadu",
         "rammanu chunadu",
         "rammanu chunnaadu",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "D. G. S Dhinakaran",
       genre: ["General"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -4910,12 +6777,12 @@ const songsData = {
         "rajiyamo neeve",
         "rajyamu neve",
         "rajyamu neevey",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Ravinder Vottepu",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4932,12 +6799,12 @@ const songsData = {
         "rajaa nee sannidilo",
         "raja ni sannidhi",
         "worship",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "John J",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4957,12 +6824,12 @@ const songsData = {
         "rajanibavanamulo",
         "rajaa nibhavanamulo",
         "worship",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Barchmans",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -4988,15 +6855,79 @@ const songsData = {
         "johnerry",
         "john erry",
         "worship",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "John Erry",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "రాజాధి రాజా రారా",
+      lyrics:
+        "రాజాధి రాజా రారా – రాజులకు రాజువై రారా\nరాజయేసు రాజ్యమేల రారా – రవికోటి తేజ యేసు రారా (2)\nఓ… మేఘ వాహనంబు మీద వేగమే\nఓ… మించు వైభవంబు తోడ వేగమే   ||రాజాధి||\n\n1. ఓ… భూజనంబులెల్ల తేరిచూడగా\nఓ… నీ జనంబు స్వాగతంబునీయగా\nనీ రాజ్యస్థాపనంబు సేయ – భూరాజులెల్ల గూలిపోవ\nభూమి ఆకసంబు మారిపోవ – నీ మహా ప్రభావమున వేగ   ||రాజాధి||\n\n2. ఆ… ఆకసమున దూత లార్భటింపగా\nఆ… ఆదిభక్త సంఘ సమేతంబుగా\nఆకసంబు మధ్య వీధిలోన – ఏకమై మహాసభ జేయ\nయేసు నాధ! నీదు మహిమలోన – మాకదే మహానందమౌగ   ||రాజాధి||\n\n3. ఓ… పరమ యెరుషలేము పుణ్య సంఘమా\nఓ… గొఱియపిల్ల క్రీస్తు పుణ్య సంఘమా\nపరమ దూతలార! భక్తులారా! – పౌలపోస్తులారా! పెద్దలారా!\nగొఱియపిల్ల యేసురాజు పేర – క్రొత్త గీతమెత్తి పాడరారా  ||రాజాధి||",
+      keywords: [
+        "raajaadhi raaja raara",
+        "raajadhi raja rara",
+        "Rajadhi raja rara",
+        "Rajadhi raja rave",
+        "andhra christian hymn",
+        "6/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "రారె చూతము రాజ సుతుని",
+      lyrics:
+        "రారె చూతము రాజ సుతుని రేయి జనన మాయెను (2)\nరాజులకు రా రాజు మెస్సియ (2)\nరాజితంబగు తేజమదిగో (2) ||రారె||\n\n1.దూత గణములన్ దేరి చూడరే దైవ వాక్కులన్ దెల్పగా (2)\nదేవుడే మన దీనరూపున (2)\nధరణి కరిగెనీ దినమున (2)  ||రారె||\n\n2.కల్లగాదిది కలయు గాదిది గొల్ల బోయల దర్శనం (2)\nతెల్లగానది తేజరిల్లెడి (2)\nతారగాంచరే త్వరగ రారే (2)  ||రారె||\n\n3.బాలుడడుగో వేల సూర్యల బోలు సద్గుణ శీలుడు (2)\nబాల బాలిక బాల వృద్ధుల (2)\nనేల గల్గిన నాధుడు (2)  ||రారె||\n\n4. యూద వంశము నుద్ధరింప దావీదు పురమున \nనుద్భవించే - సదమలంబగు మదిని గొల్చిన \nసర్వజనులకు సార్వ భౌముడు (2)   ||రారె||",
+      keywords: [
+        "raare chuthumu raaja suthuni",
+        "Rare chuthumu raja suthuni",
+        "andhra christian hymn",
+        "Christmas",
+        "4/4",
+      ],
+      video: "",
+      artist: "Chetti Bhanu Murthi",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "రెండే రెండు మార్గాలు జీవం మరణం",
+      lyrics:
+        "రెండే రెండు మార్గాలు జీవం మరణం (2) \nఒకటే మోక్షమార్గము యేసే ఆమార్గం (2)  \nయేసే ఆమార్గం  ప్రభుయేసేఆమార్గం ||రెండే|| \n\n1.పాపము పోయే మార్గముతెలియక  \nచీకటిలోమనిషి వెదకుచున్నాడు \nవ్రతములు  పూజలు చేసినగాని \nపుణ్యనదులలో మునిగినగాని  \nపాపము పోదు మోక్షమురాదు (2) \nయేసే ఆమార్గం ప్రభుయేసేఆమార్గం ||రెండే|| \n\n2.పాపిని కోరి సిలువ వదించెను \nపాపపు శిక్షను తానెబరించెను \nనీటిలొ నరులకు కొయ్యపై వ్రేలాడి  \nచక్కమగనమును పొందెను యేసు  \nరక్తము కార్చెను ముక్తి నొసగెను (2) \nయేసే ఆమార్గం  ప్రభుయేసేఆమార్గం ||రెండే|| ",
+      keywords: [
+        "rende rendu maargalu", "Rende rendu margalu", "Rendey rendu margaalu", "Rende rendu maargaalu","akumarthi daniel"
+      ],
+      video: "",
+      artist: "Dr. Akumarthi Daniel",
+      genre: ["General"],
+      timeSignature: "4/4",
     },
   ],
   ల: [
+    {
+      id: uuid.v4(),
+      title: "లాలి లాలి లాలి",
+      lyrics:
+        "లాలి లాలి లాలి లాలమ్మ లాలీ లాలియని\nపాడరే బాలయేసునకు\n\n1. పరలోక దేవుని తనయుడో యమ్మా పుడమిపై\nబాలుడుగ బుట్టెనో యమ్మా\n\n2. ఇహ పరాదుల కర్త యీతడో యమ్మ మహి పాలనము\nజేయు మహితుడో యమ్మా\n\n3. ఆద్యంతములు లేని దేవుడో యమ్మా\nఆదాము దోషమున కడ్డు పడె నమ్మా\n\n4. యూదులకు రాజుగాబుట్టెనో యమ్మా\nయూదు లాతని తోడ వాదించి రమ్మా\n\n5. నరగొఱ్ఱెల మంద కాపరో యమ్మా గొరియల\nప్రాణంబు క్రీస్తు తానమ్మా",
+      keywords: [
+        "laali laali laali",
+        "lali lali lali",
+        "andhra christian hymn",
+        "christmas",
+      ],
+      video: "",
+      artist: "Thirukovalluri Steven",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "",
+    },
     {
       id: uuid.v4(),
       title: "లెక్కించలేని స్తోత్రముల్",
@@ -5015,12 +6946,12 @@ const songsData = {
         "lekkinchalenii",
         "lekkincha leeni",
         "lekkincha leeni sthothramul",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "",
       genre: ["Worship", "General"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
   ],
   వ: [
@@ -5039,124 +6970,12 @@ const songsData = {
         "vadimpabadina gorre",
         "vadimpabadina gorre",
         "vadhiyimpabadina gorre",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Anil Kumar",
       genre: ["General"],
-      timeSignature: "4/4"
-    },
-    {
-      id: uuid.v4(),
-      title: "విజయ గీతముల్ పాడరే",
-      lyrics:
-        "విజయ గీతముల్ పాడరే\nక్రీస్తుకు జయ – విజయ గీతముల్ పాడరే (2)\nవృజిన మంతటి మీద – విజయ మిచ్చెడు దేవ\nనిజ కుమారుని నామమున్\nహృదయములతో – భజన జేయుచు నిత్యమున్  ||విజయ||\n\n1. మంగళముగ యేసుడే\nమనకు రక్షణ – శృంగమై మరి నిలచెను\nనింగిన్ విడిచి వచ్చెను\nశత్రుని యుద్ధ – రంగమందున గెల్చెను\nరంగు మీరగదన – రక్త బలము వలన\nపొంగు నణగ జేసెను\nసాతానుని బల్ – కృంగ నలిపి చీల్చెను ||విజయ||\n\n2. పాపముల్ దొలగింపను\nమనలను దన స్వ – రూపంబునకు మార్పను\nశాపం బంతయు నోర్చెను\nదేవుని న్యాయ – కోపమున్ భరియించెను\nపాపమెరుగని యేసు – పాపమై మనకొరకు\nపాప యాగము దీర్చెను\nదేవుని నీతిన్ – ధీరుడై నెరవేర్చెను ||విజయ||\n\n3. సిలువ మరణము నొందియు\nమనలను దనకై – గెలువన్ లేచిన వానికి\nచెలువుగన్ విమలాత్ముని\nప్రేమను మనలో – నిలువన్ జేసిన వానికి\nకొలువు జేతుమెగాని – ఇలను మరువక వాని\nసిలువ మోయుచు నీ కృపా\nరక్షణ చాల విలువ గలదని చాటుచు ||విజయ||",
-      keywords: [
-        "vijaya geethamul paadaare",
-        "vijaya gethamul padare",
-        "vijaya getamul padare",
-        "vijaya gethamulu padarey",
-        "vijaaya",
-        "vijaaya geethamul paadarey",
-        "holy communion",
-        "communion",
-        "7/8"
-      ],
-      video: "",
-      artist: "",
-      genre: ["Andhra Christian Hymn"],
-      timeSignature: "7/8"
-    },
-    {
-      id: uuid.v4(),
-      title: "వినరండి నా ప్రియుని విశేషము",
-      lyrics:
-        "వినరండి నా ప్రియుని విశేషము\nనా ప్రియుడు సుందరుడు మహా ఘనుడు (2)\nవినరండి నా ప్రియుని విశేషము\nనా వరుడు సుందరుడు మహా ఘనుడు (2)\nనా ప్రియుని నీడలో చేరితిని\nప్రేమకు రూపము చూసితిని (2)\nఆహ ఎంతో మనసంతా ఇక ఆనందమే\nతనువంతా పులకించి మహదానందమే       ||వినరండి||\n\n1. మహిమతో నిండిన వీధులలో\nబూరలు మ్రోగే ఆకాశ పందిరిలో (2)\nజతగా చేరెదను ఆ సన్నిధిలో\nకురిసె చిరుజల్లై ప్రేమామృతము\nనా ప్రియ యేసు నను చూసి దరి చేరునే\nజతగా చేరెదను ఆ సన్నిధిలో\nనా ప్రేమను ప్రియునికి తెలిపెదను\nకన్నీరు తుడిచేది నా ప్రభువే       ||వినరండి||\n\n2. జగతికి రూపము లేనప్పుడు\nకోరెను నన్ను తన కొరకు నా ప్రభువు (2)\nస్తుతినే వస్త్రముగా ధరించుకొని\nకృపన్ జయధ్వనితో కీర్తించెదను\nనా ప్రభు యేసు చెంతన చేరెదను\nస్తుతినే వస్త్రముగా ధరించుకొని\nనా ప్రభు యేసు చెంతన చేరెదను\nయుగమొక క్షణముగ జీవింతును       ||వినరండి||\n\n3. తలపుల ప్రతి మలుపు గెలుపులతో\nనిలిచె శుద్ధ హృదయాల వీరులతో (2)\nఫలము ప్రతిఫలము నే పొందుకొని\nప్రియ యేసు రాజ్యములో నే నిలిచెదను\nఆ శుభవేళ నాకెంతో ఆనందమే\nఫలము ప్రతిఫలము నే పొందుకొని\nఆ శుభవేళ నాకెంతో ఆనందమే\nనా ప్రియుని విడువను నేనెన్నడు  ||వినరండి||",
-      keywords: [
-        "vinarandi na yesuni viseshamu",
-        "vinarandi naa yesuni",
-        "venarande na yesuni",
-        "venarandi na yesuni",
-        "vinarandi naa yeesuni",
-        "vinarandi nayesuni",
-        "vinarandi naayeesuni",
-        "kamalakar",
-        "pranam kalamakar",
-        "4/4"
-      ],
-      video: "",
-      artist: "Pranam Kamlakhar",
-      genre: ["General"],
-      timeSignature: "4/4"
-    },
-    {
-      id: uuid.v4(),
-      title: "విలువేలేని నా జీవితం",
-      lyrics:
-        "విలువేలేని నా జీవితం – నీ చేతిలో పడగానే\nఅది ఎంతో విలువని నాకు చూపితివే\nజీవమే లేని నాలో నీ – జీవమును నింపుటకు\nనీ జీవితాన్నే ధారబోసితివే (2)\n\nనీది శాశ్వత ప్రేమయా – నేను మరచిపోలేనయా\nఎన్ని యుగాలైనా మారదు\nఎండిన ప్రతి మోడును – మరలా చిగురించును\nనా దేవునికి సమస్తము సాధ్యమే (2)\n\n1. పాపములో పడిన నన్ను\nశాపములో మునిగిన నన్ను\nనీ ప్రేమతో లేపితివే\nరోగమే నన్ను చుట్టుకొనియుండగా\nరోదనతో ఒంటరినైయుండగా\nనా కన్నీటిని తుడిచితివే (2) ||నీది||\n\n2. పగలంతా మేఘ స్తంభమై\nరాత్రంతా అగ్ని స్తంభమై\nదినమంతయు రెక్కలతో కప్పితివే\nస్నేహితులే నన్ను వదిలేసినా\nబంధువులే భారమని తలచినా\nనా కొరకే బలి అయితివే (2) ||నీది||\n\n3. సాధ్యమే సాధ్యమే సాధ్యమే\nనా యేసుకు సమస్తము\nసాధ్యమే సాధ్యమే సాధ్యమే\nనా ప్రియునికి సమస్తము (2)\n\nఎండిన ప్రతి మోడును మరలా చిగురించును\nనా దేవునికి సమస్తము సాధ్యమే (2) ||విలువేలేని||",
-      keywords: [
-        "viluvee leeni naa jeevitham",
-        "viluva leni na jivitham",
-        "viluvee",
-        "viluvaa",
-        "viluve leeni",
-        "viluvee leni",
-        "viluvee leeni",
-        "veluve lene na jevetham",
-        "veluve leni",
-        "veluvee leeni",
-        "4/4"
-      ],
-      video: "https://www.youtube.com/embed/sAo6-X8zPZ4?start=1016",
-      artist: "Vinod Kumar & Benjamin Johnson",
-      genre: ["Worship", "Love"],
-      timeSignature: "4/4"
-    },
-    {
-      id: uuid.v4(),
-      title: "వెలిగించుమయా నా యేసయ్య",
-      lyrics:
-        "వెలిగించుమయా నా యేసయ్య\nనా జీవన దీపం నీవేనయ్య (2)\nశరణం శరణం శరణం దేవా (2)\n\n1. నిను చూడలేని ఈ కనులెందుకయా\nనిను కోరలేని ఈ బ్రతుకెందుకయా\nనిను చేరలేని ఈ తనువెందుకయా\nనాకున్న సర్వం నీవేనయ్య (2)  ||శరణం...||\n\n2.ఆత్మాంధకారం తొలగించుమయా\nనీ జీవన వేదం బోదించుమయా\nపరిపూర్ణ స్వస్థతను నాకొసగుమయా\nనీ చెంత చేరే వరమీయుమయా (2) ||శరణం...|",
-      keywords: [
-        "veliginchumaya",
-        "veliginchumayaa",
-        "veliginchumaya",
-        "velinchu maya",
-        "viliginchu maya",
-        "light",
-        "candle light service",
-        "christmas",
-        "velinchumia",
-        "3/4"
-      ],
-      video: "",
-      artist: "",
-      genre: ["Light"],
-      timeSignature: "3/4"
-    },
-    {
-      id: uuid.v4(),
-      title: "వేసారిన మనసే ఊగెనే",
-      lyrics:
-        "వేసారిన మనసే ఊగెనే\nచేజారిన స్ధితికి చేరెనే\nయే గాయమైన మానదే\nనాకున్న బలము చాలదే (2)\nవినిపించు యేసు నీ స్వరం\nనడిపించు నీతో అనుక్షణం   ||వేసారిన||\n\n1. కోరినాను శ్రేయమైన నీ ప్రేమనే\nతాళలేను లేసమైన నీ కోపమే\nభారము మోపకే లోపమూ చూడకే\nఎన్నడు నీ కృప దూరము చేయకే   ||వేసారిన||\n\n2. వాడిపోదు శ్రేష్టమైన ఈ బంధమే\nవీడిపోదు ఆదరించే నీ స్నేహమే\nతోడుగా ఉండునే – త్రోవను చూపునే\nచేకటి కమ్మినా క్షేమము పంపునే    ||వేసారిన||",
-      keywords: [
-        "veesaarina manase oogene",
-        "vesarina manase oogene",
-        "vesaarina manase",
-        "vesaarena manase",
-        "vesaarina",
-        "veesaarina",
-        "veesarina manase",
-        "veysarina manase",
-        "vesarena manase",
-        "kamalakar",
-        "pranam kamalakar",
-        "4/4"
-      ],
-      video: "",
-      artist: "Pranam Kamlakhar",
-      genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5176,7 +6995,121 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["Worship", "General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "విజయ గీతముల్ పాడరే",
+      lyrics:
+        "విజయ గీతముల్ పాడరే\nక్రీస్తుకు జయ – విజయ గీతముల్ పాడరే (2)\nవృజిన మంతటి మీద – విజయ మిచ్చెడు దేవ\nనిజ కుమారుని నామమున్\nహృదయములతో – భజన జేయుచు నిత్యమున్  ||విజయ||\n\n1. మంగళముగ యేసుడే\nమనకు రక్షణ – శృంగమై మరి నిలచెను\nనింగిన్ విడిచి వచ్చెను\nశత్రుని యుద్ధ – రంగమందున గెల్చెను\nరంగు మీరగదన – రక్త బలము వలన\nపొంగు నణగ జేసెను\nసాతానుని బల్ – కృంగ నలిపి చీల్చెను ||విజయ||\n\n2. పాపముల్ దొలగింపను\nమనలను దన స్వ – రూపంబునకు మార్పను\nశాపం బంతయు నోర్చెను\nదేవుని న్యాయ – కోపమున్ భరియించెను\nపాపమెరుగని యేసు – పాపమై మనకొరకు\nపాప యాగము దీర్చెను\nదేవుని నీతిన్ – ధీరుడై నెరవేర్చెను ||విజయ||\n\n3. సిలువ మరణము నొందియు\nమనలను దనకై – గెలువన్ లేచిన వానికి\nచెలువుగన్ విమలాత్ముని\nప్రేమను మనలో – నిలువన్ జేసిన వానికి\nకొలువు జేతుమెగాని – ఇలను మరువక వాని\nసిలువ మోయుచు నీ కృపా\nరక్షణ చాల విలువ గలదని చాటుచు ||విజయ||",
+      keywords: [
+        "vijaya geethamul paadaare",
+        "vijaya gethamul padare",
+        "vijaya getamul padare",
+        "vijaya gethamulu padarey",
+        "vijaaya",
+        "vijaaya geethamul paadarey",
+        "holy communion",
+        "communion",
+        "7/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "విజయంబు విజయంబు",
+      lyrics:
+        "విజయంబు విజయంబు విజయంబు మా యేసు నిజమె మృత్యువు\nగెల్చి నేఁడు వేంచేసె యజమానుఁ డెల్ల ప్ర యాసము లెడఁబాప\nస్వజనుల రక్షింప సమసె సిలువమీఁద ||విజయంబు||\n\n1. విజయంబు విజయంబు విజయంబు మానవుల వృజిన నివృత్తిని\nవిభుఁ డొనరింపన్ గుజనులచే నతఁడు క్రూర మరణము నొంది విజిత\nమృత్యువు నుండి విజయుండై వేంచేసె ||విజయంబు||\n\n2. విజయంబు విజయంబు విజయంబు మా యేసు భుజము మీఁదను\nమోయుఁ బరిపాలనంబు కుజము మీఁదను బ్రాణ త్యజనము జేసెను\nధ్వజము మోయుచు సిల్వ పాప మోడింతము ||విజయంబు||\n\n3. విజయంబు విజయంబు విజయం బిఁకను మా క పజయము కాకుండఁ\nబ్రభు యేసు క్రీస్తు సుజనత్వమున వైరి వ్రజము గెల్వఁగఁజేసి\nనిజముగఁ బరలోక నిలయంబులో నిల్పు ||విజయంబు||\n\n4. విజయంబు విజయంబు విజయం బనెడి పాట నిజభక్తితో మనము\nనేర్చిన వాని భజియించుదము భూన భములు తాఁ బాలించు అజిత\nజీవ ప్రదుఁ డమరత్వ మిడు మనకు ||విజయంబు||",
+      keywords: [
+        "vijayambu vijayambu",
+        "vijayambhu vijayambhu",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
+    },
+     {
+      id: uuid.v4(),
+      title: "విడువని దేవుడ నీవే మా మంచి యేసయ్యా",
+      lyrics:
+        "విడువని దేవుడ నీవే మా మంచి యేసయ్యా\nపాపికి ఆశ్రయపురము నీవే మెస్సయ్యా\nప్రేమించుటకు క్షమియించుటకు\nరక్షించుటకు అర్హుడ నీవే (2)\nయేసయ్యా యేసయ్యా యేసయ్యా యేసయ్యా\n\n1. నలువది సంవత్రరములు మా పితరుల నడిపిన దేవా\nఅరణ్య మార్గమైనా అన్నీ నీవైనావు (2)\nజీవాహారమై ఆకలి తీర్చావు\nకదిలే బండవై దాహము తీర్చావు (2)\nయేసయ్యా యేసయ్యా యేసయ్యా యేసయ్యా\n\n2. ఇత్తడి సర్పమువోలే పైకెత్తబడినావు\nనిన్ను చూచినవారు ఆనాడు బ్రతికారు (2)\nసిలువపై వ్రేలాడే నీ దరి చేరిన\nజనులందరు నేడునిత్యము బ్రతుకుదురు (2)\nయేసయ్యా యేసయ్యా యేసయ్యా యేసయ్యా",
+      keywords: [
+        "viduvani dhevuda neeve", "viduvani devuda neeve", "veduvani devuda neeve", "viduvani dhevuda nive", "viduvani dhevuda nivey", "akumarthi daniel"
+      ],
+      video: "",
+      artist: "Dr. Akumarthi Daniel",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "వినరండి నా ప్రియుని విశేషము",
+      lyrics:
+        "వినరండి నా ప్రియుని విశేషము\nనా ప్రియుడు సుందరుడు మహా ఘనుడు (2)\nవినరండి నా ప్రియుని విశేషము\nనా వరుడు సుందరుడు మహా ఘనుడు (2)\nనా ప్రియుని నీడలో చేరితిని\nప్రేమకు రూపము చూసితిని (2)\nఆహ ఎంతో మనసంతా ఇక ఆనందమే\nతనువంతా పులకించి మహదానందమే       ||వినరండి||\n\n1. మహిమతో నిండిన వీధులలో\nబూరలు మ్రోగే ఆకాశ పందిరిలో (2)\nజతగా చేరెదను ఆ సన్నిధిలో\nకురిసె చిరుజల్లై ప్రేమామృతము\nనా ప్రియ యేసు నను చూసి దరి చేరునే\nజతగా చేరెదను ఆ సన్నిధిలో\nనా ప్రేమను ప్రియునికి తెలిపెదను\nకన్నీరు తుడిచేది నా ప్రభువే       ||వినరండి||\n\n2. జగతికి రూపము లేనప్పుడు\nకోరెను నన్ను తన కొరకు నా ప్రభువు (2)\nస్తుతినే వస్త్రముగా ధరించుకొని\nకృపన్ జయధ్వనితో కీర్తించెదను\nనా ప్రభు యేసు చెంతన చేరెదను\nస్తుతినే వస్త్రముగా ధరించుకొని\nనా ప్రభు యేసు చెంతన చేరెదను\nయుగమొక క్షణముగ జీవింతును       ||వినరండి||\n\n3. తలపుల ప్రతి మలుపు గెలుపులతో\nనిలిచె శుద్ధ హృదయాల వీరులతో (2)\nఫలము ప్రతిఫలము నే పొందుకొని\nప్రియ యేసు రాజ్యములో నే నిలిచెదను\nఆ శుభవేళ నాకెంతో ఆనందమే\nఫలము ప్రతిఫలము నే పొందుకొని\nఆ శుభవేళ నాకెంతో ఆనందమే\nనా ప్రియుని విడువను నేనెన్నడు  ||వినరండి||",
+      keywords: [
+        "vinarandi na yesuni viseshamu",
+        "vinarandi naa yesuni",
+        "venarande na yesuni",
+        "venarandi na yesuni",
+        "vinarandi naa yeesuni",
+        "vinarandi nayesuni",
+        "vinarandi naayeesuni",
+        "kamalakar",
+        "pranam kalamakar",
+        "4/4",
+      ],
+      video: "",
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "వినరే యో నరులారా",
+      lyrics:
+        "వినరే యో నరులారా – వీనుల కింపు మీర\nమనల రక్షింప క్రీస్తు – మానుజావతారుడయ్యె – వినరే\nఅనుదినమును దే-వుని తనయుని పద\nవనజంబులు మన-మున నిడికొనుచును     ||వినరే||\n\n1. నర రూపు బూని ఘోర – నరకుల రారమ్మని\nదురితము బాపు దొడ్డ – దొరయౌ మరియా వరపుత్రుడు\nకర మరు దగు క-ల్వరి గిరి దరి కరి\nగి రయంబున ప్రభు – కరుణను గనరే     ||వినరే||\n\n2. ఆనందమైన మోక్ష-మందరి కియ్య దీక్ష\nబూని తన మేని సిలువ – మ్రాను నణచి మృతి బొందెను\nదీన దయా పరు-డైన మహాత్ముడు\nజానుగ యాగము – సలిపిన తెరంగిది     ||వినరే||\n\n3. ఇల మాయావాదుల మాని – యితడే సద్గురు డని\nతలపోసి చూచి మతి ని-శ్చల భక్తిని గొలిచిన వారికి\nనిల జనులకు గలు-ములనలరెడు ధని\nకుల కందని సుఖ-ములు మరి యొసఁగును     ||వినరే||\n\n4. దురితము లణప వచ్చి – మరణమై తిరిగి లేచి\nనిరత మోక్షానంద సుం-దర మందిరమున కరుదుగ జనె\nబిరబిర మన మం-దర మా కరుణా\nశరనిధి చరణ మె – శరణని పోదము     ||వినరే||",
+      keywords: [
+        "vinare yo narulaara",
+        "vinare yo narulara",
+        "vinareyo narulara",
+        "vinarey yo narulara",
+        "andhra christian hymn",
+        "christmas",
+        "4/4",
+      ],
+      video: "",
+      artist: "Purushotham Chowdary",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "విలువేలేని నా జీవితం",
+      lyrics:
+        "విలువేలేని నా జీవితం – నీ చేతిలో పడగానే\nఅది ఎంతో విలువని నాకు చూపితివే\nజీవమే లేని నాలో నీ – జీవమును నింపుటకు\nనీ జీవితాన్నే ధారబోసితివే (2)\n\nనీది శాశ్వత ప్రేమయా – నేను మరచిపోలేనయా\nఎన్ని యుగాలైనా మారదు\nఎండిన ప్రతి మోడును – మరలా చిగురించును\nనా దేవునికి సమస్తము సాధ్యమే (2)\n\n1. పాపములో పడిన నన్ను\nశాపములో మునిగిన నన్ను\nనీ ప్రేమతో లేపితివే\nరోగమే నన్ను చుట్టుకొనియుండగా\nరోదనతో ఒంటరినైయుండగా\nనా కన్నీటిని తుడిచితివే (2) ||నీది||\n\n2. పగలంతా మేఘ స్తంభమై\nరాత్రంతా అగ్ని స్తంభమై\nదినమంతయు రెక్కలతో కప్పితివే\nస్నేహితులే నన్ను వదిలేసినా\nబంధువులే భారమని తలచినా\nనా కొరకే బలి అయితివే (2) ||నీది||\n\n3. సాధ్యమే సాధ్యమే సాధ్యమే\nనా యేసుకు సమస్తము\nసాధ్యమే సాధ్యమే సాధ్యమే\nనా ప్రియునికి సమస్తము (2)\n\nఎండిన ప్రతి మోడును మరలా చిగురించును\nనా దేవునికి సమస్తము సాధ్యమే (2) ||విలువేలేని||",
+      keywords: [
+        "viluvee leeni naa jeevitham",
+        "viluva leni na jivitham",
+        "viluvee",
+        "viluvaa",
+        "viluve leeni",
+        "viluvee leni",
+        "viluvee leeni",
+        "veluve lene na jevetham",
+        "veluve leni",
+        "veluvee leeni",
+        "4/4",
+      ],
+      video: "https://www.youtube.com/embed/sAo6-X8zPZ4?start=1016",
+      artist: "Vinod Kumar & Benjamin Johnson",
+      genre: ["Worship", "Love"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5201,7 +7134,89 @@ const songsData = {
       video: "",
       artist: "Joseph",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "వెలిగించుమయా నా యేసయ్య",
+      lyrics:
+        "వెలిగించుమయా నా యేసయ్య\nనా జీవన దీపం నీవేనయ్య (2)\nశరణం శరణం శరణం దేవా (2)\n\n1. నిను చూడలేని ఈ కనులెందుకయా\nనిను కోరలేని ఈ బ్రతుకెందుకయా\nనిను చేరలేని ఈ తనువెందుకయా\nనాకున్న సర్వం నీవేనయ్య (2)  ||శరణం...||\n\n2.ఆత్మాంధకారం తొలగించుమయా\nనీ జీవన వేదం బోదించుమయా\nపరిపూర్ణ స్వస్థతను నాకొసగుమయా\nనీ చెంత చేరే వరమీయుమయా (2) ||శరణం...|",
+      keywords: [
+        "veliginchumaya",
+        "veliginchumayaa",
+        "veliginchumaya",
+        "velinchu maya",
+        "viliginchu maya",
+        "light",
+        "candle light service",
+        "christmas",
+        "velinchumia",
+        "3/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Light"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "వెండి బంగారాల కన్న మిన్న అయినది",
+      lyrics:
+        "వెండి బంగారాల కన్న మిన్న అయినది\nయేసు ప్రేమ – నా యేసు ప్రేమ (2)\nలోక జ్ఞానమునకు మించిన ప్రేమ (2)\nలోకస్థులు ఎవ్వరు చూపలేని ప్రేమ (2)   ||వెండి||\n\n1. లోకమునకు వెలుగైన ప్రేమ\nలోకమును వెలిగించిన ప్రేమ (2)\nలోకులకై కరిగిపోయిన ప్రేమ\nలోకాన్ని జయించిన ప్రేమ (2)\nయేసు ప్రేమా – శాశ్వత ప్రేమా (2)\nహల్లెలూయా మహదానందమే (2)    ||వెండి||\n\n2. ఏ స్థితికైనా చాలిన ప్రేమ\nనీ పరిస్థితిని మార్చగల ప్రేమ (2)\nనీకు బదులు మరణించిన ప్రేమ\nచిర జీవము నీకొసగిన ప్రేమ (2)\nయేసు ప్రేమా – శాశ్వత ప్రేమా (2)\nహల్లెలూయా మహదానందమే (2)    ||వెండి||",
+      keywords: [
+        "vendi bangaaralakanna",
+        "vendi bangaarala kanna",
+        "andhra christian hymn",
+        "general",
+        "6/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "వేసారిన మనసే ఊగెనే",
+      lyrics:
+        "వేసారిన మనసే ఊగెనే\nచేజారిన స్ధితికి చేరెనే\nయే గాయమైన మానదే\nనాకున్న బలము చాలదే (2)\nవినిపించు యేసు నీ స్వరం\nనడిపించు నీతో అనుక్షణం   ||వేసారిన||\n\n1. కోరినాను శ్రేయమైన నీ ప్రేమనే\nతాళలేను లేసమైన నీ కోపమే\nభారము మోపకే లోపమూ చూడకే\nఎన్నడు నీ కృప దూరము చేయకే   ||వేసారిన||\n\n2. వాడిపోదు శ్రేష్టమైన ఈ బంధమే\nవీడిపోదు ఆదరించే నీ స్నేహమే\nతోడుగా ఉండునే – త్రోవను చూపునే\nచేకటి కమ్మినా క్షేమము పంపునే    ||వేసారిన||",
+      keywords: [
+        "veesaarina manase oogene",
+        "vesarina manase oogene",
+        "vesaarina manase",
+        "vesaarena manase",
+        "vesaarina",
+        "veesaarina",
+        "veesarina manase",
+        "veysarina manase",
+        "vesarena manase",
+        "kamalakar",
+        "pranam kamalakar",
+        "4/4",
+      ],
+      video: "",
+      artist: "Pranam Kamlakhar",
+      genre: ["General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "వందనంబొనర్తుమో ప్రభో ప్రభో",
+      lyrics:
+        "వందనంబొనర్తుమో ప్రభో ప్రభో\nవందనంబొనర్తుమో ప్రభో ప్రభో\nవందనంబు తండ్రి తనయ శుద్ధాత్ముడా\nవందనంబు లందుకో ప్రభో    ||వందనం||\n\n1. ఇన్ని నాళ్ళు ధరను మమ్ము బ్రోచియు\nగన్న తండ్రి మించి ఎపుడు గాచియు\nఎన్నలేని దీవెన లిడు నన్న యేసువా\nయన్ని రెట్లు స్తోత్రములివిగో   ||వందనం||\n\n2. ప్రాత వత్సరంపు బాప మంతయు\nబ్రీతిని మన్నించి మమ్ము గావుము\nనూత నాబ్దమునను నీదు నీతి నొసగుమా\nదాత క్రీస్తు నాథ రక్షకా  ||వందనం||\n\n3. దేవ మాదు కాలుసేతు లెల్లను\nసేవకాలి తనువు దినములన్నియు\nనీ వొసంగు వెండి పసిడి జ్ఞానమంత నీ\nసేవకై యంగీకరించుమా  ||వందనం||\n\n4. కోతకొరకు దాసజనము నంపుము\nఈ తరి మా లోటుపాట్లు దీర్చుము\nపాతకంబు లెల్ల మాపి భీతి బాపుము\nఖ్యాతి నొందు నీతి సూర్యుడా    ||వందనం||\n\n5. మా సభలను పెద్దజేసి పెంచుము\nనీ సువార్త జెప్ప శక్తి నీయుము\nమోసపుచ్చు నందకార మంత ద్రోయుము\nయేసు కృపన్ గుమ్మరించుము   ||వందనం||",
+      keywords: [
+        "vandhanambu nathumo prabho",
+        "vandhanambu nathumo prabhu",
+        "vandhanambu natthumo prabho",
+        "vandanambu nathumo prabho",
+        "new year",
+        "andhra christian hymns",
+        "6/8",
+      ],
+      video: "",
+      artist: "Matthayi Samuyelu",
+      genre: ["Andhra Christian Hymn", "New Year"],
+      timeSignature: "6/8",
     },
   ],
   శ: [
@@ -5217,12 +7232,12 @@ const songsData = {
         "saswatha preematho",
         "sasvata prema",
         "sasvatha premato",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "",
       genre: ["Love", "General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -5242,12 +7257,88 @@ const songsData = {
         "andhra christian song",
         "andhra kraisthava keerthanalu",
         "aandhra kraisthava keerthanalu",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/udne5IfgGl4?start=236",
-      artist: "",
+      artist: "Karl Boberg",
       genre: ["Andhra Christian Hymn", "Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "శ్రీ యేసుండు జన్మించె రేయిలో",
+      lyrics:
+        "శ్రీ యేసుండు జన్మించె రేయిలో (2)\nనేడు పాయక బెత్లెహేము ఊరిలో (2)   ||శ్రీ యేసుండు||\n\n1. ఆ కన్నియ మరియమ్మ గర్భమందున (2)\nఇమ్మానుయేలనెడి నామమందున (2)  ||శ్రీ యేసుండు||\n\n2. సత్రమందున పశువులశాల యందున (2)\nదేవపుత్రుండు మనుజుండాయెనందునా (2)  ||శ్రీ యేసుండు||\n\n3. పట్టి పొత్తి గుడ్డలతో చుట్టబడి (2)\nపశుల తొట్టిలో పరుండ బెట్టబడి (2)   ||శ్రీ యేసుండు||\n\n4. గొల్లలెల్లరు మిగుల భీతిల్లగా (2)\nదెల్పె గొప్ప వార్త దూత చల్లగా (2)   ||శ్రీ యేసుండు||\n\n5. మన కొరకొక్క శిశువు పుట్టెను (2)\nధరను మన దోషములబోగొట్టెను (2)   ||శ్రీ యేసుండు||\n\n6. పరలోకపు సైన్యంబు గూడెను (2)\nమింట వర రక్షకుని గూర్చి పాడెను (2)   ||శ్రీ యేసుండు||\n\n7. అక్షయుండగు యేసు పుట్టెను (2)\nమనకు రక్షణంబు సిద్ధపరచెను (2)   ||శ్రీ యేసుండు||",
+      keywords: [
+        "sri yesundu janminche reyilo",
+        "sriyesundu janminche reyilo",
+        "sriyesundu janminche",
+        "sre yesundu janminche",
+        "sri yesundu janminche",
+        "Andhra Christian Hymn",
+        "Christmas",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "6/8 or 4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "శ్రీ రక్షకుండు పుట్టఁగా నాకాశ సైన్యము",
+      lyrics:
+        "1. శ్రీ రక్షకుండు పుట్టఁగా\nనాకాశ సైన్యము\nఇహంబున కేతెంచుచు\nఈ పాట పాడెను.\n\n'పరంబునందు స్వామికి\nమహా ప్రభావము\nఇహంబునందు శాంతిని\nవ్యాపింపనీయుఁడు'.\n\n2. ఆ రమ్యమైన గానము\nఈ వేళ మ్రోగును\nసంతుష్టులైన భక్తులు\nఆ ధ్వని విందురు\nప్రయాసపడు ప్రజల\nదుఃఖంబు తీరఁగా\nఆ శ్రావ్యమైన గానము\nఈ వేళ విందురు.\n\n3. పూర్వంబు దూతగానము\nభువిన్ వినంబడి\nరెండువేల వర్షములు\nగతించిపోయెను\nభూప్రజలు విరోధులై\nయుద్ధంబు లాడి యా\nమనోజ్ఞమైన గానము\nనలక్ష్యపెట్టిరి.\n\n4. పాపాత్ములారా, వినుఁడి\nశ్రీ యేసు ప్రభువు\nమీ పాపభార మంతయు\nవహింప వచ్చెను\nతాపత్రయంబు నంతయుఁ\nదానే వహించును\nసంపూర్ణ శాంతి సంపద\nలను గ్రహించును.\n\n5. సద్భక్తులు స్తుతించిన\nఈ సత్యయుగము\nఈ వేళ నే నిజంబుగా\nసమీప మాయెను\nఆ కాలమందు క్షేమము\nవ్యాపించుచుండెను\nఆ దివ్య గాన మందఱు\nపాడుచు నెప్పుడు.",
+      keywords: [
+        "Sri rakshakundu puttaga",
+        "sri rakshakundu puttagaa",
+        "sri rakshakunduputtaga",
+        "srirakshakundu",
+        "Andhra Christian Hymn",
+        "Christmas",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "శ్రీ రక్షకుని నామము",
+      lyrics:
+        "1. శ్రీ రక్షకుని నామము\nకీర్తించి కొల్వుఁడీ\nకిరీట ముంచి చాటుఁడి\n-శ్రీ రాజా, రాజా, రాజా,\nరాజాధిరాజా!\n\n2. పరేశుహత సైన్యమా\nమీ రాజు ఈయనే\nకిరీట ముంచి చాటుఁడి\n-శ్రీ రాజా, రాజా, రాజా,\nరాజాధిరాజా!\n\n3. నరులారా! మీ కోసము\nచావును నొందెను\nకిరీట ముంచి చాటుఁడి\n-శ్రీ రాజా, రాజా, రాజా,\nరాజాధిరాజా!\n\n4. సర్వ జనాంగములారా!\nశరణ్యుఁ డీయనే\nకిరీట ముంచి చాటుఁడి\n-శ్రీ రాజా, రాజా, రాజా,\nరాజాధిరాజా!\n\n5. పరంబునందు యేసుకుఁ\nకిరీట ముంచుచు\nహర్షంబుతోఁ గీర్తింతుము\n-శ్రీ రాజా, రాజా, రాజా,\nరాజాధిరాజా!",
+      keywords: [
+        "sri rakshakuni naanamu",
+        "sri rakshakuninamamu",
+        "srirakshakuni nanamu",
+        "Sri rakshakuni naamamu",
+        "Andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "శుద్ధరాత్రి! సద్ధణంగ",
+      lyrics:
+        "1. శుద్ధరాత్రి! సద్ధణంగ \nనందఱు నిద్రపోవ \nశుద్ధ దంపతుల్ మేల్కొనఁగాఁ \nబరిశుద్ధుఁడౌ బాలకుఁడా! \nదివ్య నిద్ర పొమ్మా \nదివ్య నిద్ర పొమ్మా.\n\n2. శుద్ధరాత్రి! సద్ధణంగ \nదూతల హల్లెలూయ \nగొల్లవాండ్రకుఁ దెలిపెను \nఎందు కిట్టులు పాడెదరు? \nక్రీస్తు జన్మించెను. \nక్రీస్తు జన్మించెను.\n\n3. శుద్ధరాత్రి! సద్ధణంగ \nదేవుని కొమరుఁడ! \nనీ ముఖంబున బ్రేమ లొల్కు \nనేఁడు రక్షణ మాకు వచ్చె \nనీవు పుట్టుటచే \nనీవు పుట్టుటచే.",
+      keywords: [
+        "shudha rathri",
+        "sudha rathri",
+        "suddha rathri",
+        "sudha raathri",
+        "shuddha raathri",
+        "sudha raathre",
+        "Andhra Christian Hymn",
+        "christmas",
+        "3/4",
+      ],
+      video: "",
+      artist: "Boseph More",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -5271,12 +7362,12 @@ const songsData = {
         "andhra christian songs",
         "andhra kraisthava keerthanalu",
         "aandhra kraisthava keerthanalu",
-        "4/4"
+        "4/4",
       ],
       video: "https://www.youtube.com/embed/gzrFgakT7WQ?si=u1QhIn-l3sUK499T",
-      artist: "",
+      artist: "Reginald Hebar",
       genre: ["Andhra Christian Hymn", "Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5297,12 +7388,31 @@ const songsData = {
         "shuddha hrudayam",
         "anil kumar",
         "anilkumar",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Anil Kumar",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "శుభవేళ – స్తోత్రబలి",
+      lyrics:
+        "శుభవేళ – స్తోత్రబలి\nతండ్రీ దేవా – నీకేనయ్యా\nఆరాధన – స్తోత్రబలి\nతండ్రీ దేవా – నీకేనయ్యా\nతండ్రీ దేవా – నీకేనయ్యా (2) ||శుభవేళ||\n\n1. ఎల్ షడ్డాయ్ – ఎల్ షడ్డాయ్ – సర్వ శక్తిమంతుడా (2)\nసర్వ శక్తిమంతుడా – ఎల్ షడ్డాయ్ ఎల్ షడ్డాయ్ (2) ||శుభవేళ||\n\n2. ఎల్ రోయి – ఎల్ రోయి – నన్నిల చూచువాడా (2)\nనన్నిల చూచువాడా – ఎల్ రోయి ఎల్ రోయి (2) ||శుభవేళ||\n\n3. యెహోవా షమ్మా – మాతో ఉన్నవాడా (2)\nమాతో ఉన్నవాడా – యెహోవా షమ్మా (2) ||శుభవేళ||\n\n4. యెహోవా షాలోం – శాంతి నొసగు వాడా (2)\nశాంతి నొసగువాడా – యెహోవా షాలోం (2) ||శుభవేళ||",
+      keywords: [
+        "shuba vela sthothra bali",
+        "shuba vela",
+        "suba vela",
+        "shubha vela",
+        "shubha veela",
+        "worship",
+        "2/4",
+      ],
+      video: "",
+      artist: "Anil Kumar",
+      genre: ["Worship"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -5317,15 +7427,53 @@ const songsData = {
         "Sruti chesi ne padeda",
         "sruthi",
         "sruthi chese ne padeda",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
   ],
   స: [
+    {
+      id: uuid.v4(),
+      title: "సదాకాలము నీతో నేను",
+      lyrics:
+        "సదాకాలము నీతో నేను జీవించెదను యేసయ్య\nయేసయ్యా యేసయ్యా యేసయ్యా యేసయ్యా (2)   ||సదాకాలము||\n\n1. పాపాల ఊభిలో పడియున్న నన్ను\nనీ ప్రేమతో నన్ను లేపావయ్యా (2)\nఏ తోడులేని నాకు నా తోడుగా\nనా అండగా నీవు నిలిచావయ్యా (2)     ||యేసయ్యా||\n\n2. నీ వాత్సల్యమును నాపై చూపించి\nనీ సాక్షిగా నన్ను నిలిపావయ్యా (2)\nఆశ్చర్యకార్యములు ఎన్నో చేసి\nనీ పాత్రగా నన్ను మలిచావయ్యా (2)    ||యేసయ్యా||",
+      keywords: [
+        "sadhaa kaalamu",
+        "Sadhakalamu",
+        "sadakalamu",
+        "sadakaalamu",
+        "Sadhaakaalamu",
+        "sadhaa kaalamu nitho nenu",
+        "Sadha kalamu netho nenu",
+        "sadha kalamu neetho nenu",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["General"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సన్నుతింతుమో ప్రభో",
+      lyrics:
+        "1. సన్నుతింతుమో ప్రభో\nసదమలమగు భక్తితో (2)\nకన్న తండ్రి కావుమా (2)\nకలుషము నెడబాపుమా     ||సన్నుతింతుమో||\n\n2. నీతి సూర్య తేజమా\nజ్యోతి రత్న రాజమా (2)\nపాతక జన రక్షకా (2)\nపతిత పావన నామకా     ||సన్నుతింతుమో||\n\n3. మానవ సంరక్షకా\nదీన నిచయ పోషకా (2)\nదేవా మానవ నందనా (2)\nదివ్య సుగుణ మందనా     ||సన్నుతింతుమో||\n\n4. ప్రేమ తత్వ బోధకా\nక్షేమ దాత వీవెగా (2)\nకామిత ఫలదాయక (2)\nస్వామి యేసు నాయక    ||సన్నుతింతుమో||\n\n5. పాప చింతలన్నిటిన్\nపారదోలుమో ప్రభో (2)\nనీ పవిత్ర నామమున్ (2)\nనిరతము స్మరియించెదన్     ||సన్నుతింతుమో||",
+      keywords: [
+        "sannuthinthumo prabho",
+        "sannuthinthumu prabhu",
+        "sannuthinthumo prabo",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "Bontha Samuyelu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
     {
       id: uuid.v4(),
       title: "సమయము పోనీయక సిద్ధపడుమా సంఘమా",
@@ -5341,33 +7489,30 @@ const songsData = {
         "samayamu pooniyaka",
         "samayamu pooniyyaka",
         "samayam pooniyaka",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "Jonah Samuel",
       genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
-      title: "సదాకాలము నీతో నేను",
+      title: "సమానులెవరు ప్రభో",
       lyrics:
-        "సదాకాలము నీతో నేను జీవించెదను యేసయ్య\nయేసయ్యా యేసయ్యా యేసయ్యా యేసయ్యా (2)   ||సదాకాలము||\n\n1. పాపాల ఊభిలో పడియున్న నన్ను\nనీ ప్రేమతో నన్ను లేపావయ్యా (2)\nఏ తోడులేని నాకు నా తోడుగా\nనా అండగా నీవు నిలిచావయ్యా (2)     ||యేసయ్యా||\n\n2. నీ వాత్సల్యమును నాపై చూపించి\nనీ సాక్షిగా నన్ను నిలిపావయ్యా (2)\nఆశ్చర్యకార్యములు ఎన్నో చేసి\nనీ పాత్రగా నన్ను మలిచావయ్యా (2)    ||యేసయ్యా||",
+        "సమానులెవరు ప్రభో\nనీ సమానులెవరు ప్రభో (2)\nసమానులెవరు ప్రభో\nసమస్త మానవ శ్రమాను భవమును (2)\nసహించి వహించి ప్రేమించగల నీ (2)  ||సమానులెవరో||\n\n1. సమాన తత్వము – సహోదరత్వము (2)\nసమంజసము గాను మాకు దెలుప (నీ) (2) ||సమానులెవరో||\n\n2. పరార్ధమై భవ – శరీర మొసగిన (2)\nపరోపకారా నరావ తారా (నీ) (2)   ||సమానులెవరో||\n\n3. దయా హృదయ యీ – దురాత్మ లెల్లరున్ (2)\nనయాన భయాన దయాన బ్రోవ (నీ) (2)   ||సమానులెవరో||\n\n4. ఓ పావనాత్ముడ – ఓ పుణ్య శీలుడ (2)\nపాపాత్ములను బ్రోవ – పరమాత్మ సుత (నీ) (2)   ||సమానులెవరో||",
       keywords: [
-        "sadhaa kaalamu",
-        "Sadhakalamu",
-        "sadakalamu",
-        "sadakaalamu",
-        "Sadhaakaalamu",
-        "sadhaa kaalamu nitho nenu",
-        "Sadha kalamu netho nenu",
-        "sadha kalamu neetho nenu",
-        "4/4"
+        "Samaanulevaro prabhu",
+        "samanulevaro prabhu",
+        "samanu levaro prabhu",
+        "samaanulevaro prabho",
+        "Samanulevaru prabho",
+        "samaanulevaro prabu",
       ],
       video: "",
-      artist: "",
-      genre: ["General"],
-      timeSignature: "4/4"
+      artist: "Chetti Bhanu Murthi",
+      genre: ["Andhra Christian Hymn", "General"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5401,27 +7546,91 @@ const songsData = {
         "Sarvaloka nivaasulaara",
         "Saarvalooka nivaasulaara",
         "saarvaloka nevaasulaara",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "Vijai Roy",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సర్వ చిత్తంబు నీదేనయ్యా",
+      lyrics:
+        "1. సర్వ చిత్తంబు నీదేనయ్యా\nస్వరూపమిచ్చు కుమ్మరివే (2)\nసారెపైనున్న మంటినయ్యా\nసరియైన పాత్రన్ చేయుమయ్యా\nసర్వేశ్వరా నే రిక్తుండను\nసర్వదా నిన్నే సేవింతును   ||సర్వ చిత్తంబు||\n\n2. ప్రభూ! సిద్ధించు నీ చిత్తమే\nప్రార్ధించుచుంటి నీ సన్నిధి (2)\nపరికింపు నన్నీ దివసంబున\nపరిశుభ్రమైన హిమము కన్నా\nపరిశుద్ధున్ జేసి పాలింపుమా\nపాపంబు పోవ నను కడుగుమా    ||సర్వ చిత్తంబు||\n\n3. నీ చిత్తమే సిద్ధించు ప్రభూ\nనిన్నే ప్రార్ధింతు నా రక్షకా (2)\nనీఛమౌ గాయముల చేతను\nనిత్యంబు కృంగి అలసియుండ\nనిజమైన సర్వ శక్తుండవే\nనీ చేత పట్టి నన్ రక్షింపుమా   ||సర్వ చిత్తంబు||\n\n4. ఆత్మ స్వరూప నీ చిత్తమే\nఅనిశంబు చెల్లు ఇహ పరమున (2)\nఅధికంబుగా నన్ నీ ఆత్మతో\nఆవరింపుమో నా రక్షకా\nఅందరు నాలో క్రీస్తుని జూడ\nఆత్మతో నన్ను నింపుము దేవా   ||సర్వ చిత్తంబు||",
+      keywords: [
+        "sarva chithambu",
+        "Sarva chitambu",
+        "sarvachittambu",
+        "Sarvachithambu",
+        "Sarva chitthambu",
+        "andhra christinan hymns",
+        "6/8",
+      ],
+      video: "",
+      artist: "A. Charles Kinsinger",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సాగిలపడి మ్రొక్కెదము",
+      lyrics:
+        "సాగిలపడి మ్రొక్కెదము సత్యముతో ఆత్మలో\nమన ప్రభు యేసుని ఆ ఆ ఆఆ (2)  ||సాగిలపడి||\n\n1. మోషేకంటే శ్రేష్టుడు\nఅన్ని మోసములనుండి విడిపించున్ (2)\nవేషధారులను ద్వేషించున్\nఆశతో మ్రొక్కెదము (2)  ||సాగిలపడి||\n\n2. అహరోనుకంటే శ్రేష్టుడు\nమన ఆరాధనకు పాత్రుండు (2)\nఆయనే ప్రధాన యాజకుడు\nఅందరము మ్రొక్కెదము (2)  ||సాగిలపడి||\n\n3. ఆలయముకన్న శ్రేష్టుడు\nనిజ ఆలయముగ తానే యుండెన్ (2)\nఆలయము మీరేయనెను\nఎల్లకాలము మ్రొక్కెదము (2)   ||సాగిలపడి||\n\n4. యోనా కంటె శ్రేష్టుడు\nప్రాణ దానముగా తన్ను అర్పించెన్ (2)\nమానవులను విమోచించెన్\nఘనపరచి మ్రొక్కెదము (2)  ||సాగిలపడి||\n\n5. సొలోమోను కన్న శ్రేష్ఠుడు\nసర్వజ్ఞానమునకు ఆధారుండు (2)\nపదివేలలో అతిప్రియుండు\nపదిలముగ మ్రొక్కెదము (2)  ||సాగిలపడి||\n\n6. రాజులకంటే శ్రేష్ఠుడు\nయాజకులనుగా మనలను చేసెన్ (2)\nరారాజుగ త్వరలో వచ్చున్\nరయముగను మ్రొక్కెదము (2)  ||సాగిలపడి||\n\n7. అందరిలో అతి శ్రేష్ఠుడు\nమనకందరికి తానే ప్రభువు (2)\nహల్లెలూయకు పాత్రుండు\nఅనుదినము మ్రొక్కెదము (2)  ||సాగిలపడి||",
+      keywords: [
+        "saagila padi mrokkedhamu",
+        "sagila padi mrokedhamu",
+        "sagila padi mokedhamu",
+        "sagilapadi mrokedhamu",
+        "Andhra Christian Hymn",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
       title: "సిద్ధపడుదాం సిద్ధపడుదాం మన దేవుని సన్నిధికై",
       lyrics:
-      "సిద్ధపడుదాం సిద్ధపడుదాం మన దేవుని సన్నిధికై\nసిద్ధపరచుదాం సిద్ధపరచుదాం మన హృదయము ప్రభు కొరకై (2) \n\nసిద్ధ మనస్సను జోడు తొడిగి – సమాధాన సువార్త\n చాటెదం – సమాధాన సువార్త చాటెదం\n\n1. ప్రతి ఉదయమున  ప్రార్ధనతో – నీ సన్నిధికి సిద్ధమౌదును \nజీవము కలిగిన వాక్కులకై – నీ సన్నిధిలో వేచి యుందును (2) ||సిద్ధ||\n\n2. సత్కార్యముకై సిద్ధపడి – పరిశుద్ధతతో నుందును  \nఅన్ని వేళలయందు ప్రభుయేసును – ఘనపరచి కీర్తింతును (2) ||సిద్ధ||\n\n3. బుద్ధిని కలిగి నీ రాకడకై – మెలకువతో నేనుందును \nనీ రాజ్య సువార్తను ప్రకటించి – ప్రతివారిని సిద్ధపరతును (2) ||సిద్ధ||",
+        "సిద్ధపడుదాం సిద్ధపడుదాం మన దేవుని సన్నిధికై\nసిద్ధపరచుదాం సిద్ధపరచుదాం మన హృదయము ప్రభు కొరకై (2) \n\nసిద్ధ మనస్సను జోడు తొడిగి – సమాధాన సువార్త\n చాటెదం – సమాధాన సువార్త చాటెదం\n\n1. ప్రతి ఉదయమున  ప్రార్ధనతో – నీ సన్నిధికి సిద్ధమౌదును \nజీవము కలిగిన వాక్కులకై – నీ సన్నిధిలో వేచి యుందును (2) ||సిద్ధ||\n\n2. సత్కార్యముకై సిద్ధపడి – పరిశుద్ధతతో నుందును  \nఅన్ని వేళలయందు ప్రభుయేసును – ఘనపరచి కీర్తింతును (2) ||సిద్ధ||\n\n3. బుద్ధిని కలిగి నీ రాకడకై – మెలకువతో నేనుందును \nనీ రాజ్య సువార్తను ప్రకటించి – ప్రతివారిని సిద్ధపరతును (2) ||సిద్ధ||",
       keywords: [
         "sidha padudham",
-        "sidda padudham", "sidda padidam", "sida padudham", "sida padudam", "siddha padudham", "sidha padudhaa",
-        "2/4"
+        "sidda padudham",
+        "sidda padidam",
+        "sida padudham",
+        "sida padudam",
+        "siddha padudham",
+        "sidha padudhaa",
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సిల్వ చెంత నేసువా",
+      lyrics:
+        "1. సిల్వ చెంత నేసువా\nచేర్చి నన్ను నుంచు\nకల్వరిన్ స్రవించెడు\nకల్వలో నన్నుంచు.\n\nసిల్వకే సిల్వకే\nచెల్లునా విముక్తి\nచెల్వ మొప్ప నద్దరిన్\nజేర నాకు ముక్తి \n\n2. కంపితాత్ము నంధునై\nకానలేక యుండ\nసొంపు మీరఁ బ్రోచితి\nసూర్యతేజ స్కుండ\n\n3. దేవ గొఱ్ఱె పిల్ల ఈన\nదీప్తి నాకుఁ జూపు\nనీ వధా ప్రభావముల్\nపావనుండ నేర్పు.\n\n4. నే నిరీక్షణంబుతో\nనెప్డు వేచి యుందున్\nభూ నితాంత వారధిన్\nబూని యీది మందున్",
+      keywords: [
+        "silva chentha nesuva",
+        "silvachentha",
+        "silvachenta",
+        "siluvachenta",
+        "siluvachentha",
+        "siva chenta nesuva",
+        "silva chenta neysuva",
+        "silva chentha neysuva",
+        "silva chentha neesuva",
+        "andhra christian hymn",
+        "6/8",
+      ],
+      video: "",
+      artist: "Alfred Thyagaraju Saamar",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -5438,12 +7647,32 @@ const songsData = {
         "siluvalo",
         "siluvaloo",
         "silvaloo",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
       genre: ["Lent"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సిలువ చెంత చేరిననాడు కలుషములను కడిగివేయున్",
+      lyrics:
+        "సిలువ చెంత చేరిననాడు\nకలుషములను కడిగివేయున్\nపౌలువలెను సీలవలెను\nసిద్ధపడిన భక్తులజూచి\n\n1. కొండలాంటి బండలాంటి\nమొండి హృదయంబు మండించు\nపండియున్న పాపులనైన\nపిలచుచుండే పరము చేర      ||సిలువ||\n\n2. వంద గొర్రెల మందలోనుండి\nఒకటి తప్పి ఒంటరియాయే\nతొంబది తొమ్మిది గొర్రెల విడిచి\nఒంటరియైన గొర్రెను వెదకెన్    ||సిలువ||\n\n3. తప్పిపోయిన కుమారుండు\nతండ్రిని విడచి తరలిపోయే\nతప్పు తెలిసి తిరిగిరాగా\nతండ్రియతని జేర్చుకొనియే     ||సిలువ||\n\n4. పాపి రావా పాపము విడచి\nపరిశుద్ధుల విందుల జేర\nపాపుల గతిని పరికించితివా\nపాతాళంబే వారి యంతము    ||సిలువ||",
+      keywords: [
+        "siluva chentha cherina vaadu",
+        "siluvachenta",
+        "siluvachenta",
+        "siluva chenta cherina vadu",
+        "silva chentha cherina vadu",
+        "siluvachentha cherina vadu",
+        "Andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5462,12 +7691,12 @@ const songsData = {
         "siluvalo saagindi",
         "siluvalosaagindhi",
         "seluvalo",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "",
       genre: ["Lent"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
     },
     {
       id: uuid.v4(),
@@ -5485,12 +7714,46 @@ const songsData = {
         "siluve na seranaayenu",
         "seluve na saranaayenu",
         "seluva na saranaayenu",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
-      genre: ["Lent"],
-      timeSignature: "4/4"
+      genre: ["Andhra Christian Hymn", "Lent"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సీయోనుకన్యా",
+      lyrics:
+        "సీయోనుకన్యా – సంభ్రమపడుచు - వేయుము కేకల్ = పాయక నీ రాజు = భారవాహక మెక్కి - బాలస్తోత్రములతో - బైలుదేరి వచ్చె ||సీయోను||\n\n1. హెబ్రాయిలోను - నీ రాజు పేరు – యూదులరాజు = హెబ్రీయ జనులను -అబ్రాము కొడుకులను - విభవదేశము జేర్చు - శుభరాజు యీతండే ||సీయోను||\n\n2. హెల్లేనీలోను - నీ రాజు పేరు – యూదులరాజే = యెల్లపాపులఁ బ్రోచు -తాల్మిరక్షకుఁడితఁడు - చల్లని ప్రభువని - గొల్గొత మ్రోగెను ||సీయోను||\n\n3. ఉర్వి రోమాలో - నీ రాజు పేరు - యూదులరాజే = సర్వరాష్ట్రికులకు -బూర్వపితరులతోను - వరసింహాసన మిచ్చు - వరదేశాధిపుఁ డితఁడు ||సీయోను||\n\n4. వాసిగ హెబ్రీ - హెల్లేనీలో రోమాయిలోను = హోసన్నా హోసన్నా- ప్రభుని పేరట వచ్చు - మెస్సీయ్యదావీదు - కొడుకా శ్రీశుభములు ||సీయోను||",
+      keywords: [
+        "siyonu kanya",
+        "seyonu kanya",
+        "siyyonu kanya",
+        "siyonukanya",
+        "andhra christian hymn",
+        "7/8",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "7/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "సీయోను పాటలు సంతోషముగా",
+      lyrics:
+        "సీయోను పాటలు సంతోషముగా\nపాడుచు సీయోను వెల్లుదము (2)\n\n1. లోకాన శాశ్వతానందమేమియు\nలేదని చెప్పెను ప్రియుడేసు (2)\nపొందవలె నీ లోకమునందు\nకొంతకాలమెన్నో శ్రమలు (2)       ||సీయోను||\n\n2. ఐగుప్తును విడచినట్టి మీరు\nఅరణ్యవాసులే ఈ ధరలో (2)\nనిత్యనివాసము లేదిలలోన\nనేత్రాలు కానానుపై నిల్పుడి (2)   ||సీయోను||\n\n3. మారాను పోలిన చేదైన స్థలముల\nద్వారా పోవలసియున్ననేమి (2)\nనీ రక్షకుండగు యేసే నడుపును\nమారని తనదు మాట నమ్ము (2) ||సీయోను||\n\n4. ఐగుప్తు ఆశలనన్నియు విడిచి\nరంగుగ యేసుని వెంబడించి (2)\nపాడైన కోరహు పాపంబుమాని\nవిధేయులై విరాజిల్లుడి (2)          ||సీయోను||\n\n5. ఆనందమయ పరలోకంబు మనది\nఅక్కడనుండి వచ్చునేసు (2)\nసీయోను గీతము సొంపుగ కలసి\nపాడెదము ప్రభుయేసుకు జై (2)   ||సీయోను||",
+      keywords: [
+        "siyonu paatalu santhoshamuga",
+        "siyonu patalu santhoshamuga",
+        "Andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5506,17 +7769,35 @@ const songsData = {
         "sudhoramu ee payanamu",
         "sudhuram ee payanamu",
         "suduuramu",
-        "6/8"
+        "6/8",
       ],
       video: "",
       artist: "Surya Prakash Injarapu",
       genre: ["General"],
-      timeSignature: "6/8"
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "సృష్టిపితా సర్వోన్నతా",
+      lyrics:
+        "సృష్టిపితా సర్వోన్నతా సమర్పింతున్ సర్వస్వమున్\n\n1. భూమి ఆకాశము నీవే భూధర శిఖరములు నీవే భూ ప్రజలు నీవారే\nబలశౌర్యములు నీవే ||సృష్టి||\n\n2. మా వెండి బంగారములు నీవే మాకున్న వరములు నీవే మా దేహముల్\nమా గేహముల్ మా జీవితము నీవే ||సృష్టి||\n\n3. వెలలేని గాలి వెలుతురులు విలువైన పాడి పైరులు వివిధంబులైన\nదీవెనలు నీ కరుణా వర్షములు ||సృష్టి||\n\n4. పరిశుద్ధ గ్రంథపు పలుకులు పాలోక తేనె చినుకులు ప్రభు యేసుని\nమాటలు మా వెల్గు బాటలు ||సృష్టి||\n\n5. మాదంత నీదే మహా దేవా మా రాజువయ్యా యెహోవా మా తనువుల్\nమా బ్రతుకుల్ మా యావదాస్తి నీవే ||సృష్టి||\n\n6. మేమిచ్చు కాన్క యేపాటిది? యే ప్రేమ నీకు సాటిది? మోక్ష నాధా\nయేసుప్రభో అంగీకరించువిభో ||సృష్టి||\n\n7. తండ్రి కుమార శుద్ధాత్ముడా త్రియేక దేవ స్తోత్రముల్ దాత వీవే నేతవీవే\nదేవాది దేవుండవే ||సృష్టి||",
+      keywords: [
+        "srusti pitha sarvonnatha",
+        "srusti petha sarvoatha",
+        "Srusti pitha sarvnatha",
+        "andhra christian hymn",
+        "3/4",
+      ],
+      video: "",
+      artist: "D. V. Daniel",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
       title: "స్తుతి స్తుతి నా యేసుకే",
-      lyrics: "",
+      lyrics:
+        "స్తుతి స్తుతి నా యేసునికే - ఎల్లలు లేని ప్రేమకై\nషరతులులేని క్షమాపణకై - ఎన్నడు మారని దేవునికే\n\nహల్లెలూయా హల్లెలూయా హల్లెలూయా హల్లెలూయా (2)\n\nఅన్ని నామముల కంటెను - ఉన్నతమౌ యేసు నామమును\nకీర్తించెదను ఘనపరచెదను ఆరాధించెదను\n\n1. మోషే కంటే శ్రేష్టుడు - అబ్రహాము కంటె ముందున్నవాడు (2)\nసొలోమోనుకంటె జ్ఞానవంతుడు అద్వితియ సత్యదేవుడు (2)  ||హల్లెలూయా||\n\n2. మరణము మీద అధికారి - పాపదాస్యపు పరిహారి (2)\nయేసు అందరి ఉపకారి - ఆ యేసె మంచి కాపరి (2)  ||హల్లెలూయా||",
       keywords: [
         "sthuthi sthuthi",
         "stuti",
@@ -5524,27 +7805,28 @@ const songsData = {
         "sthuti",
         "worship",
         "sthuthi",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
       title: "స్తుతికి పాత్రుడా స్తోత్రార్హుడా",
-      lyrics: "",
+      lyrics:
+        "స్తుతికి పాత్రుడా - స్తోత్రార్హుడా\nఘనత నీకేనయ్య - మహోన్నతుడైన రాజు (2)\n\nఆరాధనా ఆరాధనా \nహల్లెలూయా హల్లెలూయా \nసదా పాడెద నా యేసుకే ఆరాధన\nస్తుతి పాడుచు కొనసాగెద జీవితాంతము (2)\n\n1. యుగముక పూర్వము నుండి\nసర్వయుగముల వరకు\nఆది అంతము లేని ఆధ్యంతరహితుడవు (2)\nవున్నవాడనువాడవ్వు - మారని ప్రేమకు వందనము ||ఆరాధనా ||\n\n2. ప్రేమను ధ్వజముచే - మమ్మునాదరించావు\nక్రీస్తును ఘటకముచే - మమ్ము చూచుచున్నావు\nయేసునందున్న మమ్ములను - నూతన సృష్టిగా చేశావు ||ఆరాధనా||",
       keywords: [
         "sthuthiki paathruda",
         "stutiki pathruda",
         "sthutiki paatruda",
-        "3/4"
+        "3/4",
       ],
       video: "",
       artist: "",
       genre: ["Worship"],
-      timeSignature: "3/4"
+      timeSignature: "3/4",
     },
     {
       id: uuid.v4(),
@@ -5560,12 +7842,12 @@ const songsData = {
         "sthuthulu chellintumu",
         "sthutulu chellinthumu",
         "stuthulu chellinthumu",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -5580,12 +7862,12 @@ const songsData = {
         "sevakulaara",
         "sevakularaa",
         "savakulara",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
       genre: ["Pastors"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5599,12 +7881,12 @@ const songsData = {
         "soolipovaladhu",
         "soolipovaladho",
         "solipovaladu",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5621,7 +7903,23 @@ const songsData = {
       video: "",
       artist: "",
       genre: ["Worship"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "స్తోత్రము స్తుతి స్తోత్రము వేలాది వందనాలు",
+      lyrics:
+        "స్తోత్రము స్తుతి స్తోత్రము\nవేలాది వందనాలు\nకలుగును గాక నీకే మహిమ\nఎల్లప్పుడూ స్తుతి స్తోత్రము\nయేసయ్య యేసయ్య యేసయ్య (4)\n\n1. శూన్యము నుండి సమస్తము కలుగజేసెను\nనిరాకారమైన నా జీవితమునకు రూపము నిచ్చెను\nయేసే నా సర్వము\nయేసే నా సమస్తము  ||యేసయ్య||\n\n2. పరము నుండి భూమికి దిగివచ్చిన యేసు\nసిలువ మరణమునొంది మార్గము తెరిచెను\nయేసే నా రక్షణ\nయేసే నా నిరీక్షణ   ||యేసయ్య||",
+      keywords: [
+        "sthothramu sthuthi sthothramu",
+        "sthoothram sthuthi sthoothram",
+        "stotram stuti stotram",
+        "2/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["General"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -5638,12 +7936,119 @@ const songsData = {
         "sharonsisters",
         "santosha vastram",
         "santosa vastram",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Sharon Sisters",
       genre: ["General"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సంతోషముతో నిచ్చెడు వారిని",
+      lyrics:
+        "సంతోషముతో నిచ్చెడు వారిని\nనెంతో దేవుడు ప్రేమించెన్\nవింతగ వలసిన-దంతయు నొసంగును\nవినయ మనసుగల విశ్వాసులకును  ||సంతోషముతో||\n\n1. అత్యాసక్తితో నధిక ప్రేమతో\nనంధకార జను-లందరకు\nసత్య సువార్తను జాటించుటకై\nసతతము దిరిగెడు సద్భక్తులకు    ||సంతోషముతో||\n\n2. వేద వాక్యమును వేరు వేరు గ్రా\nమాదుల నుండెడు బాలురకు\nసాధులు ప్రభుని సు-బోధలు నేర్పెడి\nసజ్జన క్రైస్తవోపాధ్యాయులకు    ||సంతోషముతో||\n\n3. దిక్కెవ్వరు లేకుండెడి దీనుల\nతక్కువ లన్నిటి దీర్చుటకై\nనిక్కపు రక్షణ – నిద్ధరలో నలు\nప్రక్కలలో బ్రక-టించుట కొరకై    ||సంతోషముతో||\n\n4. ఇయ్యండీ మీ కీయం బడు నని\nయియ్యంగల ప్రభు యే-సనెను\nఇయ్యది మరువక మదిని నుంచుకొని\nయియ్యవలెను మన యీవుల నికను    ||సంతోషముతో||\n\n5. భక్తి గలిగి ప్రభు పని కిచ్చుఁట బహు\nయుక్త మటంచు ను-దారతతో\nశక్తి కొలది మన భుక్తి నుండి యా\nశక్తితో నిరతము నియ్య వలెను    ||సంతోషముతో||",
+      keywords: [
+        "Santhoshamutho nichedu vaarini",
+        "santhoshamuto nichedu varini",
+        "andhra christian hymns",
+        "4/4",
+      ],
+      video: "",
+      artist: "Mocharla Raghavayya",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సంతోషించుడి యందరు నాతో సంతోషించుడి",
+      lyrics:
+        "సంతోషించుడి యందరు నాతో సంతోషించుడి\nయొక వింతగు కీర్తన బాడ వచ్చితిని\nసంతోషించుడి నాతో సంతోషించుడి    ||సంతోషించుడి||\n\n1. అంధకార మయమైన భూమి నా\nద్యంతము వెలిగింప – దాని యా-వేశము దొలఁగింప\nవందితుండు క్రీస్తేసు నాథుడు – వచ్చె బ్రకాశుండై\nభూమికి నిచ్చె ప్రకాశంబు   ||సంతోషించుడి||\n\n2. కాన నంధకారంబు దొలఁగఁ ప్ర\nకాశించెను లెండు – మీరు ప్ర-కాశింపను రెండు\nమానవులను సంతోష పర్చనై – మహిని నవతరించె\nభక్తుల మనము సంతసించె    ||సంతోషించుడి||\n\n3. మిన్ను నుండి సంతోషోదయము\nమిగుల ప్రకాశించె – హృదయములఁ – దగుల ప్రకాశించె\nమున్ను జేయబడిన వాగ్ధత్థము – తిన్నగ నెరవేరే\nభక్తుల కన్ను లాస దీరె    ||సంతోషించుడి||\n\n4. ప్రీతియైన నీ పండుగ గూర్చి\nనూతన కీర్తనను – గలసికొని – నాతో పాడుచును\nనీ తరి దూరస్థుల-కీ వార్తను – నే తీరును నైనఁ\nదెలుపఁగ నాతురపడవలెను    ||సంతోషించుడి||\n\n5. పాపులపై దేవునికి గలిగిన\nప్రబలమైన దయను – లోకమునఁ – జూపింపఁ గవలెను\nజూపక పోయిన లోపము మనపై – మోపబడును నిజము\nవేగము జూపుద మా పథము  ||సంతోషించుడి||",
+      keywords: [
+        "santhoshinchudi yandharu natho",
+        "santhoshinchudi andharu natho",
+        "santoshinchudi yandaru nato",
+        "Andhra Christian Hymn",
+        "Christmas",
+        "4/4",
+      ],
+      video: "",
+      artist: "Mocharla Raghavayya",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సర్వదేశములారా",
+      lyrics:
+        "సర్వదేశములారా శ్రీ యేసే దేవుండు ఉర్వి నుత్సాహముతో\nగురుస్తోత్రము జేయను రండి ||సర్వ||\n\n1. ఆ ప్రభువే దేవుండు అధికస్తోత్రార్హుండు భూప్రజలు నందరిని\nబుట్టించిన భగవంతుండు ||సర్వ||\n\n2. మనము దేవుని వార మును మరి యాయన ప్రజల మనయము నా\nఘనప్రభువు నెనరుతో మేపెడి గొఱ్ఱెలము ||సర్వ|| \n\n3. కృతజ్ఞతార్పణలు కొల్లగను జెల్లింప నాతని యావరణములో నతి\nవినయముతోఁజేరండి ||సర్వ||\n\n4. ఆయన దయామయుఁడు ఆయన కృపామయుఁడు ఆయన ప్రేమ\nసత్యం బనవరతం బుండును నిజమే ||సర్వ||\n\n5. శుభనామం మదినుంచి ప్రభునామం స్తుతియించి ఘననామం బతిభక్తిన్\nఅనయము గొలువుడి జనులారా ||సర్వ||",
+      keywords: [
+        "sarvaadhesamulara",
+        "sarva dhesamulaara",
+        "Sarvadhesamulara",
+        "Sarvadheesamulaara",
+        "andhra christian hymn",
+        "andhra kraisthava keerthana",
+        "andhra christian songs",
+        "4/4",
+      ],
+      video: "",
+      artist: "Sarella Samyuyelu Subbayya",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సర్వశక్తుని స్తోత్రగానము",
+      lyrics:
+        "సర్వశక్తుని స్తోత్రగానము\nసల్పరే జగమెల్లను\nనిర్వహించును దాస భారము\nనిత్యమెద రాజిల్లను (2)    ||సర్వ||\n\n1. ముదముతో నిర్మానకుండగు\nమూల కర్తను బాడరే\nవదన మీక్ష్మాన్వoచి దేవుని\nవందనముతో వేడరే (2)   ||సర్వ||\n\n2. వేదపారాయణము సేయుచు\nవిశ్వమంత జయింపరే\nసాదరముగా దేవు నిక మీ\nస్వాoతమున బూజింపరే (2)  ||సర్వ||\n\n3. ఎదను విశ్రాంతిన్ పరేశుని\nహెచ్చుఁగా నుతి జేయరే\nసదమలంబగు భక్తితో మీ\nసర్వ మాయన కీయరే (2)  ||సర్వ||\n\n4. చావు పుట్టుక లేనివాడుగ\nసంతతము జీవించును\nఈవులిచ్చుచు దన్ను వేడు మ-\nహేష్టులను రక్షించును (2)   ||సర్వ||\n\n5. దాసులై దేవునికి నెదలో\nదర్పమును బోగాల్పరే\nయేసుక్రీస్తుని పుణ్య వస్త్రము\nనే మరక మైదాల్పరే (2)  ||సర్వ||",
+      keywords: [
+        "Sarva shakthuni sthothra gaanamu",
+        "Sarva shakthuni stothraganamu",
+        "sarva shakthuni sthorthraganamu",
+        "andhra christian hymn",
+      ],
+      video: "",
+      artist: "Mikkili Samuyelu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "3/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "సాక్ష్యమిచ్చెద మన స్వామి యేసు దేవుడంచు",
+      lyrics:
+        "సాక్ష్యమిచ్చెద మన స్వామి యేసు దేవుడంచు\nసాక్ష్యమనగా గనిన వినిన సంగతులను దెల్పుటయే (2)\nసాక్ష్య మిచ్చు కొరకు నన్ను స్వామి రక్షించె నంచు    ||సాక్ష్య||\n\n1. దిక్కు దెసయు లేని నన్ను దేవుడెంతో కనికరించి (2)\nమక్కువతో నాకు నెట్లు మనశ్శాంతి నిచ్చినడో     ||సాక్ష్య||\n\n2. పల్లెటూళ్ళ జనుల రక్షణ భారము నా పైని గలదు (2)\nపిల్లలకును బెద్దలకును బ్రేమతో నా స్వానుభవము  ||సాక్ష్య||\n\n3. బోధ చేయలేను వాద ములకు బోను నాక దేల (2)\nనాధు డేసు ప్రభుని గూర్చి నాకు దెలసినంత వరకు    ||సాక్ష్య||\n\n4. పాపులకును మిత్రుడంచు బ్రాణ మొసగి లేచెనంచు (2)\nబాపముల క్షమించు నంచు బ్రభుని విశ్వసించు డంచు  ||సాక్ష్య||\n\n5. చోరు లైన జారు లనా చారు లైన నెవ్వరైన (2)\nఘోరపాపు లైన క్రీస్తు కూర్మితో రక్షించు నంచు    ||సాక్ష్య||\n\n6. పరమత దూషణము లేల పరిహసించి పలుకు టేల (2)\nఇరుగు పొరుగు వారి కెల్ల యేసు క్రీస్తు దేవు డంచు   ||సాక్ష్య||\n\n7. ఎల్లకాల మూరకుండ నేల యాత్మ శాంతి లేక (2)\nతల్లడిల్లు వారలకును తండ్రి కుమా రాత్మ పేర   ||సాక్ష్య||",
+      keywords: [
+        "sakshya michedha",
+        "sakshyamidhedha",
+        "sakshamichedha",
+        "sakshamicheda",
+        "andhra christian hymn",
+        "6/8",
+      ],
+      video: "",
+      artist: "Mallela Dhaveedhu",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "6/8",
+    },
+    {
+      id: uuid.v4(),
+      title: "సుందర రక్షకా! సృష్టియొక్క నాధా",
+      lyrics:
+        "1. సుందర రక్షకా! సృష్టియొక్క నాధా \nదేవమానవ పుత్రుఁడా నిన్నుఁ బ్రేమింతున్ \nసదా సేవింతున్ మదాత్మతోఁ గిరీటమా. \n\n2. మైదాన మంతయుఁ పచ్చిక బయళ్లు \nనొప్పగఁ బూచుచున్నవి ఐనను యేసుతో \nనాయన కాంతిలో దుఃఖములేనివారము. \n\n3. సూర్యుని కాంతియుఁ చంద్రుని శాంతియు \nఎంతో శ్రేష్ఠమైయున్నవి. అట్లవి యున్న \nఅన్నిటి కన్న యేసుని కాంతి గొప్పది. \n\n4. ఆనంద రక్షకా! ప్రజల నాధుఁడా \nదేవమానవ పుత్రుఁడా మహిమ, ఘనత \nస్తుతి, యారాధన నిరంతరంబు నీకగున్.",
+      keywords: [
+        "sundhara rakshakaa",
+        "sundhara rakshaka",
+        "sundara rakshaka",
+        "sundara rakshakaa",
+        "sundhararakshaka",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
     {
       id: uuid.v4(),
@@ -5662,15 +8067,36 @@ const songsData = {
         "sundharuda athisayuda",
         "sundaruda atisayuda",
         "sundaruda athisauda",
-        "4/4"
+        "4/4",
       ],
       video: "",
       artist: "Sounds of Zion",
       genre: ["Worship"],
-      timeSignature: "4/4"
+      timeSignature: "4/4",
     },
   ],
   హ: [
+    {
+      id: uuid.v4(),
+      title: "హాయి, లోకమా! ప్రభువచ్చెన్",
+      lyrics:
+        "1. హాయి, లోకమా! ప్రభువచ్చెన్\nఅంగీకరించుమీ\nపాపాత్ములెల్ల రేసునున్\nకీర్తించి పాడుఁడీ.\n\n2. హాయి రక్షకుండు ఏలును\nసాతాను రాజ్యమున్\nనశింపఁజేసి మా యేసే\nజయంబు నొందును.\n\n3. పాప దుఃఖంబులెల్లను\nనివృత్తిఁ జేయును\nరక్షణ్య సుఖక్షేమముల్\nసదా వ్యాపించును.\n\n4. సునీతి సత్యకృపలన్\nరాజ్యంబు నేలును\nభూజనులార మ్రొక్కుడీ\nస్తోత్రార్హుఁడాయెనే.",
+      keywords: [
+        "hayi lokama prabhu vachen",
+        "hai lokama prabhu vachen",
+        "hai lokama",
+        "hailokama",
+        "hayilokama",
+        "joy to the world",
+        "andhra christian hymn",
+        "christmas",
+        "4/4",
+      ],
+      video: "",
+      artist: "Jacob Charles",
+      genre: ["Andhra Christian Hymn", "Christmas"],
+      timeSignature: "4/4",
+    },
     {
       id: uuid.v4(),
       title: "హల్లెలూయా ఆరాధన రాజాధి రాజు యేసునకే",
@@ -5687,12 +8113,30 @@ const songsData = {
         "jk christopher",
         "jkchristopher",
         "worship",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "Sharon Sisters",
       genre: ["Worship", "General"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "హల్లెలూయా యేసు ప్రభున్ ఎల్లరు స్తుతియించుడి",
+      lyrics:
+        "హల్లెలూయా యేసు ప్రభున్ ఎల్లరు స్తుతియించుడి\nవల్లభుని చర్యలను తిలకించి స్తుతియించుడి\nబలమైన పని చేయు బలవంతుని స్తుతియించుడి\nఎల్లరిని స్వీకరించు యేసుని స్తుతియించుడి\n\nరాజుల రాజైన యేసు రాజు భూజనులనేలున్\nహల్లెలూయా, హల్లెలూయా దేవుని స్తుతియించుడి\n\n1. తంబురతోను వీణతోను ప్రభువుని స్తుతియించుడి\nపాపమును రక్తముతో తుడిచెను స్తుతియించుడి\nబూరతోను తాళముతో మ్రోగించి స్తుతియించుడి\nనిరంతరము మారని యేసుని స్తుతియించుడి  ||రాజుల||\n\n2. సూర్య చంద్రులారా ఇల దేవుని స్తుతియించుడి\nహృదయమును వెలిగించిన యేసుని స్తుతియించుడి\nఅగ్నివడగండ్లార మీరు  కర్తను స్తుతియించుడి\nహృదయమును చేధించిన నాథుని స్తుతియించుడి  ||రాజుల||\n\n3. యువకులారా పిల్లలారా దేవుని స్తుతియించుడి\nజీవితమున్ ప్రభుపనికై సమర్పించి స్తుతియించుడి\nపెద్దలారా ప్రభువులారా యెహోవాను స్తుతియించుడి\nఆస్తులను యేసునకై అర్పించి స్తుతియించుడి     ||రాజుల||\n\n4. అగాథమైన జలములారా దేవుని స్తుతియించుడి\nఅలలవలె సేవకులు లేచిరి స్తుతియించుడి\nదూతలారా పూర్వ భక్తులారా దేవుని స్తుతియించుడి\nపరమందు పరిశుద్ధులు ఎల్లరు స్తుతియించుడి   ||రాజుల||",
+      keywords: [
+        "halleluya yesu prabun",
+        "halleluya yesuprabhun",
+        "halleluyaa yesu prabun",
+        "haleluya yesu prabhun",
+        "worship",
+        "2/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Worship", "General"],
+      timeSignature: "2/4",
     },
     {
       id: uuid.v4(),
@@ -5713,12 +8157,30 @@ const songsData = {
         "hallelooa sthuthi",
         "haleluya stuti",
         "worship",
-        "2/4"
+        "2/4",
       ],
       video: "",
       artist: "",
       genre: ["Worship"],
-      timeSignature: "2/4"
+      timeSignature: "2/4",
+    },
+    {
+      id: uuid.v4(),
+      title: "హే ప్రభుయేసు",
+      lyrics:
+        "హే ప్రభుయేసు హే ప్రభుయేసు హే ప్రభు దేవసుతా\nసిల్వధరా – పాపహరా – శాంతికరా  ||హే ప్రభు||\n\n1. శాంతి సమాధానాధిపతీ\nస్వాంతములో ప్రశాంతనిధీ (2)\nశాంతి స్వరూపా జీవనదీపా (2)\nశాంతి సువార్తనిధీ  ||సిల్వధరా||\n\n2. తపములు తరచిన నిన్నెగదా\nజపములు గొలిచిన నిన్నెగదా (2)\nవిఫలులు చేసిన విజ్ఞాపనలకు (2)\nసఫలత నీవెగదా   ||సిల్వధరా||\n\n3. మతములు వెదకిన నిన్నెకదా\nవ్రతములుగోరిన నిన్నేగదా (2)\nపతితులు దేవుని సుతులని నేర్పిన (2)\nహితమతి వీవెగదా ||సిల్వధరా||\n\n4. పలుకులలో నీ శాంతికధ\nతొలకరి వానగా కురిసెగదా (2)\nమలమల మాడిన మానవ హృదయము (2)\nకలకలలాడె కదా  ||సిల్వధరా||\n\n5. కాననతుల్య సమాజములో\nహీనత జెందెను మానవత (2)\nమానవ మైత్రిని సిల్వ పతాకము (2)\nదానము జేసెగదా  ||సిల్వ ధరా||\n\n6. దేవుని బాసిన లోకములో\nచావుయే కాపురముండె గదా (2)\nదేవునితో సఖ్యంబును జగతికి (2)\nయీవి నిడితివి గదా  ||సిల్వ ధరా||\n\n7. పాపము చేసిన స్త్రీని గని\nపాపుల కోపము మండె గదా (2)\nదాపున జేరి పాపిని బ్రోచిన (2)\nకాపరి వీవెగదా   ||సిల్వ ధరా||\n\n8. ఖాళీ సమాధిలో మరణమును\nఖైదిగ జేసిన నీవే గదా (2)\nఖలమయుడగు సాతానుని గర్వము (2)\nఖండనమాయె గదా   ||సిల్వ ధరా||\n\n9. కలువరిలో నీ శాంతి సుధా\nసెలయెరుగ బ్రవహించే గదా (2)\nకలుష ఎడారిలో కలువలు పూయుట (2)\nసిలువ విజయము గదా   ||సిల్వ ధరా||",
+      keywords: [
+        "hey prabhu yesu",
+        "he prabhu yesu",
+        "hey prabu yeesu",
+        "hey prabhu yeesu",
+        "andhra christian hymn",
+        "4/4",
+      ],
+      video: "",
+      artist: "",
+      genre: ["Andhra Christian Hymn"],
+      timeSignature: "4/4",
     },
   ],
 };

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { TouchableOpacity } from "react-native";
-import { View, Text, Image, FlatList, StyleSheet, Linking } from "react-native";
+import { View, Text, FlatList, StyleSheet, Linking } from "react-native";
 import uuid from "react-native-uuid";
-import Icon from "react-native-vector-icons/Ionicons";
 import {
   Poppins_300Light,
   Poppins_300Light_Italic,
@@ -105,11 +104,22 @@ function HorizontalCards() {
     },
     {
       id: uuid.v4(),
+      title: "Font Size, Add to Favorites & Video Song option on Lyrics Screen",
+      teluguTitle: "Font Size, Add to Favorites & Video Song option on Lyrics Screen",
+      text: "On the top of Lyrics Screen, you will see the Font Size, 🤍 button and Video Song button. You can adjust font size according to your convinience, can add the lyrics to favorites by pressing 🤍 and see in the Favorites Screen, and for reference, you can view the video song.",
+      teluguText:
+        "లిరిక్స్ స్క్రీన్ పైభాగంలో, మీరు ఫాంట్ సైజు, 🤍 బటన్‌ మరియు వీడియో సాంగ్ బటన్‌ను చూస్తారు. మీరు మీ అనుకూలత ప్రకారం అక్షరాల పరిమాణాన్ని మార్చుకోవచ్చు, ఇష్టమైన పాట ను Add to Favorites లో చూసుకోవడానికి 🤍 ను నొక్కండి మరియు Favorites స్క్రీన్‌లో చూడవచ్చు. వీడియో సాంగ్ బటన్ నొక్కితే YouTube లో ఆ పాట వస్తుంది.",
+      image: "",
+      link: "",
+      buttonName: "",
+    },
+    {
+      id: uuid.v4(),
       title: "Menu Option on Lyrics Screen",
       teluguTitle: "Menu Option on Lyrics Screen",
-      text: "In the Lyrics Screen, there is a Menu option, right side of the song title. When you press it, you will see the options for Add to Favorite, Font Size, Video Song option, and Song Details",
+      text: "In the Lyrics Screen, there is a Menu option (︙), right side of the song title. When you press it, you will see the Song Details like Genre, Time Signature, Artist.",
       teluguText:
-        "Lyrics స్క్రీన్‌లో, పాట టైటిల్‌లో మెనూ ఆప్షన్, కుడి పక్కన ఉంటుంది. మీరు దాన్ని నొక్కినప్పుడు, ఆ పాటను like చెయ్యచ్చు, అక్షరాల పరిమాణం ని మీ అనుకూలతను బట్టి సర్దుకోవచ్చు, వీడియో సాంగ్ బటన్ నొక్కితే YouTube లో ఆ పాట వస్తాది మరియు పాట వివరాల కనిపిస్తాయి.",
+        "Lyrics స్క్రీన్‌లో, పాట పేరుకి కుడి ప్రక్కన మెనూ ఆప్షన్ (︙) ఉంటుంది. మీరు దాన్ని నొక్కినప్పుడు, పాట వివరాల కనిపిస్తాయి.",
       image: "",
       link: "",
       buttonName: "",
@@ -118,9 +128,9 @@ function HorizontalCards() {
       id: uuid.v4(),
       title: "Add to Favorites",
       teluguTitle: "Add to Favorites",
-      text: "You can add the lyrics to the Favorites section and later view them without searching for the song. 'Add to Favorite' is there in Lyrics Screen Options.",
+      text: "You can add the lyrics to the Favorites section and later view them without searching for the song. 🤍 is there in Lyrics Screen Options.",
       teluguText:
-        "మీకు ఇష్టమైన పాటని Favorites లో సేవ్ చేసుకుని తరువాత చూసుకోవచ్చు.",
+        "మీకు ఇష్టమైన పాటని Favorites లో సేవ్ చేసుకుని తరువాత చూసుకోవడానికి 🤍 ని నొక్కండి.",
       image: "",
       link: "",
       buttonName: "",
