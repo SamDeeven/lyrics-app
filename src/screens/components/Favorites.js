@@ -41,7 +41,7 @@ const Favorites = ({ navigation }) => {
 
   useEffect(() => {
     loadFavorites();
-  }, [])
+  }, [favorites])
 
   const loadFavorites = async () => {
     try {

@@ -128,7 +128,7 @@ function HorizontalCards() {
       id: uuid.v4(),
       title: "Add to Favorites",
       teluguTitle: "Add to Favorites",
-      text: "You can add the lyrics to the Favorites section and later view them without searching for the song. 🤍 is there in Lyrics Screen Options.",
+      text: "You can add the lyrics to the Favorites section and later view them without searching for the song. 🤍 is there on the top of Lyrics Screen.",
       teluguText:
         "మీకు ఇష్టమైన పాటని Favorites లో సేవ్ చేసుకుని తరువాత చూసుకోవడానికి 🤍 ని నొక్కండి.",
       image: "",
