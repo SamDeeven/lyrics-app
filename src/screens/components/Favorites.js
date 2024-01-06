@@ -39,9 +39,9 @@ import { MaterialIcons } from "@expo/vector-icons";
 const Favorites = ({ navigation }) => {
   const [favorites, setFavorites] = useState([]);
 
-  useEffect(() => {
-    loadFavorites();
-  }, [favorites])
+  // useEffect(() => {
+  //   loadFavorites();
+  // }, [favorites])
 
   const loadFavorites = async () => {
     try {
@@ -89,11 +89,11 @@ const Favorites = ({ navigation }) => {
     }
   };
  
-  // useFocusEffect(
-  //   useCallback(() => {
-  //     loadFavorites();
-  //   }, [])
-  // );
+  useFocusEffect(
+    useCallback(() => {
+      loadFavorites();
+    }, [])
+  );
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
     Poppins_100Thin_Italic,
