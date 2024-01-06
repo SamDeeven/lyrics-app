@@ -2,7 +2,7 @@
   "expo": {
     "name": "Vinnu Lyrics App",
     "slug": "lyrics",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "orientation": "portrait",
     "icon": "./assets/app-icon.png",
     "userInterfaceStyle": "light",
@@ -26,7 +26,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.samdeeven.lyrics",
-      "versionCode": 8
+      "versionCode": 9
     },
     "web": {
       "favicon": "./assets/app-icon.png"

@@ -36,6 +36,9 @@ const About = () => {
     <TouchableOpacity style={styles.youtubeContainer} onPress={() => Linking.openURL("https://www.youtube.com/@SamDeeven/featured")}>
       <Text style={styles.youtubeText}>Open YouTube Channel</Text>
     </TouchableOpacity>
+    <Text></Text>
+    <Text></Text>
+    <Text style={{color:"blue", width:120}}>App Version 1.0.8</Text>
     </View>
     </ScrollView>
     </SafeAreaView>

@@ -23,7 +23,7 @@ const Contact = () => {
             }}
           >
             If you find any mistakes in the lyrics or if you need any song
-            lyrics in this app, kindly mail us
+            lyrics in this app, kindly mail us.
           </Text>
           <Text
             style={{
@@ -34,7 +34,7 @@ const Contact = () => {
             }}
           >
             ఒకవేళ ఎదైన పాటలో మీరు తప్పులు గమనిస్తే లేదా ఎదైన పాట మీకు ఈ ఆప్ లో
-            కావలి అంటే mail చెయ్యండి
+            కావలి అంటే mail చెయ్యండి.
           </Text>
           <View style={{ marginTop: 30 }}>
             <Icon

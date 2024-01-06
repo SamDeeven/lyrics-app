@@ -269,14 +269,14 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 25,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
-    fontSize: 16,
+    fontSize: 17,
   },
   closeBtn: {
     position: "absolute",
     margin: 12,
     paddingTop: 4,
     right: 10,
-    bottom: 4,
+    bottom:9,
   },
   micIcon: {
     paddingTop: 6,
@@ -296,13 +296,14 @@ const styles = StyleSheet.create({
   },
   suggestionItem: {
     paddingHorizontal: 25,
-    margin: 3,
-    padding: 10,
-    borderWidth: 0.7,
-    borderRadius: 15,
+    margin: 4,
+    padding: 14,
+    borderColor:"#218F76",
+    borderWidth: 0.8,
+    borderRadius: 16,
   },
   suggestionText: {
-    fontSize: 16,
+    fontSize: 19,
   },
   alphabetContainer: {
     justifyContent: "center",
