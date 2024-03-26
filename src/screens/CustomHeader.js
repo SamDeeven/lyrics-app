@@ -20,7 +20,7 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
           onPress={() => navigation.goBack()}
           style={styles.backButton}
         >
-          <Icon style={{}} name="chevron-back-sharp" size={30} />
+          <Icon style={{marginTop:-7}} name="chevron-back-sharp" size={30} />
         </TouchableOpacity>
       ) : (
         <View style={styles.menuOption}>
@@ -59,6 +59,15 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
                 >
                   <Text style={styles.menuItemsBtnText}>Favorites</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate("RecentlyViewed");
+                    setShowOptions(!showOptions);
+                  }}
+                  style={styles.menuItemsBtn}
+                >
+                  <Text style={styles.menuItemsBtnText}>Recently Viewed</Text>
+                </TouchableOpacity>
               </View>
             </View>
           ) : (
@@ -75,7 +84,7 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
           onPress={() => navigation.navigate("Home")}
           style={styles.homeButton}
         >
-          <Icon style={{}} name="home-sharp" size={30} />
+          <Icon style={{marginTop:-15}} name="home-sharp" size={30} />
         </TouchableOpacity>
       )}
     </View>
@@ -88,7 +97,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#02B290",
-    height: 60,
+    height: 40,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     paddingHorizontal: 15,
@@ -97,7 +106,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     backgroundColor: "#02B290",
-    height: 60,
+    height: 42,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     paddingHorizontal: 16,
@@ -106,6 +115,7 @@ const styles = StyleSheet.create({
     fontSize: 27,
     fontFamily: "Poppins_800ExtraBold",
     color: "black",
+    marginTop:-7
     // flex:1.6
   },
   homeHeader: {
@@ -114,17 +124,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1.5,
+    marginTop:-7
   },
   menuOption: {
     flex: 1,
+    marginTop:-7
+
   },
   menuContainer: {
     backgroundColor: "#ECF0F1",
-    width: 200,
+    borderWidth:1,
+    borderColor:"#53E0BC",
+    width: 250,
     position: "absolute",
     left: 0,
-    top: 65,
-    height: 200,
+    top: 48,
+    height: 290,
     flexDirection: "column",
     justifyContent: "space-evenly",
     borderTopLeftRadius: 30,

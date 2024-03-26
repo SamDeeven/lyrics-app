@@ -2,25 +2,17 @@ import uuid from "react-native-uuid";
 
 
 const data = [
+ 
+ 
   {
     id: uuid.v4(),
-    title: "",
-    lyrics: "",
-    keywords: [],
+    title: "యోగ్యుడవో యోగ్యుడవో యేసు ప్రభో నీవే యోగ్యుడవో",
+    lyrics: "యోగ్యుడవో యోగ్యుడవో యేసు ప్రభో నీవే యోగ్యుడవో\nమరణము గెలిచిన యోధుడవో నా జీవితమున పూజ్యుడవో\n\n1. సృష్టికర్తవు నిర్మాణకుడవు జీవనదాతా జీవించువాడవు\nశిరమును వంచి కరములు జోడించి స్తుతియించెద నిను యేసుప్రభో\n\n2. గొఱ్ఱెపిల్లవై యాగమైతివి సిలువయందే పాపమైతివె\nశిరమును వంచి కరములు జోడించి సేవించెద నిను యేసు ప్రభో\n\n3. స్నేహితుడవై నన్నిల కోరితివి విడువక నన్ను ఆదుకొంటివి\nశిరమును వంచి కరములు జోడించి భజియించెద నిను యేసుప్రభో",
+    keywords: ["yogyudavo", "yogyudavu", "ogyudavu", "yoogudavu"],
     video: "",
     artist: "",
-    genre: [],
-    timeSignature: "",
-  },
-  {
-    id: uuid.v4(),
-    title: "",
-    lyrics: "",
-    keywords: [],
-    video: "",
-    artist: "",
-    genre: [],
-    timeSignature: "",
+    genre: ["General"],
+    timeSignature: "4/4",
   },
   {
     id: uuid.v4(),

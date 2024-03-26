@@ -32,6 +32,7 @@ import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import alphabetData from "../../../data/songsData.js";
 import { Picker } from "@react-native-picker/picker";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const TitlesList = () => {
   const [selectedGenre, setSelectedGenre] = useState("All");
@@ -82,9 +83,27 @@ const TitlesList = () => {
     return ["All", ...new Set(genres)];
   };
 
-  const handleTitlePress = (item) => {
-    navigation.navigate("Lyrics", { titleItem: item });
+  const handleTitlePress = async (item) => {
+    try {
+      const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+      let recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) : [];
+
+      const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+
+      if (existingIndex !== -1) {
+        recentlyViewed.splice(existingIndex, 1);
+      }
+
+      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; 
+      await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
+
+      navigation.navigate("Lyrics", { titleItem: item });
+    } catch (error) {
+      console.error("Error handling recently viewed items:", error);
+    }
   };
+ 
+  
 
   return (
     <View style={[styles.container]}>

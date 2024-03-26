@@ -15,6 +15,7 @@ import About from "./src/screens/components/About";
 import CustomHeader from "./src/screens/CustomHeader";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Favorites from "./src/screens/components/Favorites";
+import RecentlyViewed from "./src/screens/components/RecentlyViewed";
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
               },
               headerTitleAlign: "center",
               cardStyle: { backgroundColor: "#CAD5E2" },
+             
             }}
           />
 
@@ -153,6 +155,21 @@ const App = () => {
             component={Favorites}
             options={{
               header: () => <CustomHeader title="Favorites" showBackButton={true} showHomeButton={true}/>,
+              animationEnabled:false,
+              headerTitleAlign: "center",
+              headerStyle: {
+                backgroundColor: "#02B290",
+                borderBottomWidth: 2,
+                height: 70,
+              },
+              cardStyle: { backgroundColor: "#ECF0F1" },
+            }}
+          />
+           <Stack.Screen
+            name="RecentlyViewed"
+            component={RecentlyViewed}
+            options={{
+              header: () => <CustomHeader title="RecentlyViewed" showBackButton={true} showHomeButton={true}/>,
               animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -7,96 +7,63 @@ import {
   StyleSheet,
   SafeAreaView,
   ScrollView,
-  Image,
   Alert,
+  Image,
 } from "react-native";
-import { useFocusEffect } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { MaterialIcons } from "@expo/vector-icons";
-import { Poppins_700Bold_Italic } from "@expo-google-fonts/poppins";
-import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
+import { debounce } from "lodash";
 import { Picker } from "@react-native-picker/picker";
+import { MaterialIcons } from "@expo/vector-icons";
 
-const Favorites = ({ navigation }) => {
-  const [favorites, setFavorites] = useState([]);
+const RecentlyViewed = () => {
+  const navigation = useNavigation();
+  const [isRefresh, setIsRefresh] = useState(false);
+  const [recentlyViewed, setRecentlyViewed] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("All");
-  const [filteredFavorites, setFilteredFavorites] = useState([]);
+  const [filteredRecentlyViewed, setFilteredRecentlyViewed] = useState([]);
 
-  const loadFavorites = async () => {
-    try {
-      const favoritesString = await AsyncStorage.getItem("favorites");
-      const favoritesData = favoritesString ? JSON.parse(favoritesString) : [];
-      setFavorites(favoritesData);
-      filterFavoritesByGenre(selectedGenre, favoritesData);
-    } catch (error) {
-      console.error("Error loading favorites:", error);
-    }
-  };
+  useEffect(() => {
+    const loadRecentlyViewed = async () => {
+      try {
+        const recentlyViewedString = await AsyncStorage.getItem(
+          "recentlyViewed"
+        );
+        const recentlyViewedData = recentlyViewedString
+          ? JSON.parse(recentlyViewedString)
+          : [];
+        setRecentlyViewed(recentlyViewedData);
+        filterRecentlyViewedByGenre(selectedGenre, recentlyViewedData); // Apply initial filter
+      } catch (error) {
+        console.error("Error loading recently viewed items:", error);
+      }
+    };
 
-  const filterFavoritesByGenre = (genre, data) => {
+    loadRecentlyViewed();
+  }, []);
+
+  const filterRecentlyViewedByGenre = (genre, data) => {
     setSelectedGenre(genre);
     const filteredSongs =
       genre === "All"
-        ? data || favorites
-        : (data || favorites).filter(
+        ? data || recentlyViewed
+        : (data || recentlyViewed).filter(
             (song) => song.genre && song.genre.includes(genre)
           );
 
-    setFilteredFavorites(filteredSongs);
+    setFilteredRecentlyViewed(filteredSongs);
   };
 
   const getUniqueGenres = () => {
-    const genres = favorites.flatMap((song) => song.genre || []);
+    const genres = recentlyViewed.flatMap((song) => song.genre || []);
     return ["All", ...new Set(genres)];
   };
 
-  const handleRemoveFavorite = async (id) => {
-    try {
-      const updatedFavorites = favorites.filter((song) => song.id !== id);
-      await AsyncStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-      setFavorites(updatedFavorites);
-      filterFavoritesByGenre(selectedGenre, updatedFavorites);
-    } catch (error) {
-      console.error("Error removing favorite:", error);
-    }
-  };
-
-  const handleTitlePress = async (item) => {
-    console.log("handleTitlePress called for item:", item);
-
-    try {
-      let recentlyViewed = [];
-      let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
-      recentlyViewed = recentlyViewedString
-        ? JSON.parse(recentlyViewedString) || []
-        : [];
-
-      const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
-
-      if (existingIndex !== -1) {
-        recentlyViewed.splice(existingIndex, 1);
-      }
-
-      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)];
-      await AsyncStorage.setItem(
-        "recentlyViewed",
-        JSON.stringify(recentlyViewed)
-      );
-
-      console.log("Updated recentlyViewed:", recentlyViewed);
-
-      navigation.navigate("Lyrics", { titleItem: item });
-    } catch (error) {
-      console.error("Error handling recently viewed items:", error);
-    }
-  };
-
-  const clearAllFavorites = async () => {
+  const handleClearAllRecentlyViewed = async () => {
     try {
       Alert.alert(
-        "Clear All Favorites",
-        "Are you sure you want to clear all favorites?",
+        "Clear All",
+        "Are you sure you want to clear all recently viewed items?",
         [
           {
             text: "Cancel",
@@ -106,36 +73,56 @@ const Favorites = ({ navigation }) => {
             text: "OK",
             style: "destructive",
             onPress: async () => {
-              await AsyncStorage.removeItem("favorites");
-              setFavorites([]);
-              setFilteredFavorites([]);
+              await AsyncStorage.removeItem("recentlyViewed");
+              setRecentlyViewed([]);
+              setFilteredRecentlyViewed([]);
             },
           },
         ],
         { cancelable: false }
       );
     } catch (error) {
-      console.error("Error clearing favorites:", error);
+      console.error("Error clearing recently viewed items:", error);
     }
   };
 
-  useFocusEffect(
-    useCallback(() => {
-      loadFavorites();
-    }, [])
-  );
+  const handleTitlePress = async (item) => {
+    try {
+      const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+      let recentlyViewed = recentlyViewedString
+        ? JSON.parse(recentlyViewedString)
+        : [];
 
-  const [fontsLoad] = useFonts({
-    Poppins_700Bold_Italic,
+      const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+
+      if (existingIndex !== -1) {
+        recentlyViewed.splice(existingIndex, 1);
+      }
+
+      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; // Limit to 10 items
+      await AsyncStorage.setItem(
+        "recentlyViewed",
+        JSON.stringify(recentlyViewed)
+      );
+
+      navigation.navigate("Lyrics", { titleItem: item });
+    } catch (error) {
+      console.error("Error handling recently viewed items:", error);
+    }
+  };
+
+  const pullRefresh = debounce(() => {
+    if (!isRefresh) {
+      setIsRefresh(true);
+    }
+    setTimeout(() => {
+      setIsRefresh(false);
+    });
   });
-
-  if (!fontsLoad) {
-    return <AppLoading />;
-  }
 
   return (
     <View style={styles.container}>
-      {filteredFavorites.length === 0 ? (
+      {filteredRecentlyViewed.length === 0 ? (
         <SafeAreaView>
           <ScrollView>
             <View>
@@ -162,7 +149,7 @@ const Favorites = ({ navigation }) => {
               dropdownIconRippleColor={"#049372"}
               selectedValue={selectedGenre}
               onValueChange={(itemValue) =>
-                filterFavoritesByGenre(itemValue, favorites)
+                filterRecentlyViewedByGenre(itemValue, recentlyViewed)
               }
               style={styles.picker}
             >
@@ -178,7 +165,7 @@ const Favorites = ({ navigation }) => {
           </View>
           <View style={styles.clearButtonContainer}>
             <TouchableOpacity
-              onPress={clearAllFavorites}
+              onPress={handleClearAllRecentlyViewed}
               style={styles.clearButton}
             >
               <Text style={styles.clearButtonText}>Clear All</Text>
@@ -187,8 +174,8 @@ const Favorites = ({ navigation }) => {
           </View>
           <SafeAreaView>
             <FlatList
-              data={filteredFavorites}
-              keyExtractor={(item) => item.id}
+              data={filteredRecentlyViewed}
+              keyExtractor={(item) => item.id.toString()}
               renderItem={({ item }) => (
                 <View style={styles.favoriteItem}>
                   <TouchableOpacity
@@ -210,19 +197,10 @@ const Favorites = ({ navigation }) => {
                       <Text style={styles.artist}>Artist: {item.artist}</Text>
                     )}
                   </TouchableOpacity>
-                  <TouchableOpacity
-                    onPress={() => handleRemoveFavorite(item.id)}
-                    style={styles.removeButtonContainer}
-                  >
-                    <MaterialIcons
-                      style={styles.removeButton}
-                      name="delete-forever"
-                      size={26}
-                      color="black"
-                    />
-                  </TouchableOpacity>
                 </View>
               )}
+              refreshing={isRefresh}
+              onRefresh={pullRefresh}
             />
           </SafeAreaView>
         </View>
@@ -320,4 +298,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Favorites;
+export default RecentlyViewed;

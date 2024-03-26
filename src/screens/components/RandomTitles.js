@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import songsData from '../../../data/songsData';
 import {debounce} from 'lodash';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const RandomTitles = ({navigation}) => {
   const [isRefresh, setIsRefresh] = useState(false);
@@ -21,8 +22,24 @@ const RandomTitles = ({navigation}) => {
     
       const randomTitles = generateRandomTitles();
     
-      const handleTitlePress = (item) => {
-        navigation.navigate('Lyrics', { titleItem: item });
+      const handleTitlePress = async (item) => {
+        try {
+          const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+          let recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) : [];
+    
+          const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+    
+          if (existingIndex !== -1) {
+            recentlyViewed.splice(existingIndex, 1);
+          }
+    
+          recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; // Limit to 10 items
+          await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
+    
+          navigation.navigate("Lyrics", { titleItem: item });
+        } catch (error) {
+          console.error("Error handling recently viewed items:", error);
+        }
       };
 
       const pullRefresh = debounce(() => {

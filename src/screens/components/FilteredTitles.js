@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import alphabetData from "../../../data/songsData.js";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const FilteredTitles = ({ route, navigation }) => {
 
@@ -19,8 +20,6 @@ const FilteredTitles = ({ route, navigation }) => {
     Object.keys(alphabetData).forEach((alphabet) => {
       alphabetData[alphabet].forEach((item) => {
         if (
-          // item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-
           (item.keywords &&
             item.keywords.some((kw) =>
               kw.toLowerCase().startsWith(searchQuery.toLowerCase())
@@ -32,12 +31,33 @@ const FilteredTitles = ({ route, navigation }) => {
     });
 
     setMatchingTitles(matchingTitlesArray);
-    // console.log("Matching Titles==> ", matchingTitlesArray);
   }, [searchQuery]);
   
-  const handleTitlePress = (item) => {
-    // console.log("FilteredTitles.js:", item);
-    navigation.navigate("Lyrics", { titleItem: item });
+  const handleTitlePress = async (item) => {
+    console.log("handleTitlePress called for item:", item); 
+
+    try {
+      let recentlyViewed = [];
+      let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+      recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) || [] : []; 
+
+      // Update recentlyViewed
+      const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+
+      if (existingIndex !== -1) {
+        recentlyViewed.splice(existingIndex, 1); 
+      }
+
+      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; 
+
+      await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
+
+      console.log("Updated recentlyViewed:", recentlyViewed); 
+
+      navigation.navigate("Lyrics", { titleItem: item });
+    } catch (error) {
+      console.error("Error handling recently viewed items:", error);
+    }
   };
 
   return (
@@ -58,20 +78,19 @@ const FilteredTitles = ({ route, navigation }) => {
                 >
                   <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>{item.title}</Text>
                   {item.genre && item.genre.length > 0 && (
-                <Text style={styles.genre}>
-                  Genre: {item.genre.join(" | ")}
-                </Text>
-              )}
-              {item.timeSignature && (
-                <Text style={styles.timeSignature}>
-                  Time Signature: {item.timeSignature}
-                </Text>
-              )}
-              {item.artist && (
-                <Text style={styles.artist}>Artist: {item.artist}</Text>
-              )}
+                    <Text style={styles.genre}>
+                      Genre: {item.genre.join(" | ")}
+                    </Text>
+                  )}
+                  {item.timeSignature && (
+                    <Text style={styles.timeSignature}>
+                      Time Signature: {item.timeSignature}
+                    </Text>
+                  )}
+                  {item.artist && (
+                    <Text style={styles.artist}>Artist: {item.artist}</Text>
+                  )}
                 </TouchableOpacity>
-                
               </View>
             )}
             keyExtractor={(item) => item.id.toString()}
@@ -119,7 +138,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#049372",
     borderRadius: 5,
     padding: 3,
-    // paddingTop:2,
     paddingLeft:5,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
@@ -147,7 +165,6 @@ const styles = StyleSheet.create({
     fontSize: 100,
     color: "black",
   },
-
 });
 
 export default FilteredTitles;
