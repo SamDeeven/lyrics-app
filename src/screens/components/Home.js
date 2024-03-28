@@ -166,8 +166,10 @@ console.log(`Total number of objects: ${totalObjects}`);
         keyboardShouldPersistTaps={"handled"}
         nestedScrollEnabled={true}
       >
-        {/* <TouchableWithoutFeedback onPress={handleTapOutside && clearSuggestions}> */}
+        <TouchableWithoutFeedback onPress={handleTapOutside && clearSuggestions}>
         <View style={[styles.topContainer]}>
+        <Text style={{textAlign:"center"}}>Total Songs: {totalObjects}</Text>
+
           <View style={styles.inputBoxContainer}>
             <View style={{ flexDirection: "row" }}>
               <TextInput
@@ -244,7 +246,7 @@ console.log(`Total number of objects: ${totalObjects}`);
             <HorizontalCards />
           </View>
         </View>
-        {/* </TouchableWithoutFeedback> */}
+        </TouchableWithoutFeedback>
       </ScrollView>
     </SafeAreaView>
   );

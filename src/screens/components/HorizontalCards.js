@@ -135,7 +135,17 @@ function HorizontalCards() {
       link: "",
       buttonName: "",
     },
-    
+    {
+      id: uuid.v4(),
+      title: "Recently Viewed",
+      teluguTitle: "Recently Viewed",
+      text: "You can view recently viewed lyrics. It makes easy to track all the recently viewed lyrics",
+      teluguText:
+        "",
+      image: "",
+      link: "",
+      buttonName: "",
+    },
     
   ];
 
