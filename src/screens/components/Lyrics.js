@@ -38,35 +38,37 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
 
 const Lyrics = () => {
-  const [fontSize, setFontSize] = useState(18);
+  const [fontSize, setFontSize] = useState(20);
   const [isFavorite, setIsFavorite] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
-  const [selectedButton, setSelectedButton] = useState(18); 
+  const [selectedButton, setSelectedButton] = useState(18);
+  const [titleItem, setTitleItem] = useState(null);
 
   const route = useRoute();
-  const { titleItem } = route.params;
+  // const { titleItem } = route.params;
+
+  useEffect(() => {
+    setTitleItem(route.params.titleItem);
+    checkFavorite(route.params.titleItem); 
+  }, [route.params.titleItem]);
 
   const closeOptions = () => {
     setShowOptions(false);
   };
 
-  useEffect(() => {
-    const checkFavorite = async () => {
-      try {
-        const favoritesString = await AsyncStorage.getItem("favorites");
-        let favorites = favoritesString ? JSON.parse(favoritesString) : [];
-        const isSongFavorite = favorites.some(
-          (song) => song.id === titleItem.id
-        );
-        setIsFavorite(isSongFavorite);
-      } catch (error) {
-        console.error("Error checking favorites:", error);
-      }
-    };
+  const checkFavorite = async (item) => {
+    if (!item) return;
+    try {
+      const favoritesString = await AsyncStorage.getItem("favorites");
+      const favorites = favoritesString ? JSON.parse(favoritesString) : [];
+      const isSongFavorite = favorites.some((song) => song.id === item.id);
+      setIsFavorite(isSongFavorite);
+    } catch (error) {
+      console.error("Error checking favorites:", error);
+    }
+  };
 
-    checkFavorite();
-  }, [titleItem.id]);
 
   const [fontsLoad] = useFonts({
     Poppins_100Thin,
@@ -96,12 +98,11 @@ const Lyrics = () => {
   const handleFontSize = (size) => {
     let newFontSize = fontSize;
 
-    if(size === "increase" && newFontSize < 34){
+    if (size === "increase" && newFontSize < 32) {
       newFontSize += 2;
-    }else if(size === "decrease" && newFontSize > 8){
+    } else if (size === "decrease" && newFontSize > 10) {
       newFontSize -= 2;
-    }
-    else if(size === "reset"){
+    } else if (size === "reset") {
       newFontSize === fontSize;
     }
     setFontSize(newFontSize);
@@ -109,9 +110,8 @@ const Lyrics = () => {
   };
 
   const resetFontSize = () => {
-    setFontSize(18);
-    
-  }
+    setFontSize(20);
+  };
   const handleVideoButton = () => {
     if (titleItem.video) {
       const videoLink = Linking.openURL(titleItem.video);
@@ -124,6 +124,7 @@ const Lyrics = () => {
   };
 
   const handleFavoriteButton = async () => {
+    if (!titleItem) return;
     try {
       const favoritesString = await AsyncStorage.getItem("favorites");
       let favorites = favoritesString ? JSON.parse(favoritesString) : [];
@@ -137,49 +138,45 @@ const Lyrics = () => {
         favorites = [titleItem, ...favorites];
         setIsFavorite(true);
       }
+
       await AsyncStorage.setItem("favorites", JSON.stringify(favorites));
-      setFavorites(favorites);
     } catch (error) {
       console.error("Error handling favorites:", error);
     }
   };
+
+  
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row", marginTop:5 }}>
+      <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
         <View style={styles.buttonContainer}>
-         
           <TouchableOpacity
             style={[styles.button, fontSize === "decrease"]}
             onPress={() => handleFontSize("decrease")}
           >
-            <Icon name="remove-circle" size={20} color="white"/>
-
+            <Icon name="remove-circle" size={20} color="white" />
           </TouchableOpacity>
-           <TouchableOpacity
-            style={[styles.button]}
-            onPress={resetFontSize}
-          >
-            <Icon name="refresh-outline" size={20} color="white"/>
+          <TouchableOpacity style={[styles.button]} onPress={resetFontSize}>
+            <Icon name="refresh-outline" size={20} color="white" />
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.button]}
             onPress={() => handleFontSize("increase")}
           >
-            <Icon name="add-circle" size={20} color="white"/>
+            <Icon name="add-circle" size={20} color="white" />
           </TouchableOpacity>
-        </View>
-        <View style={{ flexDirection: "row", justifyContent:"center", marginBottom:-10 }}>
-        {titleItem.video && (
-          <View>
-            <TouchableOpacity
-              style={styles.videoBtn}
-              onPress={handleVideoButton}
-            >
-              <Icon name="logo-youtube" size={50} color="red"/>
-            </TouchableOpacity>
-          </View>
-        )}
-        <View>
+
+          {titleItem.video && (
+            <View>
+              <TouchableOpacity
+                style={styles.videoBtn}
+                onPress={handleVideoButton}
+              >
+                <Icon name="logo-youtube" size={50} color="red" />
+              </TouchableOpacity>
+            </View>
+          )}
+
           <TouchableOpacity
             style={styles.favButtonContainer}
             onPress={handleFavoriteButton}
@@ -191,9 +188,84 @@ const Lyrics = () => {
               style={styles.favButton}
             />
           </TouchableOpacity>
+
+          <View style={styles.options}>
+            <TouchableOpacity onPress={() => setShowOptions(!showOptions)}>
+              {showOptions ? (
+                <Icon style={{ fontSize: 40 }} name="close-circle-sharp" />
+              ) : (
+                <Icon name="information-circle-outline" size={40} />
+              )}
+            </TouchableOpacity>
+            {showOptions && (
+              <View style={styles.optionsDropdown}>
+                <LinearGradient
+                  start={{ x: 0.5, y: 1 }}
+                  end={{ x: 1.5, y: 0 }}
+                  colors={[
+                    "#85FFBD",
+                    "#FFFB7D",
+                    "#B5FFFC",
+                    "#2AF598",
+                    "#84fab0",
+                    "#8fd3f4",
+                  ]}
+                  style={styles.gradient}
+                >
+                  <View style={styles.optionTextContainer}>
+                    {titleItem.genre && titleItem.genre.length > 0 && (
+                      <Text style={styles.genre}>
+                        Genre: {titleItem.genre.join(" | ")}
+                      </Text>
+                    )}
+                    {titleItem.timeSignature && (
+                      <Text style={styles.timeSignature}>
+                        Time Signature: {titleItem.timeSignature}
+                      </Text>
+                    )}
+                    {titleItem.artist && (
+                      <Text style={styles.artist}>
+                        Artist: {titleItem.artist}
+                      </Text>
+                    )}
+                  </View>
+                </LinearGradient>
+              </View>
+            )}
+          </View>
         </View>
-      </View>
-        <View style={styles.options}>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            marginBottom: -10,
+          }}
+        >
+          {/* {titleItem.video && (
+          <View>
+            <TouchableOpacity
+              style={styles.videoBtn}
+              onPress={handleVideoButton}
+            >
+              <Icon name="logo-youtube" size={50} color="red"/>
+            </TouchableOpacity>
+          </View>
+        )} */}
+          <View>
+            {/* <TouchableOpacity
+            style={styles.favButtonContainer}
+            onPress={handleFavoriteButton}
+          >
+            <Icon
+              name={isFavorite ? "heart" : "heart-outline"}
+              size={45}
+              color={isFavorite ? "red" : "black"}
+              style={styles.favButton}
+            />
+          </TouchableOpacity> */}
+          </View>
+        </View>
+        {/* <View style={styles.options}>
           <TouchableOpacity onPress={() => setShowOptions(!showOptions)}>
             {showOptions ? (
               <Icon style={{ fontSize: 30 }} name="close-circle-sharp" />
@@ -236,18 +308,23 @@ const Lyrics = () => {
               </LinearGradient>
             </View>
           )}
-        </View>
+        </View> */}
       </View>
-     
 
       <Text style={styles.title}>{titleItem.title}</Text>
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={styles.lyricsContainer}>
           <TouchableWithoutFeedback onPress={closeOptions}>
-            <View style={{marginTop:5}}>
+            <View style={{ marginTop: 5 }}>
               {titleItem.lyrics ? (
                 titleItem.lyrics.split("\n").map((lyric, index) => (
-                  <Text key={index} style={[styles.song, { fontSize, lineHeight: fontSize+8 }]}>
+                  <Text
+                    key={index}
+                    style={[
+                      styles.song,
+                      { fontSize, lineHeight: fontSize + 8 },
+                    ]}
+                  >
                     {lyric}
                   </Text>
                 ))
@@ -279,9 +356,9 @@ const styles = StyleSheet.create({
     // marginTop: 8,
     // backgroundColor: "#E21717",
     // padding: 5,
-    width: 65,
+    width: 55,
     borderRadius: 15,
-    marginBottom: 10,
+    marginBottom: 4,
     alignSelf: "center",
   },
   videoBtnText: {
@@ -293,22 +370,26 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
   },
   options: {
-    position: "absolute",
+    // position: "absolute",
     zIndex: 1,
-    top: 12,
-    right: 25,
-    alignItems: "flex-end",
-    flex: 0.1,
+    marginTop:8,
+    // top: 12,
+    // right: -40,
+    // alignItems: "flex-end",
+    // flex: 0.1,
   },
   optionsDropdown: {
-    width: 310,
+       position: "absolute",
+         top: 50,
+         right:-15,
+    width: 300,
     padding: 8,
     borderRadius: 18,
   },
   optionTextContainer: {
     flex: 1,
     marginBottom: 10,
-    height: 105,
+    height: 100,
     justifyContent: "center",
     marginBottom: 12,
     paddingHorizontal: 5,
@@ -330,18 +411,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     marginHorizontal: 10,
-    flex: 0.8,
+    // flex: 0.8,
   },
   button: {
     backgroundColor: "#02B290",
     padding: 7,
-    margin:10,
+    margin: 10,
     borderTopLeftRadius: 14,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 14,
     borderWidth: 1,
-    borderColor:"#02B290",
+    borderColor: "#02B290",
     marginTop: 8,
   },
   buttonText: {
@@ -358,12 +439,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold",
     marginBottom: 5,
+    height:30,
     marginTop: 0,
     color: "brown",
     width: 280,
   },
   lyricsContainer: {
-    
     paddingTop: 5,
     flexGrow: 1,
   },

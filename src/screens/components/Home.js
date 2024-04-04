@@ -25,22 +25,16 @@ import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import Icon from "react-native-vector-icons/Ionicons";
 import HorizontalCards from "./HorizontalCards.js";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
   const [isKeyboardActive, setIsKeyboardActive] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const navigation = useNavigation();
- 
-  let totalObjects = 0;
 
-for (const key in alphabetData) {
-  if (Array.isArray(alphabetData[key])) {
-    totalObjects += alphabetData[key].length;
-  }
-}
-console.log(`Total number of objects: ${totalObjects}`);
 
+  
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
@@ -85,10 +79,10 @@ console.log(`Total number of objects: ${totalObjects}`);
       alphabetData[alphabet].forEach((item) => {
         if (
           // item.title.toLowerCase().includes(inputSearch.toLowerCase()) ||
-          (item.keywords &&
-            item.keywords.some((kw) =>
-              kw.toLowerCase().startsWith(inputSearch.toLowerCase())
-            ))
+          item.keywords &&
+          item.keywords.some((kw) =>
+            kw.toLowerCase().startsWith(inputSearch.toLowerCase())
+          )
         ) {
           matchingSuggestions.push(item.title);
         }
@@ -124,7 +118,7 @@ console.log(`Total number of objects: ${totalObjects}`);
     }
   };
 
-  const handleSuggestionPress = (suggestion) => {
+  const handleSuggestionPress = async (suggestion) => {
     const matchingTitlesArray = [];
 
     Object.keys(alphabetData).forEach((alphabet) => {
@@ -142,8 +136,34 @@ console.log(`Total number of objects: ${totalObjects}`);
     });
 
     if (matchingTitlesArray.length > 0) {
-      navigation.navigate("Lyrics", { titleItem: matchingTitlesArray[0] });
-      setInputSearch("");
+      const item = matchingTitlesArray[0];
+      try {
+        let recentlyViewed = [];
+        let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+        recentlyViewed = recentlyViewedString
+          ? JSON.parse(recentlyViewedString)
+          : [];
+
+        // Update recentlyViewed
+        const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+
+        if (existingIndex !== -1) {
+          recentlyViewed.splice(existingIndex, 1);
+        }
+
+        recentlyViewed = [item, ...recentlyViewed.slice(0, 9)];
+
+        await AsyncStorage.setItem(
+          "recentlyViewed",
+          JSON.stringify(recentlyViewed)
+        );
+
+        console.log("Updated recentlyViewed:", recentlyViewed);
+
+        navigation.navigate("Lyrics", { titleItem: item });
+      } catch (error) {
+        console.error("Error handling recently viewed items:", error);
+      }
     }
   };
 
@@ -166,86 +186,87 @@ console.log(`Total number of objects: ${totalObjects}`);
         keyboardShouldPersistTaps={"handled"}
         nestedScrollEnabled={true}
       >
-        <TouchableWithoutFeedback onPress={handleTapOutside && clearSuggestions}>
-        <View style={[styles.topContainer]}>
-        <Text style={{textAlign:"center"}}>Total Songs: {totalObjects}</Text>
+        <TouchableWithoutFeedback
+          onPress={handleTapOutside && clearSuggestions}
+        >
+          <View style={[styles.topContainer]}>
+            <View style={styles.inputBoxContainer}>
+              <View style={{ flexDirection: "row", position:"relative" }}>
+                <Icon name="search-outline" size={30} style={{position: "absolute",zIndex:1, left:18, top:20 }}/>
+                <TextInput
+                  style={styles.searchInput}
+                  placeholder="పాటను వెతకండి"
+                  textAlign="center"
+                  value={inputSearch}
+                  onChangeText={(text) => {
+                    setInputSearch(text);
+                  }}
+                  onSubmitEditing={handleSearch}
+                  maxLength={30}
+                  selectionColor={"brown"}
+                  backgroundColor="white"
+                  onFocus={() => setIsKeyboardActive(true)}
+                />
+              </View>
 
-          <View style={styles.inputBoxContainer}>
-            <View style={{ flexDirection: "row" }}>
-              <TextInput
-                style={styles.searchInput}
-                placeholder="Search Song / పాటను వెతకండి"
-                textAlign="center"
-                value={inputSearch}
-                onChangeText={(text) => {
-                  setInputSearch(text);
-                }}
-                onSubmitEditing={handleSearch}
-                maxLength={30}
-                selectionColor={"brown"}
-                backgroundColor="white"
-                onFocus={() => setIsKeyboardActive(true)}
-              />
+              {isKeyboardActive && inputSearch && (
+                <Icon
+                  onPress={clearText}
+                  style={styles.closeBtn}
+                  name="close-sharp"
+                  size={30}
+                />
+              )}
+
+              {suggestions.length > 0 && (
+                <ScrollView
+                  nestedScrollEnabled={true}
+                  style={styles.suggestionContainer}
+                >
+                  {suggestions.map((suggestion) => (
+                    <TouchableOpacity
+                      key={suggestion}
+                      style={styles.suggestionItem}
+                      onPress={() => handleSuggestionPress(suggestion)}
+                    >
+                      <Text
+                        numberOfLines={1}
+                        ellipsizeMode="tail"
+                        style={styles.suggestionText}
+                      >
+                        {suggestion}
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+              )}
             </View>
 
-            {isKeyboardActive && inputSearch && (
-              <Icon
-                onPress={clearText}
-                style={styles.closeBtn}
-                name="close-sharp"
-                size={30}
-              />
-            )}
+            <View style={styles.alphabetContainer}>
+              {Object.keys(alphabetData).map((item) => (
+                <TouchableOpacity
+                  key={item}
+                  style={styles.alphabetItem}
+                  onPress={() =>
+                    navigation.navigate("TitlesList", { alphabet: item })
+                  }
+                >
+                  <Text style={styles.alphabetText}>{item}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
 
-            {suggestions.length > 0 && (
-              <ScrollView
-                nestedScrollEnabled={true}
-                style={styles.suggestionContainer}
-              >
-                {suggestions.map((suggestion) => (
-                  <TouchableOpacity
-                    key={suggestion}
-                    style={styles.suggestionItem}
-                    onPress={() => handleSuggestionPress(suggestion)}
-                  >
-                    <Text
-                      numberOfLines={1}
-                      ellipsizeMode="tail"
-                      style={styles.suggestionText}
-                    >
-                      {suggestion}
-                    </Text>
-                  </TouchableOpacity>
-                ))}
-              </ScrollView>
-            )}
+            <TouchableOpacity
+              style={styles.randomBtn}
+              onPress={navigateToRandomTitles}
+            >
+              <Text style={styles.randomBtnText}>6 Random Songs</Text>
+            </TouchableOpacity>
+
+            <View style={styles.horizontalCards}>
+              <HorizontalCards />
+            </View>
           </View>
-
-          <View style={styles.alphabetContainer}>
-            {Object.keys(alphabetData).map((item) => (
-              <TouchableOpacity
-                key={item}
-                style={styles.alphabetItem}
-                onPress={() =>
-                  navigation.navigate("TitlesList", { alphabet: item })
-                }
-              >
-                <Text style={styles.alphabetText}>{item}</Text>
-              </TouchableOpacity>
-            ))}
-          </View>
-
-          <TouchableOpacity
-            style={styles.randomBtn}
-            onPress={navigateToRandomTitles}
-          >
-            <Text style={styles.randomBtnText}>6 Random Songs</Text>
-          </TouchableOpacity>
-
-          <View style={styles.horizontalCards}>
-            <HorizontalCards />
-          </View>
-        </View>
         </TouchableWithoutFeedback>
       </ScrollView>
     </SafeAreaView>
@@ -265,7 +286,7 @@ const styles = StyleSheet.create({
     width: 300,
     paddingTop: 5,
     margin: 12,
-    textAlign:"center",
+    textAlign: "center",
     paddingHorizontal: 25,
     borderTopLeftRadius: 25,
     borderBottomRightRadius: 25,
@@ -278,7 +299,7 @@ const styles = StyleSheet.create({
     margin: 12,
     paddingTop: 4,
     right: 10,
-    bottom:9,
+    bottom: 9,
   },
   micIcon: {
     paddingTop: 6,
@@ -299,13 +320,16 @@ const styles = StyleSheet.create({
   suggestionItem: {
     paddingHorizontal: 25,
     margin: 4,
-    padding: 14,
-    borderColor:"#218F76",
+    padding: 12,
+    backgroundColor: "#049372",
+    borderColor: "#218F76",
     borderWidth: 0.8,
     borderRadius: 16,
   },
   suggestionText: {
     fontSize: 19,
+    fontWeight: "bold",
+    color: "lightyellow",
   },
   alphabetContainer: {
     justifyContent: "center",

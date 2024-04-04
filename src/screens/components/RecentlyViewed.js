@@ -9,6 +9,7 @@ import {
   ScrollView,
   Alert,
   Image,
+  ActivityIndicator,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -18,6 +19,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 const RecentlyViewed = () => {
   const navigation = useNavigation();
+  const [isLoading, setIsLoading] = useState(true);
   const [isRefresh, setIsRefresh] = useState(false);
   const [recentlyViewed, setRecentlyViewed] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("All");
@@ -33,7 +35,8 @@ const RecentlyViewed = () => {
           ? JSON.parse(recentlyViewedString)
           : [];
         setRecentlyViewed(recentlyViewedData);
-        filterRecentlyViewedByGenre(selectedGenre, recentlyViewedData); // Apply initial filter
+        filterRecentlyViewedByGenre(selectedGenre, recentlyViewedData);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error loading recently viewed items:", error);
       }
@@ -42,24 +45,7 @@ const RecentlyViewed = () => {
     loadRecentlyViewed();
   }, []);
 
-  const filterRecentlyViewedByGenre = (genre, data) => {
-    setSelectedGenre(genre);
-    const filteredSongs =
-      genre === "All"
-        ? data || recentlyViewed
-        : (data || recentlyViewed).filter(
-            (song) => song.genre && song.genre.includes(genre)
-          );
-
-    setFilteredRecentlyViewed(filteredSongs);
-  };
-
-  const getUniqueGenres = () => {
-    const genres = recentlyViewed.flatMap((song) => song.genre || []);
-    return ["All", ...new Set(genres)];
-  };
-
-  const handleClearAllRecentlyViewed = async () => {
+    const handleClearAllRecentlyViewed = async () => {
     try {
       Alert.alert(
         "Clear All",
@@ -84,6 +70,31 @@ const RecentlyViewed = () => {
     } catch (error) {
       console.error("Error clearing recently viewed items:", error);
     }
+  };
+  const filterRecentlyViewedByGenre = (genre, data) => {
+    setSelectedGenre(genre);
+    const filteredSongs =
+      genre === "All"
+        ? data || recentlyViewed
+        : (data || recentlyViewed).filter(
+            (song) => song.genre && song.genre.includes(genre)
+          );
+
+    setFilteredRecentlyViewed(filteredSongs);
+  };
+
+   
+
+  if (isLoading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#049372" />
+      </View>
+    );
+  }
+    const getUniqueGenres = () => {
+    const genres = recentlyViewed.flatMap((song) => song.genre || []);
+    return ["All", ...new Set(genres)];
   };
 
   const handleTitlePress = async (item) => {
@@ -216,6 +227,11 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     marginBottom: 232,
   },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   clearButtonContainer: {},
   clearButton: {
     alignSelf: "center",
@@ -257,8 +273,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginVertical: 5,
-    // borderBottomWidth: 1,
-    // borderBottomColor: "#ddd",
     padding: 3,
     paddingLeft: 5,
     borderColor: "#049372",
@@ -284,7 +298,7 @@ const styles = StyleSheet.create({
     color: "lightyellow",
   },
   picker: {
-    width: "70%",
+    width: "100%",
     alignSelf: "center",
     alignItems: "center",
     marginBottom: 7,

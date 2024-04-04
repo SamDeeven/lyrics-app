@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, TouchableWithoutFeedback } fr
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
+const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalObjects }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   const navigation = useNavigation();
@@ -28,7 +28,7 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
             <View>
               <Icon
                 onPress={() => handleOptions()}
-                name="close-sharp"
+                name="close-circle-sharp"
                 size={40}
               />
               <View style={styles.menuContainer}>
@@ -87,6 +87,13 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle }) => {
           <Icon style={{marginTop:-15}} name="home-sharp" size={30} />
         </TouchableOpacity>
       )}
+      {homeStyle && (
+        <View>
+
+      <Text style={{fontWeight:"900"}}>Total Songs</Text>
+      <Text style={{textAlign:"center", fontWeight:"900"}}>{totalObjects}</Text>
+      </View>
+      )}
     </View>
   );
 };
@@ -123,7 +130,7 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins_800ExtraBold",
     alignItems: "center",
     justifyContent: "center",
-    flex: 1.5,
+    flex: 1.1,
     marginTop:-7
   },
   menuOption: {

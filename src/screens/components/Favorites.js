@@ -9,30 +9,34 @@ import {
   ScrollView,
   Image,
   Alert,
+  ActivityIndicator,
 } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
-import { Poppins_700Bold_Italic } from "@expo-google-fonts/poppins";
-import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
 import { Picker } from "@react-native-picker/picker";
 
 const Favorites = ({ navigation }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const [favorites, setFavorites] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("All");
   const [filteredFavorites, setFilteredFavorites] = useState([]);
 
-  const loadFavorites = async () => {
-    try {
-      const favoritesString = await AsyncStorage.getItem("favorites");
-      const favoritesData = favoritesString ? JSON.parse(favoritesString) : [];
-      setFavorites(favoritesData);
-      filterFavoritesByGenre(selectedGenre, favoritesData);
-    } catch (error) {
-      console.error("Error loading favorites:", error);
-    }
-  };
+  useEffect(() => {
+    const loadFavorites = async () => {
+      try {
+        const favoritesString = await AsyncStorage.getItem("favorites");
+        const favoritesData = favoritesString ? JSON.parse(favoritesString) : [];
+        setFavorites(favoritesData);
+        filterFavoritesByGenre(selectedGenre, favoritesData);
+        setIsLoading(false); // Set isLoading to false when data is loaded
+      } catch (error) {
+        console.error("Error loading favorites:", error);
+      }
+    };
+
+    loadFavorites();
+  }, [selectedGenre]);
 
   const filterFavoritesByGenre = (genre, data) => {
     setSelectedGenre(genre);
@@ -63,8 +67,6 @@ const Favorites = ({ navigation }) => {
   };
 
   const handleTitlePress = async (item) => {
-    console.log("handleTitlePress called for item:", item);
-
     try {
       let recentlyViewed = [];
       let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
@@ -83,8 +85,6 @@ const Favorites = ({ navigation }) => {
         "recentlyViewed",
         JSON.stringify(recentlyViewed)
       );
-
-      console.log("Updated recentlyViewed:", recentlyViewed);
 
       navigation.navigate("Lyrics", { titleItem: item });
     } catch (error) {
@@ -119,18 +119,12 @@ const Favorites = ({ navigation }) => {
     }
   };
 
-  useFocusEffect(
-    useCallback(() => {
-      loadFavorites();
-    }, [])
-  );
-
-  const [fontsLoad] = useFonts({
-    Poppins_700Bold_Italic,
-  });
-
-  if (!fontsLoad) {
-    return <AppLoading />;
+  if (isLoading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#049372" />
+      </View>
+    );
   }
 
   return (
@@ -238,6 +232,11 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     marginBottom: 232,
   },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   clearButtonContainer: {},
   clearButton: {
     alignSelf: "center",
@@ -279,8 +278,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginVertical: 5,
-    // borderBottomWidth: 1,
-    // borderBottomColor: "#ddd",
     padding: 3,
     paddingLeft: 5,
     borderColor: "#049372",
@@ -306,7 +303,7 @@ const styles = StyleSheet.create({
     color: "lightyellow",
   },
   picker: {
-    width: "70%",
+    width: "100%",
     alignSelf: "center",
     alignItems: "center",
     marginBottom: 7,

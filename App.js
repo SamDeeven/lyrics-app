@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { StyleSheet, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -16,9 +16,22 @@ import CustomHeader from "./src/screens/CustomHeader";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Favorites from "./src/screens/components/Favorites";
 import RecentlyViewed from "./src/screens/components/RecentlyViewed";
+import alphabetData from "./data/songsData.js"
 const Stack = createStackNavigator();
 
 const App = () => {
+  const [totalObjects, setTotalObjects] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    for (const key in alphabetData) {
+      if (Array.isArray(alphabetData[key])) {
+        count += alphabetData[key].length;
+      }
+    }
+    setTotalObjects(count);
+  }, []);
+
 
   const [fontsLoad] = useFonts({
     Poppins_800ExtraBold,
@@ -38,7 +51,7 @@ const App = () => {
             name="Home"
             component={Home}
             options={{
-              header: () => <CustomHeader homeStyle={true} title="Index" showBackButton={false} showHomeButton={false}/>,
+              header: () => <CustomHeader homeStyle={true} title="Index" showBackButton={false} showHomeButton={false} totalObjects={totalObjects} />,
               animationEnabled:false,
               headerStyle: {
                 backgroundColor: "#02B290",
@@ -53,13 +66,14 @@ const App = () => {
               cardStyle: { backgroundColor: "#CAD5E2" },
              
             }}
+            
           />
 
           <Stack.Screen
             name="TitlesList"
             component={TitlesList}
             options={{
-              header:()=> <CustomHeader title="Titles List" showBackButton={true} showHomeButton={true}/>,
+              header:()=> <CustomHeader title="Songs List" showBackButton={true} showHomeButton={true}/>,
               headerBackTitle: {
                 height: 49,
               },
@@ -79,7 +93,7 @@ const App = () => {
             name="FilteredTitles"
             component={FilteredTitles}
             options={{
-              header: () => <CustomHeader title="Filtered Titles" showBackButton={true} showHomeButton={true}/>,
+              header: () => <CustomHeader title="Searched Songs" showBackButton={true} showHomeButton={true}/>,
               animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {
@@ -94,7 +108,7 @@ const App = () => {
             name="RandomTitles"
             component={RandomTitles}
             options={{
-              header: () => <CustomHeader title="Random Titles" showBackButton={true} showHomeButton={true}/>,
+              header: () => <CustomHeader title="Random Songs" showBackButton={true} showHomeButton={true}/>,
             animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {
@@ -169,7 +183,7 @@ const App = () => {
             name="RecentlyViewed"
             component={RecentlyViewed}
             options={{
-              header: () => <CustomHeader title="RecentlyViewed" showBackButton={true} showHomeButton={true}/>,
+              header: () => <CustomHeader title="Recently Viewed" showBackButton={true} showHomeButton={true}/>,
               animationEnabled:false,
               headerTitleAlign: "center",
               headerStyle: {

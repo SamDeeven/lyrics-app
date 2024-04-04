@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
   alphabet: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginTop:4
   },
   titleContainer: {
     marginBottom: 7,

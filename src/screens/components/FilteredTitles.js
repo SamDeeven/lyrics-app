@@ -10,7 +10,6 @@ import alphabetData from "../../../data/songsData.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const FilteredTitles = ({ route, navigation }) => {
-
   const { searchQuery } = route.params;
   const [matchingTitles, setMatchingTitles] = useState([]);
 
@@ -20,10 +19,10 @@ const FilteredTitles = ({ route, navigation }) => {
     Object.keys(alphabetData).forEach((alphabet) => {
       alphabetData[alphabet].forEach((item) => {
         if (
-          (item.keywords &&
-            item.keywords.some((kw) =>
-              kw.toLowerCase().startsWith(searchQuery.toLowerCase())
-            ))
+          item.keywords &&
+          item.keywords.some((kw) =>
+            kw.toLowerCase().startsWith(searchQuery.toLowerCase())
+          )
         ) {
           matchingTitlesArray.push(item);
         }
@@ -32,28 +31,27 @@ const FilteredTitles = ({ route, navigation }) => {
 
     setMatchingTitles(matchingTitlesArray);
   }, [searchQuery]);
-  
-  const handleTitlePress = async (item) => {
-    console.log("handleTitlePress called for item:", item); 
 
+  const handleTitlePress = async (item) => {
     try {
       let recentlyViewed = [];
       let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
-      recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) || [] : []; 
+      recentlyViewed = recentlyViewedString
+        ? JSON.parse(recentlyViewedString)
+        : [];
 
-      // Update recentlyViewed
       const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
 
       if (existingIndex !== -1) {
-        recentlyViewed.splice(existingIndex, 1); 
+        recentlyViewed.splice(existingIndex, 1);
       }
 
-      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; 
+      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)];
 
-      await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
-
-      console.log("Updated recentlyViewed:", recentlyViewed); 
-
+      await AsyncStorage.setItem(
+        "recentlyViewed",
+        JSON.stringify(recentlyViewed)
+      );
       navigation.navigate("Lyrics", { titleItem: item });
     } catch (error) {
       console.error("Error handling recently viewed items:", error);
@@ -76,7 +74,13 @@ const FilteredTitles = ({ route, navigation }) => {
                   style={styles.titleContainer}
                   onPress={() => handleTitlePress(item)}
                 >
-                  <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>{item.title}</Text>
+                  <Text
+                    numberOfLines={1}
+                    ellipsizeMode="tail"
+                    style={styles.title}
+                  >
+                    {item.title}
+                  </Text>
                   {item.genre && item.genre.length > 0 && (
                     <Text style={styles.genre}>
                       Genre: {item.genre.join(" | ")}
@@ -97,7 +101,7 @@ const FilteredTitles = ({ route, navigation }) => {
           />
         </View>
       ) : (
-        <View style={{flex:1}}>
+        <View style={{ flex: 1 }}>
           <Text style={styles.queryText}>
             You searched for: "{searchQuery}"
           </Text>
@@ -120,7 +124,7 @@ const styles = StyleSheet.create({
   errorContainer: {
     alignItems: "center",
     flex: 1,
-    marginVertical: 100
+    marginVertical: 100,
   },
   queryText: {
     fontSize: 22,
@@ -138,7 +142,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#049372",
     borderRadius: 5,
     padding: 3,
-    paddingLeft:5,
+    paddingLeft: 5,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,

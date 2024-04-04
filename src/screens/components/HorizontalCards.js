@@ -154,7 +154,9 @@ function HorizontalCards() {
   };
 
   const renderItem = ({ item }) => (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card}
+    activeOpacity={1}
+    >
       <LinearGradient
         start={{ x: 0, y: 1 }}
         end={{ x: 1, y: 0 }}
@@ -232,7 +234,7 @@ function HorizontalCards() {
           </Text>
         </TouchableOpacity>
       </LinearGradient>
-    </View>
+    </TouchableOpacity>
   );
   return (
     <View style={styles.container}>
