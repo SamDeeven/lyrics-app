@@ -34,24 +34,24 @@ const FilteredTitles = ({ route, navigation }) => {
 
   const handleTitlePress = async (item) => {
     try {
-      let recentlyViewed = [];
-      let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
-      recentlyViewed = recentlyViewedString
-        ? JSON.parse(recentlyViewedString)
-        : [];
+      // let recentlyViewed = [];
+      // let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+      // recentlyViewed = recentlyViewedString
+      //   ? JSON.parse(recentlyViewedString)
+      //   : [];
 
-      const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+      // const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
 
-      if (existingIndex !== -1) {
-        recentlyViewed.splice(existingIndex, 1);
-      }
+      // if (existingIndex !== -1) {
+      //   recentlyViewed.splice(existingIndex, 1);
+      // }
 
-      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)];
+      // recentlyViewed = [item, ...recentlyViewed.slice(0, 9)];
 
-      await AsyncStorage.setItem(
-        "recentlyViewed",
-        JSON.stringify(recentlyViewed)
-      );
+      // await AsyncStorage.setItem(
+      //   "recentlyViewed",
+      //   JSON.stringify(recentlyViewed)
+      // );
       navigation.navigate("Lyrics", { titleItem: item });
     } catch (error) {
       console.error("Error handling recently viewed items:", error);
@@ -118,7 +118,7 @@ const FilteredTitles = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingHorizontal: 12,
     marginBottom: 44,
   },
   errorContainer: {
@@ -137,9 +137,8 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     marginBottom: 7,
-    borderWidth: 2,
-    borderColor: "#049372",
-    backgroundColor: "#049372",
+   
+    backgroundColor: "#1679AB",
     borderRadius: 5,
     padding: 3,
     paddingLeft: 5,
@@ -151,7 +150,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "lightyellow",
+    color: "white",
   },
   genre: {
     fontSize: 14,

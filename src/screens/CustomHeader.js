@@ -20,7 +20,7 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalO
           onPress={() => navigation.goBack()}
           style={styles.backButton}
         >
-          <Icon style={{marginTop:-7}} name="chevron-back-sharp" size={30} />
+          <Icon style={{marginTop:-7}} name="chevron-back-sharp" size={22} color={"white"}/>
         </TouchableOpacity>
       ) : (
         <View style={styles.menuOption}>
@@ -29,7 +29,8 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalO
               <Icon
                 onPress={() => handleOptions()}
                 name="close-circle-sharp"
-                size={40}
+                size={22}
+                color={"white"}
               />
               <View style={styles.menuContainer}>
                 <TouchableOpacity
@@ -50,7 +51,17 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalO
                 >
                   <Text style={styles.menuItemsBtnText}>About</Text>
                 </TouchableOpacity>
-                <TouchableOpacity
+
+                <View
+                  onPress={() => {
+                    navigation.navigate("About");
+                    setShowOptions(!showOptions);
+                  }}
+                  style={styles.menuItemsBtn}
+                >
+                  <Text style={styles.menuItemsBtnText}>Total Songs in the app: {totalObjects}</Text>
+                </View>
+                {/* <TouchableOpacity
                   onPress={() => {
                     navigation.navigate("Favorites");
                     setShowOptions(!showOptions);
@@ -58,8 +69,8 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalO
                   style={styles.menuItemsBtn}
                 >
                   <Text style={styles.menuItemsBtnText}>Favorites</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
+                </TouchableOpacity> */}
+                {/* <TouchableOpacity
                   onPress={() => {
                     navigation.navigate("RecentlyViewed");
                     setShowOptions(!showOptions);
@@ -67,11 +78,11 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalO
                   style={styles.menuItemsBtn}
                 >
                   <Text style={styles.menuItemsBtnText}>Recently Viewed</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
               </View>
             </View>
           ) : (
-            <Icon onPress={() => handleOptions()} name="ellipsis-vertical-sharp" size={30} />
+            <Icon onPress={() => handleOptions()} name="ellipsis-vertical-sharp" size={22} color={"white"}/>
           )}
         </View>
       )}
@@ -84,15 +95,8 @@ const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalO
           onPress={() => navigation.navigate("Home")}
           style={styles.homeButton}
         >
-          <Icon style={{marginTop:-15}} name="home-sharp" size={30} />
+          <Icon style={{marginTop:-15}} name="home-sharp" size={22} color={"white"}/>
         </TouchableOpacity>
-      )}
-      {homeStyle && (
-        <View>
-
-      <Text style={{fontWeight:"900"}}>Total Songs</Text>
-      <Text style={{textAlign:"center", fontWeight:"900"}}>{totalObjects}</Text>
-      </View>
       )}
     </View>
   );
@@ -103,8 +107,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#02B290",
-    height: 40,
+    backgroundColor: "#273A6F",
+    height: 33,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     paddingHorizontal: 15,
@@ -112,25 +116,26 @@ const styles = StyleSheet.create({
   homeHeaderContainer: {
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "#02B290",
-    height: 42,
+    backgroundColor: "#273A6F",
+    height: 33,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     paddingHorizontal: 16,
   },
   headerTitle: {
-    fontSize: 27,
+    fontSize: 18,
     fontFamily: "Poppins_800ExtraBold",
-    color: "black",
+    color: "white",
     marginTop:-7
     // flex:1.6
   },
   homeHeader: {
-    fontSize: 27,
+    fontSize: 18,
     fontFamily: "Poppins_800ExtraBold",
     alignItems: "center",
+    color: "white",
     justifyContent: "center",
-    flex: 1.1,
+    flex: 1.3,
     marginTop:-7
   },
   menuOption: {
@@ -139,14 +144,14 @@ const styles = StyleSheet.create({
 
   },
   menuContainer: {
-    backgroundColor: "#ECF0F1",
-    borderWidth:1,
-    borderColor:"#53E0BC",
-    width: 250,
+    backgroundColor: "#cAEAEa",
+    // borderWidth:1,
+    // borderColor:"#303b7c",
+    width: 230,
     position: "absolute",
     left: 0,
-    top: 48,
-    height: 290,
+    top: 38,
+    height: 250,
     flexDirection: "column",
     justifyContent: "space-evenly",
     borderTopLeftRadius: 30,
@@ -157,13 +162,14 @@ const styles = StyleSheet.create({
     margin: 6,
     marginTop: 15,
     paddingVertical: 5,
-    backgroundColor: "#53E0BC",
+    backgroundColor: "#1679AB",
     // borderRadius: 10,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
   menuItemsBtnText: {
     fontSize: 25,
+    color:"white",
     fontFamily: "Poppins_500Medium",
     textAlign: "center",
   },

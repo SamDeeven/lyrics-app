@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -16,7 +16,7 @@ import CustomHeader from "./src/screens/CustomHeader";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Favorites from "./src/screens/components/Favorites";
 import RecentlyViewed from "./src/screens/components/RecentlyViewed";
-import alphabetData from "./data/songsData.js"
+import alphabetData from "./data/songsData.js";
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -32,7 +32,6 @@ const App = () => {
     setTotalObjects(count);
   }, []);
 
-
   const [fontsLoad] = useFonts({
     Poppins_800ExtraBold,
   });
@@ -42,8 +41,8 @@ const App = () => {
   }
 
   return (
-<SafeAreaProvider>      
-  <StatusBar backgroundColor="#02B290" barStyle="light-content"/>
+    <SafeAreaProvider>
+      <StatusBar backgroundColor="#273A6F" barStyle="light-content" />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
@@ -51,8 +50,16 @@ const App = () => {
             name="Home"
             component={Home}
             options={{
-              header: () => <CustomHeader homeStyle={true} title="Index" showBackButton={false} showHomeButton={false} totalObjects={totalObjects} />,
-              animationEnabled:false,
+              header: () => (
+                <CustomHeader
+                  homeStyle={true}
+                  title="Index"
+                  showBackButton={false}
+                  showHomeButton={false}
+                  totalObjects={totalObjects}
+                />
+              ),
+              animationEnabled: false,
               headerStyle: {
                 backgroundColor: "#02B290",
                 height: 70,
@@ -63,21 +70,25 @@ const App = () => {
                 fontFamily: "Poppins_800ExtraBold",
               },
               headerTitleAlign: "center",
-              cardStyle: { backgroundColor: "#CAD5E2" },
-             
+              cardStyle: { backgroundColor: "#EAEAEA" },
             }}
-            
           />
 
           <Stack.Screen
             name="TitlesList"
             component={TitlesList}
             options={{
-              header:()=> <CustomHeader title="Songs List" showBackButton={true} showHomeButton={true}/>,
+              header: () => (
+                <CustomHeader
+                  title="Songs List"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
               headerBackTitle: {
                 height: 49,
               },
-            animationEnabled:false,
+              animationEnabled: false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
@@ -85,7 +96,7 @@ const App = () => {
                 height: 70,
               },
               cardStyle: {
-                backgroundColor: "#ECF0F1",
+                backgroundColor: "#EAEAEA",
               },
             }}
           />
@@ -93,33 +104,45 @@ const App = () => {
             name="FilteredTitles"
             component={FilteredTitles}
             options={{
-              header: () => <CustomHeader title="Searched Songs" showBackButton={true} showHomeButton={true}/>,
-              animationEnabled:false,
+              header: () => (
+                <CustomHeader
+                  title="Searched Songs"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              animationEnabled: false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#ECF0F1" },
-            }}
-          />
-           <Stack.Screen
-            name="RandomTitles"
-            component={RandomTitles}
-            options={{
-              header: () => <CustomHeader title="Random Songs" showBackButton={true} showHomeButton={true}/>,
-            animationEnabled:false,
-              headerTitleAlign: "center",
-              headerStyle: {
-                backgroundColor: "#02B290",
-                borderBottomWidth: 2,
-                height: 70,
-              },
-              cardStyle: { backgroundColor: "#ECF0F1" },
+              cardStyle: { backgroundColor: "#EAEAEA" },
             }}
           />
           <Stack.Screen
+            name="RandomTitles"
+            component={RandomTitles}
+            options={{
+              header: () => (
+                <CustomHeader
+                  title="Random Songs"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              animationEnabled: false,
+              headerTitleAlign: "center",
+              headerStyle: {
+                backgroundColor: "#02B290",
+                borderBottomWidth: 2,
+                height: 70,
+              },
+              cardStyle: { backgroundColor: "#EAEAEA" },
+            }}
+          />
+          {/* <Stack.Screen
             name="Lyrics"
             component={Lyrics}
             options={{
@@ -131,55 +154,98 @@ const App = () => {
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#ECF0F1" },
+              cardStyle: { backgroundColor: "#EAEAEA" },
             }}
-          />
+          /> */}
           <Stack.Screen
-            name="About"
-            component={About}
-            options={{
-              header: () => <CustomHeader title="About" showBackButton={true} showHomeButton={true}/>,
+            name="Lyrics"
+            component={Lyrics}
+            options={({ route }) => ({
+              header: () => (
+                <CustomHeader
+                  title={
+                    route.params.titleItem.title.length
+                      ? `${route.params.titleItem.title.substring(0, 23)}...`
+                      : route.params.titleItem.title
+                  }
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              animationEnabled: false,
               headerTitleAlign: "center",
-            animationEnabled:false,
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#ECF0F1" },
+              cardStyle: { backgroundColor: "#EAEAEA" },
+            })}
+          />
+          <Stack.Screen
+            name="About"
+            component={About}
+            options={{
+              header: () => (
+                <CustomHeader
+                  title="About"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              headerTitleAlign: "center",
+              animationEnabled: false,
+              headerStyle: {
+                backgroundColor: "#02B290",
+                borderBottomWidth: 2,
+                height: 70,
+              },
+              cardStyle: { backgroundColor: "#EAEAEA" },
             }}
           />
           <Stack.Screen
             name="Contact"
             component={Contact}
             options={{
-              header: () => <CustomHeader title="Contact" showBackButton={true} showHomeButton={true}/>,
-              animationEnabled:false,
+              header: () => (
+                <CustomHeader
+                  title="Contact"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              animationEnabled: false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#ECF0F1" },
+              cardStyle: { backgroundColor: "#EAEAEA" },
             }}
           />
           <Stack.Screen
             name="Favorites"
             component={Favorites}
             options={{
-              header: () => <CustomHeader title="Favorites" showBackButton={true} showHomeButton={true}/>,
-              animationEnabled:false,
+              header: () => (
+                <CustomHeader
+                  title="Favorites"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              animationEnabled: false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#ECF0F1" },
+              cardStyle: { backgroundColor: "#EAEAEA" },
             }}
           />
-           <Stack.Screen
+          {/* <Stack.Screen
             name="RecentlyViewed"
             component={RecentlyViewed}
             options={{
@@ -193,10 +259,10 @@ const App = () => {
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
             }}
-          />
+          /> */}
         </Stack.Navigator>
       </NavigationContainer>
-      </SafeAreaProvider>
+    </SafeAreaProvider>
   );
 };
 

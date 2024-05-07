@@ -24,17 +24,17 @@ const RandomTitles = ({navigation}) => {
     
       const handleTitlePress = async (item) => {
         try {
-          const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
-          let recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) : [];
+          // const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+          // let recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) : [];
     
-          const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+          // const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
     
-          if (existingIndex !== -1) {
-            recentlyViewed.splice(existingIndex, 1);
-          }
+          // if (existingIndex !== -1) {
+          //   recentlyViewed.splice(existingIndex, 1);
+          // }
     
-          recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; // Limit to 10 items
-          await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
+          // recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; // Limit to 10 items
+          // await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
     
           navigation.navigate("Lyrics", { titleItem: item });
         } catch (error) {
@@ -88,21 +88,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-
+    paddingHorizontal:12,
+    marginBottom: 0,
+    paddingBottom:0
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: "lightyellow",
+    color: "white",
   },
   titleContainer: {
     marginBottom: 7,
-    borderWidth: 2,
-    borderColor: "#049372",
     padding: 3,
     // paddingTop:2,
     paddingLeft:5,
-    backgroundColor: "#049372",
+    // backgroundColor: "#049372",
+    backgroundColor: "#1679AB",
     borderTopLeftRadius: 20,
     borderTopRightRadius:5,
     borderBottomLeftRadius:5,

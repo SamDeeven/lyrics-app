@@ -200,15 +200,17 @@ const Lyrics = () => {
             {showOptions && (
               <View style={styles.optionsDropdown}>
                 <LinearGradient
-                  start={{ x: 0.5, y: 1 }}
+                  start={{ x: 0.5, y: 1.5 }}
                   end={{ x: 1.5, y: 0 }}
                   colors={[
-                    "#85FFBD",
-                    "#FFFB7D",
-                    "#B5FFFC",
-                    "#2AF598",
-                    "#84fab0",
-                    "#8fd3f4",
+                    // "#9DBC98",
+                    "#135D66",
+                    // "#FFFB7D",
+                    "#1679AB",
+                    "#211951",
+                    // "#2AF598",
+                    "#393E46",
+                    "#496989",
                   ]}
                   style={styles.gradient}
                 >
@@ -311,7 +313,7 @@ const Lyrics = () => {
         </View> */}
       </View>
 
-      <Text style={styles.title}>{titleItem.title}</Text>
+      {/* <Text style={styles.title}>{titleItem.title}</Text> */}
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={styles.lyricsContainer}>
           <TouchableWithoutFeedback onPress={closeOptions}>
@@ -350,7 +352,7 @@ const Lyrics = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 15,
+    paddingHorizontal: 10,
   },
   videoBtn: {
     // marginTop: 8,
@@ -414,7 +416,8 @@ const styles = StyleSheet.create({
     // flex: 0.8,
   },
   button: {
-    backgroundColor: "#02B290",
+    // backgroundColor: "#02B290",
+    backgroundColor: "#1679AB",
     padding: 7,
     margin: 10,
     borderTopLeftRadius: 14,
@@ -422,7 +425,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 14,
     borderWidth: 1,
-    borderColor: "#02B290",
+    borderColor: "#1679AB",
     marginTop: 8,
   },
   buttonText: {
@@ -442,6 +445,7 @@ const styles = StyleSheet.create({
     height:30,
     marginTop: 0,
     color: "brown",
+    backgroundColor:"#E6F7FF",
     width: 280,
   },
   lyricsContainer: {
@@ -457,16 +461,19 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginLeft: 5,
     paddingVertical: 5,
+    color:"lightyellow"
   },
   timeSignature: {
     fontSize: 18,
     marginLeft: 5,
     paddingVertical: 5,
+    color:"lightyellow"
   },
   artist: {
     fontSize: 18,
     marginLeft: 5,
     paddingVertical: 5,
+    color:"lightyellow"
   },
   errorMessage: {
     fontSize: 20,

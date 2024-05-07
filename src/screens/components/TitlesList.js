@@ -85,23 +85,33 @@ const TitlesList = () => {
 
   const handleTitlePress = async (item) => {
     try {
-      const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
-      let recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) : [];
-
-      const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
-
-      if (existingIndex !== -1) {
-        recentlyViewed.splice(existingIndex, 1);
-      }
-
-      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)]; 
-      await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
-
+      // const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+      // let recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) : [];
+  
+      // // Check if the item is already in the recentlyViewed list
+      // const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+  
+      // if (existingIndex !== -1) {
+      //   // If the item is already in the recentlyViewed list, remove it
+      //   recentlyViewed.splice(existingIndex, 1);
+      // }
+      
+      // // Add the item to the top of the list
+      // recentlyViewed.unshift(item);
+      
+      // // Limit the list to 10 items
+      // if (recentlyViewed.length > 10) {
+      //   recentlyViewed.pop(); // Remove the last item
+      // }
+  
+      // await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
+  
       navigation.navigate("Lyrics", { titleItem: item });
     } catch (error) {
       console.error("Error handling recently viewed items:", error);
     }
   };
+  
  
   
 
@@ -113,9 +123,9 @@ const TitlesList = () => {
         <Text style={{ fontSize: 20 }}>Filter</Text>
         <Picker
           prompt="Choose Genre"
-          promptStyle={{ color: "yellow" }}
-          dropdownIconColor={"#049372"}
-          dropdownIconRippleColor={"#049372"}
+          promptStyle={{ color: "1679AB" }}
+          dropdownIconColor={"#1679AB"}
+          dropdownIconRippleColor={"#1679AB"}
           selectedValue={selectedGenre}
           onValueChange={(itemValue) => filterSongsByGenre(itemValue)}
           style={styles.picker}
@@ -167,7 +177,7 @@ const TitlesList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingHorizontal: 12,
     // marginBottom: 45,
   },
   darkContainer: {},
@@ -178,12 +188,13 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     marginBottom: 7,
-    borderWidth: 2,
-    borderColor: "#049372",
+    // borderWidth: 2,
+    // borderColor: "#455299",
     padding: 3,
     // paddingTop:2,
     paddingLeft:5,
-    backgroundColor: "#049372",
+    // backgroundColor: "#049372",
+    backgroundColor: "#1679AB",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
@@ -192,30 +203,30 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "lightyellow",
+    color: "white",
   },
   genre: {
     fontSize: 14,
     color: "white",
   },
   timeSignature: {
-    fontSize: 14,
+    fontSize: 13,
     color: "white",
   },
   artist: {
-    fontSize: 12,
-    color: "lightpink",
+    fontSize: 11,
+    color: "#FFCDEA",
   },
   picker: {
-    width: "100%",
-    marginBottom: 10,
-    backgroundColor: "#C2E4DD",
-    marginHorizontal:5,
+    // width: "100%",
+    marginBottom: 5,
+    backgroundColor: "#d0d4ec",
+    // marginHorizontal:5,
     padding: 3,
 
   },
   pickerItem: {
-    color: "#049372",
+    color: "#1679AB",
     fontSize:22,
   },
 });

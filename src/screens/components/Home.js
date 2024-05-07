@@ -26,6 +26,7 @@ import AppLoading from "expo-app-loading";
 import Icon from "react-native-vector-icons/Ionicons";
 import HorizontalCards from "./HorizontalCards.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Favorites from "./Favorites.js";
 
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
@@ -108,6 +109,11 @@ const Home = () => {
   const navigateToRandomTitles = () => {
     navigation.navigate("RandomTitles");
   };
+
+  const navigateToFavorites = () => {
+    navigation.navigate("Favorites");
+  };
+
 
   const handleSearch = () => {
     if (inputSearch.length === 0) return;
@@ -255,13 +261,24 @@ const Home = () => {
                 </TouchableOpacity>
               ))}
             </View>
-
+            <View style={{flexDirection:"row", justifyContent:"center"}}>
+            <TouchableOpacity
+              style={styles.randomBtn}
+              onPress={navigateToFavorites}
+            >
+              <Text style={styles.randomBtnText}>Favorite Songs</Text>
+            </TouchableOpacity>
+              
             <TouchableOpacity
               style={styles.randomBtn}
               onPress={navigateToRandomTitles}
             >
-              <Text style={styles.randomBtnText}>6 Random Songs</Text>
+              <Text style={styles.randomBtnText}>Random Songs</Text>
             </TouchableOpacity>
+
+            </View>
+
+          
 
             <View style={styles.horizontalCards}>
               <HorizontalCards />
@@ -275,7 +292,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   topContainer: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 12,
   },
   inputBoxContainer: {
     alignSelf: "center",
@@ -321,15 +338,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     margin: 4,
     padding: 12,
-    backgroundColor: "#049372",
-    borderColor: "#218F76",
+    backgroundColor: "#1679AB",
+    borderColor: "#1679AB",
     borderWidth: 0.8,
     borderRadius: 16,
   },
   suggestionText: {
     fontSize: 19,
     fontWeight: "bold",
-    color: "lightyellow",
+    color: "white",
   },
   alphabetContainer: {
     justifyContent: "center",
@@ -339,30 +356,35 @@ const styles = StyleSheet.create({
   alphabetItem: {
     justifyContent: "center",
     alignItems: "center",
-    margin: 4,
-    height: 53,
-    width: 53,
-    backgroundColor: "#02B290",
-    borderRadius: 10,
+    margin: 3,
+    height: 47,
+    width: 47,
+    // backgroundColor: "#02B290",
+    backgroundColor: "#D37676",
+    borderRadius: 8,
   },
   alphabetText: {
     fontSize: 30,
     fontFamily: "Poppins_600SemiBold",
     textAlign: "center",
-    marginTop: 4,
+    marginTop:3,
+    color:"black"
   },
 
   randomBtn: {
-    backgroundColor: "#02B290",
-    width: 270,
+    // backgroundColor: "#02B290",
+    backgroundColor: "#1679AB",
+    width: 150,
     padding: 5,
     marginTop: 8,
-    borderRadius: 10,
+    margin:2,
+    borderRadius: 8,
     alignSelf: "center",
   },
   randomBtnText: {
-    color: "#120E43",
-    fontSize: 22,
+    // color: "#120E43",
+    color: "lightyellow",
+    fontSize: 18,
     textAlign: "center",
     fontFamily: "Poppins_600SemiBold",
   },

@@ -84,9 +84,9 @@ function HorizontalCards() {
       id: uuid.v4(),
       title: "6 Random Songs Feature",
       teluguTitle: "ఏదైన 6 పాటలు",
-      text: "When you press the '6 Random Songs' button, a list of 6 random songs will be generated, saving your time in searching for a song. If the generated list is not suitable for you at that moment, you can refresh the page by pulling the screen down to get new list.",
+      text: "'6 Random Songs' button generates a list of 6 random songs, saving time searching. If it's not suitable, pull down to refresh for a new list.",
       teluguText:
-        "'6 Random Songs' బటన్ నొక్కితే, ఏదైన 6 పాటల జాబితా వస్తాది. దీనివల్ల మీ సమయం పాట వెకడం లొ వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్(screen) ని కిందకి లాగండి, అప్పుడు వేరే 6 పాటలు జాబితా వస్తుంది.",
+        "'6 Random Songs' బటన్ నొక్కితే, ఏదైన 6 పాటల జాబితా వస్తాది. దీనివల్ల మీ సమయం పాటలు వెకడం లో వృదా అవ్వదు. ఒకవేళ మీకు ఆ జాబితా మీకు తగినది కాకపోతె, ఆ స్క్రీన్(screen) ని కిందకి లాగండి, అప్పుడు వేరే 6 పాటలు జాబితా వస్తుంది.",
       image: "",
       link: "",
       buttonName: "",
@@ -104,22 +104,22 @@ function HorizontalCards() {
     },
     {
       id: uuid.v4(),
-      title: "Font Size, Add to Favorites & Video Song option on Lyrics Screen",
-      teluguTitle: "Font Size, Add to Favorites & Video Song option on Lyrics Screen",
-      text: "On the top of Lyrics Screen, you will see the Font Size, 🤍 button and Video Song button. You can adjust font size according to your convinience, can add the lyrics to favorites by pressing 🤍 and see in the Favorites Screen, and for reference, you can view the video song.",
+      title: "Font Size",
+      teluguTitle: "అక్షరాల పరిమాణం",
+      text: "The Lyrics Screen offers font size adjustment.",
       teluguText:
-        "లిరిక్స్ స్క్రీన్ పైభాగంలో, మీరు ఫాంట్ సైజు, 🤍 బటన్‌ మరియు వీడియో సాంగ్ బటన్‌ను చూస్తారు. మీరు మీ అనుకూలత ప్రకారం అక్షరాల పరిమాణాన్ని మార్చుకోవచ్చు, ఇష్టమైన పాట ను Add to Favorites లో చూసుకోవడానికి 🤍 ను నొక్కండి మరియు Favorites స్క్రీన్‌లో చూడవచ్చు. వీడియో సాంగ్ బటన్ నొక్కితే YouTube లో ఆ పాట వస్తుంది.",
+        "లిరిక్స్ స్క్రీన్‌లో, అక్షరాల పరిమాణాన్ని మీ అనుకూలత ప్రకారం అక్షరాల పరిమాణాన్ని మార్చుకోవచ్చు",
       image: "",
       link: "",
       buttonName: "",
     },
     {
       id: uuid.v4(),
-      title: "Menu Option on Lyrics Screen",
-      teluguTitle: "Menu Option on Lyrics Screen",
-      text: "In the Lyrics Screen, there is a Menu option (︙), right side of the song title. When you press it, you will see the Song Details like Genre, Time Signature, Artist.",
+      title: "Video Song option on Lyrics Screen",
+      teluguTitle: "Video Song option on Lyrics Screen",
+      text: "Watch the song on YouTube for reference.",
       teluguText:
-        "Lyrics స్క్రీన్‌లో, పాట పేరుకి కుడి ప్రక్కన మెనూ ఆప్షన్ (︙) ఉంటుంది. మీరు దాన్ని నొక్కినప్పుడు, పాట వివరాల కనిపిస్తాయి.",
+        "పాటను వినడానికి  YouTube బటన్ నొక్కండి.",
       image: "",
       link: "",
       buttonName: "",
@@ -137,16 +137,15 @@ function HorizontalCards() {
     },
     {
       id: uuid.v4(),
-      title: "Recently Viewed",
-      teluguTitle: "Recently Viewed",
-      text: "You can view recently viewed lyrics. It makes easy to track all the recently viewed lyrics",
+      title: "Option on Lyrics Screen",
+      teluguTitle: "Option on Lyrics Screen",
+      text: "In the Lyrics Screen, there is a Menu option (︙), right side of the song title. When you press it, you will see the Song Details like Genre, Time Signature, Artist.",
       teluguText:
-        "",
+        "Lyrics స్క్రీన్‌లో, పాట పేరుకి కుడి ప్రక్కన మెనూ ఆప్షన్ (︙) ఉంటుంది. మీరు దాన్ని నొక్కినప్పుడు, పాట వివరాల కనిపిస్తాయి.",
       image: "",
       link: "",
       buttonName: "",
     },
-    
   ];
 
   const handleLanguage = () => {
@@ -160,7 +159,7 @@ function HorizontalCards() {
       <LinearGradient
         start={{ x: 0, y: 1 }}
         end={{ x: 1, y: 0 }}
-        colors={["#0a3431", "#407A52", "#4a9b7f", "#1c3e35"]}
+        colors={["#1679AB", "#393E46", "#496989", "#9DBC98"]}
         style={styles.gradient}
       >
         <Text
@@ -222,7 +221,7 @@ function HorizontalCards() {
             bottom: 8,
             padding: 3,
             backgroundColor: "lightblue",
-            width: 170,
+            width: 160,
             borderRadius: 5,
            right:4,
           // marginLeft:185,
@@ -252,8 +251,8 @@ function HorizontalCards() {
 const styles = StyleSheet.create({
   container: {},
   card: {
-    width: 365,
-    height: 260,
+    width: 325,
+    height: 225,
     // backgroundColor: "#242B2E",
     marginHorizontal: 5,
     // borderRadius: 10,

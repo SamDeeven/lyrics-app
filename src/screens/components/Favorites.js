@@ -152,8 +152,8 @@ const Favorites = ({ navigation }) => {
           <View>
             <Picker
               prompt="Choose Genre"
-              dropdownIconColor={"#049372"}
-              dropdownIconRippleColor={"#049372"}
+              dropdownIconColor={"#1679AB"}
+              dropdownIconRippleColor={"#1679AB"}
               selectedValue={selectedGenre}
               onValueChange={(itemValue) =>
                 filterFavoritesByGenre(itemValue, favorites)
@@ -176,7 +176,7 @@ const Favorites = ({ navigation }) => {
               style={styles.clearButton}
             >
               <Text style={styles.clearButtonText}>Clear All</Text>
-              <MaterialIcons name="delete" size={25} color="lightyellow" />
+              <MaterialIcons name="delete" size={25} color="white" />
             </TouchableOpacity>
           </View>
           <SafeAreaView>
@@ -228,7 +228,7 @@ const Favorites = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 15,
+    paddingHorizontal: 12,
     paddingTop: 10,
     marginBottom: 232,
   },
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     width: 150,
     fontSize: 18,
-    color: "lightyellow",
+    color: "white",
   },
   title: {
     fontSize: 24,
@@ -280,9 +280,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     padding: 3,
     paddingLeft: 5,
-    borderColor: "#049372",
-    backgroundColor: "#049372",
-    borderWidth: 2,
+    backgroundColor: "#1679AB",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
@@ -293,7 +291,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 24,
-    color: "lightyellow",
+    color: "white",
   },
   removeButtonContainer: {
     marginRight: 10,
@@ -307,12 +305,12 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     marginBottom: 7,
-    backgroundColor: "#C2E4DD",
+    backgroundColor: "#d0d4ec",
     marginHorizontal: 5,
     padding: 3,
   },
   pickerItem: {
-    color: "#049372",
+    color: "#1679AB",
     fontSize: 20,
   },
 });
