@@ -68,23 +68,23 @@ const Favorites = ({ navigation }) => {
 
   const handleTitlePress = async (item) => {
     try {
-      let recentlyViewed = [];
-      let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
-      recentlyViewed = recentlyViewedString
-        ? JSON.parse(recentlyViewedString) || []
-        : [];
+      // let recentlyViewed = [];
+      // let recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
+      // recentlyViewed = recentlyViewedString
+      //   ? JSON.parse(recentlyViewedString) || []
+      //   : [];
 
-      const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
+      // const existingIndex = recentlyViewed.findIndex((i) => i.id === item.id);
 
-      if (existingIndex !== -1) {
-        recentlyViewed.splice(existingIndex, 1);
-      }
+      // if (existingIndex !== -1) {
+      //   recentlyViewed.splice(existingIndex, 1);
+      // }
 
-      recentlyViewed = [item, ...recentlyViewed.slice(0, 9)];
-      await AsyncStorage.setItem(
-        "recentlyViewed",
-        JSON.stringify(recentlyViewed)
-      );
+      // recentlyViewed = [item, ...recentlyViewed.slice(0, 9)];
+      // await AsyncStorage.setItem(
+      //   "recentlyViewed",
+      //   JSON.stringify(recentlyViewed)
+      // );
 
       navigation.navigate("Lyrics", { titleItem: item });
     } catch (error) {

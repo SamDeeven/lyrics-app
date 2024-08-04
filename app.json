@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Telugu Gospel Lyrics",
+    "name": "Vinnu Lyrics App",
     "slug": "lyrics",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "orientation": "portrait",
     "icon": "./assets/app-icon.png",
     "userInterfaceStyle": "light",
@@ -26,7 +26,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.samdeeven.lyrics",
-      "versionCode": 11
+      "versionCode": 12
     },
     "web": {
       "favicon": "./assets/app-icon.png"

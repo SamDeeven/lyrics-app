@@ -83,7 +83,7 @@ const TitlesList = () => {
     return ["All", ...new Set(genres)];
   };
 
-  const handleTitlePress = async (item) => {
+  const handleTitlePress = (item) => {
     try {
       // const recentlyViewedString = await AsyncStorage.getItem("recentlyViewed");
       // let recentlyViewed = recentlyViewedString ? JSON.parse(recentlyViewedString) : [];
@@ -107,8 +107,9 @@ const TitlesList = () => {
       // await AsyncStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
   
       navigation.navigate("Lyrics", { titleItem: item });
-    } catch (error) {
-      console.error("Error handling recently viewed items:", error);
+    } 
+    catch (error) {
+      console.error("Error:", error);
     }
   };
   

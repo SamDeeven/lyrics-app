@@ -43,15 +43,39 @@ const Lyrics = () => {
   const [favorites, setFavorites] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
   const [selectedButton, setSelectedButton] = useState(18);
-  const [titleItem, setTitleItem] = useState(null);
+  // const [titleItem, setTitleItem] = useState(null);
 
   const route = useRoute();
-  // const { titleItem } = route.params;
+  const { titleItem } = route.params;
 
   useEffect(() => {
-    setTitleItem(route.params.titleItem);
-    checkFavorite(route.params.titleItem); 
-  }, [route.params.titleItem]);
+    // Check if the current song is a favorite when the component mounts
+    const checkFavorite = async () => {
+      try {
+        const favoritesString = await AsyncStorage.getItem("favorites");
+        let favorites = favoritesString ? JSON.parse(favoritesString) : [];
+        const isSongFavorite = favorites.some(
+          (song) => song.id === titleItem.id
+        );
+        setIsFavorite(isSongFavorite);
+      } catch (error) {
+        console.error("Error checking favorites:", error);
+      }
+    };
+    checkFavorite();
+  }, [titleItem.id]);
+
+  // useEffect(() => {
+  //   setTitleItem(route.params.titleItem);
+  //   checkFavorite(route.params.titleItem); 
+  // }, [route.params.titleItem]);
+
+  // useEffect(() => {
+  //   if (route.params?.titleItem) {
+  //     setTitleItem(route.params.titleItem);
+  //     checkFavorite(route.params.titleItem);
+  //   }
+  // }, [route.params?.titleItem]);
 
   const closeOptions = () => {
     setShowOptions(false);
@@ -115,13 +139,27 @@ const Lyrics = () => {
   const handleVideoButton = () => {
     if (titleItem.video) {
       const videoLink = Linking.openURL(titleItem.video);
-      if (videoLink) {
-        Linking.openURL(titleItem.video);
-      }
-    } else {
+      // if (videoLink) {
+      //   Linking.openURL(titleItem.video);
+      // }
+    } 
+    else {
       Alert.alert("No video link available");
     }
   };
+
+  // const handleVideoButton = () => {
+  //   if (titleItem && titleItem.video) {
+  //     const videoLink = Linking.openURL(titleItem.video);
+  //     if (videoLink) {
+  //       Linking.openURL(titleItem.video);
+  //     }
+  //   } 
+  //   else {
+  //     Alert.alert("No video link available");
+  //   }
+  // };
+
 
   const handleFavoriteButton = async () => {
     if (!titleItem) return;
@@ -166,7 +204,7 @@ const Lyrics = () => {
             <Icon name="add-circle" size={20} color="white" />
           </TouchableOpacity>
 
-          {titleItem.video && (
+          {/* {titleItem.video && (
             <View>
               <TouchableOpacity
                 style={styles.videoBtn}
@@ -175,7 +213,7 @@ const Lyrics = () => {
                 <Icon name="logo-youtube" size={50} color="red" />
               </TouchableOpacity>
             </View>
-          )}
+          )} */}
 
           <TouchableOpacity
             style={styles.favButtonContainer}
@@ -313,7 +351,7 @@ const Lyrics = () => {
         </View> */}
       </View>
 
-      {/* <Text style={styles.title}>{titleItem.title}</Text> */}
+      <Text style={styles.title}>{titleItem.title}</Text>
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={styles.lyricsContainer}>
           <TouchableWithoutFeedback onPress={closeOptions}>

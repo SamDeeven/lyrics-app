@@ -142,7 +142,7 @@ const App = () => {
               cardStyle: { backgroundColor: "#EAEAEA" },
             }}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             name="Lyrics"
             component={Lyrics}
             options={{
@@ -156,8 +156,8 @@ const App = () => {
               },
               cardStyle: { backgroundColor: "#EAEAEA" },
             }}
-          /> */}
-          <Stack.Screen
+          />
+          {/* <Stack.Screen
             name="Lyrics"
             component={Lyrics}
             options={({ route }) => ({
@@ -181,7 +181,7 @@ const App = () => {
               },
               cardStyle: { backgroundColor: "#EAEAEA" },
             })}
-          />
+          /> */}
           <Stack.Screen
             name="About"
             component={About}

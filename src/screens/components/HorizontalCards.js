@@ -137,11 +137,11 @@ function HorizontalCards() {
     },
     {
       id: uuid.v4(),
-      title: "Option on Lyrics Screen",
-      teluguTitle: "Option on Lyrics Screen",
-      text: "In the Lyrics Screen, there is a Menu option (︙), right side of the song title. When you press it, you will see the Song Details like Genre, Time Signature, Artist.",
+      title: "More Info on Lyrics Screen",
+      teluguTitle: "పాట వివరాలు",
+      text: "In the Lyrics Screen, there is a Menu option (i), right side of the song title. When you press it, you will see the Song Details like Genre, Time Signature, Artist.",
       teluguText:
-        "Lyrics స్క్రీన్‌లో, పాట పేరుకి కుడి ప్రక్కన మెనూ ఆప్షన్ (︙) ఉంటుంది. మీరు దాన్ని నొక్కినప్పుడు, పాట వివరాల కనిపిస్తాయి.",
+        "Lyrics స్క్రీన్‌లో, పాట పేరుకి కుడి ప్రక్కన మెనూ ఆప్షన్ (i) ఉంటుంది. మీరు దాన్ని నొక్కినప్పుడు, పాట వివరాల కనిపిస్తాయి.",
       image: "",
       link: "",
       buttonName: "",
