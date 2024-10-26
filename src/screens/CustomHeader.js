@@ -124,14 +124,14 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 18,
-    fontFamily: "Poppins_800ExtraBold",
+    // fontFamily: "Poppins_800ExtraBold",
     color: "white",
     marginTop:-7
     // flex:1.6
   },
   homeHeader: {
     fontSize: 18,
-    fontFamily: "Poppins_800ExtraBold",
+    // fontFamily: "Poppins_800ExtraBold",
     alignItems: "center",
     color: "white",
     justifyContent: "center",
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   menuItemsBtnText: {
     fontSize: 25,
     color:"white",
-    fontFamily: "Poppins_500Medium",
+    // fontFamily: "Poppins_500Medium",
     textAlign: "center",
   },
 });

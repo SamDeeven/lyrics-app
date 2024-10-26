@@ -9,7 +9,7 @@ import FilteredTitles from "./src/screens/components/FilteredTitles";
 import RandomTitles from "./src/screens/components/RandomTitles";
 import { Poppins_800ExtraBold } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
+// import AppLoading from "expo-app-loading";
 import Contact from "./src/screens/components/Contact";
 import About from "./src/screens/components/About";
 import CustomHeader from "./src/screens/CustomHeader";
@@ -32,13 +32,13 @@ const App = () => {
     setTotalObjects(count);
   }, []);
 
-  const [fontsLoad] = useFonts({
-    Poppins_800ExtraBold,
-  });
+  // const [fontsLoad] = useFonts({
+  //   Poppins_800ExtraBold,
+  // });
 
-  if (!fontsLoad) {
-    return <AppLoading />;
-  }
+  // if (!fontsLoad) {
+  //   return <AppLoading />;
+  // }
 
   return (
     <SafeAreaProvider>
@@ -67,7 +67,7 @@ const App = () => {
               headerTitleStyle: {
                 fontSize: 28,
                 fontWeight: "bold",
-                fontFamily: "Poppins_800ExtraBold",
+                // fontFamily: "Poppins_800ExtraBold",
               },
               headerTitleAlign: "center",
               cardStyle: { backgroundColor: "#EAEAEA" },
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
   },
   menuItemsBtnText: {
     fontSize: 25,
-    fontFamily: "Poppins_500Medium",
+    // fontFamily: "Poppins_500Medium",
     textAlign: "center",
   },
 });

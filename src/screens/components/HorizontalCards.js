@@ -14,26 +14,26 @@ import {
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
+// import AppLoading from "expo-app-loading";
 import { LinearGradient } from "expo-linear-gradient";
 
 function HorizontalCards() {
   const [isTelugu, setIsTelugu] = useState(false);
-  const [fontsLoad] = useFonts({
-    Poppins_300Light,
-    Poppins_300Light_Italic,
-    Poppins_400Regular,
-    Poppins_400Regular_Italic,
-    Poppins_500Medium,
-    Poppins_500Medium_Italic,
-    Poppins_600SemiBold,
-    Poppins_600SemiBold_Italic,
-    Poppins_700Bold,
-  });
+  // const [fontsLoad] = useFonts({
+  //   Poppins_300Light,
+  //   Poppins_300Light_Italic,
+  //   Poppins_400Regular,
+  //   Poppins_400Regular_Italic,
+  //   Poppins_500Medium,
+  //   Poppins_500Medium_Italic,
+  //   Poppins_600SemiBold,
+  //   Poppins_600SemiBold_Italic,
+  //   Poppins_700Bold,
+  // });
 
-  if (!fontsLoad) {
-    return <AppLoading />;
-  }
+  // if (!fontsLoad) {
+  //   return <AppLoading />;
+  // }
   const data = [
     {
       id: uuid.v4(),
@@ -167,7 +167,8 @@ function HorizontalCards() {
             color: "#E5D68A",
             fontSize: 18,
             textAlign: "auto",
-            fontFamily: "Poppins_600SemiBold",
+            // fontFamily: "Poppins_600SemiBold",
+            
           }}
         >
           {isTelugu ? item.teluguTitle : item.title}
@@ -178,7 +179,7 @@ function HorizontalCards() {
             marginTop: 0,
             marginBottom: 6,
             textAlign: "justify",
-            fontFamily: "Poppins_400Regular",
+            // fontFamily: "Poppins_400Regular",
             color:"#ECF0F1"
           }}
         >
@@ -206,7 +207,7 @@ function HorizontalCards() {
                   color: "white",
                   borderRadius: 10,
                   fontSize: 15,
-                  fontFamily: "Poppins_400Regular",
+                  // fontFamily: "Poppins_400Regular",
                 }}
               >
                 {item.buttonName}

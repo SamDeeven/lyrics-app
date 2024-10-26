@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     fontSize: 18,
-    fontFamily: "Poppins_600SemiBold_Italic",
+    // fontFamily: "Poppins_600SemiBold_Italic",
     color: "#888",
     textAlign: "center",
   },

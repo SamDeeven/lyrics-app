@@ -15,6 +15,7 @@ import { useFocusEffect } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Picker } from "@react-native-picker/picker";
+import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
 
 const Favorites = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -118,7 +119,17 @@ const Favorites = ({ navigation }) => {
       console.error("Error clearing favorites:", error);
     }
   };
+  const [fontsLoaded] = useFonts({
+    NotoSansTelugu_400Regular,
+  });
 
+  if (!fontsLoaded) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
@@ -269,7 +280,7 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     fontSize: 18,
-    fontFamily: "Poppins_600SemiBold_Italic",
+    // fontFamily: "Poppins_600SemiBold_Italic",
     color: "#888",
     textAlign: "center",
   },
@@ -290,8 +301,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    fontSize: 24,
+    fontSize: 25,
     color: "white",
+    fontFamily:"NotoSansTelugu_400Regular",
+
   },
   removeButtonContainer: {
     marginRight: 10,

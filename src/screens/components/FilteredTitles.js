@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import alphabetData from "../../../data/songsData.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
 
 const FilteredTitles = ({ route, navigation }) => {
   const { searchQuery } = route.params;
@@ -57,6 +58,17 @@ const FilteredTitles = ({ route, navigation }) => {
       console.error("Error handling recently viewed items:", error);
     }
   };
+  const [fontsLoaded] = useFonts({
+    NotoSansTelugu_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -148,9 +160,10 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 25,
     fontWeight: "bold",
     color: "white",
+    fontFamily:"NotoSansTelugu_400Regular",
   },
   genre: {
     fontSize: 14,

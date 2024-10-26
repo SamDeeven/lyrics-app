@@ -9,21 +9,21 @@ import {
   Poppins_800ExtraBold,
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
+// import AppLoading from "expo-app-loading";
 
 
 const About = () => {
-  const [fontsLoad] = useFonts({
-    Poppins_300Light,
-    Poppins_400Regular,
-    Poppins_500Medium,
-    Poppins_600SemiBold,
-    Poppins_800ExtraBold,
-  });
+  // const [fontsLoad] = useFonts({
+  //   Poppins_300Light,
+  //   Poppins_400Regular,
+  //   Poppins_500Medium,
+  //   Poppins_600SemiBold,
+  //   Poppins_800ExtraBold,
+  // });
 
-  if (!fontsLoad) {
-    return <AppLoading />;
-  }
+  // if (!fontsLoad) {
+  //   return <AppLoading />;
+  // }
   return (
     <SafeAreaView>
       <ScrollView>
@@ -58,28 +58,28 @@ const styles = StyleSheet.create({
       marginTop:30,
       marginBottom:40,
       color:"#800000",
-      fontFamily:"Poppins_800ExtraBold"
+      // fontFamily:"Poppins_800ExtraBold"
     },
     bibleVerse:{
     color: "#6A5ACD",
     fontSize:25,
     marginHorizontal:18,
     textAlign:"center",
-    fontFamily:"Poppins_600SemiBold"
+    // fontFamily:"Poppins_600SemiBold"
     },
     aboutText:{
       fontSize: 22,
       marginHorizontal:20,
       textAlign:"justify",
       color:"#6A5ACD",
-      fontFamily:"Poppins_300Light"
+      // fontFamily:"Poppins_300Light"
     },
     subscribeText:{
       fontSize: 24,
       marginHorizontal:20,
       textAlign:"center",
       color:"#6A5ACD",
-      fontFamily:"Poppins_300Light"
+      // fontFamily:"Poppins_300Light"
     },
     youtubeContainer:{
       backgroundColor:"#FF0000",
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
       fontSize: 22,
       textAlign:"center",
       color:"white",
-      fontFamily:"Poppins_400Regular"
+      // fontFamily:"Poppins_400Regular"
 
     }
 })

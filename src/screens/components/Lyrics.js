@@ -9,6 +9,7 @@ import {
   Linking,
   Alert,
   TouchableWithoutFeedback,
+  ActivityIndicator 
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import {
@@ -31,14 +32,16 @@ import {
   Poppins_900Black,
   Poppins_900Black_Italic,
 } from "@expo-google-fonts/poppins";
-import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
+// import { useFonts } from "expo-font";
+// import AppLoading from "expo-app-loading";
 import Icon from "react-native-vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
+import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
+
 
 const Lyrics = () => {
-  const [fontSize, setFontSize] = useState(20);
+  const [fontSize, setFontSize] = useState(22);
   const [isFavorite, setIsFavorite] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
@@ -94,29 +97,41 @@ const Lyrics = () => {
   };
 
 
-  const [fontsLoad] = useFonts({
-    Poppins_100Thin,
-    Poppins_100Thin_Italic,
-    Poppins_200ExtraLight,
-    Poppins_200ExtraLight_Italic,
-    Poppins_300Light,
-    Poppins_300Light_Italic,
-    Poppins_400Regular,
-    Poppins_400Regular_Italic,
-    Poppins_500Medium,
-    Poppins_500Medium_Italic,
-    Poppins_600SemiBold,
-    Poppins_600SemiBold_Italic,
-    Poppins_700Bold,
-    Poppins_700Bold_Italic,
-    Poppins_800ExtraBold,
-    Poppins_800ExtraBold_Italic,
-    Poppins_900Black,
-    Poppins_900Black_Italic,
+  // const [fontsLoad] = useFonts({
+  //   Poppins_100Thin,
+  //   Poppins_100Thin_Italic,
+  //   Poppins_200ExtraLight,
+  //   Poppins_200ExtraLight_Italic,
+  //   Poppins_300Light,
+  //   Poppins_300Light_Italic,
+  //   Poppins_400Regular,
+  //   Poppins_400Regular_Italic,
+  //   Poppins_500Medium,
+  //   Poppins_500Medium_Italic,
+  //   Poppins_600SemiBold,
+  //   Poppins_600SemiBold_Italic,
+  //   Poppins_700Bold,
+  //   Poppins_700Bold_Italic,
+  //   Poppins_800ExtraBold,
+  //   Poppins_800ExtraBold_Italic,
+  //   Poppins_900Black,
+  //   Poppins_900Black_Italic,
+  // });
+
+  // if (!fontsLoad) {
+  //   return <AppLoading />;
+  // }
+
+  const [fontsLoaded] = useFonts({
+    NotoSansTelugu_400Regular,
   });
 
-  if (!fontsLoad) {
-    return <AppLoading />;
+  if (!fontsLoaded) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
   }
 
   const handleFontSize = (size) => {
@@ -204,7 +219,7 @@ const Lyrics = () => {
             <Icon name="add-circle" size={20} color="white" />
           </TouchableOpacity>
 
-          {/* {titleItem.video && (
+          {titleItem.video && (
             <View>
               <TouchableOpacity
                 style={styles.videoBtn}
@@ -213,7 +228,7 @@ const Lyrics = () => {
                 <Icon name="logo-youtube" size={50} color="red" />
               </TouchableOpacity>
             </View>
-          )} */}
+          )}
 
           <TouchableOpacity
             style={styles.favButtonContainer}
@@ -494,6 +509,8 @@ const styles = StyleSheet.create({
     lineHeight: 27,
     paddingLeft: 5,
     marginBottom: 3,
+    fontFamily:"NotoSansTelugu_400Regular",
+
   },
   genre: {
     fontSize: 18,
@@ -517,7 +534,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     alignSelf: "center",
     paddingVertical: 10,
-    fontFamily: "Poppins_700Bold_Italic",
+    // fontFamily: "Poppins_700Bold_Italic",
     color: "red",
   },
   gradient: {

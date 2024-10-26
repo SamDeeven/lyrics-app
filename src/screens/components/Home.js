@@ -10,6 +10,8 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableWithoutFeedback,
+  ActivityIndicator 
+
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.js";
@@ -21,12 +23,13 @@ import {
   Poppins_700Bold,
   Poppins_800ExtraBold,
 } from "@expo-google-fonts/poppins";
-import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
+// import { useFonts } from "expo-font";
+// import AppLoading from "expo-app-loading";
 import Icon from "react-native-vector-icons/Ionicons";
 import HorizontalCards from "./HorizontalCards.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Favorites from "./Favorites.js";
+import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
 
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
@@ -93,17 +96,29 @@ const Home = () => {
     setSuggestions(matchingSuggestions);
   }, [inputSearch]);
 
-  const [fontsLoad] = useFonts({
-    Poppins_300Light,
-    Poppins_400Regular,
-    Poppins_500Medium,
-    Poppins_600SemiBold,
-    Poppins_700Bold,
-    Poppins_800ExtraBold,
+  // const [fontsLoad] = useFonts({
+  //   Poppins_300Light,
+  //   Poppins_400Regular,
+  //   Poppins_500Medium,
+  //   Poppins_600SemiBold,
+  //   Poppins_700Bold,
+  //   Poppins_800ExtraBold,
+  // });
+
+  // if (!fontsLoad) {
+  //   return <AppLoading />;
+  // }
+
+  const [fontsLoaded] = useFonts({
+    NotoSansTelugu_400Regular,
   });
 
-  if (!fontsLoad) {
-    return <AppLoading />;
+  if (!fontsLoaded) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
   }
 
   const navigateToRandomTitles = () => {
@@ -298,7 +313,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   searchInput: {
-    fontFamily: "Poppins_500Medium",
+    // fontFamily: "Poppins_500Medium",
     height: 50,
     width: 300,
     paddingTop: 5,
@@ -344,9 +359,11 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   suggestionText: {
-    fontSize: 19,
+    fontSize: 20,
     fontWeight: "bold",
     color: "white",
+    fontFamily:"NotoSansTelugu_400Regular",
+
   },
   alphabetContainer: {
     justifyContent: "center",
@@ -356,7 +373,7 @@ const styles = StyleSheet.create({
   alphabetItem: {
     justifyContent: "center",
     alignItems: "center",
-    margin: 3,
+    margin: 4,
     height: 47,
     width: 47,
     // backgroundColor: "#02B290",
@@ -364,10 +381,12 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   alphabetText: {
-    fontSize: 30,
-    fontFamily: "Poppins_600SemiBold",
+    fontSize: 32,
+    // fontFamily: "Poppins_600SemiBold",
+    fontFamily:"NotoSansTelugu_400Regular",
     textAlign: "center",
-    marginTop:3,
+    fontWeight:"bold",
+    // marginTop:3,
     color:"black"
   },
 
@@ -386,7 +405,7 @@ const styles = StyleSheet.create({
     color: "lightyellow",
     fontSize: 18,
     textAlign: "center",
-    fontFamily: "Poppins_600SemiBold",
+    // fontFamily: "Poppins_600SemiBold",
   },
   horizontalCards: {
     marginTop: 15,
