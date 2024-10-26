@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <SafeAreaProvider>
-      <StatusBar backgroundColor="#273A6F" barStyle="light-content" />
+      <StatusBar backgroundColor="#293241" barStyle="light-content" />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen

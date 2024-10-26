@@ -38,10 +38,13 @@ import Icon from "react-native-vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
 import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
+import { Chilanka_400Regular } from '@expo-google-fonts/chilanka';
+import { Mallanna_400Regular } from '@expo-google-fonts/mallanna';
+import { BalooTammudu2_400Regular, BalooTammudu2_700Bold } from '@expo-google-fonts/baloo-tammudu-2';
 
 
 const Lyrics = () => {
-  const [fontSize, setFontSize] = useState(22);
+  const [fontSize, setFontSize] = useState(24);
   const [isFavorite, setIsFavorite] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
@@ -124,6 +127,10 @@ const Lyrics = () => {
 
   const [fontsLoaded] = useFonts({
     NotoSansTelugu_400Regular,
+    Chilanka_400Regular,
+    Mallanna_400Regular,
+    BalooTammudu2_400Regular,
+    BalooTammudu2_700Bold,
   });
 
   if (!fontsLoaded) {
@@ -137,9 +144,9 @@ const Lyrics = () => {
   const handleFontSize = (size) => {
     let newFontSize = fontSize;
 
-    if (size === "increase" && newFontSize < 32) {
+    if (size === "increase" && newFontSize < 38) {
       newFontSize += 2;
-    } else if (size === "decrease" && newFontSize > 10) {
+    } else if (size === "decrease" && newFontSize > 14) {
       newFontSize -= 2;
     } else if (size === "reset") {
       newFontSize === fontSize;
@@ -149,7 +156,7 @@ const Lyrics = () => {
   };
 
   const resetFontSize = () => {
-    setFontSize(20);
+    setFontSize(24);
   };
   const handleVideoButton = () => {
     if (titleItem.video) {
@@ -377,7 +384,9 @@ const Lyrics = () => {
                     key={index}
                     style={[
                       styles.song,
-                      { fontSize, lineHeight: fontSize + 8 },
+                      { fontSize, 
+                        lineHeight: fontSize + 18 
+                      },
                     ]}
                   >
                     {lyric}
@@ -438,6 +447,7 @@ const styles = StyleSheet.create({
          top: 50,
          right:-15,
     width: 300,
+    height:300,
     padding: 8,
     borderRadius: 18,
   },
@@ -504,12 +514,13 @@ const styles = StyleSheet.create({
   lyricsContainer: {
     paddingTop: 5,
     flexGrow: 1,
+    
   },
   song: {
-    lineHeight: 27,
+    // lineHeight: 30,
     paddingLeft: 5,
     marginBottom: 3,
-    fontFamily:"NotoSansTelugu_400Regular",
+    fontFamily:"Mallanna_400Regular",
 
   },
   genre: {

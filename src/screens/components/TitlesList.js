@@ -214,6 +214,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 20,
+
   },
   title: {
     fontSize: 25,

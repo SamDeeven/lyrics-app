@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#273A6F",
+    backgroundColor: "#293241",
     height: 33,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   homeHeaderContainer: {
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "#273A6F",
+    backgroundColor: "#293241",
     height: 33,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,

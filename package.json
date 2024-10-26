@@ -1,6 +1,6 @@
 {
   "name": "lyrics-app",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@eva-design/eva": "^2.2.0",
+    "@expo-google-fonts/baloo-tammudu-2": "^0.2.3",
+    "@expo-google-fonts/chilanka": "^0.2.3",
+    "@expo-google-fonts/mallanna": "^0.2.3",
     "@expo-google-fonts/noto-sans-telugu": "^0.2.3",
     "@expo-google-fonts/poppins": "^0.2.3",
     "@expo/config": "^9.0.0",

@@ -38,7 +38,7 @@ const About = () => {
     </TouchableOpacity>
     <Text></Text>
     <Text></Text>
-    <Text style={{color:"blue", width:120}}>App Version 1.0.11</Text>
+    <Text style={{color:"blue", width:120}}>App Version 1.0.12</Text>
     </View>
     </ScrollView>
     </SafeAreaView>

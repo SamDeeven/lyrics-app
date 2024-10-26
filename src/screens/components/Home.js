@@ -30,6 +30,7 @@ import HorizontalCards from "./HorizontalCards.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Favorites from "./Favorites.js";
 import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
+import { Mallanna_400Regular } from '@expo-google-fonts/mallanna';
 
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
@@ -111,6 +112,7 @@ const Home = () => {
 
   const [fontsLoaded] = useFonts({
     NotoSansTelugu_400Regular,
+    Mallanna_400Regular
   });
 
   if (!fontsLoaded) {
@@ -377,13 +379,13 @@ const styles = StyleSheet.create({
     height: 47,
     width: 47,
     // backgroundColor: "#02B290",
-    backgroundColor: "#D37676",
+    backgroundColor: "#F87A53",
     borderRadius: 8,
   },
   alphabetText: {
-    fontSize: 32,
+    fontSize: 30,
     // fontFamily: "Poppins_600SemiBold",
-    fontFamily:"NotoSansTelugu_400Regular",
+    fontFamily:"Mallanna_400Regular",
     textAlign: "center",
     fontWeight:"bold",
     // marginTop:3,
@@ -392,7 +394,8 @@ const styles = StyleSheet.create({
 
   randomBtn: {
     // backgroundColor: "#02B290",
-    backgroundColor: "#1679AB",
+    // backgroundColor: "#1679AB",
+    backgroundColor:"#3d5a80",
     width: 150,
     padding: 5,
     marginTop: 8,
