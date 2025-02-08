@@ -17,6 +17,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import Favorites from "./src/screens/components/Favorites";
 import RecentlyViewed from "./src/screens/components/RecentlyViewed";
 import alphabetData from "./data/songsData.js";
+import Categories from "./src/screens/components/Categories.js";
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -73,6 +74,29 @@ const App = () => {
               cardStyle: { backgroundColor: "#EAEAEA" },
             }}
           />
+
+<Stack.Screen
+            name="Categories"
+            component={Categories}
+            options={{
+              header: () => (
+                <CustomHeader
+                  title="Categories" 
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              headerTitleAlign: "center",
+              animationEnabled: false,
+              headerStyle: {
+                backgroundColor: "#02B290",
+                borderBottomWidth: 2,
+                height: 70,
+              },
+              cardStyle: { backgroundColor: "#EAEAEA" },
+            }}
+          />
+
 
           <Stack.Screen
             name="TitlesList"
