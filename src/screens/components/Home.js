@@ -10,8 +10,7 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableWithoutFeedback,
-  ActivityIndicator 
-
+  ActivityIndicator,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.js";
@@ -29,17 +28,17 @@ import Icon from "react-native-vector-icons/Ionicons";
 import HorizontalCards from "./HorizontalCards.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Favorites from "./Favorites.js";
-import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
-import { Mallanna_400Regular } from '@expo-google-fonts/mallanna';
+import {
+  useFonts,
+  NotoSansTelugu_400Regular,
+} from "@expo-google-fonts/noto-sans-telugu";
+import { Mallanna_400Regular } from "@expo-google-fonts/mallanna";
 
 const Home = () => {
   const [inputSearch, setInputSearch] = useState("");
   const [isKeyboardActive, setIsKeyboardActive] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const navigation = useNavigation();
-
-
-  
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
@@ -112,7 +111,7 @@ const Home = () => {
 
   const [fontsLoaded] = useFonts({
     NotoSansTelugu_400Regular,
-    Mallanna_400Regular
+    Mallanna_400Regular,
   });
 
   if (!fontsLoaded) {
@@ -130,7 +129,6 @@ const Home = () => {
   const navigateToFavorites = () => {
     navigation.navigate("Favorites");
   };
-
 
   const handleSearch = () => {
     if (inputSearch.length === 0) return;
@@ -214,8 +212,12 @@ const Home = () => {
         >
           <View style={[styles.topContainer]}>
             <View style={styles.inputBoxContainer}>
-              <View style={{ flexDirection: "row", position:"relative" }}>
-                <Icon name="search-outline" size={30} style={{position: "absolute",zIndex:1, left:18, top:20 }}/>
+              <View style={{ flexDirection: "row", position: "relative" }}>
+                <Icon
+                  name="search-outline"
+                  size={30}
+                  style={{ position: "absolute", zIndex: 1, left: 18, top: 20 }}
+                />
                 <TextInput
                   style={styles.searchInput}
                   placeholder="పాటను వెతకండి"
@@ -278,24 +280,29 @@ const Home = () => {
                 </TouchableOpacity>
               ))}
             </View>
-            <View style={{flexDirection:"row", justifyContent:"center"}}>
-            <TouchableOpacity
-              style={styles.randomBtn}
-              onPress={navigateToFavorites}
-            >
-              <Text style={styles.randomBtnText}>Favorite Songs</Text>
-            </TouchableOpacity>
-              
-            <TouchableOpacity
-              style={styles.randomBtn}
-              onPress={navigateToRandomTitles}
-            >
-              <Text style={styles.randomBtnText}>Random Songs</Text>
-            </TouchableOpacity>
+            <View style={{ flexDirection: "row", justifyContent: "center" }}>
+              <TouchableOpacity
+                style={styles.randomBtn}
+                onPress={navigateToFavorites}
+              >
+                <Text style={styles.randomBtnText}>Favorite Songs</Text>
+              </TouchableOpacity>
 
+              <TouchableOpacity
+                style={styles.randomBtn}
+                onPress={navigateToRandomTitles}
+              >
+                <Text style={styles.randomBtnText}>Random Songs</Text>
+              </TouchableOpacity>
             </View>
-
-          
+            <View>
+              <TouchableOpacity
+                style={styles.randomBtn}
+                onPress={() => navigation.navigate("LentSongsRandom")}
+              >
+                <Text style={styles.randomBtnText}>Lent Songs</Text>
+              </TouchableOpacity>
+            </View>
 
             <View style={styles.horizontalCards}>
               <HorizontalCards />
@@ -364,8 +371,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "white",
-    fontFamily:"NotoSansTelugu_400Regular",
-
+    fontFamily: "NotoSansTelugu_400Regular",
   },
   alphabetContainer: {
     justifyContent: "center",
@@ -385,21 +391,21 @@ const styles = StyleSheet.create({
   alphabetText: {
     fontSize: 30,
     // fontFamily: "Poppins_600SemiBold",
-    fontFamily:"Mallanna_400Regular",
+    fontFamily: "Mallanna_400Regular",
     textAlign: "center",
-    fontWeight:"bold",
+    fontWeight: "bold",
     // marginTop:3,
-    color:"black"
+    color: "black",
   },
 
   randomBtn: {
     // backgroundColor: "#02B290",
     // backgroundColor: "#1679AB",
-    backgroundColor:"#3d5a80",
+    backgroundColor: "#3d5a80",
     width: 150,
     padding: 5,
     marginTop: 8,
-    margin:2,
+    margin: 2,
     borderRadius: 8,
     alignSelf: "center",
   },
