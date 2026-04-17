@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   View,
   Text,
@@ -11,6 +11,7 @@ import {
   ScrollView,
   TouchableWithoutFeedback,
   ActivityIndicator,
+  Modal
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.js";
@@ -39,6 +40,16 @@ const Home = () => {
   const [isKeyboardActive, setIsKeyboardActive] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const navigation = useNavigation();
+
+  const [modalVisible, setModalVisible] = useState(false);
+  const isFirstRender = useRef(true); // Track first render
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      setModalVisible(true); // Show popup on first launch
+      isFirstRender.current = false; // Prevent showing again on navigation
+    }
+  }, []);
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
@@ -210,6 +221,27 @@ const Home = () => {
         <TouchableWithoutFeedback
           onPress={handleTapOutside && clearSuggestions}
         >
+          <View style={{ flex: 1 }}>
+
+<Modal visible={modalVisible} transparent animationType="fade">
+        <View style={styles.modalBackground}>
+          <View style={styles.modalContainer}>
+            <Text style={styles.modalText}>Welcome to Vinnu Lyrics App! 🎉</Text>
+            <Text style={styles.modalText}>Enjoy the fresh, and clean new UI. Happy singing! 🎤🙌</Text>
+            <Text style={styles.modalText}>Total Songs = 779</Text>
+
+            
+            {/* <Text style={styles.modalText}>New Update: Lent Songs Button is added</Text>
+            <Text style={styles.modalText}>శ్రమదినాల పాటల కోసం ప్రత్యేకమైన బటన్ ని గమనించండి</Text> */}
+
+
+            <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.closeButton}>
+              <Text style={styles.closeButtonText}>Close</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+
           <View style={[styles.topContainer]}>
             <View style={styles.inputBoxContainer}>
               <View style={{ flexDirection: "row", position: "relative" }}>
@@ -295,18 +327,22 @@ const Home = () => {
                 <Text style={styles.randomBtnText}>Random Songs</Text>
               </TouchableOpacity>
             </View>
-            <View>
+            {/* <View>
               <TouchableOpacity
-                style={styles.randomBtn}
+                style={styles.lentRandomBtn}
                 onPress={() => navigation.navigate("LentSongsRandom")}
               >
                 <Text style={styles.randomBtnText}>Lent Songs</Text>
+                <Text style={styles.randomBtnText}>శ్రమదినాల పాటల</Text>
+
+               
               </TouchableOpacity>
-            </View>
+            </View> */}
 
             <View style={styles.horizontalCards}>
               <HorizontalCards />
             </View>
+          </View>
           </View>
         </TouchableWithoutFeedback>
       </ScrollView>
@@ -362,15 +398,24 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     margin: 4,
     padding: 12,
-    backgroundColor: "#1679AB",
-    borderColor: "#1679AB",
-    borderWidth: 0.8,
+    // backgroundColor: "#1679AB",
+    borderColor: "#2C3E50",
+    borderWidth: 0.9,
     borderRadius: 16,
+    shadowColor: "#000",
+shadowOffset: {
+  width: 0,
+  height: 5, // A positive number pushes the shadow down
+},
+shadowOpacity: 0.25,
+shadowRadius: 3.84,
+elevation: 5,
+
   },
   suggestionText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "white",
+    color: "#2C3E50",
     fontFamily: "NotoSansTelugu_400Regular",
   },
   alphabetContainer: {
@@ -385,8 +430,11 @@ const styles = StyleSheet.create({
     height: 47,
     width: 47,
     // backgroundColor: "#02B290",
-    backgroundColor: "#F87A53",
-    borderRadius: 8,
+    // backgroundColor: "#F87A53",
+   backgroundColor: "#E3F2FD",
+   borderWidth:0.9,
+   borderColor:"#2C3E50",
+    borderRadius: 17,
   },
   alphabetText: {
     fontSize: 30,
@@ -395,13 +443,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     // marginTop:3,
-    color: "black",
+    color: "#2C3E50",
   },
 
   randomBtn: {
     // backgroundColor: "#02B290",
     // backgroundColor: "#1679AB",
-    backgroundColor: "#3d5a80",
+    // backgroundColor: "#3d5a80",
+    borderColor: "#2C3E50",
+    borderWidth: 0.9,
     width: 150,
     padding: 5,
     marginTop: 8,
@@ -411,10 +461,20 @@ const styles = StyleSheet.create({
   },
   randomBtnText: {
     // color: "#120E43",
-    color: "lightyellow",
+    color: "#2C3E50",
+    fontWeight: "bold",
     fontSize: 18,
     textAlign: "center",
     // fontFamily: "Poppins_600SemiBold",
+  },
+  lentRandomBtn:{
+backgroundColor:"#c3195d",
+width: 150,
+    padding: 5,
+    marginTop: 8,
+    margin: 2,
+    borderRadius: 8,
+    alignSelf: "center",
   },
   horizontalCards: {
     marginTop: 15,
@@ -433,6 +493,13 @@ const styles = StyleSheet.create({
   darkThemeBtnText: {
     color: "black",
   },
+
+  modalBackground: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.5)" },
+  modalContainer: { width: 250, padding: 20, backgroundColor: "white", borderRadius: 10, alignItems: "center" },
+  modalText: { fontSize: 18, fontWeight: "bold", marginBottom: 10 },
+  closeButton: { backgroundColor: "red", padding: 8, borderRadius: 5 },
+  closeButtonText: { color: "white", fontWeight: "bold" },
+
 });
 
 export default Home;

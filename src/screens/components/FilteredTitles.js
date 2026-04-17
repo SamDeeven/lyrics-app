@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     marginBottom: 7,
    
-    backgroundColor: "#1679AB",
+    // backgroundColor: "#2C3E50",
     borderRadius: 5,
     padding: 3,
     paddingLeft: 5,
@@ -159,24 +159,33 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 20,
+      borderWidth:0.9,
+   shadowColor: "#000",
+shadowOffset: {
+  width: 0,
+  height: 5, // A positive number pushes the shadow down
+},
+shadowOpacity: 0.25,
+shadowRadius: 3.84,
+elevation: 5,
   },
   title: {
     fontSize: 25,
     fontWeight: "bold",
-    color: "white",
+    color: "#2C3E50",
     fontFamily:"NotoSansTelugu_400Regular",
   },
   genre: {
     fontSize: 14,
-    color: "white",
+    color: "#2C3E50",
   },
   timeSignature: {
     fontSize: 14,
-    color: "white",
+    color: "#2C3E50",
   },
   artist: {
     fontSize: 12,
-    color: "lightpink",
+    color: "#67717b",
   },
   emoji: {
     fontSize: 100,

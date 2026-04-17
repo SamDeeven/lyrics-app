@@ -163,8 +163,8 @@ const Favorites = ({ navigation }) => {
           <View>
             <Picker
               prompt="Choose Genre"
-              dropdownIconColor={"#1679AB"}
-              dropdownIconRippleColor={"#1679AB"}
+              dropdownIconColor={"#2C3E50"}
+              dropdownIconRippleColor={"#2C3E50"}
               selectedValue={selectedGenre}
               onValueChange={(itemValue) =>
                 filterFavoritesByGenre(itemValue, favorites)
@@ -268,15 +268,15 @@ const styles = StyleSheet.create({
   },
   genre: {
     fontSize: 14,
-    color: "white",
+    color: "#2C3E50",
   },
   timeSignature: {
     fontSize: 14,
-    color: "white",
+    color: "#2C3E50",
   },
   artist: {
     fontSize: 12,
-    color: "lightpink",
+    color: "#67717b",
   },
   emptyText: {
     fontSize: 18,
@@ -291,18 +291,27 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     padding: 3,
     paddingLeft: 5,
-    backgroundColor: "#1679AB",
+    // backgroundColor: "#1679AB",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 20,
+     borderWidth:0.9,
+   shadowColor: "#000",
+shadowOffset: {
+  width: 0,
+  height: 5, // A positive number pushes the shadow down
+},
+shadowOpacity: 0.25,
+shadowRadius: 3.84,
+elevation: 5,
   },
   itemContainer: {
     flex: 1,
   },
   titleText: {
     fontSize: 25,
-    color: "white",
+    color: "#2C3E50",
     fontFamily:"NotoSansTelugu_400Regular",
 
   },
@@ -310,8 +319,8 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   removeButton: {
-    color: "white",
-    color: "lightyellow",
+    // color: "white",
+    color: "#2C3E50",
   },
   picker: {
     width: "100%",
@@ -323,7 +332,7 @@ const styles = StyleSheet.create({
     padding: 3,
   },
   pickerItem: {
-    color: "#1679AB",
+    color: "#2C3E50",
     fontSize: 20,
   },
 });

@@ -20,6 +20,7 @@ const Contact = () => {
               textAlign: "justify",
               paddingHorizontal: 15,
               marginTop: 15,
+              color:"#2C3E50"
             }}
           >
             If you find any mistakes in the lyrics or if you need any song
@@ -31,6 +32,7 @@ const Contact = () => {
               textAlign: "justify",
               paddingHorizontal: 15,
               marginTop: 15,
+              color:"#2C3E50"
             }}
           >
             ఒకవేళ ఎదైన పాటలో మీరు తప్పులు గమనిస్తే లేదా ఎదైన పాట మీకు ఈ ఆప్ లో
@@ -41,19 +43,21 @@ const Contact = () => {
               style={{ position: "absolute" }}
               name="mail-sharp"
               size={30}
+              color="#2C3E50"
             />
             <TouchableOpacity
               onPress={() =>
                 Linking.openURL("mailto:samdeeven.lyricsapp@gmail.com")
               }
               style={{
-                borderWidth: 1.5,
+                borderWidth: 0.9,
                 borderRadius: 18,
                 alignContent: "center",
                 marginHorizontal: 30,
+                padding: 4,
               }}
             >
-              <Text style={{ fontSize: 18, textAlign: "center" }}>
+              <Text style={{ fontSize: 18, textAlign: "center", color:"#2C3E50" }}>
                 samdeeven.lyricsapp@gmail.com
               </Text>
             </TouchableOpacity>

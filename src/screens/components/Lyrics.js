@@ -214,16 +214,16 @@ const Lyrics = () => {
             style={[styles.button, fontSize === "decrease"]}
             onPress={() => handleFontSize("decrease")}
           >
-            <Icon name="remove-circle" size={20} color="white" />
+            <Icon name="remove-circle" size={20} color="#2C3E50" />
           </TouchableOpacity>
           <TouchableOpacity style={[styles.button]} onPress={resetFontSize}>
-            <Icon name="refresh-outline" size={20} color="white" />
+            <Icon name="refresh-outline" size={20} color="#2C3E50" />
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.button]}
             onPress={() => handleFontSize("increase")}
           >
-            <Icon name="add-circle" size={20} color="white" />
+            <Icon name="add-circle" size={20} color="#2C3E50" />
           </TouchableOpacity>
 
           {titleItem.video && (
@@ -244,7 +244,7 @@ const Lyrics = () => {
             <Icon
               name={isFavorite ? "heart" : "heart-outline"}
               size={45}
-              color={isFavorite ? "red" : "black"}
+              color={isFavorite ? "red" : "#2C3E50"}
               style={styles.favButton}
             />
           </TouchableOpacity>
@@ -254,7 +254,7 @@ const Lyrics = () => {
               {showOptions ? (
                 <Icon style={{ fontSize: 40 }} name="close-circle-sharp" />
               ) : (
-                <Icon name="information-circle-outline" size={40} />
+                <Icon name="information-circle-outline" size={40} color="#2C3E50"/>
               )}
             </TouchableOpacity>
             {showOptions && (
@@ -480,7 +480,7 @@ const styles = StyleSheet.create({
   },
   button: {
     // backgroundColor: "#02B290",
-    backgroundColor: "#1679AB",
+    // backgroundColor: "#1679AB",
     padding: 7,
     margin: 10,
     borderTopLeftRadius: 14,
@@ -488,7 +488,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 14,
     borderWidth: 1,
-    borderColor: "#1679AB",
+    borderColor: "#2C3E50",
     marginTop: 8,
   },
   buttonText: {

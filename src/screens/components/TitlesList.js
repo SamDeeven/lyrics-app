@@ -138,9 +138,9 @@ const TitlesList = () => {
         <Text style={{ fontSize: 20 }}>Filter</Text>
         <Picker
           prompt="Choose Genre"
-          promptStyle={{ color: "1679AB" }}
-          dropdownIconColor={"#1679AB"}
-          dropdownIconRippleColor={"#1679AB"}
+          promptStyle={{ color: "#2C3E50" }}
+          dropdownIconColor={"#2C3E50"}
+          dropdownIconRippleColor={"#2C3E50"}
           selectedValue={selectedGenre}
           onValueChange={(itemValue) => filterSongsByGenre(itemValue)}
           style={styles.picker}
@@ -209,7 +209,17 @@ const styles = StyleSheet.create({
     // paddingTop:2,
     paddingLeft:5,
     // backgroundColor: "#049372",
-    backgroundColor: "#1679AB",
+    // backgroundColor: "#2C3E50",
+    borderWidth:0.9,
+   shadowColor: "#000",
+shadowOffset: {
+  width: 0,
+  height: 5, // A positive number pushes the shadow down
+},
+shadowOpacity: 0.25,
+shadowRadius: 3.84,
+elevation: 5,
+    borderColor:"#2C3E50",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
@@ -219,20 +229,20 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     fontWeight: "bold",
-    color: "white",
+    color: "#2C3E50",
     fontFamily:"NotoSansTelugu_400Regular",
   },
   genre: {
     fontSize: 14,
-    color: "white",
+    color: "#2C3E50",
   },
   timeSignature: {
     fontSize: 13,
-    color: "white",
+    color: "#2C3E50",
   },
   artist: {
     fontSize: 11,
-    color: "#FFCDEA",
+    color: "#67717b",
   },
   picker: {
     // width: "100%",
@@ -243,7 +253,7 @@ const styles = StyleSheet.create({
 
   },
   pickerItem: {
-    color: "#1679AB",
+    color: "#2C3E50",
     fontSize:22,
   },
 });

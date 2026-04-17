@@ -32,13 +32,13 @@ const About = () => {
       <Text style={[styles.bibleVerse]}>“I will praise the LORD all my life; I will sing praise to my God as long as I live.”{"\n"}Psalm 146:2</Text>
       <Text style={styles.aboutText}>{"\n"}Hello, I am Sam Deeven (Vinnu). I hope this app helps you in your church service for Song Lyrics without internet.</Text>
       <Text style={styles.subscribeText}>{"\n"}To listen and learn gospel songs and music, subscribe to my YouTube Channel</Text>
-    <Icon name="caret-down-outline" size={30} color="#6A5ACD" />
+    <Icon name="caret-down-outline" size={30} color="#2C3E50" />
     <TouchableOpacity style={styles.youtubeContainer} onPress={() => Linking.openURL("https://www.youtube.com/@SamDeeven/featured")}>
       <Text style={styles.youtubeText}>Open YouTube Channel</Text>
     </TouchableOpacity>
     <Text></Text>
     <Text></Text>
-    <Text style={{color:"blue", width:120}}>App Version 1.0.12</Text>
+    <Text style={{color:"#2C3E50", width:120}}>App Version 1.0.14</Text>
     </View>
     </ScrollView>
     </SafeAreaView>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
       // fontFamily:"Poppins_800ExtraBold"
     },
     bibleVerse:{
-    color: "#6A5ACD",
+    color: "#2C3E50",
     fontSize:25,
     marginHorizontal:18,
     textAlign:"center",
@@ -71,14 +71,14 @@ const styles = StyleSheet.create({
       fontSize: 22,
       marginHorizontal:20,
       textAlign:"justify",
-      color:"#6A5ACD",
+      color:"#2C3E50",
       // fontFamily:"Poppins_300Light"
     },
     subscribeText:{
       fontSize: 24,
       marginHorizontal:20,
       textAlign:"center",
-      color:"#6A5ACD",
+      color:"#2C3E50",
       // fontFamily:"Poppins_300Light"
     },
     youtubeContainer:{

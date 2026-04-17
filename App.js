@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <SafeAreaProvider>
-      <StatusBar backgroundColor="#293241" barStyle="light-content" />
+      <StatusBar backgroundColor="#2C3E50" barStyle="light-content" />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
@@ -72,17 +72,17 @@ const App = () => {
                 // fontFamily: "Poppins_800ExtraBold",
               },
               headerTitleAlign: "center",
-              cardStyle: { backgroundColor: "#EAEAEA" },
+              cardStyle: { backgroundColor: "#F8F9FA" },
             }}
           />
 
-<Stack.Screen
+          <Stack.Screen
             name="Categories"
             component={Categories}
             options={{
               header: () => (
                 <CustomHeader
-                  title="Categories" 
+                  title="Categories"
                   showBackButton={true}
                   showHomeButton={true}
                 />
@@ -97,7 +97,6 @@ const App = () => {
               cardStyle: { backgroundColor: "#EAEAEA" },
             }}
           />
-
 
           <Stack.Screen
             name="TitlesList"
@@ -121,7 +120,7 @@ const App = () => {
                 height: 70,
               },
               cardStyle: {
-                backgroundColor: "#EAEAEA",
+                backgroundColor: "#F8F9FA",
               },
             }}
           />
@@ -143,7 +142,7 @@ const App = () => {
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#EAEAEA" },
+              cardStyle: { backgroundColor: "#F8F9FA" },
             }}
           />
           <Stack.Screen
@@ -164,10 +163,10 @@ const App = () => {
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#EAEAEA" },
+              cardStyle: { backgroundColor: "#F8F9FA" },
             }}
           />
-           <Stack.Screen
+          <Stack.Screen
             name="LentSongsRandom"
             component={LentSongsRandom}
             options={{
@@ -192,15 +191,25 @@ const App = () => {
             name="Lyrics"
             component={Lyrics}
             options={{
-              header: () => <CustomHeader title="Lyrics" showBackButton={true} showHomeButton={true}/>,
-            animationEnabled:false,
+              header: () => (
+                <CustomHeader
+                  title="Lyrics"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              animationEnabled: false,
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: "#02B290",
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#EAEAEA" },
+              cardStyle: { 
+                // backgroundColor: "#EAEAEA",
+                backgroundColor: "#F8F9FA"
+              
+              },
             }}
           />
           {/* <Stack.Screen
@@ -246,7 +255,7 @@ const App = () => {
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#EAEAEA" },
+              cardStyle: { backgroundColor: "#F8F9FA" },
             }}
           />
           <Stack.Screen
@@ -267,7 +276,7 @@ const App = () => {
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#EAEAEA" },
+              cardStyle: { backgroundColor: "#F8F9FA" },
             }}
           />
           <Stack.Screen
@@ -288,7 +297,7 @@ const App = () => {
                 borderBottomWidth: 2,
                 height: 70,
               },
-              cardStyle: { backgroundColor: "#EAEAEA" },
+              cardStyle: { backgroundColor: "#F8F9FA" },
             }}
           />
           {/* <Stack.Screen
