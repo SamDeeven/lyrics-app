@@ -521,6 +521,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     marginBottom: 3,
     fontFamily:"Mallanna_400Regular",
+    color:"#2C3E50"
 
   },
   genre: {

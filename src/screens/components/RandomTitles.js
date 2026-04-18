@@ -130,7 +130,7 @@ shadowOffset: {
 },
 shadowOpacity: 0.25,
 shadowRadius: 3.84,
-elevation: 5,
+elevation: 1,
   },
   genre: {
     fontSize: 14,

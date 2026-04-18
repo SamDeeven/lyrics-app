@@ -370,6 +370,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
     fontSize: 17,
+    borderWidth:0.5
   },
   closeBtn: {
     position: "absolute",
@@ -407,9 +408,9 @@ shadowOffset: {
   width: 0,
   height: 5, // A positive number pushes the shadow down
 },
-shadowOpacity: 0.25,
-shadowRadius: 3.84,
-elevation: 5,
+// shadowOpacity: 0.25,
+// shadowRadius: 3.84,
+// elevation: 5,
 
   },
   suggestionText: {

@@ -218,7 +218,7 @@ shadowOffset: {
 },
 shadowOpacity: 0.25,
 shadowRadius: 3.84,
-elevation: 5,
+elevation: 1,
     borderColor:"#2C3E50",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,

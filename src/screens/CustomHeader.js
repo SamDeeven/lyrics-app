@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
 
   },
   menuContainer: {
-    backgroundColor: "#cAEAEa",
+    backgroundColor: "#E3F2FD",
     // borderWidth:1,
     // borderColor:"#303b7c",
     width: 230,

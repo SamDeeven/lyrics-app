@@ -37,8 +37,7 @@ const About = () => {
       <Text style={styles.youtubeText}>Open YouTube Channel</Text>
     </TouchableOpacity>
     <Text></Text>
-    <Text></Text>
-    <Text style={{color:"#2C3E50", width:120}}>App Version 1.0.14</Text>
+    <Text style={{color:"#2C3E50", width:150}}>App Version 1.0.14</Text>
     </View>
     </ScrollView>
     </SafeAreaView>

@@ -159,15 +159,16 @@ function HorizontalCards() {
       <LinearGradient
         start={{ x: 0, y: 1 }}
         end={{ x: 1, y: 0 }}
-        colors={["#1679AB", "#393E46", "#496989", "#9DBC98"]}
+        colors={["#1679AB", "#393E46", "#496989", "#4c7dd3"]}
         style={styles.gradient}
       >
         <Text
           style={{
-            color: "#E5D68A",
+            color: "#e2c119",
             fontSize: 18,
             textAlign: "auto",
             // fontFamily: "Poppins_600SemiBold",
+            
             
           }}
         >
