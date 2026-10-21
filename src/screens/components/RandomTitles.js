@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     paddingBottom:0
   },
   title: {
-    fontSize: 25,
+    fontSize: 17,
     fontWeight: 'bold',
     color: "#2C3E50",
     fontFamily:"NotoSansTelugu_400Regular",
@@ -130,18 +130,18 @@ shadowOffset: {
 },
 shadowOpacity: 0.25,
 shadowRadius: 3.84,
-elevation: 1,
+// elevation: 1,
   },
   genre: {
-    fontSize: 14,
+    fontSize: 10,
     color: "#2C3E50",
   },
   timeSignature: {
-    fontSize: 14,
+    fontSize: 10,
     color: "#2C3E50",
   },
   artist: {
-    fontSize: 12,
+    fontSize: 10,
     color: "#67717b",
   },
 });

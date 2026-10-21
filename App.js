@@ -300,7 +300,7 @@ const App = () => {
               cardStyle: { backgroundColor: "#F8F9FA" },
             }}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             name="RecentlyViewed"
             component={RecentlyViewed}
             options={{
@@ -314,7 +314,7 @@ const App = () => {
               },
               cardStyle: { backgroundColor: "#ECF0F1" },
             }}
-          /> */}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

@@ -23,21 +23,51 @@ const Favorites = ({ navigation }) => {
   const [selectedGenre, setSelectedGenre] = useState("All");
   const [filteredFavorites, setFilteredFavorites] = useState([]);
 
-  useEffect(() => {
+  
+useFocusEffect(
+  useCallback(() => {
+    let isActive = true;
+
     const loadFavorites = async () => {
       try {
-        const favoritesString = await AsyncStorage.getItem("favorites");
-        const favoritesData = favoritesString ? JSON.parse(favoritesString) : [];
-        setFavorites(favoritesData);
-        filterFavoritesByGenre(selectedGenre, favoritesData);
-        setIsLoading(false); // Set isLoading to false when data is loaded
+        const favoritesString =
+          await AsyncStorage.getItem("favorites");
+
+        const favoritesData = favoritesString
+          ? JSON.parse(favoritesString)
+          : [];
+
+        if (isActive) {
+          setFavorites(favoritesData);
+
+          const filtered =
+            selectedGenre === "All"
+              ? favoritesData
+              : favoritesData.filter(
+                  (song) =>
+                    song.genre &&
+                    song.genre.includes(selectedGenre)
+                );
+
+          setFilteredFavorites(filtered);
+        }
       } catch (error) {
         console.error("Error loading favorites:", error);
+      } finally {
+        if (isActive) {
+          setIsLoading(false);
+        }
       }
     };
 
     loadFavorites();
-  }, [selectedGenre]);
+
+    return () => {
+      isActive = false;
+    };
+  }, [selectedGenre])
+);
+
 
   const filterFavoritesByGenre = (genre, data) => {
     setSelectedGenre(genre);
@@ -56,16 +86,34 @@ const Favorites = ({ navigation }) => {
     return ["All", ...new Set(genres)];
   };
 
+  // const handleRemoveFavorite = async (id) => {
+  //   try {
+  //     const updatedFavorites = favorites.filter((song) => song.id !== id);
+  //     await AsyncStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  //     setFavorites(updatedFavorites);
+  //     filterFavoritesByGenre(selectedGenre, updatedFavorites);
+  //   } catch (error) {
+  //     console.error("Error removing favorite:", error);
+  //   }
+  // };
+
   const handleRemoveFavorite = async (id) => {
-    try {
-      const updatedFavorites = favorites.filter((song) => song.id !== id);
-      await AsyncStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-      setFavorites(updatedFavorites);
-      filterFavoritesByGenre(selectedGenre, updatedFavorites);
-    } catch (error) {
-      console.error("Error removing favorite:", error);
-    }
-  };
+  try {
+    const updatedFavorites = favorites.filter(
+      (song) => song.id !== id
+    );
+
+    await AsyncStorage.setItem(
+      "favorites",
+      JSON.stringify(updatedFavorites)
+    );
+
+    setFavorites(updatedFavorites);
+    filterFavoritesByGenre(selectedGenre, updatedFavorites);
+  } catch (error) {
+    console.error("Error removing favorite:", error);
+  }
+};
 
   const handleTitlePress = async (item) => {
     try {
@@ -267,15 +315,15 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   genre: {
-    fontSize: 14,
+    fontSize: 10,
     color: "#2C3E50",
   },
   timeSignature: {
-    fontSize: 14,
+    fontSize: 10,
     color: "#2C3E50",
   },
   artist: {
-    fontSize: 12,
+    fontSize: 10,
     color: "#67717b",
   },
   emptyText: {
@@ -310,7 +358,7 @@ elevation: 1,
     flex: 1,
   },
   titleText: {
-    fontSize: 25,
+    fontSize: 17,
     color: "#2C3E50",
     fontFamily:"NotoSansTelugu_400Regular",
 
@@ -333,7 +381,7 @@ elevation: 1,
   },
   pickerItem: {
     color: "#2C3E50",
-    fontSize: 20,
+    fontSize: 17,
   },
 });
 

@@ -11,7 +11,7 @@ import {
   ScrollView,
   TouchableWithoutFeedback,
   ActivityIndicator,
-  Modal
+  Modal,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import alphabetData from "../../../data/songsData.js";
@@ -56,14 +56,14 @@ const Home = () => {
       "keyboardDidShow",
       () => {
         setIsKeyboardActive(true);
-      }
+      },
     );
 
     const keyboardDidHideListener = Keyboard.addListener(
       "keyboardDidHide",
       () => {
         setIsKeyboardActive(false);
-      }
+      },
     );
 
     return () => {
@@ -96,7 +96,7 @@ const Home = () => {
           // item.title.toLowerCase().includes(inputSearch.toLowerCase()) ||
           item.keywords &&
           item.keywords.some((kw) =>
-            kw.toLowerCase().startsWith(inputSearch.toLowerCase())
+            kw.toLowerCase().startsWith(inputSearch.toLowerCase()),
           )
         ) {
           matchingSuggestions.push(item.title);
@@ -141,6 +141,10 @@ const Home = () => {
     navigation.navigate("Favorites");
   };
 
+  const navigateToRecentlyViewed = () => {
+    navigation.navigate("RecentlyViewed");
+  };
+
   const handleSearch = () => {
     if (inputSearch.length === 0) return;
 
@@ -159,7 +163,7 @@ const Home = () => {
           item.title.toLowerCase() === suggestion.toLowerCase() ||
           (item.keywords &&
             item.keywords.some(
-              (kw) => kw.toLowerCase() === suggestion.toLowerCase()
+              (kw) => kw.toLowerCase() === suggestion.toLowerCase(),
             ))
         ) {
           matchingTitlesArray.push(item);
@@ -187,7 +191,7 @@ const Home = () => {
 
         await AsyncStorage.setItem(
           "recentlyViewed",
-          JSON.stringify(recentlyViewed)
+          JSON.stringify(recentlyViewed),
         );
 
         console.log("Updated recentlyViewed:", recentlyViewed);
@@ -222,112 +226,128 @@ const Home = () => {
           onPress={handleTapOutside && clearSuggestions}
         >
           <View style={{ flex: 1 }}>
+            <Modal visible={modalVisible} transparent animationType="fade">
+              <View style={styles.modalBackground}>
+                <View style={styles.modalContainer}>
+                  <Text style={styles.modalText}>
+                    Welcome to Vinnu Lyrics App! 🎉
+                  </Text>
+                  <Text style={styles.modalText}>
+                    Enjoy the fresh, and clean new UI. Happy singing! 🎤🙌
+                  </Text>
+                  <Text style={styles.modalText}>Total Songs = 786</Text>
 
-<Modal visible={modalVisible} transparent animationType="fade">
-        <View style={styles.modalBackground}>
-          <View style={styles.modalContainer}>
-            <Text style={styles.modalText}>Welcome to Vinnu Lyrics App! 🎉</Text>
-            <Text style={styles.modalText}>Enjoy the fresh, and clean new UI. Happy singing! 🎤🙌</Text>
-            <Text style={styles.modalText}>Total Songs = 779</Text>
-
-            
-            {/* <Text style={styles.modalText}>New Update: Lent Songs Button is added</Text>
+                  {/* <Text style={styles.modalText}>New Update: Lent Songs Button is added</Text>
             <Text style={styles.modalText}>శ్రమదినాల పాటల కోసం ప్రత్యేకమైన బటన్ ని గమనించండి</Text> */}
 
+                  <TouchableOpacity
+                    onPress={() => setModalVisible(false)}
+                    style={styles.closeButton}
+                  >
+                    <Text style={styles.closeButtonText}>Close</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </Modal>
 
-            <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.closeButton}>
-              <Text style={styles.closeButtonText}>Close</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
+            <View style={[styles.topContainer]}>
+              <View style={styles.inputBoxContainer}>
+                <View style={{ flexDirection: "row", position: "relative" }}>
+                  <Icon
+                    name="search-outline"
+                    size={30}
+                    style={{
+                      position: "absolute",
+                      zIndex: 1,
+                      left: 18,
+                      top: 20,
+                    }}
+                  />
+                  <TextInput
+                    style={styles.searchInput}
+                    placeholder="పాటను వెతకండి"
+                    textAlign="center"
+                    value={inputSearch}
+                    onChangeText={(text) => {
+                      setInputSearch(text);
+                    }}
+                    onSubmitEditing={handleSearch}
+                    maxLength={30}
+                    selectionColor={"brown"}
+                    backgroundColor="white"
+                    onFocus={() => setIsKeyboardActive(true)}
+                  />
+                </View>
 
-          <View style={[styles.topContainer]}>
-            <View style={styles.inputBoxContainer}>
-              <View style={{ flexDirection: "row", position: "relative" }}>
-                <Icon
-                  name="search-outline"
-                  size={30}
-                  style={{ position: "absolute", zIndex: 1, left: 18, top: 20 }}
-                />
-                <TextInput
-                  style={styles.searchInput}
-                  placeholder="పాటను వెతకండి"
-                  textAlign="center"
-                  value={inputSearch}
-                  onChangeText={(text) => {
-                    setInputSearch(text);
-                  }}
-                  onSubmitEditing={handleSearch}
-                  maxLength={30}
-                  selectionColor={"brown"}
-                  backgroundColor="white"
-                  onFocus={() => setIsKeyboardActive(true)}
-                />
+                {isKeyboardActive && inputSearch && (
+                  <Icon
+                    onPress={clearText}
+                    style={styles.closeBtn}
+                    name="close-sharp"
+                    size={30}
+                  />
+                )}
+
+                {suggestions.length > 0 && (
+                  <ScrollView
+                    nestedScrollEnabled={true}
+                    style={styles.suggestionContainer}
+                  >
+                    {suggestions.map((suggestion) => (
+                      <TouchableOpacity
+                        key={suggestion}
+                        style={styles.suggestionItem}
+                        onPress={() => handleSuggestionPress(suggestion)}
+                      >
+                        <Text
+                          numberOfLines={1}
+                          ellipsizeMode="tail"
+                          style={styles.suggestionText}
+                        >
+                          {suggestion}
+                        </Text>
+                      </TouchableOpacity>
+                    ))}
+                  </ScrollView>
+                )}
               </View>
 
-              {isKeyboardActive && inputSearch && (
-                <Icon
-                  onPress={clearText}
-                  style={styles.closeBtn}
-                  name="close-sharp"
-                  size={30}
-                />
-              )}
-
-              {suggestions.length > 0 && (
-                <ScrollView
-                  nestedScrollEnabled={true}
-                  style={styles.suggestionContainer}
-                >
-                  {suggestions.map((suggestion) => (
-                    <TouchableOpacity
-                      key={suggestion}
-                      style={styles.suggestionItem}
-                      onPress={() => handleSuggestionPress(suggestion)}
-                    >
-                      <Text
-                        numberOfLines={1}
-                        ellipsizeMode="tail"
-                        style={styles.suggestionText}
-                      >
-                        {suggestion}
-                      </Text>
-                    </TouchableOpacity>
-                  ))}
-                </ScrollView>
-              )}
-            </View>
-
-            <View style={styles.alphabetContainer}>
-              {Object.keys(alphabetData).map((item) => (
+              <View style={styles.alphabetContainer}>
+                {Object.keys(alphabetData).map((item) => (
+                  <TouchableOpacity
+                    key={item}
+                    style={styles.alphabetItem}
+                    onPress={() =>
+                      navigation.navigate("TitlesList", { alphabet: item })
+                    }
+                  >
+                    <Text style={styles.alphabetText}>{item}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+              <View style={{ flexDirection: "row", justifyContent: "center" }}>
                 <TouchableOpacity
-                  key={item}
-                  style={styles.alphabetItem}
-                  onPress={() =>
-                    navigation.navigate("TitlesList", { alphabet: item })
-                  }
+                  style={styles.randomBtn}
+                  onPress={navigateToFavorites}
                 >
-                  <Text style={styles.alphabetText}>{item}</Text>
+                  <Text style={styles.randomBtnText}>Favorite Songs</Text>
                 </TouchableOpacity>
-              ))}
-            </View>
-            <View style={{ flexDirection: "row", justifyContent: "center" }}>
-              <TouchableOpacity
-                style={styles.randomBtn}
-                onPress={navigateToFavorites}
-              >
-                <Text style={styles.randomBtnText}>Favorite Songs</Text>
-              </TouchableOpacity>
 
-              <TouchableOpacity
-                style={styles.randomBtn}
-                onPress={navigateToRandomTitles}
-              >
-                <Text style={styles.randomBtnText}>Random Songs</Text>
-              </TouchableOpacity>
-            </View>
-            {/* <View>
+                <TouchableOpacity
+                  style={styles.randomBtn}
+                  onPress={navigateToRandomTitles}
+                >
+                  <Text style={styles.randomBtnText}>Random Songs</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.randomBtn}
+                  onPress={navigateToRecentlyViewed}
+                >
+                  <Text style={styles.randomBtnText}>Recently Viewed</Text>
+                </TouchableOpacity>
+              </View>
+              {/* <View>
               <TouchableOpacity
                 style={styles.lentRandomBtn}
                 onPress={() => navigation.navigate("LentSongsRandom")}
@@ -339,10 +359,10 @@ const Home = () => {
               </TouchableOpacity>
             </View> */}
 
-            <View style={styles.horizontalCards}>
-              <HorizontalCards />
+              <View style={styles.horizontalCards}>
+                <HorizontalCards />
+              </View>
             </View>
-          </View>
           </View>
         </TouchableWithoutFeedback>
       </ScrollView>
@@ -369,8 +389,8 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 25,
     borderTopRightRadius: 5,
     borderBottomLeftRadius: 5,
-    fontSize: 17,
-    borderWidth:0.5
+    fontSize: 15,
+    borderWidth: 0.5,
   },
   closeBtn: {
     position: "absolute",
@@ -404,17 +424,16 @@ const styles = StyleSheet.create({
     borderWidth: 0.9,
     borderRadius: 16,
     shadowColor: "#000",
-shadowOffset: {
-  width: 0,
-  height: 5, // A positive number pushes the shadow down
-},
-// shadowOpacity: 0.25,
-// shadowRadius: 3.84,
-// elevation: 5,
-
+    shadowOffset: {
+      width: 0,
+      height: 5, // A positive number pushes the shadow down
+    },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 5,
   },
   suggestionText: {
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: "bold",
     color: "#2C3E50",
     fontFamily: "NotoSansTelugu_400Regular",
@@ -428,17 +447,17 @@ shadowOffset: {
     justifyContent: "center",
     alignItems: "center",
     margin: 4,
-    height: 47,
-    width: 47,
+    height: 45,
+    width: 45,
     // backgroundColor: "#02B290",
     // backgroundColor: "#F87A53",
-   backgroundColor: "#E3F2FD",
-   borderWidth:0.9,
-   borderColor:"#2C3E50",
+    backgroundColor: "#E3F2FD",
+    borderWidth: 0.6,
+    borderColor: "#2C3E50",
     borderRadius: 17,
   },
   alphabetText: {
-    fontSize: 30,
+    fontSize: 24,
     // fontFamily: "Poppins_600SemiBold",
     fontFamily: "Mallanna_400Regular",
     textAlign: "center",
@@ -452,8 +471,8 @@ shadowOffset: {
     // backgroundColor: "#1679AB",
     // backgroundColor: "#3d5a80",
     borderColor: "#2C3E50",
-    borderWidth: 0.9,
-    width: 150,
+    borderWidth: 0.5,
+    width: 90,
     padding: 5,
     marginTop: 8,
     margin: 2,
@@ -464,13 +483,13 @@ shadowOffset: {
     // color: "#120E43",
     color: "#2C3E50",
     fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 12,
     textAlign: "center",
     // fontFamily: "Poppins_600SemiBold",
   },
-  lentRandomBtn:{
-backgroundColor:"#c3195d",
-width: 150,
+  lentRandomBtn: {
+    backgroundColor: "#c3195d",
+    width: 150,
     padding: 5,
     marginTop: 8,
     margin: 2,
@@ -495,12 +514,22 @@ width: 150,
     color: "black",
   },
 
-  modalBackground: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.5)" },
-  modalContainer: { width: 250, padding: 20, backgroundColor: "white", borderRadius: 10, alignItems: "center" },
+  modalBackground: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  modalContainer: {
+    width: 250,
+    padding: 20,
+    backgroundColor: "white",
+    borderRadius: 10,
+    alignItems: "center",
+  },
   modalText: { fontSize: 18, fontWeight: "bold", marginBottom: 10 },
   closeButton: { backgroundColor: "red", padding: 8, borderRadius: 5 },
   closeButtonText: { color: "white", fontWeight: "bold" },
-
 });
 
 export default Home;

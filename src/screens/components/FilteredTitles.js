@@ -140,11 +140,11 @@ const styles = StyleSheet.create({
     marginVertical: 100,
   },
   queryText: {
-    fontSize: 22,
+    fontSize: 17,
     marginBottom: 15,
   },
   sorryMsg: {
-    fontSize: 24,
+    fontSize: 17,
     fontWeight: "bold",
     color: "brown",
   },
@@ -167,24 +167,24 @@ shadowOffset: {
 },
 shadowOpacity: 0.25,
 shadowRadius: 3.84,
-elevation: 1,
+// elevation: 1,
   },
   title: {
-    fontSize: 25,
+    fontSize: 17,
     fontWeight: "bold",
     color: "#2C3E50",
     fontFamily:"NotoSansTelugu_400Regular",
   },
   genre: {
-    fontSize: 14,
+    fontSize: 10,
     color: "#2C3E50",
   },
   timeSignature: {
-    fontSize: 14,
+    fontSize: 10,
     color: "#2C3E50",
   },
   artist: {
-    fontSize: 12,
+    fontSize: 10,
     color: "#67717b",
   },
   emoji: {

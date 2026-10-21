@@ -34,6 +34,7 @@ import {
 import alphabetData from "../../../data/songsData.js";
 import { Picker } from "@react-native-picker/picker";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Icon from "react-native-vector-icons/Ionicons";
 import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
 
 const TitlesList = () => {
@@ -43,6 +44,22 @@ const TitlesList = () => {
   const { alphabet } = route.params;
   const data = alphabetData[alphabet];
   const [filteredData, setFilteredData] = useState(data);
+
+  const [expandedSongs, setExpandedSongs] = useState(new Set());
+
+const toggleSongDetails = (songId) => {
+  setExpandedSongs((previous) => {
+    const next = new Set(previous);
+
+    if (next.has(songId)) {
+      next.delete(songId);
+    } else {
+      next.add(songId);
+    }
+
+    return next;
+  });
+};
 
   // const [fontsLoad] = useFonts({
   //   Poppins_100Thin,
@@ -156,35 +173,75 @@ const TitlesList = () => {
         </Picker>
       </View>
 
-      <FlatList
-        data={filteredData}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View>
-            <TouchableOpacity
-              style={styles.titleContainer}
-              onPress={() => handleTitlePress(item)}
+     
+<FlatList
+  data={filteredData}
+  keyExtractor={(item) => item.id.toString()}
+  renderItem={({ item }) => {
+    const isExpanded = expandedSongs.has(item.id);
+
+    return (
+      <View style={styles.titleContainer}>
+        <View style={styles.titleRow}>
+          <TouchableOpacity
+            style={styles.titleTouchable}
+            onPress={() => handleTitlePress(item)}
+            activeOpacity={0.7}
+          >
+            <Text
+              numberOfLines={2}
+              ellipsizeMode="tail"
+              style={styles.title}
             >
-              <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
-                {item.title}
+              {item.title}
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.accordionButton}
+            onPress={() => toggleSongDetails(item.id)}
+            activeOpacity={0.7}
+            accessibilityRole="button"
+            accessibilityLabel={
+              isExpanded
+                ? "Hide song details"
+                : "Show song details"
+            }
+          >
+            <Icon
+              name={isExpanded ? "chevron-up" : "chevron-down"}
+              size={22}
+              color="#2C3E50"
+            />
+          </TouchableOpacity>
+        </View>
+
+        {isExpanded && (
+          <View style={styles.songDetails}>
+            {item.genre && item.genre.length > 0 && (
+              <Text style={styles.genre}>
+                Genre: {item.genre.join(" | ")}
               </Text>
-              {item.genre && item.genre.length > 0 && (
-                <Text style={styles.genre}>
-                  Genre: {item.genre.join(" | ")}
-                </Text>
-              )}
-              {item.timeSignature && (
-                <Text style={styles.timeSignature}>
-                  Time Signature: {item.timeSignature}
-                </Text>
-              )}
-              {item.artist && (
-                <Text style={styles.artist}>Artist: {item.artist}</Text>
-              )}
-            </TouchableOpacity>
+            )}
+
+            {item.timeSignature && (
+              <Text style={styles.timeSignature}>
+                Time Signature: {item.timeSignature}
+              </Text>
+            )}
+
+            {item.artist && (
+              <Text style={styles.artist}>
+                Artist: {item.artist}
+              </Text>
+            )}
           </View>
         )}
-      />
+      </View>
+    );
+  }}
+/>
+
     </View>
   );
 };
@@ -214,11 +271,11 @@ const styles = StyleSheet.create({
    shadowColor: "#000",
 shadowOffset: {
   width: 0,
-  height: 5, // A positive number pushes the shadow down
+  height: 5, 
 },
 shadowOpacity: 0.25,
 shadowRadius: 3.84,
-elevation: 1,
+// elevation: 1,
     borderColor:"#2C3E50",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 5,
@@ -227,21 +284,21 @@ elevation: 1,
 
   },
   title: {
-    fontSize: 25,
+    fontSize: 17,
     fontWeight: "bold",
     color: "#2C3E50",
     fontFamily:"NotoSansTelugu_400Regular",
   },
   genre: {
-    fontSize: 14,
+    fontSize: 10,
     color: "#2C3E50",
   },
   timeSignature: {
-    fontSize: 13,
+    fontSize: 10,
     color: "#2C3E50",
   },
   artist: {
-    fontSize: 11,
+    fontSize: 10,
     color: "#67717b",
   },
   picker: {
@@ -254,8 +311,37 @@ elevation: 1,
   },
   pickerItem: {
     color: "#2C3E50",
-    fontSize:22,
+    fontSize:17,
   },
+
+  
+titleRow: {
+  flexDirection: "row",
+  alignItems: "center",
+},
+
+titleTouchable: {
+  flex: 1,
+  minWidth: 0,
+  paddingVertical: 3,
+},
+
+accordionButton: {
+  width: 36,
+  height: 36,
+  marginLeft: 5,
+  borderRadius: 12,
+  // backgroundColor: "#E6F7FF",
+  alignItems: "center",
+  justifyContent: "center",
+},
+
+songDetails: {
+  paddingTop: 4,
+  paddingBottom: 3,
+  paddingLeft: 2,
+},
+
 });
 
 export default TitlesList;
