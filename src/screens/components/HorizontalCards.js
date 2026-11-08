@@ -208,9 +208,9 @@ export default function HorizontalCards() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.sectionTitle}>
+      {/* <Text style={styles.sectionTitle}>
         {isTelugu ? "యాప్ ప్రత్యేకతలు" : "Features in the App"}
-      </Text>
+      </Text> */}
 
       <FlatList
         data={DATA}
@@ -226,17 +226,12 @@ export default function HorizontalCards() {
         overScrollMode="always"
         keyboardShouldPersistTaps="handled"
         removeClippedSubviews={false}
-        style={styles.horizontalList}
+        // style={styles.horizontalList}
         contentContainerStyle={styles.listContent}
-        initialNumToRender={4}
-        windowSize={5}
+        // initialNumToRender={4}
+        // windowSize={5}
       />
 
-      <Text style={styles.scrollHint}>
-        {isTelugu
-          ? "కార్డుపై ఎక్కడైనా ఎడమకు లేదా కుడికి స్వైప్ చేయండి →"
-          : "Swipe left or right anywhere on the cards →"}
-      </Text>
     </View>
   );
 }
@@ -275,11 +270,11 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     overflow: "hidden",
     backgroundColor: "#123B5D",
-    elevation: 5,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 7,
+    // elevation: 5,
+    // shadowColor: "#000",
+    // shadowOffset: { width: 0, height: 4 },
+    // shadowOpacity: 0.2,
+    // shadowRadius: 7,
   },
 
   gradient: {

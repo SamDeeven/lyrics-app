@@ -16,42 +16,11 @@ import {
   Platform,
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
-import {
-  Poppins_100Thin,
-  Poppins_100Thin_Italic,
-  Poppins_200ExtraLight,
-  Poppins_200ExtraLight_Italic,
-  Poppins_300Light,
-  Poppins_300Light_Italic,
-  Poppins_400Regular,
-  Poppins_400Regular_Italic,
-  Poppins_500Medium,
-  Poppins_500Medium_Italic,
-  Poppins_600SemiBold,
-  Poppins_600SemiBold_Italic,
-  Poppins_700Bold,
-  Poppins_700Bold_Italic,
-  Poppins_800ExtraBold,
-  Poppins_800ExtraBold_Italic,
-  Poppins_900Black,
-  Poppins_900Black_Italic,
-} from "@expo-google-fonts/poppins";
-// import { useFonts } from "expo-font";
 // import AppLoading from "expo-app-loading";
 import { transliterateTelugu } from "../../utils/teluguTransliteration";
-import Icon from "react-native-vector-icons/Ionicons";
+import Icon from "../../utils/AppIcons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
-import {
-  useFonts,
-  NotoSansTelugu_400Regular,
-} from "@expo-google-fonts/noto-sans-telugu";
-import { Chilanka_400Regular } from "@expo-google-fonts/chilanka";
-import { Mallanna_400Regular } from "@expo-google-fonts/mallanna";
-import {
-  BalooTammudu2_400Regular,
-  BalooTammudu2_700Bold,
-} from "@expo-google-fonts/baloo-tammudu-2";
 
 const Lyrics = () => {
   const [fontSize, setFontSize] = useState(22);
@@ -246,21 +215,7 @@ const Lyrics = () => {
   //   return <AppLoading />;
   // }
 
-  const [fontsLoaded] = useFonts({
-    NotoSansTelugu_400Regular,
-    Chilanka_400Regular,
-    Mallanna_400Regular,
-    BalooTammudu2_400Regular,
-    BalooTammudu2_700Bold,
-  });
 
-  if (!fontsLoaded) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
 
   const handleFontSize = (size) => {
     let newFontSize = fontSize;
@@ -277,7 +232,7 @@ const Lyrics = () => {
   };
 
   const resetFontSize = () => {
-    setFontSize(24);
+    setFontSize(22);
   };
   const handleVideoButton = () => {
     if (titleItem.video) {
@@ -679,7 +634,6 @@ const styles = StyleSheet.create({
     // lineHeight: 30,
     paddingLeft: 5,
     marginBottom: 3,
-    fontFamily: "Mallanna_400Regular",
     color: "#2C3E50",
   },
   genre: {

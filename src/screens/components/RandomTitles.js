@@ -3,7 +3,7 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity, ActivityIndicator }
 import songsData from '../../../data/songsData';
 import {debounce} from 'lodash';
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
+
 
 const RandomTitles = ({navigation}) => {
   const [isRefresh, setIsRefresh] = useState(false);
@@ -51,17 +51,7 @@ const RandomTitles = ({navigation}) => {
            setIsRefresh(false);
         })
       })
-      const [fontsLoaded] = useFonts({
-        NotoSansTelugu_400Regular,
-      });
     
-      if (!fontsLoaded) {
-        return (
-          <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#0000ff" />
-          </View>
-        );
-      }
 
   return (
     <View style={styles.container}>
@@ -108,7 +98,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: 'bold',
     color: "#2C3E50",
-    fontFamily:"NotoSansTelugu_400Regular",
 
   },
   titleContainer: {

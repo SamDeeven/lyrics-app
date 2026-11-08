@@ -13,9 +13,8 @@ import {
 } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { MaterialIcons } from "@expo/vector-icons";
+import MaterialIcons from "../../utils/AppIcons";
 import { Picker } from "@react-native-picker/picker";
-import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
 
 const Favorites = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -167,17 +166,7 @@ useFocusEffect(
       console.error("Error clearing favorites:", error);
     }
   };
-  const [fontsLoaded] = useFonts({
-    NotoSansTelugu_400Regular,
-  });
 
-  if (!fontsLoaded) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
@@ -235,7 +224,12 @@ useFocusEffect(
               style={styles.clearButton}
             >
               <Text style={styles.clearButtonText}>Clear All</Text>
-              <MaterialIcons name="delete" size={25} color="white" />
+              <MaterialIcons
+                name="delete"
+                size={22}
+                color="white"
+                style={styles.clearButtonIcon}
+              />
             </TouchableOpacity>
           </View>
           <SafeAreaView>
@@ -300,14 +294,22 @@ const styles = StyleSheet.create({
   clearButton: {
     alignSelf: "center",
     alignItems: "center",
+    justifyContent: "center",
+    width: 180,
+    height: 46,
     backgroundColor: "brown",
     borderRadius: 10,
   },
   clearButtonText: {
     textAlign: "center",
-    width: 150,
+    textAlignVertical: "center",
+    includeFontPadding: false,
     fontSize: 18,
     color: "white",
+  },
+  clearButtonIcon: {
+    position: "absolute",
+    left: 14,
   },
   title: {
     fontSize: 24,
@@ -360,7 +362,6 @@ elevation: 1,
   titleText: {
     fontSize: 17,
     color: "#2C3E50",
-    fontFamily:"NotoSansTelugu_400Regular",
 
   },
   removeButtonContainer: {

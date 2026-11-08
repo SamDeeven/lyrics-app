@@ -8,34 +8,12 @@ import {
   ActivityIndicator
 } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
-import {
-  Poppins_100Thin,
-  Poppins_100Thin_Italic,
-  Poppins_200ExtraLight,
-  Poppins_200ExtraLight_Italic,
-  Poppins_300Light,
-  Poppins_300Light_Italic,
-  Poppins_400Regular,
-  Poppins_400Regular_Italic,
-  Poppins_500Medium,
-  Poppins_500Medium_Italic,
-  Poppins_600SemiBold,
-  Poppins_600SemiBold_Italic,
-  Poppins_700Bold,
-  Poppins_700Bold_Italic,
-  Poppins_800ExtraBold,
-  Poppins_800ExtraBold_Italic,
-  Poppins_900Black,
-  Poppins_900Black_Italic,
-} from "@expo-google-fonts/poppins";
 
-// import { useFonts } from "expo-font";
 // import AppLoading from "expo-app-loading";
 import alphabetData from "../../../data/songsData.js";
 import { Picker } from "@react-native-picker/picker";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import Icon from "react-native-vector-icons/Ionicons";
-import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
+import Icon from "../../utils/AppIcons";
 
 const TitlesList = () => {
   const [selectedGenre, setSelectedGenre] = useState("All");
@@ -86,17 +64,7 @@ const toggleSongDetails = (songId) => {
   //   return <AppLoading />;
   // }
 
-  const [fontsLoaded] = useFonts({
-    NotoSansTelugu_400Regular,
-  });
 
-  if (!fontsLoaded) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
 
   const filterSongsByGenre = (genre) => {
     setSelectedGenre(genre);
@@ -287,7 +255,6 @@ shadowRadius: 3.84,
     fontSize: 17,
     fontWeight: "bold",
     color: "#2C3E50",
-    fontFamily:"NotoSansTelugu_400Regular",
   },
   genre: {
     fontSize: 10,

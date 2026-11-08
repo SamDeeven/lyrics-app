@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import {
   View,
   Text,
@@ -7,32 +7,13 @@ import {
   TouchableOpacity,
   ActivityIndicator
 } from "react-native";
-import alphabetData from "../../../data/songsData.js";
+import { searchSongs } from "../../utils/searchSongs";
+
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useFonts, NotoSansTelugu_400Regular } from '@expo-google-fonts/noto-sans-telugu';
 
 const FilteredTitles = ({ route, navigation }) => {
-  const { searchQuery } = route.params;
-  const [matchingTitles, setMatchingTitles] = useState([]);
-
-  useEffect(() => {
-    const matchingTitlesArray = [];
-
-    Object.keys(alphabetData).forEach((alphabet) => {
-      alphabetData[alphabet].forEach((item) => {
-        if (
-          item.keywords &&
-          item.keywords.some((kw) =>
-            kw.toLowerCase().startsWith(searchQuery.toLowerCase())
-          )
-        ) {
-          matchingTitlesArray.push(item);
-        }
-      });
-    });
-
-    setMatchingTitles(matchingTitlesArray);
-  }, [searchQuery]);
+  const { searchQuery = "" } = route.params || {};
+  const matchingTitles = useMemo(() => searchSongs(searchQuery), [searchQuery]);
 
   const handleTitlePress = async (item) => {
     try {
@@ -59,24 +40,14 @@ const FilteredTitles = ({ route, navigation }) => {
       console.error("Error handling recently viewed items:", error);
     }
   };
-  const [fontsLoaded] = useFonts({
-    NotoSansTelugu_400Regular,
-  });
 
-  if (!fontsLoaded) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
 
   return (
     <View style={styles.container}>
       {matchingTitles.length > 0 ? (
-        <View>
+        <View style={{ flex: 1 }}>
           <Text style={styles.queryText}>
-            You searched for: "{searchQuery}"
+            You searched for: "{searchQuery}" ({matchingTitles.length} found)
           </Text>
 
           <FlatList
@@ -173,7 +144,6 @@ shadowRadius: 3.84,
     fontSize: 17,
     fontWeight: "bold",
     color: "#2C3E50",
-    fontFamily:"NotoSansTelugu_400Regular",
   },
   genre: {
     fontSize: 10,

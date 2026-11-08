@@ -1,177 +1,299 @@
-import React, { useEffect, useState, useMemo } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Pressable,
+  Modal,
+  StatusBar,
+  Platform,
+  StyleSheet,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Icon from "react-native-vector-icons/Ionicons";
+import { LinearGradient } from "expo-linear-gradient";
+import Icon from "../utils/AppIcons";
 
-const CustomHeader = ({ title, showBackButton, showHomeButton, homeStyle, totalObjects }) => {
-  const [showOptions, setShowOptions] = useState(false);
+const HEADER_HEIGHT = 56;
 
+const MENU_ITEMS = [
+  { icon: "mail-outline", label: "Contact", screen: "Contact" },
+  { icon: "information-circle-outline", label: "About", screen: "About" },
+];
+
+const HeaderButton = ({ icon, label, onPress }) => (
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={onPress}
+    style={styles.iconButton}
+    accessibilityRole="button"
+    accessibilityLabel={label}
+  >
+    <Icon name={icon} size={22} color="#FFFFFF" />
+  </TouchableOpacity>
+);
+
+const CustomHeader = ({
+  title,
+  subtitle,
+  showBackButton,
+  showHomeButton,
+  homeStyle,
+  totalObjects,
+}) => {
+  const [menuVisible, setMenuVisible] = useState(false);
   const navigation = useNavigation();
-  const handleOptions = () => {
-    setShowOptions(!showOptions);
+
+  // The menu opens in a Modal (a separate layer), so it sits below the header
+  // and every item is tappable on Android.
+  const statusBarHeight =
+    Platform.OS === "android" ? StatusBar.currentHeight || 0 : 50;
+
+  const closeMenu = () => setMenuVisible(false);
+
+  const goTo = (screen) => {
+    closeMenu();
+    navigation.navigate(screen);
   };
 
   return (
-    <View
-      style={homeStyle ? styles.homeHeaderContainer : styles.headerContainer}
-    >
-      {showBackButton ? (
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          style={styles.backButton}
-        >
-          <Icon style={{marginTop:-7}} name="chevron-back-sharp" size={22} color={"white"}/>
-        </TouchableOpacity>
-      ) : (
-        <View style={styles.menuOption}>
-          {showOptions ? (
-            <View>
-              <Icon
-                onPress={() => handleOptions()}
-                name="close-circle-sharp"
-                size={22}
-                color={"white"}
-              />
-              <View style={styles.menuContainer}>
-                <TouchableOpacity
-                  style={styles.menuItemsBtn}
-                  onPress={() => {
-                    navigation.navigate("Contact");
-                    setShowOptions(!showOptions);
-                  }}
-                >
-                  <Text style={styles.menuItemsBtnText}>Contact</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => {
-                    navigation.navigate("About");
-                    setShowOptions(!showOptions);
-                  }}
-                  style={styles.menuItemsBtn}
-                >
-                  <Text style={styles.menuItemsBtnText}>About</Text>
-                </TouchableOpacity>
+    <>
+      <View
+        // colors={["#2C3E50", "#1679AB"]}
+        // start={{ x: 0, y: 0 }}
+        // end={{ x: 1, y: 1 }}
+        style={styles.header}
+      >
+        {/* Left: back button, or the menu button on the main screen */}
+        {showBackButton ? (
+          <HeaderButton
+            icon="chevron-back-sharp"
+            label="Go back"
+            onPress={() => navigation.goBack()}
+          />
+        ) : (
+          <HeaderButton
+            icon="ellipsis-vertical-sharp"
+            label="Open menu"
+            onPress={() => setMenuVisible(true)}
+          />
+        )}
 
-                <View
-                  onPress={() => {
-                    navigation.navigate("About");
-                    setShowOptions(!showOptions);
-                  }}
-                  style={styles.menuItemsBtn}
-                >
-                  <Text style={styles.menuItemsBtnText}>Total Songs in the app: {totalObjects}</Text>
-                </View>
-                {/* <TouchableOpacity
-                  onPress={() => {
-                    navigation.navigate("Favorites");
-                    setShowOptions(!showOptions);
-                  }}
-                  style={styles.menuItemsBtn}
-                >
-                  <Text style={styles.menuItemsBtnText}>Favorites</Text>
-                </TouchableOpacity> */}
-                {/* <TouchableOpacity
-                  onPress={() => {
-                    navigation.navigate("RecentlyViewed");
-                    setShowOptions(!showOptions);
-                  }}
-                  style={styles.menuItemsBtn}
-                >
-                  <Text style={styles.menuItemsBtnText}>Recently Viewed</Text>
-                </TouchableOpacity> */}
-              </View>
-            </View>
-          ) : (
-            <Icon onPress={() => handleOptions()} name="ellipsis-vertical-sharp" size={22} color={"white"}/>
-          )}
+        {/* Center: title (and optional subtitle) */}
+        <View style={[styles.titleWrap, homeStyle && styles.titleWrapHome]}>
+          <Text
+            numberOfLines={1}
+            style={[styles.title, homeStyle && styles.titleHome]}
+          >
+            {title}
+          </Text>
+          {subtitle ? (
+            <Text numberOfLines={1} style={styles.subtitle}>
+              {subtitle}
+            </Text>
+          ) : null}
         </View>
-      )}
-      
-      <Text style={homeStyle ? styles.homeHeader : styles.headerTitle}>
-        {title}
-      </Text>
-      {showHomeButton && (
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
-          style={styles.homeButton}
-        >
-          <Icon style={{marginTop:-15}} name="home-sharp" size={22} color={"white"}/>
-        </TouchableOpacity>
-      )}
-    </View>
+
+        {/* Right: home button (or an empty box so the title stays centered) */}
+        {showHomeButton ? (
+          <HeaderButton
+            icon="home-sharp"
+            label="Go to home"
+            onPress={() => navigation.navigate("Home")}
+          />
+        ) : (
+          <View style={styles.spacer} />
+        )}
+      </View>
+
+      <Modal
+        visible={menuVisible}
+        transparent
+        animationType="fade"
+        statusBarTranslucent
+        onRequestClose={closeMenu}
+      >
+        <Pressable style={styles.backdrop} onPress={closeMenu}>
+          <Pressable
+            style={[styles.menuCard, { top: statusBarHeight + HEADER_HEIGHT + 8 }]}
+            onPress={() => {}}
+          >
+            <View style={styles.menuHeader}>
+              <Text style={styles.menuHeaderText}>MENU</Text>
+              <TouchableOpacity
+                onPress={closeMenu}
+                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                accessibilityRole="button"
+                accessibilityLabel="Close menu"
+              >
+                <Icon name="close" size={20} color="#FFFFFF" />
+              </TouchableOpacity>
+            </View>
+
+            {MENU_ITEMS.map((item) => (
+              <TouchableOpacity
+                key={item.screen}
+                activeOpacity={0.6}
+                style={styles.menuItem}
+                onPress={() => goTo(item.screen)}
+              >
+                <View style={styles.menuIconWrap}>
+                  <Icon name={item.icon} size={20} color="#1679AB" />
+                </View>
+                <Text style={styles.menuLabel}>{item.label}</Text>
+                <Icon
+                  name="chevron-back-sharp"
+                  size={18}
+                  color="#8A99A8"
+                  style={styles.menuArrow}
+                />
+              </TouchableOpacity>
+            ))}
+
+            {totalObjects != null && (
+              <View style={styles.totalRow}>
+                <View style={styles.menuIconWrap}>
+                  <Icon name="musical-notes" size={20} color="#1679AB" />
+                </View>
+                <Text style={styles.totalText}>
+                  Total songs in the app:{" "}
+                  <Text style={styles.totalNumber}>{totalObjects}</Text>
+                </Text>
+              </View>
+            )}
+          </Pressable>
+        </Pressable>
+      </Modal>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  headerContainer: {
+  header: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
+    height: HEADER_HEIGHT,
+    paddingHorizontal: 12,
     backgroundColor: "#2C3E50",
-    height: 33,
-    borderBottomLeftRadius: 35,
-    borderBottomRightRadius: 35,
-    paddingHorizontal: 15,
+    borderBottomLeftRadius: 24,
+    borderBottomRightRadius: 24,
+    elevation: 6,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
   },
-  homeHeaderContainer: {
+  iconButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
     alignItems: "center",
-    flexDirection: "row",
-    backgroundColor: "#2C3E50",
-    height: 33,
-    borderBottomLeftRadius: 35,
-    borderBottomRightRadius: 35,
-    paddingHorizontal: 16,
-  },
-  headerTitle: {
-    fontSize: 18,
-    // fontFamily: "Poppins_800ExtraBold",
-    color: "white",
-    marginTop:-7
-    // flex:1.6
-  },
-  homeHeader: {
-    fontSize: 18,
-    // fontFamily: "Poppins_800ExtraBold",
-    alignItems: "center",
-    color: "white",
     justifyContent: "center",
-    flex: 1.3,
-    marginTop:-7
   },
-  menuOption: {
+  spacer: {
+    width: 40,
+    height: 40,
+  },
+  titleWrap: {
     flex: 1,
-    marginTop:-7
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 8,
+  },
+  titleWrapHome: {
+    alignItems: "flex-start",
+    paddingLeft: 12,
+    alignItems: "center"
+  },
+  title: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "700",
+    letterSpacing: 0.3,
+    
+  },
+  titleHome: {
+    fontSize: 20,
+  },
+  subtitle: {
+    color: "#CFE5F7",
+    fontSize: 11,
+    marginTop: 1,
+  },
 
+  backdrop: {
+    flex: 1,
+    backgroundColor: "rgba(10, 18, 32, 0.35)",
   },
-  menuContainer: {
-    backgroundColor: "#E3F2FD",
-    // borderWidth:1,
-    // borderColor:"#303b7c",
-    width: 230,
+  menuCard: {
     position: "absolute",
-    left: 0,
-    top: 38,
-    height: 250,
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    paddingVertical: 10,
+    left: 12,
+    width: 280,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: "#D5E2EC",
+    overflow: "hidden",
+    elevation: 10,
   },
-  menuItemsBtn: {
-    margin: 6,
-    marginTop: 15,
-    paddingVertical: 5,
+  menuHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
     backgroundColor: "#2C3E50",
-    // borderRadius: 10,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
   },
-  menuItemsBtnText: {
-    fontSize: 25,
-    color:"white",
-    // fontFamily: "Poppins_500Medium",
-    textAlign: "center",
+  menuHeaderText: {
+    color: "#FFFFFF",
+    fontSize: 12,
+    fontWeight: "700",
+    letterSpacing: 1.4,
+  },
+  menuItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "#DDE6EE",
+  },
+  menuIconWrap: {
+    width: 36,
+    height: 36,
+    borderRadius: 12,
+    backgroundColor: "#E3F2FD",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  menuLabel: {
+    flex: 1,
+    marginLeft: 12,
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#2C3E50",
+  },
+  menuArrow: {
+    transform: [{ rotate: "180deg" }],
+  },
+  totalRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    backgroundColor: "#F4F9FD",
+  },
+  totalText: {
+    flex: 1,
+    marginLeft: 12,
+    fontSize: 14,
+    color: "#728198",
+  },
+  totalNumber: {
+    fontWeight: "700",
+    color: "#2C3E50",
   },
 });
 

@@ -31,14 +31,18 @@ const RecentlyViewed = () => {
         const recentlyViewedString = await AsyncStorage.getItem(
           "recentlyViewed"
         );
-        const recentlyViewedData = recentlyViewedString
+        const parsed = recentlyViewedString
           ? JSON.parse(recentlyViewedString)
           : [];
+        // Guard against corrupt / unexpected data
+        const recentlyViewedData = Array.isArray(parsed) ? parsed : [];
         setRecentlyViewed(recentlyViewedData);
         filterRecentlyViewedByGenre(selectedGenre, recentlyViewedData);
-        setIsLoading(false);
       } catch (error) {
         console.error("Error loading recently viewed items:", error);
+      } finally {
+        // Always stop the spinner, even if loading failed
+        setIsLoading(false);
       }
     };
 
@@ -134,8 +138,8 @@ const RecentlyViewed = () => {
   return (
     <View style={styles.container}>
       {filteredRecentlyViewed.length === 0 ? (
-        <SafeAreaView>
-          <ScrollView>
+        <SafeAreaView style={{ flex: 1 }}>
+          <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
             <View>
               <Text style={styles.emptyText}>Empty</Text>
               <Image
@@ -152,7 +156,7 @@ const RecentlyViewed = () => {
           </ScrollView>
         </SafeAreaView>
       ) : (
-        <View>
+        <View style={{ flex: 1 }}>
           <View>
             <Picker
               prompt="Choose Genre"
@@ -180,13 +184,21 @@ const RecentlyViewed = () => {
               style={styles.clearButton}
             >
               <Text style={styles.clearButtonText}>Clear All</Text>
-              <MaterialIcons name="delete" size={25} color="lightyellow" />
+              <MaterialIcons
+                name="delete"
+                size={22}
+                color="lightyellow"
+                style={styles.clearButtonIcon}
+              />
             </TouchableOpacity>
           </View>
-          <SafeAreaView>
+          <SafeAreaView style={{ flex: 1 }}>
             <FlatList
               data={filteredRecentlyViewed}
-              keyExtractor={(item) => item.id.toString()}
+              keyExtractor={(item, index) =>
+                item && item.id != null ? String(item.id) : String(index)
+              }
+              contentContainerStyle={{ paddingBottom: 20 }}
               renderItem={({ item }) => (
                 <View style={styles.favoriteItem}>
                   <TouchableOpacity
@@ -225,7 +237,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 15,
     paddingTop: 10,
-    marginBottom: 232,
   },
   loadingContainer: {
     flex: 1,
@@ -236,14 +247,22 @@ const styles = StyleSheet.create({
   clearButton: {
     alignSelf: "center",
     alignItems: "center",
+    justifyContent: "center",
+    width: 180,
+    height: 46,
     backgroundColor: "brown",
     borderRadius: 10,
   },
   clearButtonText: {
     textAlign: "center",
-    width: 150,
+    textAlignVertical: "center",
+    includeFontPadding: false,
     fontSize: 17,
     color: "lightyellow",
+  },
+  clearButtonIcon: {
+    position: "absolute",
+    left: 14,
   },
   title: {
     fontSize: 24,
@@ -296,7 +315,6 @@ shadowRadius: 3.84,
   titleText: {
     fontSize: 17,
     color: "#2C3E50",
-    fontFamily:"NotoSansTelugu_400Regular",
 
   },
   removeButtonContainer: {

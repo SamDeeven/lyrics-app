@@ -19,6 +19,7 @@ import RecentlyViewed from "./src/screens/components/RecentlyViewed";
 import alphabetData from "./data/songsData.js";
 import Categories from "./src/screens/components/Categories.js";
 import LentSongsRandom from "./src/screens/components/LentSongsRandom.js";
+import Notes from "./src/screens/components/Notes.js";
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -212,6 +213,32 @@ const App = () => {
               },
             }}
           />
+
+ <Stack.Screen
+            name="Notes"
+            component={Notes}
+            options={{
+              header: () => (
+                <CustomHeader
+                  title="Notes"
+                  showBackButton={true}
+                  showHomeButton={true}
+                />
+              ),
+              headerTitleAlign: "center",
+              animationEnabled: false,
+              headerStyle: {
+                backgroundColor: "#02B290",
+                borderBottomWidth: 2,
+                height: 70,
+              },
+              cardStyle: { backgroundColor: "#EAEAEA" },
+            }}
+          />
+
+
+
+
           {/* <Stack.Screen
             name="Lyrics"
             component={Lyrics}
